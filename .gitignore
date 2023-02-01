@@ -17,8 +17,8 @@ Thumbs.db
 /coverage
 
 # Production
-build/
-dist/
+/build/
+/dist/
 
 # misc
 .env.local
