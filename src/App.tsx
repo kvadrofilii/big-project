@@ -10,6 +10,7 @@ import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy';
 import { MainPageLazy } from './pages/MainPage/MainPage.lazy';
 import { Layout } from './layouts/Layout/Layout';
 import { useTheme } from './theme/useTheme';
+import { cn } from './helpers/classNames/classNames';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,7 +25,7 @@ const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={cn('app', {}, [theme])}>
       <button type="button" onClick={toggleTheme}>
         Toggle theme
       </button>
