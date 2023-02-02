@@ -30,7 +30,12 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    // Задаём откуда считать абсолютные пути импортов
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   // Необходим для работы typescript в webpack.config.ts
   "ts-node": {
