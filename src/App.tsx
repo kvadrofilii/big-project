@@ -4,12 +4,12 @@ import {
   createRoutesFromElements,
   RouterProvider,
   Route,
-  Link,
 } from 'react-router-dom';
-import './index.scss';
+import './styles/index.scss';
 import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy';
 import { MainPageLazy } from './pages/MainPage/MainPage.lazy';
 import { Layout } from './layouts/Layout/Layout';
+import { useTheme } from './theme/useTheme';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,8 +21,13 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <div className="app">
+    <div className={`app ${theme}`}>
+      <button type="button" onClick={toggleTheme}>
+        Toggle theme
+      </button>
       <Suspense fallback={<div>Loading...</div>}>
         <RouterProvider router={router} />
       </Suspense>
