@@ -1,30 +1,33 @@
-import { Button } from './components/Button';
-import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom';
+import { Suspense } from 'react';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+  Link,
+} from 'react-router-dom';
 import './index.scss';
+import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy';
+import { MainPageLazy } from './pages/MainPage/MainPage.lazy';
+import { Layout } from './layouts/Layout/Layout';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="about">About Us</Link>
-      </div>
-    ),
-  },
-  {
-    path: 'about',
-    element: (
-      <div className="app">
-        <div>About</div>
-        <Button>hello world!</Button>
-      </div>
-    ),
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route index element={<MainPageLazy />} />
+      <Route path="/about" element={<AboutPageLazy />} />
+    </Route>
+  )
+);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="app">
+      <Suspense fallback={<div>Loading...</div>}>
+        <RouterProvider router={router} />
+      </Suspense>
+    </div>
+  );
 };
 
 export default App;
