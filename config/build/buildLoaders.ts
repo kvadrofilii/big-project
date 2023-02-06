@@ -3,7 +3,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
-  const sassLoader = {
+  const cssLoader = {
     test: /\.s|[ac]ss$/i,
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -11,12 +11,12 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         loader: 'css-loader',
         options: {
           modules: {
-            auto: /\.modules\.\w+$/i,
+            auto: /\.m\.\w+$/i,
             localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
           },
         },
       },
-      'sass-loader',
+      //'sass-loader',
     ],
   };
 
@@ -26,5 +26,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  return [typescriptLoader, sassLoader];
+  return [typescriptLoader, cssLoader];
 }
