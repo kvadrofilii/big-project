@@ -11,3 +11,17 @@ declare module '*.scss' {
   };
   export default styles;
 }
+
+declare module '*.svg' {
+  const svg: React.FunctionComponent<React.SVGAttributes<SVGAElement>>;
+  export default svg;
+}
+
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.gif';
+declare module '*.webp';
+declare module '*.avif';
+declare module '*.ico';
+declare module '*.bmp';
