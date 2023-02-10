@@ -1,0 +1,4 @@
+.root {
+  color: var(--bg-color);
+  background-color: var(--inverted-bg-color);
+}
