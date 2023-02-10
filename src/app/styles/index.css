@@ -1,6 +1,6 @@
 @import url('reset');
 @import url('variables/global');
-@import url('themes/normal');
+@import url('themes/light');
 @import url('themes/dark');
 
 .app {
