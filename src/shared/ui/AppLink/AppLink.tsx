@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
-import { cn } from 'shared/lib/classNames';
+import { cn } from 'shared/lib';
 import css from './AppLink.m.css';
 
 export type AppLinkTheme = 'primary' | 'secondary';
