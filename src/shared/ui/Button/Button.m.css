@@ -1,6 +1,12 @@
-.btn {
-  padding: 8px 16px;
-  background-color: crimson;
-  color: aliceblue;
+.root {
   cursor: pointer;
+  line-height: 100%;
+}
+
+.clear {
+  padding: 0;
+  margin: 0;
+  border:none;
+  background: none;
+  outline: none;
 }

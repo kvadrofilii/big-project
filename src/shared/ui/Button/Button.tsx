@@ -1,8 +1,18 @@
-import { ButtonProps } from './Button.type';
 import css from './Button.m.css';
+import { cn } from 'shared/lib';
+import { ButtonHTMLAttributes, FC } from 'react';
 
-export const Button = ({ children }: ButtonProps) => {
-  return <button className={css.btn}>{children}</button>;
+type Variant = 'clear';
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string;
+  variant?: Variant;
+}
+
+export const Button: FC<ButtonProps> = ({ children, className, variant, ...otherProps }) => {
+  return (
+    <button className={cn([css.root, css[variant], className])} {...otherProps}>
+      {children}
+    </button>
+  );
 };
-
-
