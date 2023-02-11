@@ -3,7 +3,7 @@ import { Link, LinkProps } from 'react-router-dom';
 import { cn } from 'shared/lib';
 import css from './AppLink.m.css';
 
-export type AppLinkTheme = 'primary' | 'secondary';
+export type AppLinkTheme = 'primary' | 'secondary' | 'base' | 'inverted';
 
 export interface AppLinkProps extends LinkProps {
   className?: string;
@@ -14,7 +14,7 @@ export const AppLink: FC<AppLinkProps> = ({
   to,
   className,
   children,
-  theme = 'primary',
+  theme = 'base',
   ...otherProps
 }) => {
   return (
