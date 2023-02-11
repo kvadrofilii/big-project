@@ -1,0 +1,9 @@
+.root {
+  color: var(--bg-color);
+  background-color: var(--inverted-bg-color);
+}
+
+.root svg {
+  width: 16px;
+  height: 16px;
+}
