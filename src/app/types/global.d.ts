@@ -25,3 +25,5 @@ declare module '*.webp';
 declare module '*.avif';
 declare module '*.ico';
 declare module '*.bmp';
+
+declare const __IS_DEV__: boolean;
