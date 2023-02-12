@@ -4,7 +4,7 @@ describe('classNames', () => {
   test('with only first param', () => {
     const expected = 'class';
 
-    expect(classNames(['class'])).toBe(expected);
+    expect(classNames(['class', undefined])).toBe(expected);
   });
 
   test('with param more', () => {

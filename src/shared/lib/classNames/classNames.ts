@@ -1,8 +1,8 @@
 type Mods = Record<string, boolean | string>;
 
-export function classNames(cls: string[] = [], mods: Mods = {}): string {
+export function classNames(cls: Array<string | undefined>, mods: Mods = {}): string {
   return [
-    ...cls,
+    ...cls.filter(Boolean),
     ...Object.entries(mods)
       .filter(([_, value]) => Boolean(value))
       .map(([classNames]) => classNames),
