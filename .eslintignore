@@ -2,7 +2,8 @@
 .stylelint.js
 .babel.config.js
 lint-staged.config.js
-node_modules
+/node_modules
+/build
 .vs
 .vscode
 .idea

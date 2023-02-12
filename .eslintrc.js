@@ -13,6 +13,7 @@ module.exports = {
     'plugin:postcss-modules/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-redux/recommended',
+    'plugin:i18next/recommended',
     'prettier',
   ],
   overrides: [],
@@ -31,6 +32,7 @@ module.exports = {
     'react-redux',
     'prettier',
     'postcss-modules',
+    'i18next',
   ],
   settings: {
     react: {
