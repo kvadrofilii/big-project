@@ -1,8 +1,10 @@
 import { FC, useState } from 'react';
+
 import { cn } from 'shared/lib';
-import css from './Sidebar.m.css';
-import ArrowSquare from 'widgets/assets/icons/arrow-square.svg';
 import { Button } from 'shared/ui';
+import ArrowSquare from 'widgets/assets/icons/arrow-square.svg';
+
+import css from './Sidebar.m.css';
 
 interface SidebarProps {
   className?: string;

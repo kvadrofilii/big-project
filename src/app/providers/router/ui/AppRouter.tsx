@@ -1,13 +1,14 @@
+import { Suspense } from 'react';
+
+import { Layout } from 'app/Layout/Layout';
+import { AboutPage } from 'pages/AboutPage';
+import { MainPage } from 'pages/MainPage';
 import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
   Route,
 } from 'react-router-dom';
-import { Suspense } from 'react';
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
-import { Layout } from 'app/Layout/Layout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

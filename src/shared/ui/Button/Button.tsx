@@ -1,6 +1,8 @@
-import css from './Button.m.css';
-import { cn } from 'shared/lib';
 import { ButtonHTMLAttributes, FC } from 'react';
+
+import { cn } from 'shared/lib';
+
+import css from './Button.m.css';
 
 type Variant = 'clear';
 

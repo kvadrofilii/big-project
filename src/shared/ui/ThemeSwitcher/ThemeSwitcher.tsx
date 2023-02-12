@@ -1,10 +1,12 @@
 import { FC } from 'react';
+
 import { useTheme } from 'shared/contexts';
 import { cn } from 'shared/lib';
-import LightIcon from './sun.svg';
-import DarkIcon from './moon.svg';
 import { Button } from 'shared/ui';
+
 import css from './ThemeSwitcher.m.css';
+import DarkIcon from './moon.svg';
+import LightIcon from './sun.svg';
 
 interface ThemeSwitcherProps {
   className?: string;

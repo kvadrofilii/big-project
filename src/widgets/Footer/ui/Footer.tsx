@@ -1,6 +1,8 @@
 import { FC } from 'react';
-import css from './Footer.m.css';
+
 import { cn } from 'shared/lib';
+
+import css from './Footer.m.css';
 
 export interface FooterProps {
   className?: string;
