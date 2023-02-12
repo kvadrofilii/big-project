@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { cn } from 'shared/lib';
 
 import css from './Footer.m.css';
@@ -10,5 +10,7 @@ export interface FooterProps {
 }
 
 export const Footer: FC<FooterProps> = ({ className }) => {
+  const { t } = useTranslation();
+
   return <footer className={cn([css.root, className])}>{t('Footer')}</footer>;
 };
