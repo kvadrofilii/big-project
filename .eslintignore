@@ -1,0 +1,9 @@
+.eslintrc.js
+.stylelint.js
+.babel.config.js
+lint-staged.config.js
+node_modules
+.vs
+.vscode
+.idea
+.git
