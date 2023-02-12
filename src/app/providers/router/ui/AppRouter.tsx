@@ -1,8 +1,7 @@
-import { Suspense } from 'react';
-
 import { Layout } from 'app/Layout/Layout';
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -15,14 +14,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<MainPage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Route>,
   ),
 );
 
 export const AppRouter = () => {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <RouterProvider router={router} />
-    </Suspense>
-  );
+  return <RouterProvider router={router} />;
 };
