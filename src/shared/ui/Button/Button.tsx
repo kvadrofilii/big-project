@@ -11,7 +11,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
 }
 
-export const Button: FC<ButtonProps> = ({ children, className, variant, ...otherProps }) => {
+export const Button: FC<ButtonProps> = (props) => {
+  const { children, className, variant = 'clear', ...otherProps } = props;
+
   return (
     <button className={cn([css.root, css[variant], className])} {...otherProps}>
       {children}
