@@ -8,3 +8,4 @@ lint-staged.config.js
 .vscode
 .idea
 .git
+**/*.test.ts
