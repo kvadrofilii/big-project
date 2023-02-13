@@ -1,15 +1,15 @@
 declare module '*.m.css' {
   const css: {
-    [key: string]: string;
+    [className: string]: string;
   };
   export default css;
 }
 
 declare module '*.scss' {
-  const styles: {
-    [key: string]: string;
+  const scss: {
+    [className: string]: string;
   };
-  export default styles;
+  export default scss;
 }
 
 declare module '*.svg' {
