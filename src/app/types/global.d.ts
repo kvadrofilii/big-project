@@ -1,8 +1,15 @@
-declare module '*.m.css' {
+declare module '*.css' {
   const css: {
     [className: string]: string;
   };
   export default css;
+}
+
+declare module '*.m.css' {
+  const moduleCss: {
+    [className: string]: string;
+  };
+  export default moduleCss;
 }
 
 declare module '*.scss' {
