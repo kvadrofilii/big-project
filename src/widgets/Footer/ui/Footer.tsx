@@ -12,5 +12,9 @@ export interface FooterProps {
 export const Footer: FC<FooterProps> = ({ className }) => {
   const { t } = useTranslation();
 
-  return <footer className={cn([css.root, className])}>{t('Footer')}</footer>;
+  return (
+    <footer data-testid="footer" className={cn([css.root, className])}>
+      {t('Footer')}
+    </footer>
+  );
 };
