@@ -1,6 +1,6 @@
 .eslintrc.js
 .stylelint.js
-.babel.config.js
+babel.config.js
 lint-staged.config.js
 /node_modules
 /build
@@ -8,4 +8,3 @@ lint-staged.config.js
 .vscode
 .idea
 .git
-**/*.test.ts
