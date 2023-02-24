@@ -5,13 +5,6 @@ declare module '*.css' {
   export default css;
 }
 
-declare module '*.m.css' {
-  const moduleCss: {
-    [className: string]: string;
-  };
-  export default moduleCss;
-}
-
 declare module '*.scss' {
   const scss: {
     [className: string]: string;

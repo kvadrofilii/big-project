@@ -37,7 +37,17 @@
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
-    }
+    },
+    "plugins": [
+      {
+        // Плагин для типизации css-modules
+        // https://www.npmjs.com/package/typescript-plugin-css-modules
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.m\\.css$"
+        }
+      }
+    ]
   },
   // Необходим для работы typescript в webpack.config.ts
   "ts-node": {
@@ -45,6 +55,12 @@
       "module": "CommonJS"
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "./config/jest/jest-setup.ts", "src/shared/config/storybook/StyleDecorator"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+    "./config/jest/jest-setup.ts",
+    "src/shared/config/storybook/StyleDecorator"
+  ],
   "exclude": ["./node_modules", "./build", "./dist", "babel.config.js", ".eslintrc.js"]
 }
