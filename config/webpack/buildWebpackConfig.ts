@@ -19,6 +19,8 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     },
     plugins: buildPlugins(options),
     module: {
+      // Включаем строгий режим, чтобы попытка импортировать несуществующие объекты приводила к падению билда
+      strictExportPresence: true,
       rules: buildLoaders(options),
     },
     resolve: buildResolvers(options),
