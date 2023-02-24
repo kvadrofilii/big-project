@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { cn } from 'shared/lib';
+import cn from 'classnames';
 import { Loader } from 'shared/ui';
 
 import css from './PageLoader.m.css';
@@ -11,7 +11,7 @@ interface PageLoaderProps {
 
 export const PageLoader: FC<PageLoaderProps> = ({ className }) => {
   return (
-    <div className={cn([css.root, className])}>
+    <div className={cn(css.root, className)}>
       <Loader />
     </div>
   );

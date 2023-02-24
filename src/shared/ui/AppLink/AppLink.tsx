@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
+import cn from 'classnames';
 import { Link, LinkProps } from 'react-router-dom';
-import { cn } from 'shared/lib';
 
 import css from './AppLink.m.css';
 
@@ -20,7 +20,7 @@ export const AppLink: FC<AppLinkProps> = ({
   ...otherProps
 }) => {
   return (
-    <Link className={cn([css.root, className, css[theme]])} to={to} {...otherProps}>
+    <Link className={cn(css.root, className, css[theme])} to={to} {...otherProps}>
       {children}
     </Link>
   );

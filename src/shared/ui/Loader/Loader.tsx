@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { cn } from 'shared/lib';
+import cn from 'classnames';
 
 import css from './Loader.m.css';
 
@@ -10,7 +10,7 @@ interface LoaderProps {
 
 export const Loader: FC<LoaderProps> = ({ className }) => {
   return (
-    <div className={cn([css.root, className])}>
+    <div className={cn(css.root, className)}>
       <div />
       <div />
       <div />

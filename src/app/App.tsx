@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
+import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'shared/contexts/theme-context/useTheme';
-import { cn } from 'shared/lib';
 
 import { AppRouter } from './providers/AppRouter';
 
@@ -17,7 +17,7 @@ const App = () => {
   }, [i18n.language]);
 
   return (
-    <div className={cn(['app', theme])}>
+    <div className={cn('app', theme)}>
       <AppRouter />
     </div>
   );

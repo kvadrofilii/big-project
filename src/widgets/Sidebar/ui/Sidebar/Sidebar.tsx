@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { cn } from 'shared/lib';
+import cn from 'classnames';
 import { Button } from 'shared/ui';
 import ArrowSquare from 'widgets/assets/icons/arrow-square.svg';
 
@@ -18,10 +18,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
   };
 
   return (
-    <div
-      data-testid="sidebar"
-      className={cn([css.root, className], { [css.collapsed]: collapsed })}
-    >
+    <div data-testid="sidebar" className={cn(css.root, className, { [css.collapsed]: collapsed })}>
       <Button
         data-testid="sidebar-toggle"
         variant="clear"
