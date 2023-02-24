@@ -39,6 +39,10 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'postcss-modules': {
+      include: '**/*.m.css',
+      exclude: '**/node_modules/**/*',
+    },
   },
   rules: {
     'prettier/prettier': [
@@ -99,6 +103,8 @@ module.exports = {
     ],
     // Запрещает использовать класс, который не задан в css-модуле
     'postcss-modules/no-undef-class': 'error',
+    // Запрещает оставлять классы в css-модуле, которые не используются в компоненте
+    'postcss-modules/no-unused-class': 'warn',
   },
   // Глобальные переменные
   globals: {
@@ -117,13 +123,6 @@ module.exports = {
         'storybook/hierarchy-separator': 'error',
         'storybook/default-exports': 'error',
         'i18next/no-literal-string': 'off',
-      },
-    },
-    {
-      files: ['**/*.m.css'],
-      rules: {
-        // Запрещает оставлять классы в css-модуле, которые не используются в компоненте
-        'postcss-modules/no-unused-class': 'warn',
       },
     },
   ],
