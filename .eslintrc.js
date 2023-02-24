@@ -14,6 +14,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react-redux/recommended',
     'plugin:i18next/recommended',
+    'plugin:storybook/recommended',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -40,15 +41,21 @@ module.exports = {
     },
   },
   rules: {
-    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     // Конец строки LF
     'linebreak-style': ['error', 'unix'],
     // Добавляю исключение для неиспользуемых аргументов в виде "_"
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-    // Запрещает использовать класс, который не задан в css-модуле
-    'postcss-modules/no-undef-class': 'warn',
-    // Запрещает оставлять классы в css-модуле, которые не используются в компоненте
-    'postcss-modules/no-unused-class': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
     // Настройка очерёдности импортов
     'import/order': [
       'error',
@@ -90,6 +97,8 @@ module.exports = {
         pathGroupsExcludedImportTypes: ['react', 'react-native', 'type'],
       },
     ],
+    // Запрещает использовать класс, который не задан в css-модуле
+    'postcss-modules/no-undef-class': 'error',
   },
   // Глобальные переменные
   globals: {
@@ -100,6 +109,21 @@ module.exports = {
       files: ['**/src/**/*.test.{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off',
+      },
+    },
+    {
+      files: ['**/*.story.@(ts|tsx|js|jsx|mjs|cjs)'],
+      rules: {
+        'storybook/hierarchy-separator': 'error',
+        'storybook/default-exports': 'error',
+        'i18next/no-literal-string': 'off',
+      },
+    },
+    {
+      files: ['**/*.m.css'],
+      rules: {
+        // Запрещает оставлять классы в css-модуле, которые не используются в компоненте
+        'postcss-modules/no-unused-class': 'warn',
       },
     },
   ],

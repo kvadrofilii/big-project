@@ -4,6 +4,8 @@ babel.config.js
 lint-staged.config.js
 /node_modules
 /build
+/config/storybook/main.js
+/config/storybook/preview.js
 .vs
 .vscode
 .idea

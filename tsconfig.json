@@ -45,6 +45,6 @@
       "module": "CommonJS"
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "./config/jest/jest-setup.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "./config/jest/jest-setup.ts", "src/shared/config/storybook/StyleDecorator"],
   "exclude": ["./node_modules", "./build", "./dist", "babel.config.js", ".eslintrc.js"]
 }
