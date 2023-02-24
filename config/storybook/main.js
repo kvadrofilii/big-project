@@ -1,5 +1,7 @@
 module.exports = {
   stories: ['../../src/**/*.story.tsx'],
+  // Статичные файлы проекта. Для корректной работы i18next и файлов в assets
+  staticDirs: ['../../public'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
