@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import css from './Button.m.css';
 
-type Variant = 'clear';
+type Variant = 'clear' | 'primary' | 'outline';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
