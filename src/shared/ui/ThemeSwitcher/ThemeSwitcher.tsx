@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import cn from 'classnames';
 import { useTheme } from 'shared/contexts';
-import { Button } from 'shared/ui';
+import { IconButton } from 'shared/ui';
 
 import css from './ThemeSwitcher.m.css';
 import DarkIcon from './moon.svg';
@@ -16,7 +16,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...otherProps
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <Button
+    <IconButton
       variant="clear"
       className={cn(css.root, className)}
       type="button"
@@ -24,6 +24,6 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...otherProps
       {...otherProps}
     >
       {theme === 'dark' ? <LightIcon /> : <DarkIcon />}
-    </Button>
+    </IconButton>
   );
 };

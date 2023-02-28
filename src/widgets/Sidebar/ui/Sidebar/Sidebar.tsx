@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
 
 import cn from 'classnames';
-import { Button } from 'shared/ui';
-import ArrowSquare from 'widgets/assets/icons/arrow-square.svg';
+import { IconButton } from 'shared/ui';
+import CaretLeft from 'widgets/assets/icons/caret-left-fill.svg';
 
 import css from './Sidebar.m.css';
 
@@ -19,15 +19,9 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 
   return (
     <div data-testid="sidebar" className={cn(css.root, className, { [css.collapsed]: collapsed })}>
-      <Button
-        data-testid="sidebar-toggle"
-        variant="clear"
-        type="button"
-        onClick={onToggle}
-        className={css.btn}
-      >
-        <ArrowSquare />
-      </Button>
+      <IconButton data-testid="sidebar-toggle" type="button" onClick={onToggle} className={css.btn}>
+        <CaretLeft />
+      </IconButton>
     </div>
   );
 };

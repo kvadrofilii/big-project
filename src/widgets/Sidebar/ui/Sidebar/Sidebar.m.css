@@ -5,6 +5,7 @@
   height: calc(100vh - var(--header-height));
   padding: 10px;
 
+
   background: var(--inverted-bg-color);
 
   transition: width 0.2s;
@@ -18,10 +19,6 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
-
-  width: 30px;
-  height: 30px;
-
   color: var(--bg-color);
 }
 

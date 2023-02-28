@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui';
+import { IconButton } from 'shared/ui';
 
 import css from './LangSelect.m.css';
 import TranslateIcon from './translate.svg';
@@ -19,7 +19,7 @@ export const LangSelect: FC<LangSelectProps> = ({ className, ...otherProps }) =>
   };
 
   return (
-    <Button
+    <IconButton
       variant="clear"
       className={cn(css.root, className)}
       type="button"
@@ -27,6 +27,6 @@ export const LangSelect: FC<LangSelectProps> = ({ className, ...otherProps }) =>
       {...otherProps}
     >
       <TranslateIcon />
-    </Button>
+    </IconButton>
   );
 };
