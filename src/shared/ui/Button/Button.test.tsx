@@ -8,9 +8,9 @@ describe('Button', () => {
     expect(screen.getByText('Test')).toBeInTheDocument();
   });
 
-  test('Test clear variant', () => {
-    render(<Button variant="clear">Test</Button>);
-    expect(screen.getByText('Test')).toHaveClass('clear');
+  test('Test clear contained', () => {
+    render(<Button variant="contained">Test</Button>);
+    expect(screen.getByText('Test')).toHaveClass('contained-primary');
     screen.debug();
   });
 });

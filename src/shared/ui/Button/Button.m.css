@@ -1,28 +1,110 @@
 .root {
   cursor: pointer;
-  line-height: 100%;
-}
 
-.clear {
-  padding: 0;
-  background: none;
-  border:none;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-radius: var(--border-radius);
   outline: none;
 }
 
-.primary {
-  padding: 8px 16px;
+.icon {
+  cursor: pointer;
+  user-select: none;
+  color: inherit;
+}
 
+/* Size */
+
+.small {
+  padding: var(--btn-padding-s);
+}
+
+.medium {
+  padding: var(--btn-padding-m);
+}
+
+.large {
+  padding: var(--btn-padding-l);
+}
+
+/* Color & Variant */
+
+.contained-primary {
   color: var(--inverted-text-color);
-
   background: var(--primary-color);
   border: 1px solid var(--primary-color);
-  outline: none;
+  box-shadow: var(--shadow-btn-color);
 }
 
-.outline {
-  padding: 8px 16px;
+.contained-secondary {
+  color: var(--inverted-text-color);
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  box-shadow: var(--shadow-btn-color);
+}
+
+.contained-disabled {
+  background: var(--disabled-bg-color);
+  border: 1px solid var(--disabled-bg-color);
+  box-shadow: none;
+}
+
+.text-primary {
+  color: var(--primary-color);
+  background: none;
+  border: 1px solid transparent;
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+  background: none;
+  border: 1px solid transparent;
+}
+
+.text-disabled {
+  background: none;
+  border: 1px solid transparent;
+}
+
+.outlined-primary {
   color: var(--primary-color);
   background: none;
   border: 1px solid var(--primary-color);
+}
+
+.outlined-secondary {
+  color: var(--secondary-color);
+  background: none;
+  border: 1px solid var(--secondary-color);
+}
+
+.outlined-disabled {
+  background: none;
+  border: 1px solid var(--disabled-bg-color);
+}
+
+.contained-primary:hover ,
+.contained-secondary:hover {
+  box-shadow: var(--shadow-btn-hover-color);
+}
+
+.text-disabled,
+.contained-disabled,
+.outlined-disabled {
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
+  color: var(--disabled-text-color);
+}
+
+.full-width {
+  flex: 2 1 auto;
+  width: 100%;
 }
