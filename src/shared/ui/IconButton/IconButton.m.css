@@ -1,0 +1,114 @@
+.root {
+  cursor: pointer;
+  user-select: none;
+
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--border-radius);
+  outline: none;
+
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.root svg {
+  user-select: none;
+
+  display: inline-block;
+  flex-shrink: 0;
+
+  width: 1em;
+  height: 1em;
+
+  fill: currentcolor;
+
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+/* Size */
+
+.small {
+  padding: var(--icon-btn-padding-s);
+  font-size: var(--font-line-s);
+}
+
+.medium {
+  padding: var(--icon-btn-padding-s);
+  font-size: var(--font-line-m);
+}
+
+.large {
+  padding: var(--icon-btn-padding-m);
+  font-size: var(--font-line-l);
+}
+
+/* Color & Variant */
+
+.contained-primary {
+  color: var(--inverted-text-color);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  box-shadow: var(--shadow-btn-color);
+}
+
+.contained-secondary {
+  color: var(--inverted-text-color);
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  box-shadow: var(--shadow-btn-color);
+}
+
+.contained-disabled {
+  background: var(--disabled-bg-color);
+  border: 1px solid var(--disabled-bg-color);
+  box-shadow: none;
+}
+
+.clear-primary {
+  color: var(--primary-color);
+  background: none;
+  border: 1px solid transparent;
+}
+
+.clear-secondary {
+  color: var(--secondary-color);
+  background: none;
+  border: 1px solid transparent;
+}
+
+.clear-disabled {
+  background: none;
+  border: 1px solid transparent;
+}
+
+.outlined-primary {
+  color: var(--primary-color);
+  background: none;
+  border: 1px solid var(--primary-color);
+}
+
+.outlined-secondary {
+  color: var(--secondary-color);
+  background: none;
+  border: 1px solid var(--secondary-color);
+}
+
+.outlined-disabled {
+  background: none;
+  border: 1px solid var(--disabled-bg-color);
+}
+
+.contained-primary:hover ,
+.contained-secondary:hover {
+  box-shadow: var(--shadow-btn-hover-color);
+}
+
+.clear-disabled,
+.contained-disabled,
+.outlined-disabled {
+  pointer-events: none;
+  cursor: default;
+  color: var(--disabled-text-color);
+}
