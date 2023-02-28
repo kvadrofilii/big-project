@@ -5,5 +5,6 @@ module.exports = {
     // Отключаю псевдо-класс global, чтобы никто глобально не переопределял стили у компонентов
     'selector-pseudo-class-disallowed-list': ['global'],
   },
-  "exclude": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "**/*.js", "**/*.jsx", "**/*.md", "**/*.svg"]
+  include: ['**/*.css', '**/*.m.css'],
+  exclude: ['**/*.ts', '**/*.tsx', '**/*.d.ts', '**/*.js', '**/*.jsx', '**/*.md', '**/*.svg'],
 };
