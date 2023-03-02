@@ -8,13 +8,14 @@ import {
   RouterProvider,
   Route,
 } from 'react-router-dom';
+import { routePath } from 'shared/config';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path={routePath.main} element={<Layout />}>
       <Route index element={<MainPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path={routePath.about} element={<AboutPage />} />
+      <Route path={routePath['not-found']} element={<NotFoundPage />} />
     </Route>,
   ),
 );
