@@ -53,6 +53,9 @@ module.exports = {
     ],
     // Конец строки LF
     'linebreak-style': ['error', 'unix'],
+    // React Hooks Rules
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
     // Добавляю исключение для неиспользуемых аргументов в виде "_"
     '@typescript-eslint/no-unused-vars': [
       'warn',
