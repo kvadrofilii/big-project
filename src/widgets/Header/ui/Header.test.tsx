@@ -4,7 +4,7 @@ import { Header } from 'widgets/Header';
 
 describe('Header', () => {
   test('Test render', () => {
-    ComponentRender(<Header />, {});
+    ComponentRender(<Header />);
     expect(screen.getByTestId('header')).toBeInTheDocument();
   });
 });
