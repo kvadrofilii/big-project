@@ -3,4 +3,7 @@ export { Button } from './Button/Button';
 export { IconButton } from './IconButton/IconButton';
 export { LangSelect } from './LangSelect/LangSelect';
 export { Loader } from './Loader/Loader';
+export { Modal } from './Modal/Modal';
+export { Overlay } from './Overlay/Overlay';
+export { Portal } from './Portal/Portal';
 export { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher';

@@ -1,0 +1,47 @@
+.root {
+  pointer-events: none;
+
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: 0;
+}
+
+.root.opened {
+  pointer-events: auto;
+  z-index: var(--modal-z-index);
+  opacity: 1;
+}
+
+.content {
+  max-width: 60%;
+  padding: 20px;
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+}
+
+.opened .content {
+  animation: forwards content-opened var(--default-transition-time);
+}
+
+.closed .content {
+  animation: forwards content-closed var(--default-transition-time);
+}
+
+@keyframes content-opened {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes content-closed {
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+}
