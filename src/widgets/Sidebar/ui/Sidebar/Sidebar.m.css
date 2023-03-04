@@ -8,7 +8,7 @@
 
   background: var(--inverted-bg-color);
 
-  transition: width 0.2s;
+  transition: width var(--default-transition-time);
 }
 
 .collapsed {
