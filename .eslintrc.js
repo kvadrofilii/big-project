@@ -54,8 +54,8 @@ module.exports = {
     // Конец строки LF
     'linebreak-style': ['error', 'unix'],
     // React Hooks Rules
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
     // Добавляю исключение для неиспользуемых аргументов в виде "_"
     '@typescript-eslint/no-unused-vars': [
       'warn',
@@ -114,6 +114,10 @@ module.exports = {
     __IS_DEV__: true,
   },
   overrides: [
+    {
+      files: ['src/**/*.slice.ts'],
+      rules: { 'no-param-reassign': ['error', { props: false }] },
+    },
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
       rules: {
