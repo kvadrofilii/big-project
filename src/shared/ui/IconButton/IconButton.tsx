@@ -61,6 +61,7 @@ export const IconButton: FC<IconButtonProps> = (props) => {
           [css.small]: size === 'small',
           [css.medium]: size === 'medium',
           [css.large]: size === 'large',
+          [css.xl]: size === 'xl',
         },
         className,
       )}

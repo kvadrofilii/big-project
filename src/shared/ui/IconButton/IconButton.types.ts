@@ -6,7 +6,7 @@ export type Color = 'primary' | 'secondary';
 //| 'info'
 //| 'warning'
 
-export type Size = 'small' | 'medium' | 'large';
+export type Size = 'small' | 'medium' | 'large' | 'xl';
 
 export type Variant = 'contained' | 'clear' | 'outlined';
 

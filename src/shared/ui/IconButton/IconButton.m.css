@@ -7,6 +7,11 @@
   align-items: center;
   justify-content: center;
 
+  padding: var(--icon-btn-padding-s);
+
+  font-size: var(--font-size-m);
+  line-height: 100%;
+
   appearance: none;
   border-radius: var(--border-radius);
   outline: none;
@@ -20,9 +25,6 @@
   display: inline-block;
   flex-shrink: 0;
 
-  width: 100%;
-  height: 100%;
-
   fill: currentcolor;
 
   transition: fill var(--default-transition-time) cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -30,19 +32,24 @@
 
 /* Size */
 
-.small {
-  padding: var(--icon-btn-padding-s);
-  font-size: var(--font-line-s);
+.small svg {
+  width: var(--font-size-s);
+  height: var(--font-size-s);
 }
 
-.medium {
-  padding: var(--icon-btn-padding-s);
-  font-size: var(--font-line-m);
+.medium svg {
+  width: var(--font-size-m);
+  height: var(--font-size-m);
 }
 
-.large {
-  padding: var(--icon-btn-padding-m);
-  font-size: var(--font-line-l);
+.large svg {
+  width: var(--font-size-l);
+  height: var(--font-size-l);
+}
+
+.xl svg {
+  width: var(--font-size-xl);
+  height: var(--font-size-xl);
 }
 
 /* Color & Variant */
