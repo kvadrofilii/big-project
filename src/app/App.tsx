@@ -4,8 +4,6 @@ import { AppRouter } from 'app/providers/AppRouter';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'shared/contexts/theme-context/useTheme';
 
-import 'app/styles/index.css';
-
 const App = () => {
   const { theme } = useTheme();
   const { i18n } = useTranslation();
