@@ -15,7 +15,10 @@ export const LangSelect: FC<LangSelectProps> = ({ className, ...otherProps }) =>
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+    const newLanguage = i18n.language === 'ru' ? 'en' : 'ru';
+
+    i18n.changeLanguage(newLanguage);
+    document.documentElement.setAttribute('lang', newLanguage);
   };
 
   return (
