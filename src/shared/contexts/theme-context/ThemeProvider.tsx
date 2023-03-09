@@ -1,4 +1,4 @@
-import { FC, useMemo, useState, ReactNode } from 'react';
+import { FC, useMemo, useState, ReactNode, useEffect } from 'react';
 
 import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './ThemeContext';
 
@@ -19,6 +19,20 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children, initialTheme }) => {
     }),
     [theme],
   );
+
+  useEffect(() => {
+    switch (defaultTheme) {
+      case 'dark': {
+        document.body.classList.add('dark');
+        break;
+      }
+      case 'light':
+      default: {
+        document.body.classList.remove('dark');
+        break;
+      }
+    }
+  }, []);
 
   return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;
 };
