@@ -17,8 +17,8 @@ module.exports = {
     'plugin:storybook/recommended',
     'prettier',
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json',
@@ -85,11 +85,7 @@ module.exports = {
             group: 'builtin',
           },
           {
-            pattern: 'src/',
-            group: 'internal',
-          },
-          {
-            pattern: 'features/',
+            pattern: 'processes/',
             group: 'internal',
           },
           {
@@ -97,7 +93,19 @@ module.exports = {
             group: 'internal',
           },
           {
-            pattern: 'components/',
+            pattern: 'widgets/',
+            group: 'internal',
+          },
+          {
+            pattern: 'features/',
+            group: 'internal',
+          },
+          {
+            pattern: 'entities/',
+            group: 'internal',
+          },
+          {
+            pattern: 'shared/',
             group: 'internal',
           },
         ],
