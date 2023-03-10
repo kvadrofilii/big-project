@@ -6,7 +6,7 @@ lint-staged.config.js
 /build
 /config/storybook/main.js
 /config/storybook/preview.js
-/scripts/generate-visual-json-report.js
+/json-server/index.js
 .vs
 .vscode
 .idea
