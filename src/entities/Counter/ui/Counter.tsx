@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'shared/ui/Button/Button';
 
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
-import { counterActions } from '../model/slice/counterSlice';
+import { counterActions } from '../model/slice/counter.slice';
 
 export const Counter = () => {
   const dispatch = useDispatch();
