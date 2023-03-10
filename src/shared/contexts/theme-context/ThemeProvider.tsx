@@ -6,11 +6,11 @@ const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) ||
 
 export type ThemeProviderProps = {
   children: ReactNode;
-  initialTheme?: Theme;
+  changeTheme?: Theme;
 };
 
-const ThemeProvider: FC<ThemeProviderProps> = ({ children, initialTheme }) => {
-  const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
+const ThemeProvider: FC<ThemeProviderProps> = ({ children, changeTheme }) => {
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   const defaultProps = useMemo(
     () => ({
@@ -21,18 +21,29 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children, initialTheme }) => {
   );
 
   useEffect(() => {
-    switch (defaultTheme) {
+    setTheme(changeTheme);
+  }, [changeTheme]);
+
+  useEffect(() => {
+    switch (theme) {
       case 'dark': {
         document.body.classList.add('dark');
+        document.body.classList.remove('contrast');
+        break;
+      }
+      case 'contrast': {
+        document.body.classList.add('contrast');
+        document.body.classList.remove('dark');
         break;
       }
       case 'light':
       default: {
         document.body.classList.remove('dark');
+        document.body.classList.remove('contrast');
         break;
       }
     }
-  }, []);
+  }, [theme]);
 
   return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;
 };
