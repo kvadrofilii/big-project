@@ -14,6 +14,14 @@ export function buildCssLoader(isDev: boolean) {
           },
         },
       },
+      {
+        loader: 'postcss-loader',
+        options: {
+          postcssOptions: {
+            plugins: ['postcss-preset-env'],
+          },
+        },
+      },
     ],
   };
 }
