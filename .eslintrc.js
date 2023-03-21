@@ -12,6 +12,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:postcss-modules/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:react-redux/recommended',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
@@ -55,6 +56,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     // React Hooks Rules
     'react-hooks/rules-of-hooks': 'error',
+    // Проверяем зависимости эффекта
     'react-hooks/exhaustive-deps': 'error',
     // Добавляю исключение для неиспользуемых аргументов в виде "_"
     '@typescript-eslint/no-unused-vars': [
@@ -122,10 +124,12 @@ module.exports = {
     __IS_DEV__: true,
   },
   overrides: [
+    // Настройки для корректной работы redux toolkit
     {
       files: ['src/**/*.slice.ts'],
       rules: { 'no-param-reassign': ['error', { props: false }] },
     },
+    // Отключаю проверку наличия переводов в тестах
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
       rules: {
