@@ -4,7 +4,6 @@
   justify-content: center;
 
   box-sizing: border-box;
-  width: 100%;
   min-width: 64px;
   padding: var(--btn-padding-m);
 
