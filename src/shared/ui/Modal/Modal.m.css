@@ -1,26 +1,23 @@
 .root {
-  pointer-events: none;
-
   position: fixed;
-  z-index: -1;
-  inset: 0;
-
-  opacity: 0;
-}
-
-.root.opened {
-  pointer-events: auto;
   z-index: var(--modal-z-index);
-  opacity: 1;
+  inset: 0;
 }
 
 .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   max-width: 60%;
   padding: 20px;
+
   background: var(--bg-color);
   border-radius: var(--border-radius);
 }
 
+/*
 .opened .content {
   animation: forwards content-opened var(--default-transition-time);
 }
@@ -41,4 +38,4 @@
     transform: scale(0.1);
     opacity: 0;
   }
-}
+} */

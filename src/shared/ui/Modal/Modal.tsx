@@ -1,35 +1,22 @@
-import { FC, MouseEvent } from 'react';
+import { FC } from 'react';
 
-import cn from 'classnames';
-import { Overlay, Portal } from 'shared/ui';
+import { Portal, Overlay } from 'shared/ui';
 
 import css from './Modal.m.css';
 import { ModalProps } from './Modal.types';
 
 export const Modal: FC<ModalProps> = (props) => {
-  const { className, children, isOpen, onClose } = props;
+  const { children, isOpened, onClose } = props;
 
-  const onContentClick = (e: MouseEvent) => {
-    e.stopPropagation();
-  };
+  if (!isOpened) {
+    return null;
+  }
 
   return (
     <Portal>
-      <div
-        className={cn(
-          css.root,
-          {
-            [css.opened]: isOpen,
-            [css.closed]: !isOpen,
-          },
-          className,
-        )}
-      >
-        <Overlay onClose={onClose} isOpen={isOpen}>
-          <div className={css.content} onClick={onContentClick}>
-            {children}
-          </div>
-        </Overlay>
+      <div className={css.root}>
+        <Overlay onClose={onClose} isOpened={isOpened} />
+        <div className={css.content}>{children}</div>
       </div>
     </Portal>
   );
