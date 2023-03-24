@@ -20,7 +20,8 @@
     "analyze:prod": "webpack --env mode=production analyze=true",
     "analyze:dev": "webpack serve --env mode=development analyze=true",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
-    "storybook:build": "build-storybook -c ./config/storybook"
+    "storybook:build": "build-storybook -c ./config/storybook",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Michael Yakovlev",
@@ -93,7 +94,8 @@
     "webpack": "^5.75.0",
     "webpack-bundle-analyzer": "^4.8.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
