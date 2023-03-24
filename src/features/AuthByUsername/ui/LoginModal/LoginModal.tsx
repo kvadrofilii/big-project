@@ -11,7 +11,7 @@ interface LoginModalProps {
 
 export const LoginModal: FC<LoginModalProps> = ({ isOpened, onClose }) => {
   return (
-    <Modal isOpened={isOpened} onClose={onClose} lazy>
+    <Modal isOpened={isOpened} onClose={onClose}>
       <LoginForm />
     </Modal>
   );
