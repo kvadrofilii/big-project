@@ -19,9 +19,12 @@
   --header-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 56px;
-  --btn-padding-s: 3px 9px;
-  --btn-padding-m: 5px 15px;
-  --btn-padding-l: 7px 21px;
+  --padding-s: 9px;
+  --padding-m: 15px;
+  --padding-l: 21px;
+  --btn-padding-s: 3px var(--padding-s);
+  --btn-padding-m: 5px var(--padding-m);
+  --btn-padding-l: 7px var(--padding-l);
   --icon-btn-padding-s: 5px;
   --icon-btn-padding-m: 12px;
   --border-radius: 4px;
@@ -39,7 +42,7 @@
 
   /* z-index */
 
-  --modal-z-index: 100;
+  --modal-z-index: 1;
 
   /* transition time */
 
