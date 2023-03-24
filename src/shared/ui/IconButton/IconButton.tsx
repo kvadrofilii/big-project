@@ -13,7 +13,7 @@ export const IconButton: FC<IconButtonProps> = (props) => {
     disabled = false,
     size = 'medium',
     variant = 'clear',
-    ...otherProps
+    ...restProps
   } = props;
 
   const styles = () => {
@@ -65,7 +65,7 @@ export const IconButton: FC<IconButtonProps> = (props) => {
         },
         className,
       )}
-      {...otherProps}
+      {...restProps}
     >
       {children}
     </button>

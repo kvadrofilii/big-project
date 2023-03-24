@@ -16,7 +16,7 @@ export const Button: FC<ButtonProps> = (props) => {
     size = 'medium',
     startIcon,
     variant = 'text',
-    ...otherProps
+    ...restProps
   } = props;
 
   const styles = () => {
@@ -68,7 +68,7 @@ export const Button: FC<ButtonProps> = (props) => {
         },
         className,
       )}
-      {...otherProps}
+      {...restProps}
     >
       {startIcon && <span className={css.icon}>{startIcon}</span>}
       {children}
