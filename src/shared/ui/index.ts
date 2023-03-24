@@ -1,6 +1,7 @@
 export { AppLink } from './AppLink/AppLink';
 export { Button } from './Button/Button';
 export { IconButton } from './IconButton/IconButton';
+export { Input } from './Input/Input';
 export { LangSelect } from './LangSelect/LangSelect';
 export { Loader } from './Loader/Loader';
 export { Modal } from './Modal/Modal';

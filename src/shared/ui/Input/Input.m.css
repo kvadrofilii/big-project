@@ -1,0 +1,25 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 64px;
+  padding: var(--btn-padding-m);
+
+  font-size: var(--font-size-m);
+  line-height: 100%;
+  color: currentcolor;
+  text-decoration: none;
+  letter-spacing: inherit;
+
+  background: none;
+  border: 1px solid var(--gray-color);
+  border-radius: var(--border-radius);
+}
+
+.root:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
