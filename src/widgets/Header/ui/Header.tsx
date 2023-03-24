@@ -1,10 +1,10 @@
-/* eslint-disable i18next/no-literal-string */
 import { FC, useCallback, useState } from 'react';
 
 import cn from 'classnames';
+import { LoginModal } from 'features/AuthByUsername';
 import { useTranslation } from 'react-i18next';
 import { routePath } from 'shared/config';
-import { AppLink, Button, LangSelect, Modal, ThemeSwitcher } from 'shared/ui';
+import { AppLink, Button, LangSelect, ThemeSwitcher } from 'shared/ui';
 
 import css from './Header.m.css';
 
@@ -16,8 +16,12 @@ export const Header: FC<HeaderProps> = ({ className }) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
 
-  const onToggleModal = useCallback(() => {
-    setIsAuthModal((prev) => !prev);
+  const onCloseModal = useCallback(() => {
+    setIsAuthModal(false);
+  }, []);
+
+  const onShowModal = useCallback(() => {
+    setIsAuthModal(true);
   }, []);
 
   return (
@@ -33,12 +37,10 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       <div className={css.wrapper}>
         <LangSelect />
         <ThemeSwitcher />
-        <Button variant="contained" onClick={onToggleModal}>
+        <Button variant="contained" onClick={onShowModal}>
           {t('Enter')}
         </Button>
-        <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laboriosam laudantium!
-        </Modal>
+        <LoginModal isOpened={isAuthModal} onClose={onCloseModal} />
       </div>
     </header>
   );

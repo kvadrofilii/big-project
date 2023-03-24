@@ -8,5 +8,7 @@
   "PageError": "An unexpected error has occurred",
   "PageErrorBtn": "Reload page",
   "throw error": "Error in project",
-  "Enter": "Enter"
+  "Enter": "Enter",
+  "username": "Username",
+  "password": "Password"
 }
