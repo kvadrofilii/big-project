@@ -5,4 +5,5 @@ body.dark {
   --inverted-text-color:#333;
   --primary-color: #e8e8ea;
   --secondary-color: #04ff04;
+  --gray-color: rgb(0 0 0 / 87%);
 }

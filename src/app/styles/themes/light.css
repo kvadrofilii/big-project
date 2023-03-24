@@ -5,4 +5,5 @@ body {
   --inverted-text-color:#e8e8ea;
   --primary-color: #1976d2;
   --secondary-color: #9c27b0;
+  --gray-color: rgb(0 0 0 / 87%);
 }
