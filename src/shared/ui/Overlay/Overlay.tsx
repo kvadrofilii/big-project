@@ -1,12 +1,14 @@
 import { FC, useCallback, useEffect } from 'react';
 
-import cn from 'classnames';
-
 import css from './Overlay.m.css';
-import { OverlayProps } from './Overlay.types';
+
+export interface OverlayProps {
+  isOpened?: boolean;
+  onClose?: () => void;
+}
 
 export const Overlay: FC<OverlayProps> = (props) => {
-  const { className, children, isOpen, onClose } = props;
+  const { isOpened, onClose } = props;
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -24,18 +26,14 @@ export const Overlay: FC<OverlayProps> = (props) => {
   );
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpened) {
       window.addEventListener('keydown', onKeyDown);
     }
 
     return () => {
       window.removeEventListener('keydown', onKeyDown);
     };
-  }, [isOpen, onKeyDown]);
+  }, [isOpened, onKeyDown]);
 
-  return (
-    <div className={cn(css.root, className)} onClick={closeHandler}>
-      {children}
-    </div>
-  );
+  return <button className={css.root} tabIndex={0} onClick={closeHandler} />;
 };
