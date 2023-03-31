@@ -1,0 +1,78 @@
+.root {
+  margin: 0;
+}
+
+/* Size */
+
+.small {
+  font: var(--font-size-s);
+}
+
+.medium {
+  font: var(--font-size-m);
+}
+
+.large {
+  font: var(--font-size-l);
+}
+
+/* Color */
+
+.dark {
+  color: var(--text-color);
+}
+
+.light {
+  color: var(--inverted-text-color);
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.warning {
+  color: var(--warning-color);
+}
+
+.info {
+  color: var(--info-color);
+}
+
+.success {
+  color: var(--success-color);
+}
+
+/* Align */
+
+.start {
+  text-align: start;
+}
+
+.end {
+  text-align: end;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+/* Disabled */
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  user-select: none;
+  color: var(--disabled-text-color);
+}
