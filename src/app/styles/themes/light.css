@@ -6,4 +6,12 @@ body {
   --primary-color: #1976d2;
   --secondary-color: #9c27b0;
   --gray-color: rgb(0 0 0 / 87%);
+  --error-color: rgb(211 47 47);
+  --error-bg-color: rgb(253 237 237);
+  --warning-color: rgb(237 108 2);
+  --warning-bg-color: rgb(255 244 229);
+  --info-color: rgb(2 136 209);
+  --info-bg-color: rgb(229 246 253);
+  --success-color: rgb(46 125 50);
+  --success-bg-color: rgb(237 247 237);
 }
