@@ -111,6 +111,8 @@
   box-shadow: var(--shadow-btn-hover-color);
 } */
 
+/* disabled */
+
 .text-disabled,
 .contained-disabled,
 .outlined-disabled {
