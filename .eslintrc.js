@@ -6,13 +6,13 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:postcss-modules/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:jsx-a11y/recommended',
+    'airbnb-typescript',
+    'plugin:react/jsx-runtime',
+    //'plugin:postcss-modules/recommended',
     'plugin:react-redux/recommended',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
@@ -33,8 +33,9 @@ module.exports = {
     'jsx-a11y',
     'react-redux',
     'prettier',
-    'postcss-modules',
+    //'postcss-modules',
     'i18next',
+    'testing-library',
   ],
   settings: {
     react: {
@@ -46,14 +47,19 @@ module.exports = {
     },
   },
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-      },
-    ],
-    // Конец строки LF
-    'linebreak-style': ['error', 'unix'],
+    "no-console": "off",
+    "no-plusplus": "off",
+    "prefer-object-spread": "off",
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/export": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "off",
+    "react/prop-types": "off",
+    // Отключает обязательный импорт React
+    "react/react-in-jsx-scope": "off",
     // React Hooks Rules
     'react-hooks/rules-of-hooks': 'error',
     // Проверяем зависимости эффекта
@@ -115,9 +121,9 @@ module.exports = {
       },
     ],
     // Запрещает использовать класс, который не задан в css-модуле
-    'postcss-modules/no-undef-class': 'error',
+    //'postcss-modules/no-undef-class': 'error',
     // Запрещает оставлять классы в css-модуле, которые не используются в компоненте
-    'postcss-modules/no-unused-class': 'warn',
+    //'postcss-modules/no-unused-class': 'warn',
   },
   // Глобальные переменные
   globals: {
