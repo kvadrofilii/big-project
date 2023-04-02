@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 
 import css from './Text.m.css';
 import { TextProps } from './Text.types';
@@ -18,7 +18,7 @@ export const Text: FC<TextProps> = (props) => {
   } = props;
 
   const styles = () => {
-    return cn(
+    return clsx(
       css.root,
       css[size],
       css[color],

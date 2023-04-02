@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 import { LoginModal } from 'features/AuthByUsername';
 import { useTranslation } from 'react-i18next';
 import { routePath } from 'shared/config';
@@ -25,7 +25,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
   }, []);
 
   return (
-    <header data-testid="header" className={cn(css.root, className)}>
+    <header data-testid="header" className={clsx(css.root, className)}>
       <div className={css.wrapper}>
         <AppLink variant="inverted" to={routePath.main}>
           {t('MainPage')}

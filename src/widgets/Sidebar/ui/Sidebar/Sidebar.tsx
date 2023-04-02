@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 import { IconButton } from 'shared/ui';
 import CaretLeft from 'widgets/assets/icons/caret-left-fill.svg';
 
@@ -18,7 +18,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
   };
 
   return (
-    <div data-testid="sidebar" className={cn(css.root, className, { [css.collapsed]: collapsed })}>
+    <div data-testid="sidebar" className={clsx(css.root, className, { [css.collapsed]: collapsed })}>
       <IconButton
         size="large"
         variant="outlined"

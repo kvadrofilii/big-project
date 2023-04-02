@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 import { IconButton } from 'shared/ui';
 
@@ -24,7 +24,7 @@ export const LangSelect: FC<LangSelectProps> = ({ className, ...restProps }) => 
   return (
     <IconButton
       variant="clear"
-      className={cn(css.root, className)}
+      className={clsx(css.root, className)}
       type="button"
       onClick={toggleLanguage}
       {...restProps}

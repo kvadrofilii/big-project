@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 import { useTheme } from 'shared/contexts';
 import { IconButton } from 'shared/ui';
 
@@ -18,7 +18,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...restProps 
   return (
     <IconButton
       variant="clear"
-      className={cn(css.root, className)}
+      className={clsx(css.root, className)}
       type="button"
       onClick={toggleTheme}
       {...restProps}

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 import { Link, LinkProps } from 'react-router-dom';
 
 import css from './AppLink.m.css';
@@ -20,7 +20,7 @@ export const AppLink: FC<AppLinkProps> = ({
   ...restProps
 }) => {
   return (
-    <Link className={cn(css.root, css[variant], className)} to={to} {...restProps}>
+    <Link className={clsx(css.root, css[variant], className)} to={to} {...restProps}>
       {children}
     </Link>
   );

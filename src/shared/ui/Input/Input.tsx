@@ -1,6 +1,6 @@
 import { FC, InputHTMLAttributes } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 
 import css from './Input.m.css';
 
@@ -9,5 +9,5 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Input: FC<InputProps> = ({ className, ...restProps }) => {
-  return <input data-testid="input" className={cn(css.root, className)} {...restProps} />;
+  return <input data-testid="input" className={clsx(css.root, className)} {...restProps} />;
 };

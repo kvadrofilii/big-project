@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import css from './PageError.m.css';
@@ -17,7 +17,7 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
   };
 
   return (
-    <div className={cn(css.root, className)}>
+    <div className={clsx(css.root, className)}>
       <p>{t('PageError')}</p>
       <button type="button" onClick={reloadPage}>
         {t('PageErrorBtn')}

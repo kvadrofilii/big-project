@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 
 import css from './Button.m.css';
 import { ButtonProps } from './Button.types';
@@ -57,7 +57,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
   return (
     <button
-      className={cn(
+      className={clsx(
         css.root,
         styles(),
         {

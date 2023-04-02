@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import css from './NotFoundPage.m.css';
@@ -12,5 +12,5 @@ interface NotFoundPageProps {
 export const NotFoundPage: FC<NotFoundPageProps> = ({ className }) => {
   const { t } = useTranslation();
 
-  return <div className={cn(css.root, className)}>{t('404')}</div>;
+  return <div className={clsx(css.root, className)}>{t('404')}</div>;
 };

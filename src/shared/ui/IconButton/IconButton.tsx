@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
+import clsx from 'clsx';
 
 import css from './IconButton.m.css';
 import { IconButtonProps } from './IconButton.types';
@@ -54,7 +54,7 @@ export const IconButton: FC<IconButtonProps> = (props) => {
 
   return (
     <button
-      className={cn(
+      className={clsx(
         css.root,
         styles(),
         {
