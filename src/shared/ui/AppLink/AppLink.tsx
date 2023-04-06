@@ -17,11 +17,9 @@ export const AppLink: FC<AppLinkProps> = ({
   className,
   children,
   variant = 'base',
-  ...restProps
-}) => {
-  return (
-    <Link className={clsx(css.root, css[variant], className)} to={to} {...restProps}>
-      {children}
-    </Link>
-  );
-};
+  ...rest
+}) => (
+  <Link className={clsx(css.root, css[variant], className)} to={to} {...rest}>
+    {children}
+  </Link>
+);

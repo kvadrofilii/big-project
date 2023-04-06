@@ -9,10 +9,8 @@ interface PageLoaderProps {
   className?: string;
 }
 
-export const PageLoader: FC<PageLoaderProps> = ({ className }) => {
-  return (
+export const PageLoader: FC<PageLoaderProps> = ({ className }) => (
     <div className={clsx(css.root, className)}>
       <Loader />
     </div>
   );
-};

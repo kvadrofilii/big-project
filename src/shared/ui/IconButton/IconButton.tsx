@@ -13,59 +13,27 @@ export const IconButton: FC<IconButtonProps> = (props) => {
     disabled = false,
     size = 'medium',
     variant = 'clear',
-    ...restProps
+    ...rest
   } = props;
-
-  const styles = () => {
-    if (disabled) {
-      switch (variant) {
-        case 'contained': {
-          return css['contained-disabled'];
-        }
-        case 'outlined': {
-          return css['outlined-disabled'];
-        }
-        case 'clear':
-        default: {
-          return css['clear-disabled'];
-        }
-      }
-    }
-
-    if (variant === 'contained' && color === 'primary') {
-      return css['contained-primary'];
-    }
-    if (variant === 'contained' && color === 'secondary') {
-      return css['contained-secondary'];
-    }
-    if (variant === 'clear' && color === 'primary') {
-      return css['clear-primary'];
-    }
-    if (variant === 'clear' && color === 'secondary') {
-      return css['clear-secondary'];
-    }
-    if (variant === 'outlined' && color === 'primary') {
-      return css['outlined-primary'];
-    }
-    if (variant === 'outlined' && color === 'secondary') {
-      return css['outlined-secondary'];
-    }
-  };
 
   return (
     <button
+      type="button"
       className={clsx(
         css.root,
-        styles(),
+        css[size],
         {
-          [css.small]: size === 'small',
-          [css.medium]: size === 'medium',
-          [css.large]: size === 'large',
-          [css.xl]: size === 'xl',
+          [css[`${variant}-disabled`]]: disabled,
+          [css['contained-primary']]: variant === 'contained' && color === 'primary',
+          [css['contained-secondary']]: variant === 'contained' && color === 'secondary',
+          [css['clear-primary']]: variant === 'clear' && color === 'primary',
+          [css['clear-secondary']]: variant === 'clear' && color === 'secondary',
+          [css['outlined-primary']]: variant === 'outlined' && color === 'primary',
+          [css['outlined-secondary']]: variant === 'outlined' && color === 'secondary',
         },
         className,
       )}
-      {...restProps}
+      {...rest}
     >
       {children}
     </button>

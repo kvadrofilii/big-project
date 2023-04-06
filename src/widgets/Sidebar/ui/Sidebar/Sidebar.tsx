@@ -18,7 +18,12 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
   };
 
   return (
-    <div data-testid="sidebar" className={clsx(css.root, className, { [css.collapsed]: collapsed })}>
+    <div
+      data-testid="sidebar"
+      className={clsx(css.root, className, {
+        [css.collapsed]: collapsed,
+      })}
+    >
       <IconButton
         size="large"
         variant="outlined"

@@ -16,8 +16,8 @@ export const Heading: FC<HeadingProps> = (props) => {
     ...rest
   } = props;
 
-  const styles = () => {
-    return clsx(
+  const styles = () =>
+    clsx(
       css.root,
       css[color],
       css[align],
@@ -26,7 +26,6 @@ export const Heading: FC<HeadingProps> = (props) => {
       },
       className,
     );
-  };
 
   switch (variant) {
     case 'h1':
@@ -34,13 +33,6 @@ export const Heading: FC<HeadingProps> = (props) => {
         <h1 className={styles()} {...rest}>
           {children}
         </h1>
-      );
-    default:
-    case 'h2':
-      return (
-        <h2 className={styles()} {...rest}>
-          {children}
-        </h2>
       );
     case 'h3':
       return (
@@ -65,6 +57,13 @@ export const Heading: FC<HeadingProps> = (props) => {
         <h6 className={styles()} {...rest}>
           {children}
         </h6>
+      );
+    case 'h2':
+    default:
+      return (
+        <h2 className={styles()} {...rest}>
+          {children}
+        </h2>
       );
   }
 };

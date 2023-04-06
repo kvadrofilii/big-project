@@ -26,5 +26,5 @@ declare module '*.avif';
 declare module '*.ico';
 declare module '*.bmp';
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
+// eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle
 declare const __IS_DEV__: boolean;

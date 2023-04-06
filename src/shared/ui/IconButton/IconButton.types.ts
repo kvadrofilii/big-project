@@ -1,10 +1,10 @@
 import { ButtonHTMLAttributes } from 'react';
 
 export type Color = 'primary' | 'secondary';
-//| 'success'
-//| 'error'
-//| 'info'
-//| 'warning'
+// | 'success'
+// | 'error'
+// | 'info'
+// | 'warning'
 
 export type Size = 'small' | 'medium' | 'large' | 'xl';
 

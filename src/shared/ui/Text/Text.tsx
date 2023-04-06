@@ -16,21 +16,20 @@ export const Text: FC<TextProps> = (props) => {
     ...rest
   } = props;
 
-  const styles = () => {
-    return clsx(
-      css.root,
-      css[fontSize],
-      css[color],
-      css[align],
-      {
-        [css.disabled]: disabled,
-      },
-      className,
-    );
-  };
-
   return (
-    <p className={styles()} {...rest}>
+    <p
+      className={clsx(
+        css.root,
+        css[fontSize],
+        css[color],
+        css[align],
+        {
+          [css.disabled]: disabled,
+        },
+        className,
+      )}
+      {...rest}
+    >
       {children}
     </p>
   );

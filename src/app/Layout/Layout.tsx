@@ -8,19 +8,17 @@ import { Sidebar } from 'widgets/Sidebar';
 
 import css from './Layout.m.css';
 
-export const Layout = () => {
-  return (
-    <div className={css.root}>
-      <Header />
-      <div className={css.body}>
-        <Sidebar className={css.sidebar} />
-        <div className={css.main}>
-          <Suspense fallback={<PageLoader />}>
-            <Outlet />
-          </Suspense>
-        </div>
-        <Footer className={css.footer} />
+export const Layout = () => (
+  <div className={css.root}>
+    <Header />
+    <div className={css.body}>
+      <Sidebar className={css.sidebar} />
+      <div className={css.main}>
+        <Suspense fallback={<PageLoader />}>
+          <Outlet />
+        </Suspense>
       </div>
+      <Footer className={css.footer} />
     </div>
-  );
-};
+  </div>
+);

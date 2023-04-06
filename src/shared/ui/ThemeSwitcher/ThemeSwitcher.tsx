@@ -12,7 +12,7 @@ interface ThemeSwitcherProps {
   className?: string;
 }
 
-export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...restProps }) => {
+export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...rest }) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -21,7 +21,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...restProps 
       className={clsx(css.root, className)}
       type="button"
       onClick={toggleTheme}
-      {...restProps}
+      {...rest}
     >
       {theme === 'dark' ? <LightIcon /> : <DarkIcon />}
     </IconButton>

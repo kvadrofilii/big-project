@@ -1,10 +1,10 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export type Color = 'primary' | 'secondary';
-//| 'success'
-//| 'error'
-//| 'info'
-//| 'warning'
+// | 'success'
+// | 'error'
+// | 'info'
+// | 'warning'
 
 export type Size = 'small' | 'medium' | 'large';
 
@@ -19,4 +19,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: Size;
   startIcon?: ReactNode;
   variant?: Variant;
+  type?: 'submit' | 'reset' | 'button';
 }

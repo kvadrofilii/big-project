@@ -11,7 +11,7 @@ interface LangSelectProps {
   className?: string;
 }
 
-export const LangSelect: FC<LangSelectProps> = ({ className, ...restProps }) => {
+export const LangSelect: FC<LangSelectProps> = ({ className, ...rest }) => {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -27,7 +27,7 @@ export const LangSelect: FC<LangSelectProps> = ({ className, ...restProps }) => 
       className={clsx(css.root, className)}
       type="button"
       onClick={toggleLanguage}
-      {...restProps}
+      {...rest}
     >
       <TranslateIcon />
     </IconButton>
