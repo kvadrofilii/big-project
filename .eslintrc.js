@@ -8,9 +8,10 @@ module.exports = {
   extends: [
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
+    'airbnb',
     'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     //'plugin:postcss-modules/recommended',
     'plugin:react-redux/recommended',
@@ -52,16 +53,36 @@ module.exports = {
     'prefer-object-spread': 'off',
     // Устанавливает максимальное количество пустых строк (в файле, в конце файла, в начале файла)
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
+    semi: ['error', 'always'],
+    // Запятые в объектах и массивах
+    'comma-dangle': ['error', 'always-multiline'],
+    // Длина строки
+    'max-len': [
+      'error',
+      {
+        code: 100,
+        ignoreUrls: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+        ignoreComments: true,
+      },
+    ],
+    // Все свойства объектов с новой строки
+    'object-property-newline': 'error',
+    'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
     'import/prefer-default-export': 'off',
     'import/no-named-as-default': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/export': 'off',
     'react/forbid-prop-types': 'off',
+    'react/function-component-definition': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/no-array-index-key': 'off',
     'react/prop-types': 'off',
     // Отключает обязательный импорт React
     'react/react-in-jsx-scope': 'off',
+    // Отключает значения по умолчанию для необязательных пропсов
+    'react/require-default-props': 'off',
     // React Hooks Rules
     'react-hooks/rules-of-hooks': 'error',
     // Проверяем зависимости эффекта
