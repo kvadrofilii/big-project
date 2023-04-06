@@ -9,7 +9,7 @@
 
   padding: var(--icon-btn-padding-s);
 
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-md);
   line-height: 100%;
 
   appearance: none;
@@ -33,18 +33,18 @@
 /* Size */
 
 .small svg {
-  width: var(--font-size-s);
-  height: var(--font-size-s);
+  width: var(--font-size-sm);
+  height: var(--font-size-sm);
 }
 
 .medium svg {
-  width: var(--font-size-m);
-  height: var(--font-size-m);
+  width: var(--font-size-md);
+  height: var(--font-size-md);
 }
 
 .large svg {
-  width: var(--font-size-l);
-  height: var(--font-size-l);
+  width: var(--font-size-lg);
+  height: var(--font-size-lg);
 }
 
 .xl svg {

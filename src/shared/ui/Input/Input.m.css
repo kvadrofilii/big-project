@@ -7,7 +7,7 @@
   min-width: 64px;
   padding: var(--btn-padding-m);
 
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-md);
   line-height: 100%;
   color: currentcolor;
   text-decoration: none;
