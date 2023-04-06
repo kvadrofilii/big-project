@@ -47,19 +47,21 @@ module.exports = {
     },
   },
   rules: {
-    "no-console": "off",
-    "no-plusplus": "off",
-    "prefer-object-spread": "off",
-    "import/prefer-default-export": "off",
-    "import/no-named-as-default": "off",
-    "import/no-extraneous-dependencies": "off",
-    "import/export": "off",
-    "react/forbid-prop-types": "off",
-    "react/jsx-props-no-spreading": "off",
-    "react/no-array-index-key": "off",
-    "react/prop-types": "off",
+    'no-console': 'off',
+    'no-plusplus': 'off',
+    'prefer-object-spread': 'off',
+    // Устанавливает максимальное количество пустых строк (в файле, в конце файла, в начале файла)
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
+    'import/prefer-default-export': 'off',
+    'import/no-named-as-default': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/export': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-array-index-key': 'off',
+    'react/prop-types': 'off',
     // Отключает обязательный импорт React
-    "react/react-in-jsx-scope": "off",
+    'react/react-in-jsx-scope': 'off',
     // React Hooks Rules
     'react-hooks/rules-of-hooks': 'error',
     // Проверяем зависимости эффекта
