@@ -2,6 +2,7 @@ import { addDecorator } from '@storybook/react';
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator';
+import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -29,8 +30,20 @@ export const globalTypes = {
       dynamicTitle: true,
     },
   },
+  locale: {
+    name: 'Locale',
+    description: 'Internationalization locale',
+    toolbar: {
+      icon: 'globe',
+      items: [
+        { value: 'ru', title: 'Русский' },
+        { value: 'en', title: 'English' },
+      ],
+    },
+  },
 };
 
+addDecorator(TranslationDecorator);
 addDecorator(RouterDecorator);
 addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator);
