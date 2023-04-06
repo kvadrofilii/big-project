@@ -1,5 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
+export type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
 export type Color =
   | 'dark'
   | 'light'
@@ -10,16 +12,14 @@ export type Color =
   | 'info'
   | 'success';
 
-export type FontSize = '6xl' | '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
-
 export type Align = 'start' | 'end' | 'center' | 'justify';
 
-export interface TextProps
+export interface HeadingProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement> {
   children?: ReactNode;
   className?: string;
+  variant?: Variant;
   color?: Color;
   disabled?: boolean;
-  fontSize?: FontSize;
   align?: Align;
 }

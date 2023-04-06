@@ -1,15 +1,15 @@
 import { render, screen } from '@testing-library/react';
 
-import { Text } from './Text';
+import { Heading } from './Heading';
 
-describe('Text', () => {
+describe('Heading', () => {
   test('Test render', () => {
-    render(<Text>Test</Text>);
+    render(<Heading>Test</Heading>);
     expect(screen.getByText('Test')).toBeInTheDocument();
   });
 
   test('Test primary color', () => {
-    render(<Text color="primary">Test</Text>);
+    render(<Heading color="primary">Test</Heading>);
     expect(screen.getByText('Test')).toHaveClass('primary');
   });
 });
