@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import path from 'path';
 
-import webpack, { RuleSetRule } from 'webpack';
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 
 import { buildCssLoader } from '../webpack/loaders/buildCssLoader';
 import { buildSvgLoader } from '../webpack/loaders/buildSvgLoader';
@@ -33,6 +33,13 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
   // Подключаю свой обработчик для стилей
   config.module.rules.push(buildCssLoader(true));
+
+  // Подключаю глобальные переменные
+  config.plugins.push(
+    new DefinePlugin({
+      __IS_DEV__: true,
+    }),
+  );
 
   return config;
 };
