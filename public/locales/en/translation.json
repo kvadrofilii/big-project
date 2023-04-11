@@ -10,5 +10,8 @@
   "throw error": "Error in project",
   "Enter": "Enter",
   "username": "Username",
-  "password": "Password"
+  "password": "Password",
+  "Form authorizations": "Form authorizations",
+  "You entered": "You entered the wrong username or password",
+  "Logout": "Logout"
 }

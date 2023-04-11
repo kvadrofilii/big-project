@@ -3,16 +3,18 @@ import { memo } from 'react';
 import clsx from 'clsx';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch } from 'shared/lib';
-import { Button, Input } from 'shared/ui';
+import { useAppDispatch, useAppSelector } from 'shared/lib';
+import { Button, Heading, Input, Text } from 'shared/ui';
 
 import css from './LoginForm.m.css';
 import { LoginFormProps, FormInput } from './LoginForm.types';
+import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 
 export const LoginForm = memo(function LoginForm({ className }: LoginFormProps) {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
+  const { error, isLoading } = useAppSelector(getLoginState);
 
   const { control, handleSubmit } = useForm({
     defaultValues: {
@@ -23,16 +25,18 @@ export const LoginForm = memo(function LoginForm({ className }: LoginFormProps) 
 
   const onSubmit: SubmitHandler<FormInput> = (data) => {
     dispatch(loginByUsername(data));
-    console.log(data);
+    console.log('form data:', data);
   };
 
   return (
     <form className={clsx(css.root, className)} onSubmit={handleSubmit(onSubmit)}>
+      <Heading>{t('Form authorizations')}</Heading>
+      {error && <Text color="error">{error}</Text>}
       <Controller
         name="username"
         control={control}
-        rules={{ required: true, minLength: 6, maxLength: 20 }}
-        defaultValue={''}
+        // rules={{ required: true, minLength: 2, maxLength: 20 }}
+        defaultValue=""
         render={({ field: { onChange, onBlur, value } }) => (
           <Input
             onBlur={onBlur}
@@ -46,8 +50,8 @@ export const LoginForm = memo(function LoginForm({ className }: LoginFormProps) 
       <Controller
         name="password"
         control={control}
-        rules={{ required: true, minLength: 6, maxLength: 20, pattern: /^[A-Za-z]+$/i }}
-        defaultValue={''}
+        // rules={{ required: true, minLength: 3, maxLength: 20, pattern: /^[A-Za-z]+$/i }}
+        defaultValue=""
         render={({ field: { onChange, onBlur, value } }) => (
           <Input
             onBlur={onBlur}
@@ -58,7 +62,7 @@ export const LoginForm = memo(function LoginForm({ className }: LoginFormProps) 
           />
         )}
       />
-      <Button variant="contained" type="submit">
+      <Button variant="contained" type="submit" disabled={isLoading}>
         {t('Enter')}
       </Button>
     </form>
