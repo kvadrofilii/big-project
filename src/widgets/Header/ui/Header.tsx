@@ -30,6 +30,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
 
   const onLogout = useCallback(() => {
     dispatch(userActions.logout());
+    setIsAuthModal(false);
   }, [dispatch]);
 
   return (
@@ -54,7 +55,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
             <Button variant="contained" onClick={onShowModal}>
               {t('Enter')}
             </Button>
-            <LoginModal isOpened={isAuthModal} onClose={onCloseModal} />
+            {isAuthModal && <LoginModal isOpened={isAuthModal} onClose={onCloseModal} />}
           </>
         )}
       </div>
