@@ -20,7 +20,6 @@ export const userSlice = createSlice({
     },
     logout: (state) => {
       state.authData = null;
-      console.log('authData', state.authData);
       localStorage.removeItem(USER_LOCALSTORAGE_KEY);
     },
   },
