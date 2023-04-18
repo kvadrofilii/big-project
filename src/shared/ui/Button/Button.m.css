@@ -33,6 +33,16 @@
 .icon {
   cursor: pointer;
   user-select: none;
+
+  width: 1em;
+  height: 1em;
+
+  color: inherit;
+}
+
+.icon svg {
+  width: 1em;
+  height: 1em;
   color: inherit;
 }
 

@@ -10,14 +10,24 @@ export type Size = 'small' | 'medium' | 'large';
 
 export type Variant = 'contained' | 'text' | 'outlined';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface CommonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   color?: Color;
   disabled?: boolean;
-  endIcon?: ReactNode;
   fullWidth?: boolean;
   size?: Size;
-  startIcon?: ReactNode;
   variant?: Variant;
   type?: 'submit' | 'reset' | 'button';
 }
+
+interface StartIconProps extends CommonButtonProps {
+  startIcon?: ReactNode;
+  endIcon?: never;
+}
+
+interface EndIconProps extends CommonButtonProps {
+  endIcon?: ReactNode;
+  startIcon?: never;
+}
+
+export type ButtonProps = StartIconProps | EndIconProps;
