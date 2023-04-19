@@ -17,7 +17,7 @@ const initialReducers: ReducersList = {
   loginForm: loginReducer,
 };
 
-const LoginForm = memo(function LoginForm({ className }: LoginFormProps) {
+const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormProps) {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
 
@@ -31,8 +31,11 @@ const LoginForm = memo(function LoginForm({ className }: LoginFormProps) {
     },
   });
 
-  const onSubmit: SubmitHandler<FormInput> = (data) => {
-    dispatch(loginByUsername(data));
+  const onSubmit: SubmitHandler<FormInput> = async (data) => {
+    const result = await dispatch(loginByUsername(data));
+    if (result.meta.requestStatus === 'fulfilled') {
+      onSuccess();
+    }
     console.log('form data:', data);
   };
 
@@ -40,7 +43,7 @@ const LoginForm = memo(function LoginForm({ className }: LoginFormProps) {
     <DynamicModuleLoader reducers={initialReducers}>
       <form className={clsx(css.root, className)} onSubmit={handleSubmit(onSubmit)}>
         <Heading>{t('Form authorizations')}</Heading>
-        {error && <Text color="error">{error}</Text>}
+        {error && <Text color="error">{t('You entered')}</Text>}
         <Controller
           name="username"
           control={control}

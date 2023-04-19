@@ -30,7 +30,6 @@ export const Header: FC<HeaderProps> = ({ className }) => {
 
   const onLogout = useCallback(() => {
     dispatch(userActions.logout());
-    setIsAuthModal(false);
   }, [dispatch]);
 
   return (
