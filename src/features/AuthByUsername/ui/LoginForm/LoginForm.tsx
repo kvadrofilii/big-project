@@ -20,20 +20,6 @@ const initialReducers: ReducersList = {
 const LoginForm = memo(function LoginForm({ className }: LoginFormProps) {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
-  // const store = useStore() as ReduxStoreWithManager;
-
-  // useDynamicModuleLoad(initialReducers);
-
-  // useEffect(() => {
-  //  store.reducerManager.add('loginForm', loginReducer);
-  //  dispatch({ type: '@INIT loginForm reducer' });
-
-  //  return () => {
-  //    store.reducerManager.remove('loginForm');
-  //    dispatch({ type: '@DESTROY loginForm reducer' });
-  //  };
-  //  // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
 
   const error = useAppSelector(getLoginError);
   const isLoading = useAppSelector(getLoginIsLoading);
