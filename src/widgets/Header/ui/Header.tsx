@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { useCallback, useState, memo } from 'react';
 
 import clsx from 'clsx';
 import { getUserAuthData, userActions } from 'entities/User';
@@ -14,7 +14,7 @@ export interface HeaderProps {
   className?: string;
 }
 
-export const Header: FC<HeaderProps> = ({ className }) => {
+export const Header = memo(function Header({ className }: HeaderProps) {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useAppSelector(getUserAuthData);
@@ -41,6 +41,9 @@ export const Header: FC<HeaderProps> = ({ className }) => {
         <AppLink variant="inverted" to={routePath.about}>
           {t('AboutPage')}
         </AppLink>
+        <AppLink variant="inverted" to={routePath.profile}>
+          {t('ProfilePage')}
+        </AppLink>
       </div>
       <div className={css.wrapper}>
         <LangSelect />
@@ -60,4 +63,4 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       </div>
     </header>
   );
-};
+});

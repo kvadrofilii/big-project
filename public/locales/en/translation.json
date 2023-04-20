@@ -4,6 +4,7 @@
   "Translate": "Translate",
   "AboutPage": "About",
   "MainPage": "Main",
+  "ProfilePage": "Profile",
   "Footer": "Footer",
   "PageError": "An unexpected error has occurred",
   "PageErrorBtn": "Reload page",
@@ -13,5 +14,19 @@
   "password": "Password",
   "Form authorizations": "Form authorizations",
   "You entered": "You entered the wrong username or password",
-  "Logout": "Logout"
+  "Logout": "Logout",
+  "navbar-links": [
+    {
+      "id": 0,
+      "text": "Main"
+    },
+    {
+      "id": 1,
+      "text": "About"
+    },
+    {
+      "id": 2,
+      "text": "Profile"
+    }
+  ]
 }
