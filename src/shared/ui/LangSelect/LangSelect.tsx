@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +11,7 @@ interface LangSelectProps {
   className?: string;
 }
 
-export const LangSelect: FC<LangSelectProps> = ({ className, ...rest }) => {
+export const LangSelect = memo(function LangSelect({ className, ...rest }: LangSelectProps) {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -32,4 +32,4 @@ export const LangSelect: FC<LangSelectProps> = ({ className, ...rest }) => {
       <TranslateIcon />
     </IconButton>
   );
-};
+});

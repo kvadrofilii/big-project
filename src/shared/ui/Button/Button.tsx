@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 
 import css from './Button.m.css';
 import { ButtonProps } from './Button.types';
 
-export const Button: FC<ButtonProps> = (props) => {
+export const Button = memo(function Button(props: ButtonProps) {
   const {
     children,
     className,
@@ -46,4 +46,4 @@ export const Button: FC<ButtonProps> = (props) => {
       {endIcon && <span className={css.icon}>{endIcon}</span>}
     </button>
   );
-};
+});

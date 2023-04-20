@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 import { useTheme } from 'shared/contexts';
@@ -12,7 +12,10 @@ interface ThemeSwitcherProps {
   className?: string;
 }
 
-export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...rest }) => {
+export const ThemeSwitcher = memo(function ThemeSwitcher({
+  className,
+  ...rest
+}: ThemeSwitcherProps) {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -26,4 +29,4 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...rest }) =>
       {theme === 'dark' ? <LightIcon /> : <DarkIcon />}
     </IconButton>
   );
-};
+});

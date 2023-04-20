@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 
 import css from './IconButton.m.css';
 import { IconButtonProps } from './IconButton.types';
 
-export const IconButton: FC<IconButtonProps> = (props) => {
+export const IconButton = memo(function IconButton(props: IconButtonProps) {
   const {
     children,
     className,
@@ -38,4 +38,4 @@ export const IconButton: FC<IconButtonProps> = (props) => {
       {children}
     </button>
   );
-};
+});

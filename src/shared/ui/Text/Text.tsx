@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 
 import css from './Text.m.css';
 import { TextProps } from './Text.types';
 
-export const Text: FC<TextProps> = (props) => {
+export const Text = memo(function Text(props: TextProps) {
   const {
     children,
     className,
@@ -33,4 +33,4 @@ export const Text: FC<TextProps> = (props) => {
       {children}
     </p>
   );
-};
+});

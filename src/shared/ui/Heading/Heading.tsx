@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 
 import css from './Heading.m.css';
 import { HeadingProps } from './Heading.types';
 
-export const Heading: FC<HeadingProps> = (props) => {
+export const Heading = memo(function Heading(props: HeadingProps) {
   const {
     children,
     className,
@@ -66,4 +66,4 @@ export const Heading: FC<HeadingProps> = (props) => {
         </h2>
       );
   }
-};
+});

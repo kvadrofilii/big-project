@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 import { Link, LinkProps } from 'react-router-dom';
@@ -12,14 +12,16 @@ export interface AppLinkProps extends LinkProps {
   variant?: Variant;
 }
 
-export const AppLink: FC<AppLinkProps> = ({
+export const AppLink = memo(function AppLink({
   to,
   className,
   children,
   variant = 'base',
   ...rest
-}) => (
-  <Link className={clsx(css.root, css[variant], className)} to={to} {...rest}>
-    {children}
-  </Link>
-);
+}: AppLinkProps) {
+  return (
+    <Link className={clsx(css.root, css[variant], className)} to={to} {...rest}>
+      {children}
+    </Link>
+  );
+});

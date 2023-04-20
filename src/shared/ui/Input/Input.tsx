@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes } from 'react';
+import { memo, InputHTMLAttributes } from 'react';
 
 import clsx from 'clsx';
 
@@ -8,6 +8,6 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
 }
 
-export const Input: FC<InputProps> = ({ className, ...rest }) => (
-  <input data-testid="input" className={clsx(css.root, className)} {...rest} />
-);
+export const Input = memo(function Input({ className, ...rest }: InputProps) {
+  return <input data-testid="input" className={clsx(css.root, className)} {...rest} />;
+});
