@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { memo, useState } from 'react';
 
 import clsx from 'clsx';
 import { IconButton } from 'shared/ui';
@@ -10,7 +10,7 @@ interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
+export const Sidebar = memo(function Sidebar({ className }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(true);
 
   const onToggle = () => {
@@ -36,4 +36,4 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       </IconButton>
     </div>
   );
-};
+});
