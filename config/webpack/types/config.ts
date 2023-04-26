@@ -5,6 +5,7 @@ export interface BuildEnv {
   port: number;
   open: boolean;
   analyze: boolean;
+  apiUrl: string;
 }
 
 export interface BuildPaths {
@@ -21,4 +22,5 @@ export interface BuildOptions {
   port: number;
   open: boolean;
   analyze: boolean;
+  apiUrl: string;
 }

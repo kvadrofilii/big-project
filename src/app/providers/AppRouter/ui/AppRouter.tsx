@@ -1,25 +1,21 @@
-import { Layout } from 'app/Layout/Layout';
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
-import { NotFoundPage } from 'pages/NotFoundPage';
-import { ProfilePage } from 'pages/ProfilePage';
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-  Route,
-} from 'react-router-dom';
-import { routePath } from 'shared/config';
+import { Suspense } from 'react';
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path={routePath.main} element={<Layout />}>
-      <Route index element={<MainPage />} />
-      <Route path={routePath.about} element={<AboutPage />} />
-      <Route path={routePath.profile} element={<ProfilePage />} />
-      <Route path={routePath['not-found']} element={<NotFoundPage />} />
-    </Route>,
-  ),
+import { Route, Routes } from 'react-router-dom';
+import { routeConfig } from 'shared/config';
+import { PageLoader } from 'widgets/PageLoader';
+
+export const AppRouter = () => (
+  <Routes>
+    {Object.values(routeConfig).map(({ element, path }) => (
+      <Route
+        key={path}
+        path={path}
+        element={
+          <Suspense fallback={<PageLoader />}>
+            <div className="page-wrapper">{element}</div>
+          </Suspense>
+        }
+      />
+    ))}
+  </Routes>
 );
-
-export const AppRouter = () => <RouterProvider router={router} />;

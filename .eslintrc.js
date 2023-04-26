@@ -70,6 +70,8 @@ module.exports = {
     // Все свойства объектов с новой строки
     'object-property-newline': 'error',
     'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
+    // Разрешаем использовать глобальное объявление типов
+    'no-undef': 'off',
     'import/prefer-default-export': 'off',
     'import/no-named-as-default': 'off',
     'import/no-extraneous-dependencies': 'off',
@@ -151,6 +153,7 @@ module.exports = {
   // Глобальные переменные
   globals: {
     __IS_DEV__: true,
+    __API__: true,
   },
   overrides: [
     // Настройки для корректной работы redux toolkit

@@ -1,4 +1,4 @@
-export function buildBabelLoader() {
+export function babelLoader() {
   return {
     test: /\.(js|jsx|tsx)$/,
     exclude: /node_modules/,

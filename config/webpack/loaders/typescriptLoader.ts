@@ -1,4 +1,4 @@
-export function buildTypescriptLoader() {
+export function typescriptLoader() {
   return {
     test: /\.tsx?$/,
     use: 'ts-loader',

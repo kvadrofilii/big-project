@@ -3,15 +3,17 @@ import path from 'path';
 
 import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 
-import { buildCssLoader } from '../webpack/loaders/buildCssLoader';
-import { buildSvgLoader } from '../webpack/loaders/buildSvgLoader';
+import { cssLoader } from '../webpack/loaders/cssLoader';
+import { svgLoader } from '../webpack/loaders/svgLoader';
 
 export default ({ config }: { config: webpack.Configuration }) => {
-  config.resolve.extensions.push('.ts', '.tsx');
-  config.resolve.modules = [path.resolve(__dirname, '../../src'), 'node_modules'];
+  config.resolve?.extensions?.push('.ts', '.tsx');
+  config!.resolve!.modules = [path.resolve(__dirname, '../../src'), 'node_modules'];
+
+  const rules = config.module?.rules as RuleSetRule[];
 
   // Отключаю встроенный обработчик svg
-  config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+  config!.module!.rules = rules.map((rule: RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
       return { ...rule, exclude: /\.svg$/i };
     }
@@ -20,10 +22,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
   });
 
   // Подключаю свой обработчик для svg
-  config.module.rules.push(buildSvgLoader());
+  config.module?.rules?.push(svgLoader());
 
   // Отключаю встроенный обработчик стилей
-  config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+  config!.module!.rules = rules.map((rule: RuleSetRule) => {
     if (/(s[ac]ss|css)/.test(rule.test as string)) {
       return { ...rule, exclude: /\.(s[ac]ss|css)$/i };
     }
@@ -32,12 +34,13 @@ export default ({ config }: { config: webpack.Configuration }) => {
   });
 
   // Подключаю свой обработчик для стилей
-  config.module.rules.push(buildCssLoader(true));
+  config.module?.rules?.push(cssLoader(true));
 
   // Подключаю глобальные переменные
-  config.plugins.push(
+  config.plugins?.push(
     new DefinePlugin({
       __IS_DEV__: true,
+      __API__: '',
     }),
   );
 

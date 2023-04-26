@@ -28,3 +28,12 @@ declare module '*.bmp';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle
 declare const __IS_DEV__: boolean;
+// eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle
+declare const __API__: string;
+
+// Тип который делает все поля необязательными (для тестов и storybook)
+type DeepPartial<T> = T extends object
+  ? {
+      [P in keyof T]?: DeepPartial<T[P]>;
+    }
+  : T;

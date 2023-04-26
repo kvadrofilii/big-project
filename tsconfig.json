@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
+    // Строгий режим
+    "strict": true,
+    // Проверка на null и undefined
+    // "strictNullChecks": true,
     "outDir": "./dist/",
     // Подсвечивает все места где не указан тип
     // Однако это не означает, что теперь вовсе нельзя использовать any.
-    // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
+    // Это означает лишь, что в подобных ситуация разработчик должен явно писать any
     "noImplicitAny": true,
-    // Проверка на null и undefined
-    //"strictNullChecks": true,
     // Какие импорты использовать
     "module": "ESNext",
     // В какую спецификацию компилируем: для поддержки большинства браузеров
@@ -61,7 +63,8 @@
     "**/*.tsx",
     "**/*.d.ts",
     "./config/jest/jest-setup.ts",
-    "src/shared/config/storybook/StyleDecorator"
+    "src/shared/config/storybook/StyleDecorator",
+    "./webpack.config.ts"
   ],
   "exclude": ["./node_modules", "./build", "./dist", "babel.config.js", ".eslintrc.js"]
 }

@@ -9,8 +9,9 @@ export function buildPlugins({
   paths,
   isDev,
   analyze,
+  apiUrl,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
+  const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html,
     }),
@@ -22,7 +23,10 @@ export function buildPlugins({
       }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
+      __API__: JSON.stringify(apiUrl),
     }),
     analyze && new BundleAnalyzerPlugin(),
   ].filter(Boolean);
+
+  return plugins as webpack.WebpackPluginInstance[];
 }

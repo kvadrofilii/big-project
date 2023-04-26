@@ -4,6 +4,6 @@ export { useAppSelector } from './hooks/useAppSelector/useAppSelector';
 // export { useDynamicModuleLoad } from './hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 // export type { ReducersList } from './hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 export {
-  DynamicModuleLoader,
+  DynamicReducerLoader,
   ReducersList,
-} from './components/DynamicModuleLoader/DynamicModuleLoader';
+} from './components/DynamicModuleLoader/DynamicReducerLoader';

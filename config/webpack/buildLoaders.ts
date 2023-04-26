@@ -1,9 +1,9 @@
 import webpack from 'webpack';
 
-import { buildCssLoader } from './loaders/buildCssLoader';
-import { buildImagesLoader } from './loaders/buildImagesLoader';
-import { buildSvgLoader } from './loaders/buildSvgLoader';
-import { buildTypescriptLoader } from './loaders/buildTypescriptLoader';
+import { cssLoader as buildCssLoader } from './loaders/cssLoader';
+import { imagesLoader as buildImagesLoader } from './loaders/imagesLoader';
+import { svgLoader as buildSvgLoader } from './loaders/svgLoader';
+import { typescriptLoader as buildTypescriptLoader } from './loaders/typescriptLoader';
 // import { buildBabelLoader } from './loaders/buildBabelLoader';
 import { BuildOptions } from './types/config';
 

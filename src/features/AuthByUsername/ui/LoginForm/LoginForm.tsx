@@ -3,7 +3,7 @@ import { memo } from 'react';
 import clsx from 'clsx';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch, useAppSelector, DynamicModuleLoader, ReducersList } from 'shared/lib';
+import { useAppDispatch, useAppSelector, DynamicReducerLoader, ReducersList } from 'shared/lib';
 import { Button, Heading, Input, Text } from 'shared/ui';
 
 import css from './LoginForm.m.css';
@@ -40,7 +40,7 @@ const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormPro
   };
 
   return (
-    <DynamicModuleLoader reducers={initialReducers}>
+    <DynamicReducerLoader reducers={initialReducers}>
       <form className={clsx(css.root, className)} onSubmit={handleSubmit(onSubmit)}>
         <Heading>{t('Form authorizations')}</Heading>
         {error && <Text color="error">{t('You entered')}</Text>}
@@ -78,7 +78,7 @@ const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormPro
           {t('Enter')}
         </Button>
       </form>
-    </DynamicModuleLoader>
+    </DynamicReducerLoader>
   );
 });
 

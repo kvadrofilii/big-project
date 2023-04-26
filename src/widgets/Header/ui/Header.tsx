@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
 import { useTranslation } from 'react-i18next';
-import { routePath } from 'shared/config';
+import { RoutePath } from 'shared/config';
 import { useAppDispatch, useAppSelector } from 'shared/lib';
 import { AppLink, Button, LangSelect, ThemeSwitcher } from 'shared/ui';
 
@@ -35,13 +35,13 @@ export const Header = memo(function Header({ className }: HeaderProps) {
   return (
     <header data-testid="header" className={clsx(css.root, className)}>
       <div className={css.wrapper}>
-        <AppLink variant="inverted" to={routePath.main}>
+        <AppLink variant="inverted" to={RoutePath.main}>
           {t('MainPage')}
         </AppLink>
-        <AppLink variant="inverted" to={routePath.about}>
+        <AppLink variant="inverted" to={RoutePath.about}>
           {t('AboutPage')}
         </AppLink>
-        <AppLink variant="inverted" to={routePath.profile}>
+        <AppLink variant="inverted" to={RoutePath.profile}>
           {t('ProfilePage')}
         </AppLink>
       </div>

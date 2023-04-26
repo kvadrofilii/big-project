@@ -9,7 +9,7 @@ export type ThemeProviderProps = {
   changeTheme?: Theme;
 };
 
-const ThemeProvider: FC<ThemeProviderProps> = ({ children, changeTheme }) => {
+const ThemeProvider: FC<ThemeProviderProps> = ({ children, changeTheme = 'light' }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   const defaultProps = useMemo(
