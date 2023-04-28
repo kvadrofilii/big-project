@@ -22,3 +22,8 @@
   border-color: var(--primary-color);
   outline: none;
 }
+
+.root[readOnly] {
+  color: var(--disabled-text-color);
+  border-color: var(--disabled-text-color);
+}
