@@ -20,6 +20,14 @@ export const Button = memo(function Button(props: ButtonProps) {
     ...rest
   } = props;
 
+  const style = () => {
+    if (disabled) {
+      return css[`${variant}-disabled`];
+    }
+
+    return css[`${variant}-${color}`];
+  };
+
   return (
     <button
       // eslint-disable-next-line react/button-has-type
@@ -29,16 +37,11 @@ export const Button = memo(function Button(props: ButtonProps) {
         css[size],
         {
           [css['full-width']]: fullWidth,
-          [css[`${variant}-disabled`]]: disabled,
-          [css['contained-primary']]: variant === 'contained' && color === 'primary',
-          [css['contained-secondary']]: variant === 'contained' && color === 'secondary',
-          [css['text-primary']]: variant === 'text' && color === 'primary',
-          [css['text-secondary']]: variant === 'text' && color === 'secondary',
-          [css['outlined-primary']]: variant === 'outlined' && color === 'primary',
-          [css['outlined-secondary']]: variant === 'outlined' && color === 'secondary',
         },
+        style(),
         className,
       )}
+      disabled={disabled}
       {...rest}
     >
       {startIcon && <span className={css.icon}>{startIcon}</span>}
