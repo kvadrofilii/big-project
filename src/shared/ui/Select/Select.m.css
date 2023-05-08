@@ -1,0 +1,29 @@
+.root {
+  display: inline-flex;
+}
+
+.label {
+  margin-right: 5px;
+  color: inherit;
+}
+
+.select {
+  padding: 2px 10px 2px 2px;
+
+  color: inherit;
+
+  background: none;
+  border: 1px solid var(--gray-color);
+  border-radius: var(--border-radius);
+  outline: none;
+}
+
+.select[disabled] {
+  color: var(--disabled-text-color);
+  border-color: var(--disabled-text-color);
+}
+
+.option {
+  color: inherit;
+  background: var(--bg-color);
+}

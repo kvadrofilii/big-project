@@ -1,4 +1,5 @@
 export { AppLink } from './AppLink/AppLink';
+export { Avatar } from './Avatar/Avatar';
 export { Button } from './Button/Button';
 export { IconButton } from './IconButton/IconButton';
 export { Input } from './Input/Input';
@@ -8,5 +9,6 @@ export { Loader } from './Loader/Loader';
 export { Modal } from './Modal/Modal';
 export { Overlay } from './Overlay/Overlay';
 export { Portal } from './Portal/Portal';
+export { Select } from './Select/Select';
 export { Text } from './Text/Text';
 export { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher';
