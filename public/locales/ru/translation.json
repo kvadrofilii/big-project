@@ -15,6 +15,8 @@
   "Form authorizations": "Форма авторизации",
   "You entered": "Вы ввели неправильный логин или пароль",
   "Logout": "Выйти",
+  "Specify the currency": "Укажите валюту",
+  "Specify the country": "Выберете страну",
   "navbar-links": [
     {
       "id": 0,

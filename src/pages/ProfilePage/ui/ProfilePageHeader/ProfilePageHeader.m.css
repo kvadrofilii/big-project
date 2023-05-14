@@ -1,0 +1,10 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--padding-m);
+}
+
+.edit {
+  display: flex;
+  gap: var(--padding-m)
+}

@@ -1,3 +1,5 @@
+import { error } from 'console';
+
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 

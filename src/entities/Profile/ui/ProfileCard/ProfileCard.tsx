@@ -1,34 +1,130 @@
 import clsx from 'clsx';
+import { Country, CountrySelect } from 'entities/Country';
+import { Currency, CurrencySelect } from 'entities/Currency';
 import { useTranslation } from 'react-i18next';
-import { useAppSelector } from 'shared/lib';
-import { Button, Heading, Input } from 'shared/ui';
+import { Avatar, Heading, Input, Loader, Text } from 'shared/ui';
 
 import css from './ProfileCard.m.css';
-import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
-import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
-import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
+import { Profile } from '../../model/types/profile.types';
 
 interface ProfileCardProps {
   className?: string;
+  data?: Profile;
+  isLoading?: boolean;
+  error?: string;
+  readOnly?: boolean;
+  onChangeFirstName?: (value?: string) => void;
+  onChangeLastName?: (value?: string) => void;
+  onChangeAge?: (value?: string) => void;
+  onChangeCity?: (value?: string) => void;
+  onChangeUsername?: (value?: string) => void;
+  onChangeAvatar?: (value?: string) => void;
+  onChangeCurrency?: (currency: Currency) => void;
+  onChangeCountry?: (country: Country) => void;
 }
 
-export const ProfileCard = ({ className }: ProfileCardProps) => {
+export const ProfileCard = (props: ProfileCardProps) => {
+  const {
+    className,
+    data,
+    isLoading,
+    error,
+    readOnly,
+    onChangeFirstName,
+    onChangeLastName,
+    onChangeAge,
+    onChangeCity,
+    onChangeUsername,
+    onChangeAvatar,
+    onChangeCurrency,
+    onChangeCountry,
+  } = props;
   const { t } = useTranslation('profile');
-  const data = useAppSelector(getProfileData);
-  const isLoading = useAppSelector(getProfileIsLoading);
-  const error = useAppSelector(getProfileError);
+
+  if (isLoading) {
+    return (
+      <div className={clsx(css.root, css.loading, className)}>
+        <Loader />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={clsx(css.root, css.error, className)}>
+        <Heading color="error" align="center">
+          {t('An error occurred while loading the profile')}
+        </Heading>
+        <Text color="error" align="center">
+          {t('Try refreshing the page')}
+        </Text>
+      </div>
+    );
+  }
 
   return (
     <div className={clsx(css.root, className)}>
-      <div className={css.header}>
-        <Heading>{t('Profile')}</Heading>
-        <Button className={css.edit} variant="outlined">
-          {t('Edit')}
-        </Button>
-      </div>
       <div className={css.data}>
-        <Input value={data?.firstname} placeholder={t('Your-first-name')} className={css.input} />
-        <Input value={data?.lastname} placeholder={t('Your-last-name')} className={css.input} />
+        {data?.avatar && (
+          <div className={css['avatar-wrapper']}>
+            <Avatar src={data?.avatar} />
+          </div>
+        )}
+        <Input
+          value={data?.firstName || ''}
+          placeholder={t('Your-first-name')}
+          className={css.input}
+          readOnly={readOnly}
+          onChange={onChangeFirstName}
+        />
+        <Input
+          value={data?.lastName || ''}
+          placeholder={t('Your-last-name')}
+          className={css.input}
+          readOnly={readOnly}
+          onChange={onChangeLastName}
+        />
+        <Input
+          value={data?.age || ''}
+          placeholder={t('Your-age')}
+          className={css.input}
+          readOnly={readOnly}
+          onChange={onChangeAge}
+          type="number"
+        />
+        <Input
+          value={data?.city || ''}
+          placeholder={t('Your-city')}
+          className={css.input}
+          readOnly={readOnly}
+          onChange={onChangeCity}
+        />
+        <Input
+          value={data?.username || ''}
+          placeholder={t('Enter the user name')}
+          className={css.input}
+          readOnly={readOnly}
+          onChange={onChangeUsername}
+        />
+        <Input
+          value={data?.avatar || ''}
+          placeholder={t('Enter the link to the avatar')}
+          className={css.input}
+          readOnly={readOnly}
+          onChange={onChangeAvatar}
+        />
+        <CurrencySelect
+          value={data?.currency}
+          className={css.input}
+          disabled={readOnly}
+          onChange={onChangeCurrency}
+        />
+        <CountrySelect
+          value={data?.country}
+          className={css.input}
+          disabled={readOnly}
+          onChange={onChangeCountry}
+        />
       </div>
     </div>
   );

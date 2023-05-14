@@ -1,6 +1,18 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
   "users": [
     {
       "id": "1",
@@ -9,13 +21,13 @@
     }
   ],
   "profile": {
-    "firstname": "Chaisy",
-    "lastname": "Lain",
+    "firstName": "Chaisy",
+    "lastName": "Lain",
     "age": 22,
-    "currency": "RUB",
-    "country": "Russia",
+    "currency": "USD",
+    "country": "Belarus",
     "city": "Moscow",
     "username": "admin",
-    "avatar": "https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg?1535950207"
+    "avatar": "https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg"
   }
 }

@@ -15,6 +15,8 @@
   "Form authorizations": "Form authorizations",
   "You entered": "You entered the wrong username or password",
   "Logout": "Logout",
+  "Specify the currency": "Specify the currency",
+  "Specify the country": "Specify the country",
   "navbar-links": [
     {
       "id": 0,

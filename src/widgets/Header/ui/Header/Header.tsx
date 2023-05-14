@@ -1,14 +1,15 @@
-import { useCallback, useState, memo } from 'react';
+import { useCallback, useState, memo, useMemo } from 'react';
 
 import clsx from 'clsx';
 import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config';
 import { useAppDispatch, useAppSelector } from 'shared/lib';
-import { AppLink, Button, LangSelect, ThemeSwitcher } from 'shared/ui';
+import { Button, LangSelect, ThemeSwitcher } from 'shared/ui';
 
 import css from './Header.m.css';
+import { NavbarLinks } from '../../model/links';
+import { NavbarLink } from '../NavbarLink/NavbarLink';
 
 export interface HeaderProps {
   className?: string;
@@ -32,19 +33,14 @@ export const Header = memo(function Header({ className }: HeaderProps) {
     dispatch(userActions.logout());
   }, [dispatch]);
 
+  const linksList = useMemo(
+    () => NavbarLinks.map((item) => <NavbarLink key={item.path} item={item} />),
+    [],
+  );
+
   return (
     <header data-testid="header" className={clsx(css.root, className)}>
-      <div className={css.wrapper}>
-        <AppLink variant="inverted" to={RoutePath.main}>
-          {t('MainPage')}
-        </AppLink>
-        <AppLink variant="inverted" to={RoutePath.about}>
-          {t('AboutPage')}
-        </AppLink>
-        <AppLink variant="inverted" to={RoutePath.profile}>
-          {t('ProfilePage')}
-        </AppLink>
-      </div>
+      <div className={css.wrapper}>{linksList}</div>
       <div className={css.wrapper}>
         <LangSelect />
         <ThemeSwitcher />

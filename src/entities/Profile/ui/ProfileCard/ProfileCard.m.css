@@ -5,15 +5,6 @@
   border-radius: var(--border-radius);
 }
 
-.header {
-  display: flex;
-  margin-bottom: var(--padding-m);
-}
-
-.edit {
-  margin-left: auto;
-}
-
 .data {
   display: flex;
   flex-direction: column;
@@ -22,4 +13,21 @@
 
 .input {
   margin-top: 10px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.error {
+  height: 300px;
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
