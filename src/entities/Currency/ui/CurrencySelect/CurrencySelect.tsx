@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo, useCallback, useMemo } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui';
@@ -12,16 +12,14 @@ interface CurrencySelectProps {
   disabled?: boolean;
 }
 
-const options = [
-  { value: Currency.RUB, content: Currency.RUB },
-  { value: Currency.EUR, content: Currency.EUR },
-  { value: Currency.USD, content: Currency.USD },
-];
-
 export const CurrencySelect = memo(function CurrencySelect(props: CurrencySelectProps) {
   const { className, value, onChange, disabled } = props;
-
   const { t } = useTranslation();
+
+  const options = useMemo(
+    () => Object.entries(Currency).map((val) => ({ value: val[0], content: val[1] })),
+    [],
+  );
 
   const onChangeHandler = useCallback(
     (currency: string) => {
