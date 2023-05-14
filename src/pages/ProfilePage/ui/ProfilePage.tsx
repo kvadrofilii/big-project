@@ -11,8 +11,12 @@ import {
   profileActions,
   ProfileCard,
   profileReducer,
+  getProfileValidateErrors,
 } from 'entities/Profile';
+import { ValidateProfileError } from 'entities/Profile/model/types/profile.types';
+import { useTranslation } from 'react-i18next';
 import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } from 'shared/lib';
+import { Text } from 'shared/ui';
 
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
@@ -21,11 +25,21 @@ const reducers: ReducersList = {
 };
 
 const ProfilePage: FC = () => {
+  const { t } = useTranslation('profile');
   const dispatch = useAppDispatch();
   const dataForm = useAppSelector(getProfileForm);
   const isLoading = useAppSelector(getProfileIsLoading);
   const error = useAppSelector(getProfileError);
   const readOnly = useAppSelector(getProfileReadOnly);
+  const validateErrors = useAppSelector(getProfileValidateErrors);
+
+  const validateErrorTranslates = {
+    [ValidateProfileError.SERVER_ERROR]: t('Server error when saving'),
+    [ValidateProfileError.NO_DATA]: t('Data is not specified'),
+    [ValidateProfileError.INCORRECT_AGE]: t('Incorrect age'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('Invalid region'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('First and last name are required'),
+  };
 
   useEffect(() => {
     dispatch(fetchProfileData());
@@ -93,6 +107,12 @@ const ProfilePage: FC = () => {
     <DynamicReducerLoader reducers={reducers}>
       <div>
         <ProfilePageHeader />
+        {validateErrors?.length &&
+          validateErrors.map((err) => (
+            <Text color="error" key={err}>
+              {validateErrorTranslates[err]}
+            </Text>
+          ))}
         <ProfileCard
           data={dataForm}
           isLoading={isLoading}

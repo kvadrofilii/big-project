@@ -12,5 +12,10 @@
   "Username": "Username",
   "Avatar": "Avatar",
   "Enter the user name": "Enter the user name",
-  "Enter the link to the avatar": "Enter the link to the avatar"
+  "Enter the link to the avatar": "Enter the link to the avatar",
+  "Server error when saving": "Server error when saving",
+  "Data is not specified": "Data is not specified",
+  "Incorrect age": "Incorrect age",
+  "Invalid region": "Invalid region",
+  "First and last name are required": "First and last name are required"
 }

@@ -12,5 +12,10 @@
   "Username": "Имя пользователя",
   "Avatar": "Аватар",
   "Enter the link to the avatar": "Введите ссылку на аватар",
-  "Enter the user name": "Введите имя пользователя"
+  "Enter the user name": "Введите имя пользователя",
+  "Server error when saving": "Серверная ошибка при сохранении",
+  "Data is not specified": "Данные не указаны",
+  "Incorrect age": "Некорректный возраст",
+  "Invalid region": "Некорректный регион",
+  "First and last name are required": "Имя и фамилия обязательны"
 }
