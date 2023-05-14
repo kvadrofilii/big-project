@@ -1,23 +1,23 @@
-import { RoutePath } from 'shared/config';
+import { RoutePath, AppRoutes } from 'shared/config';
 
 export interface NavbarLinksType {
   path: string;
-  text: string;
+  text: AppRoutes;
   authOnly?: boolean;
 }
 
 export const NavbarLinks: NavbarLinksType[] = [
   {
     path: RoutePath.main,
-    text: 'Главная',
+    text: AppRoutes.MAIN,
   },
   {
     path: RoutePath.about,
-    text: 'О сайте',
+    text: AppRoutes.ABOUT,
   },
   {
     path: RoutePath.profile,
-    text: 'Профиль',
+    text: AppRoutes.PROFILE,
     authOnly: true,
   },
 ];

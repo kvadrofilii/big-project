@@ -5,6 +5,7 @@
   "AboutPage": "About",
   "MainPage": "Main",
   "ProfilePage": "Profile",
+  "Profile": "Profile",
   "Footer": "Footer",
   "PageError": "An unexpected error has occurred",
   "PageErrorBtn": "Reload page",
@@ -30,5 +31,7 @@
       "id": 2,
       "text": "Profile"
     }
-  ]
+  ],
+  "Main": "Main",
+  "About": "About"
 }
