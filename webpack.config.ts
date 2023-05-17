@@ -29,6 +29,7 @@ export default (env: BuildEnv) => {
     open,
     analyze,
     apiUrl,
+    project: 'frontend',
   });
 
   return config;

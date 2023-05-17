@@ -154,6 +154,7 @@ module.exports = {
   globals: {
     __IS_DEV__: true,
     __API__: true,
+    __PROJECT__: true,
   },
   overrides: [
     // Настройки для корректной работы redux toolkit

@@ -1,11 +1,13 @@
 /* eslint-disable react/display-name */
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
+import { profileReducer } from 'entities/Profile';
 import { loginReducer } from 'features/AuthByUsername/model/slice/login.slice';
 import { ReducersList } from 'shared/lib';
 
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
+  profile: profileReducer,
 };
 
 export const StoreDecorator =
