@@ -33,5 +33,7 @@
     }
   ],
   "Main": "Main",
-  "About": "About"
+  "About": "About",
+  "Articles": "Articles",
+  "Article": "Article"
 }

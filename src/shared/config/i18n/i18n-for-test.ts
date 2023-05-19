@@ -3,7 +3,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-const ns = ['translation', 'main-page', 'about-page', 'profile'];
+const ns = ['translation', 'main-page', 'about-page', 'profile', 'article'];
 const supportedLngs = ['ru', 'en'];
 const resources = ns.reduce((acc, n) => {
   supportedLngs.forEach((lng) => {

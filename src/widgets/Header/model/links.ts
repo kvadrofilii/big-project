@@ -20,4 +20,9 @@ export const NavbarLinks: NavbarLinksType[] = [
     text: AppRoutes.PROFILE,
     authOnly: true,
   },
+  {
+    path: RoutePath.articles,
+    text: AppRoutes.ARTICLES,
+    authOnly: true,
+  },
 ];
