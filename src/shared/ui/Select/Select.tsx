@@ -3,20 +3,7 @@ import { ChangeEvent, memo, useMemo } from 'react';
 import clsx from 'clsx';
 
 import css from './Select.m.css';
-
-export interface SelectOption {
-  value: string;
-  content: string;
-}
-
-interface SelectProps {
-  className?: string;
-  label?: string;
-  options?: SelectOption[];
-  value?: string;
-  onChange?: (value: string) => void;
-  disabled?: boolean;
-}
+import { SelectProps } from './Select.types';
 
 export const Select = memo(function Select(props: SelectProps) {
   const { className, label, options, onChange, value, disabled } = props;
