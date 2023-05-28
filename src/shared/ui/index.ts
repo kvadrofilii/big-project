@@ -10,5 +10,6 @@ export { Modal } from './Modal/Modal';
 export { Overlay } from './Overlay/Overlay';
 export { Portal } from './Portal/Portal';
 export { Select } from './Select/Select';
+export { Skeleton } from './Skeleton/Skeleton';
 export { Text } from './Text/Text';
 export { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher';
