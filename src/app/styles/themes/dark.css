@@ -14,4 +14,8 @@ body.dark {
   --info-bg-color: rgb(7 19 24);
   --success-color:rgb(102 187 106);
   --success-bg-color:rgb(12 19 13);
+
+  /* Skeleton */
+  --skeleton-color: #c0c0c0;
+  --skeleton-shadow: #555;
 }

@@ -15,10 +15,12 @@
 }
 
 .main {
+  overflow: hidden;
   grid-area: main;
-  padding: 10px;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
 .footer {
   grid-area: footer;
+  height: var(--footer-height);
 }

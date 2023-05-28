@@ -14,4 +14,8 @@ body {
   --info-bg-color: rgb(229 246 253);
   --success-color: rgb(46 125 50);
   --success-bg-color: rgb(237 247 237);
+
+  /* Skeleton */
+  --skeleton-color: #1976d2;
+  --skeleton-shadow: #9cb7d2;
 }

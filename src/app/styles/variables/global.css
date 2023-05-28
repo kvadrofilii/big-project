@@ -25,6 +25,7 @@
   /* Size */
 
   --header-height: 50px;
+  --footer-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 56px;
   --padding-s: 9px;
