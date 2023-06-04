@@ -18,4 +18,7 @@ body.dark {
   /* Skeleton */
   --skeleton-color: #c0c0c0;
   --skeleton-shadow: #555;
+
+  /* Code */
+  --code-bg-color: #555;
 }

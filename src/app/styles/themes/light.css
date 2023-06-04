@@ -18,4 +18,7 @@ body {
   /* Skeleton */
   --skeleton-color: #1976d2;
   --skeleton-shadow: #9cb7d2;
+
+  /* Code */
+  --code-bg-color: #9b9ba2;
 }

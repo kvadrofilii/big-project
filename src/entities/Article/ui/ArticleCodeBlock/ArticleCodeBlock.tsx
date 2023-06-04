@@ -1,17 +1,22 @@
-import { FC } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
-import { useTranslation } from 'react-i18next';
+import { Code } from 'shared/ui';
 
 import css from './ArticleCodeBlock.m.css';
+import { IArticleCodeBlock } from '../../model/types/article.types';
 
 interface ArticleCodeBlockProps {
   className?: string;
+  block: IArticleCodeBlock;
 }
 
-export const ArticleCodeBlock: FC<ArticleCodeBlockProps> = (props) => {
-  const { className } = props;
-  const { t } = useTranslation();
+export const ArticleCodeBlock = memo(function ArticleCodeBlock(props: ArticleCodeBlockProps) {
+  const { className, block } = props;
 
-  return <div className={clsx(css.root, className)}></div>;
-};
+  return (
+    <div className={clsx(css.root, className)}>
+      <Code text={block.code} />
+    </div>
+  );
+});

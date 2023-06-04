@@ -28,7 +28,11 @@ export interface IArticleTextBlock extends IArticleBlockBase {
 
 export type ArticleBlock = IArticleCodeBlock | IArticleImageBlock | IArticleTextBlock;
 
-export enum ArticleType {}
+export enum ArticleType {
+  IT = 'IT',
+  SCIENCE = 'SCIENCE',
+  ECONOMICS = 'ECONOMICS',
+}
 
 export interface IArticle {
   id: string;

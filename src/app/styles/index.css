@@ -3,6 +3,10 @@
 @import url('themes/light');
 @import url('themes/dark');
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   min-height: 100vh;
   font: var(--font-md);
