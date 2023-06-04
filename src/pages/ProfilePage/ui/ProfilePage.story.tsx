@@ -7,14 +7,14 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 import ProfilePage from './ProfilePage';
 
 export default {
-  title: 'entities/ProfilePage',
+  title: 'page/ProfilePage',
   component: ProfilePage,
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
-export const Primary = Template.bind({});
-Primary.decorators = [
+export const Default = Template.bind({});
+Default.decorators = [
   StoreDecorator({
     profile: {
       form: {

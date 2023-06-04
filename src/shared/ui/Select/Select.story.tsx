@@ -11,8 +11,8 @@ export default {
 
 const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   label: 'Укажите значение',
   options: [
     { value: '123', content: 'Первый пункт' },

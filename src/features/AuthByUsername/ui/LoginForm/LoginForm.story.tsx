@@ -13,9 +13,9 @@ export default {
 
 const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {};
-Primary.decorators = [StoreDecorator({})];
+export const Default = Template.bind({});
+Default.args = {};
+Default.decorators = [StoreDecorator({})];
 
 export const WithError = Template.bind({});
 WithError.args = {};
