@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { [FTName] } from './[FTName]';
 
 export default {
-   title: 'shared/[FTName]',
+   title: '/[FTName]',
    component: [FTName],
    argTypes: {
       backgroundColor: { control: 'color' },
@@ -12,7 +12,7 @@ export default {
 
 const Template: ComponentStory<typeof [FTName]> = (args) => <[FTName] { ...args } />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
 
 };
