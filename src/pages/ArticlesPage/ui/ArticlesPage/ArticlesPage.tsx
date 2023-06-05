@@ -13,7 +13,7 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const { className } = props;
   const { t } = useTranslation('article');
 
-  return <div className={clsx(css.root, className)}>articles</div>;
+  return <div className={clsx(css.root, className)} />;
 };
 
 export default memo(ArticlesPage);
