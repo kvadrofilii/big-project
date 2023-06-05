@@ -7,11 +7,10 @@ import ArticleDetailsPage from './ArticleDetailsPage';
 export default {
   title: 'page/ArticleDetailsPage',
   component: ArticleDetailsPage,
-  // Параметры для роутинга
   parameters: {
-    router: {
-      path: '/articles/:id',
-      route: '/articles/1',
+    reactRouter: {
+      routePath: '/articles/:id',
+      routeParams: { id: '1' },
     },
   },
   argTypes: {

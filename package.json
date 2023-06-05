@@ -88,6 +88,7 @@
     "react-i18next": "^12.2.2",
     "react-refresh": "^0.14.0",
     "reg-cli": "^0.17.7",
+    "storybook-addon-react-router-v6": "^0.3.6",
     "style-loader": "^3.3.2",
     "stylelint": "^15.6.0",
     "stylelint-config-clean-order": "^5.0.1",
