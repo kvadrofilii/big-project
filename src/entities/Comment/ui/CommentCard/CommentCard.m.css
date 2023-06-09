@@ -1,0 +1,12 @@
+.root {
+  padding: var(--padding-m);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.header {
+  display: flex;
+  gap: var(--padding-m);
+  align-items: center;
+  margin-bottom: var(--padding-m);
+}

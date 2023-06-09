@@ -5,7 +5,13 @@ import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 import CalendarPlusIcon from 'shared/assets/icons/calendar-plus.svg';
 import EyeIcon from 'shared/assets/icons/eye.svg';
-import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } from 'shared/lib';
+import {
+  DynamicReducerLoader,
+  ReducersList,
+  useAppDispatch,
+  useAppSelector,
+  useInitialEffect,
+} from 'shared/lib';
 import { Avatar, Heading, Skeleton, Text } from 'shared/ui';
 
 import css from './ArticleDetails.m.css';
@@ -55,11 +61,9 @@ export const ArticleDetails = memo(function ArticleDetails(props: ArticleDetails
   const article = useAppSelector(getArticleDetailsData);
   const error = useAppSelector(getArticleDetailsError);
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchArticlesById(id));
-    }
-  }, [dispatch, id]);
+  useInitialEffect(() => {
+    dispatch(fetchArticlesById(id));
+  });
 
   let content;
 

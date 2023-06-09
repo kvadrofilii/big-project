@@ -1,3 +1,7 @@
 .root {
   min-height: 100%;
 }
+
+.comment-title {
+  padding: 2rem 0 1rem;
+}
