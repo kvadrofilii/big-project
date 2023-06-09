@@ -107,19 +107,34 @@
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "cherry",
       "password": "123",
       "role": "USER",
       "avatar": "https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg"
     }
   ],
-  "profile": {
-    "firstName": "Chaisy",
-    "lastName": "Lain",
-    "age": 22,
-    "currency": "USD",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstName": "Paul",
+      "lastName": "Smith",
+      "age": 22,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg"
+    },
+    {
+      "id": "2",
+      "firstName": "Chaisy",
+      "lastName": "Lain",
+      "age": 22,
+      "currency": "USD",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "cherry",
+      "avatar": "https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg"
+    }
+  ]
 }

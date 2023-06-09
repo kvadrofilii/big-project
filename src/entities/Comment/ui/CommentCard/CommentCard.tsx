@@ -1,7 +1,8 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { Avatar, Skeleton, Text } from 'shared/ui';
+import { RoutePath } from 'shared/config';
+import { AppLink, Avatar, Skeleton, Text } from 'shared/ui';
 
 import css from './CommentCard.m.css';
 import { IComment } from '../../model/types/comment.types';
@@ -29,10 +30,10 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
 
   return (
     <div className={clsx(css.root, className)}>
-      <div className={css.header}>
+      <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={css.header}>
         {comment.user.avatar ? <Avatar size={30} src={comment.user.avatar} /> : null}
         <Text>{comment.user.username}</Text>
-      </div>
+      </AppLink>
       <Text>{comment.text}</Text>
     </div>
   );

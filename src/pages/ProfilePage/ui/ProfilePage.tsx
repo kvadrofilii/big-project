@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect } from 'react';
+import { FC, useCallback } from 'react';
 
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
@@ -15,6 +15,7 @@ import {
 } from 'entities/Profile';
 import { ValidateProfileError } from 'entities/Profile/model/types/profile.types';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 import {
   DynamicReducerLoader,
   ReducersList,
@@ -38,6 +39,7 @@ const ProfilePage: FC = () => {
   const error = useAppSelector(getProfileError);
   const readOnly = useAppSelector(getProfileReadOnly);
   const validateErrors = useAppSelector(getProfileValidateErrors);
+  const { id } = useParams<{ id: string }>();
 
   const validateErrorTranslates = {
     [ValidateProfileError.SERVER_ERROR]: t('Server error when saving'),
@@ -48,7 +50,9 @@ const ProfilePage: FC = () => {
   };
 
   useInitialEffect(() => {
-    dispatch(fetchProfileData());
+    if (id) {
+      dispatch(fetchProfileData(id));
+    }
   });
 
   const onChangeFirstName = useCallback(
