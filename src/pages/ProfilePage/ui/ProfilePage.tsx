@@ -15,7 +15,13 @@ import {
 } from 'entities/Profile';
 import { ValidateProfileError } from 'entities/Profile/model/types/profile.types';
 import { useTranslation } from 'react-i18next';
-import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } from 'shared/lib';
+import {
+  DynamicReducerLoader,
+  ReducersList,
+  useAppDispatch,
+  useAppSelector,
+  useInitialEffect,
+} from 'shared/lib';
 import { Text } from 'shared/ui';
 
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
@@ -41,11 +47,9 @@ const ProfilePage: FC = () => {
     [ValidateProfileError.INCORRECT_USER_DATA]: t('First and last name are required'),
   };
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData());
-    }
-  }, [dispatch]);
+  useInitialEffect(() => {
+    dispatch(fetchProfileData());
+  });
 
   const onChangeFirstName = useCallback(
     (value?: string) => {
