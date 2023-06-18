@@ -4,10 +4,7 @@ import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import css from './[FTName].m.css';
-
-interface [FTName]Props {
-   className?: string;
-}
+import { [FTName]Props } from './[FTName].types';
 
 export const [FTName] = memo(function [FTName](props: [FTName]Props) {
    const { className } = props;
@@ -15,7 +12,7 @@ export const [FTName] = memo(function [FTName](props: [FTName]Props) {
 
    return (
       <div className={clsx(css.root, className)}>
-         [FTName]
+         <div/>
       </div>
    );
 });
