@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 import { CommentCard } from './CommentCard';
 
@@ -24,4 +23,14 @@ Default.args = {
       avatar: 'https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg',
     },
   },
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  comment: {
+    id: '1',
+    text: 'hello world',
+    user: { id: '1', username: 'Vasya' },
+  },
+  isLoading: true,
 };

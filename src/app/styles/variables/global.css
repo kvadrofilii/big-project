@@ -31,6 +31,9 @@
   --padding-s: 9px;
   --padding-m: 15px;
   --padding-l: 21px;
+  --gap-s: 9px;
+  --gap-m: 15px;
+  --gap-l: 21px;
   --btn-padding-s: 3px var(--padding-s);
   --btn-padding-m: 5px var(--padding-m);
   --btn-padding-l: 7px var(--padding-l);

@@ -9,7 +9,7 @@ import { IComment } from '../../model/types/comment.types';
 
 interface CommentCardProps {
   className?: string;
-  comment: IComment;
+  comment?: IComment;
   isLoading?: boolean;
 }
 
@@ -26,6 +26,10 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
         <Skeleton width="100%" height={50} />
       </div>
     );
+  }
+
+  if (!comment) {
+    return null;
   }
 
   return (

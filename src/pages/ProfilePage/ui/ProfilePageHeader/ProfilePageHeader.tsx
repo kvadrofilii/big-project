@@ -1,7 +1,13 @@
 import { useCallback } from 'react';
 
 import clsx from 'clsx';
-import { getProfileReadOnly, profileActions, updateProfileData } from 'entities/Profile';
+import {
+  getProfileData,
+  getProfileReadOnly,
+  profileActions,
+  updateProfileData,
+} from 'entities/Profile';
+import { getUserAuthData } from 'entities/User';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from 'shared/lib';
 import { Button, Heading } from 'shared/ui';
@@ -16,6 +22,9 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   const { t } = useTranslation('profile');
   const dispatch = useAppDispatch();
   const readOnly = useAppSelector(getProfileReadOnly);
+  const authData = useAppSelector(getUserAuthData);
+  const profileData = useAppSelector(getProfileData);
+  const canEdit = authData?.id === profileData?.id;
 
   const onEdit = useCallback(() => {
     dispatch(profileActions.setReadOnly(false));
@@ -32,22 +41,24 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   return (
     <div className={clsx(css.root, className)}>
       <Heading>{t('Profile')}</Heading>
-      <div className={css.edit}>
-        {readOnly ? (
-          <Button variant="outlined" onClick={onEdit}>
-            {t('Edit')}
-          </Button>
-        ) : (
-          <>
-            <Button variant="outlined" color="error" onClick={onCancelEdit}>
-              {t('Cancel')}
+      {canEdit && (
+        <div className={css.edit}>
+          {readOnly ? (
+            <Button variant="outlined" onClick={onEdit}>
+              {t('Edit')}
             </Button>
-            <Button variant="outlined" onClick={onSave}>
-              {t('Save')}
-            </Button>
-          </>
-        )}
-      </div>
+          ) : (
+            <>
+              <Button variant="outlined" color="error" onClick={onCancelEdit}>
+                {t('Cancel')}
+              </Button>
+              <Button variant="outlined" onClick={onSave}>
+                {t('Save')}
+              </Button>
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  gap: var(--gap-m);
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: var(--padding-m);
+  padding: var(--padding-m);
+
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius)
+}
+
+.input {
+  flex-grow: 1;
+}
