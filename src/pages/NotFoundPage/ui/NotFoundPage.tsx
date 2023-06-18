@@ -4,10 +4,7 @@ import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import css from './NotFoundPage.m.css';
-
-interface NotFoundPageProps {
-  className?: string;
-}
+import { NotFoundPageProps } from './NotFoundPage.types';
 
 export const NotFoundPage: FC<NotFoundPageProps> = ({ className }) => {
   const { t } = useTranslation();

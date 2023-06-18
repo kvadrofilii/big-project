@@ -1,17 +1,17 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { IStateSchema } from 'app/providers/StoreProvider';
 
 import { getUserIsMount } from './getUserIsMount';
 
 describe('getUserIsMount', () => {
   test('Should return true', () => {
-    const state: DeepPartial<StateSchema> = {
+    const state: DeepPartial<IStateSchema> = {
       user: { isMount: true },
     };
-    expect(getUserIsMount(state as StateSchema)).toEqual(true);
+    expect(getUserIsMount(state as IStateSchema)).toEqual(true);
   });
 
   test('Should work with empty state', () => {
-    const state: DeepPartial<StateSchema> = {};
-    expect(getUserIsMount(state as StateSchema)).toEqual(undefined);
+    const state: DeepPartial<IStateSchema> = {};
+    expect(getUserIsMount(state as IStateSchema)).toEqual(undefined);
   });
 });

@@ -3,14 +3,8 @@ import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui';
 
+import { CountrySelectProps } from './CountrySelect.types';
 import { Country } from '../../model/types/country';
-
-interface CountrySelectProps {
-  className?: string;
-  value?: Country;
-  onChange?: (value: Country) => void;
-  disabled?: boolean;
-}
 
 export const CountrySelect = memo(function CountrySelect(props: CountrySelectProps) {
   const { className, value, onChange, disabled } = props;

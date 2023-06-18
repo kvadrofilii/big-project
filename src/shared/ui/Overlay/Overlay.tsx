@@ -1,11 +1,7 @@
 import { FC, useCallback, useEffect } from 'react';
 
 import css from './Overlay.m.css';
-
-export interface OverlayProps {
-  isOpened?: boolean;
-  onClose?: () => void;
-}
+import { OverlayProps } from './Overlay.types';
 
 export const Overlay: FC<OverlayProps> = (props) => {
   const { isOpened, onClose } = props;

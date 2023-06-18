@@ -13,10 +13,7 @@ import { useAppDispatch, useAppSelector } from 'shared/lib';
 import { Button, Heading } from 'shared/ui';
 
 import css from './ProfilePageHeader.m.css';
-
-interface ProfilePageHeaderProps {
-  className?: string;
-}
+import { ProfilePageHeaderProps } from './ProfilePageHeader.types';
 
 export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   const { t } = useTranslation('profile');

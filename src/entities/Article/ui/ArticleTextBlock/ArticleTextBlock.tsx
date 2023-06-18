@@ -4,12 +4,7 @@ import clsx from 'clsx';
 import { Heading, Text } from 'shared/ui';
 
 import css from './ArticleTextBlock.m.css';
-import { IArticleTextBlock } from '../../model/types/article.types';
-
-interface ArticleTextBlockProps {
-  className?: string;
-  block: IArticleTextBlock;
-}
+import { ArticleTextBlockProps } from './ArticleTextBlock.types';
 
 export const ArticleTextBlock = memo(function ArticleTextBlock(props: ArticleTextBlockProps) {
   const { className, block } = props;

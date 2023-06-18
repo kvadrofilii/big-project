@@ -1,7 +1,7 @@
-import { User } from 'entities/User';
+import { IUser } from 'entities/User';
 
 export interface IComment {
   id: string;
-  user: User;
+  user: IUser;
   text: string;
 }

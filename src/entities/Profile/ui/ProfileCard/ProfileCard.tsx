@@ -1,27 +1,11 @@
 import clsx from 'clsx';
-import { Country, CountrySelect } from 'entities/Country';
-import { Currency, CurrencySelect } from 'entities/Currency';
+import { CountrySelect } from 'entities/Country';
+import { CurrencySelect } from 'entities/Currency';
 import { useTranslation } from 'react-i18next';
 import { Avatar, Heading, Input, Loader, Text } from 'shared/ui';
 
 import css from './ProfileCard.m.css';
-import { Profile } from '../../model/types/profile.types';
-
-interface ProfileCardProps {
-  className?: string;
-  data?: Profile;
-  isLoading?: boolean;
-  error?: string;
-  readOnly?: boolean;
-  onChangeFirstName?: (value?: string) => void;
-  onChangeLastName?: (value?: string) => void;
-  onChangeAge?: (value?: string) => void;
-  onChangeCity?: (value?: string) => void;
-  onChangeUsername?: (value?: string) => void;
-  onChangeAvatar?: (value?: string) => void;
-  onChangeCurrency?: (currency: Currency) => void;
-  onChangeCountry?: (country: Country) => void;
-}
+import { ProfileCardProps } from './ProfileCard.types';
 
 export const ProfileCard = (props: ProfileCardProps) => {
   const {

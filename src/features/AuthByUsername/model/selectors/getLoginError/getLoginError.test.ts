@@ -1,19 +1,19 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { IStateSchema } from 'app/providers/StoreProvider';
 
 import { getLoginError } from './getLoginError';
 
 describe('getLoginError', () => {
   test('Should return error', () => {
-    const state: DeepPartial<StateSchema> = {
+    const state: DeepPartial<IStateSchema> = {
       loginForm: {
         error: 'error',
       },
     };
-    expect(getLoginError(state as StateSchema)).toEqual('error');
+    expect(getLoginError(state as IStateSchema)).toEqual('error');
   });
 
   test('Should work with empty state', () => {
-    const state: DeepPartial<StateSchema> = {};
-    expect(getLoginError(state as StateSchema)).toEqual(undefined);
+    const state: DeepPartial<IStateSchema> = {};
+    expect(getLoginError(state as IStateSchema)).toEqual(undefined);
   });
 });

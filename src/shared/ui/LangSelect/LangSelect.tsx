@@ -5,13 +5,11 @@ import { useTranslation } from 'react-i18next';
 import { IconButton } from 'shared/ui';
 
 import css from './LangSelect.m.css';
+import { LangSelectProps } from './LangSelect.types';
 import TranslateIcon from './translate.svg';
 
-interface LangSelectProps {
-  className?: string;
-}
-
-export const LangSelect = memo(function LangSelect({ className, ...rest }: LangSelectProps) {
+export const LangSelect = memo(function LangSelect(props: LangSelectProps) {
+  const { className, ...rest } = props;
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {

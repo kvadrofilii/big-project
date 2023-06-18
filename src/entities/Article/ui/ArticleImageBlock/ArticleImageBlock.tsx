@@ -4,12 +4,7 @@ import clsx from 'clsx';
 import { Heading } from 'shared/ui';
 
 import css from './ArticleImageBlock.m.css';
-import { IArticleImageBlock } from '../../model/types/article.types';
-
-interface ArticleImageBlockProps {
-  className?: string;
-  block: IArticleImageBlock;
-}
+import { ArticleImageBlockProps } from './ArticleImageBlock.types';
 
 export const ArticleImageBlock = memo(function ArticleImageBlock(props: ArticleImageBlockProps) {
   const { className, block } = props;

@@ -4,12 +4,7 @@ import clsx from 'clsx';
 import { Code } from 'shared/ui';
 
 import css from './ArticleCodeBlock.m.css';
-import { IArticleCodeBlock } from '../../model/types/article.types';
-
-interface ArticleCodeBlockProps {
-  className?: string;
-  block: IArticleCodeBlock;
-}
+import { ArticleCodeBlockProps } from './ArticleCodeBlock.types';
 
 export const ArticleCodeBlock = memo(function ArticleCodeBlock(props: ArticleCodeBlockProps) {
   const { className, block } = props;

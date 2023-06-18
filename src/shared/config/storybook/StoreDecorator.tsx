@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import { Story } from '@storybook/react';
-import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
+import { IStateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetails.slice';
 import { profileReducer } from 'entities/Profile';
 import { addCommentFormReducer } from 'features/AddCommentForm/model/slices/addCommentForm.slice';
@@ -17,7 +17,7 @@ const defaultAsyncReducers: ReducersList = {
 };
 
 export const StoreDecorator =
-  (state: DeepPartial<StateSchema>, asyncReducers?: ReducersList) => (StoryComponent: Story) =>
+  (state: DeepPartial<IStateSchema>, asyncReducers?: ReducersList) => (StoryComponent: Story) =>
     (
       <StoreProvider
         initialState={state}

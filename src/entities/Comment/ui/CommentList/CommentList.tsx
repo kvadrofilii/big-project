@@ -5,14 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { Text } from 'shared/ui';
 
 import css from './CommentList.m.css';
-import { IComment } from '../../model/types/comment.types';
+import { CommentListProps } from './CommentList.types';
 import { CommentCard } from '../CommentCard/CommentCard';
-
-interface CommentListProps {
-  className?: string;
-  comments?: IComment[];
-  isLoading?: boolean;
-}
 
 export const CommentList = memo(function CommentList(props: CommentListProps) {
   const { className, comments, isLoading } = props;

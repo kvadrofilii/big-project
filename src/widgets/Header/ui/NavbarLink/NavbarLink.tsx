@@ -6,11 +6,7 @@ import { AppRoutes } from 'shared/config';
 import { useAppSelector } from 'shared/lib';
 import { AppLink } from 'shared/ui';
 
-import { NavbarLinksType } from '../../model/links';
-
-interface NavbarLinkProps {
-  item: NavbarLinksType;
-}
+import { NavbarLinkProps } from './NavbarLink.types';
 
 export const NavbarLink = memo(function NavbarLink({ item }: NavbarLinkProps) {
   const { t } = useTranslation();

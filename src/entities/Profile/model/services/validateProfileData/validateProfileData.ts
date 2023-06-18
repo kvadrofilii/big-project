@@ -1,6 +1,6 @@
-import { Profile, ValidateProfileError } from '../../types/profile.types';
+import { IProfile, ValidateProfileError } from '../../types/profile.types';
 
-export const validateProfileData = (profile?: Profile) => {
+export const validateProfileData = (profile?: IProfile) => {
   if (!profile) {
     return [ValidateProfileError.NO_DATA];
   }

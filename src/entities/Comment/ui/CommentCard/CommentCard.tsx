@@ -5,13 +5,7 @@ import { RoutePath } from 'shared/config';
 import { AppLink, Avatar, Skeleton, Text } from 'shared/ui';
 
 import css from './CommentCard.m.css';
-import { IComment } from '../../model/types/comment.types';
-
-interface CommentCardProps {
-  className?: string;
-  comment?: IComment;
-  isLoading?: boolean;
-}
+import { CommentCardProps } from './CommentCard.types';
 
 export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
   const { className, comment, isLoading } = props;

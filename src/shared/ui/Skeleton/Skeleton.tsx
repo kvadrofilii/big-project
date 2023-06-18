@@ -3,13 +3,7 @@ import { CSSProperties, FC } from 'react';
 import clsx from 'clsx';
 
 import css from './Skeleton.m.css';
-
-interface SkeletonProps {
-  className?: string;
-  height?: string | number;
-  width?: string | number;
-  borderRadius?: string;
-}
+import { SkeletonProps } from './Skeleton.types';
 
 export const Skeleton: FC<SkeletonProps> = (props) => {
   const { className, height, width, borderRadius } = props;

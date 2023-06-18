@@ -15,6 +15,7 @@ import {
 import { Avatar, Heading, Skeleton, Text } from 'shared/ui';
 
 import css from './ArticleDetails.m.css';
+import { ArticleDetailsProps } from './ArticleDetails.types';
 import {
   getArticleDetailsIsLoading,
   getArticleDetailsError,
@@ -26,11 +27,6 @@ import { ArticleBlock, ArticleBlockType } from '../../model/types/article.types'
 import { ArticleCodeBlock } from '../ArticleCodeBlock/ArticleCodeBlock';
 import { ArticleImageBlock } from '../ArticleImageBlock/ArticleImageBlock';
 import { ArticleTextBlock } from '../ArticleTextBlock/ArticleTextBlock';
-
-interface ArticleDetailsProps {
-  className?: string;
-  id: string;
-}
 
 const reducers: ReducersList = {
   articleDetails: articleDetailsReducer,

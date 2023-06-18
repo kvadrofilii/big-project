@@ -16,6 +16,7 @@ import {
 import { Heading } from 'shared/ui';
 
 import css from './ArticleDetailsPage.m.css';
+import { ArticleDetailsPageProps } from './ArticleDetailsPage.types';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -23,10 +24,6 @@ import {
   articleDetailsCommentsReducer,
   getArticleComments,
 } from '../../model/slices/articleDetailsComments.slice';
-
-interface ArticleDetailsPageProps {
-  className?: string;
-}
 
 const reducers: ReducersList = {
   articleDetailsComments: articleDetailsCommentsReducer,

@@ -4,10 +4,7 @@ import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import css from './ArticlesPage.m.css';
-
-interface ArticlesPageProps {
-  className?: string;
-}
+import { ArticlesPageProps } from './ArticlesPage.types';
 
 const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const { className } = props;

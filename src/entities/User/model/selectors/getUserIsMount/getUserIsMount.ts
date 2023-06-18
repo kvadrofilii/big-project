@@ -1,3 +1,3 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { IStateSchema } from 'app/providers/StoreProvider';
 
-export const getUserIsMount = (state: StateSchema) => state.user?.isMount;
+export const getUserIsMount = (state: IStateSchema) => state.user?.isMount;

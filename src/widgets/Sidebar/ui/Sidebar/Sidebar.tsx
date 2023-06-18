@@ -5,10 +5,7 @@ import { IconButton } from 'shared/ui';
 import CaretLeft from 'widgets/assets/icons/caret-left-fill.svg';
 
 import css from './Sidebar.m.css';
-
-interface SidebarProps {
-  className?: string;
-}
+import { SidebarProps } from './Sidebar.types';
 
 export const Sidebar = memo(function Sidebar({ className }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(true);

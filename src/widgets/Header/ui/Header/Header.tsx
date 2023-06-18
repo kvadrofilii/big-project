@@ -8,12 +8,9 @@ import { useAppDispatch, useAppSelector } from 'shared/lib';
 import { Button, LangSelect, ThemeSwitcher } from 'shared/ui';
 
 import css from './Header.m.css';
+import { HeaderProps } from './Header.types';
 import { NavbarLinks } from '../../model/links';
 import { NavbarLink } from '../NavbarLink/NavbarLink';
-
-export interface HeaderProps {
-  className?: string;
-}
 
 export const Header = memo(function Header({ className }: HeaderProps) {
   const { t } = useTranslation();
