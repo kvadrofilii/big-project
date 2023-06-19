@@ -9,14 +9,15 @@ import { Button, LangSelect, ThemeSwitcher } from 'shared/ui';
 
 import css from './Header.m.css';
 import { HeaderProps } from './Header.types';
-import { NavbarLinks } from '../../model/links';
+import { getHeaderLinks } from '../../model/selectors/getHeaderLinks';
 import { NavbarLink } from '../NavbarLink/NavbarLink';
 
 export const Header = memo(function Header({ className }: HeaderProps) {
   const { t } = useTranslation();
+  const dispatch = useAppDispatch();
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useAppSelector(getUserAuthData);
-  const dispatch = useAppDispatch();
+  const navbarLinks = useAppSelector(getHeaderLinks);
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
@@ -31,8 +32,8 @@ export const Header = memo(function Header({ className }: HeaderProps) {
   }, [dispatch]);
 
   const linksList = useMemo(
-    () => NavbarLinks.map((item) => <NavbarLink key={item.path} item={item} />),
-    [],
+    () => navbarLinks.map((item) => <NavbarLink key={item.path} item={item} />),
+    [navbarLinks],
   );
 
   return (
