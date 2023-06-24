@@ -89,3 +89,11 @@
   user-select: none;
   color: var(--disabled-text-color);
 }
+
+/* Ellipsis */
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

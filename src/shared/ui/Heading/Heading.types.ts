@@ -22,4 +22,5 @@ export interface HeadingProps
   color?: Color;
   disabled?: boolean;
   align?: Align;
+  ellipsis?: boolean;
 }

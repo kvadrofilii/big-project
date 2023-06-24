@@ -13,6 +13,7 @@ export const Heading = memo(function Heading(props: HeadingProps) {
     variant = 'h2',
     color = 'dark',
     align = 'start',
+    ellipsis = false,
     ...rest
   } = props;
 
@@ -23,6 +24,7 @@ export const Heading = memo(function Heading(props: HeadingProps) {
       css[align],
       {
         [css.disabled]: disabled,
+        [css.ellipsis]: ellipsis,
       },
       className,
     );

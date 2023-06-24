@@ -22,4 +22,5 @@ export interface TextProps
   disabled?: boolean;
   fontSize?: FontSize;
   align?: Align;
+  ellipsis?: boolean;
 }

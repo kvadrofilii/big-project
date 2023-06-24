@@ -13,6 +13,7 @@ export const Text = memo(function Text(props: TextProps) {
     color = 'dark',
     fontSize = 'md',
     align = 'start',
+    ellipsis = false,
     ...rest
   } = props;
 
@@ -25,6 +26,7 @@ export const Text = memo(function Text(props: TextProps) {
         css[align],
         {
           [css.disabled]: disabled,
+          [css.ellipsis]: ellipsis,
         },
         className,
       )}
