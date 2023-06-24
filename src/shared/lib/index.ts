@@ -6,3 +6,4 @@ export { useAppSelector } from './hooks/useAppSelector/useAppSelector';
 export type { ReducersList } from './components/DynamicModuleLoader/DynamicReducerLoader';
 export { DynamicReducerLoader } from './components/DynamicModuleLoader/DynamicReducerLoader';
 export { useInitialEffect } from './hooks/useInitialEffect/useInitialEffect';
+export { useHover } from './hooks/useHover/useHover';
