@@ -1,6 +1,8 @@
 export { AppLink } from './AppLink/AppLink';
 export { Avatar } from './Avatar/Avatar';
 export { Button } from './Button/Button';
+export { Card } from './Card/Card';
+export { CardAction } from './CardAction/CardAction';
 export { Code } from './Code/Code';
 export { IconButton } from './IconButton/IconButton';
 export { Input } from './Input/Input';

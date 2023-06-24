@@ -1,0 +1,5 @@
+.root {
+  padding: var(--padding-m);
+  background: var(--card-bg-color);
+  border-radius: var(--border-radius);
+}
