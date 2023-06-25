@@ -2,7 +2,7 @@
 .views-wrapper,
 .footer {
   display: flex;
-  gap: var(--gap-s);
+  gap: var(--space-1);
   align-items: center;
   justify-content: space-between;
 }
@@ -13,7 +13,7 @@
 
 .grid {
   cursor: pointer;
-  width: calc(var(--padding-m) * 2 + 200px);
+  width: calc(var(--space-2) * 2 + 200px);
   transition: 0.2;
 
   & .create {
@@ -45,7 +45,7 @@
   }
 
   & .info-wrapper {
-    padding: var(--padding-s) 0 var(--padding-s);
+    padding: var(--space-1) 0 var(--space-1);
   }
 }
 
@@ -53,12 +53,12 @@
   & .card {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-s);
+    gap: var(--space-1);
   }
 
   & .header {
     display: flex;
-    gap: var(--gap-s);
+    gap: var(--space-1);
     align-items: center;
   }
 

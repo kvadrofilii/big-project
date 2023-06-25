@@ -28,18 +28,25 @@
   --footer-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 56px;
-  --padding-s: 8px;
-  --padding-m: 16px;
-  --padding-l: 24px;
-  --gap-s: 8px;
-  --gap-m: 16px;
-  --gap-l: 24px;
-  --btn-padding-s: 3px var(--padding-s);
-  --btn-padding-m: 5px var(--padding-m);
-  --btn-padding-l: 7px var(--padding-l);
+  --btn-padding-s: 3px var(--space-1);
+  --btn-padding-m: 5px var(--space-2);
+  --btn-padding-l: 7px var(--space-3);
   --icon-btn-padding-s: 5px;
   --icon-btn-padding-m: 12px;
-  --border-radius: 4px;
+  --border-radius: 8px;
+
+  /* Spacing */
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-9: 72px;
+  --space-10: 80px;
 
   /* Color */
 
