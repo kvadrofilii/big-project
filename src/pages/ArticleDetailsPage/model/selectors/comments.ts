@@ -1,6 +1,5 @@
-import { IStateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from 'app/providers/StoreProvider';
 
-export const getArticleCommentsIsLoading = (state: IStateSchema) =>
+export const getArticleCommentsIsLoading = (state: StateSchema) =>
   state.articleDetailsComments?.isLoading;
-export const getArticleCommentsErrors = (state: IStateSchema) =>
-  state.articleDetailsComments?.error;
+export const getArticleCommentsErrors = (state: StateSchema) => state.articleDetailsComments?.error;

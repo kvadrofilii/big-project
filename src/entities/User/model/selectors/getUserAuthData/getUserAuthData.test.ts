@@ -1,4 +1,4 @@
-import { IStateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from 'app/providers/StoreProvider';
 
 import { getUserAuthData } from './getUserAuthData';
 
@@ -6,14 +6,14 @@ describe('getUserAuthData', () => {
   test('Should return authData', () => {
     const authData = { id: '2', username: 'admin' };
 
-    const state: DeepPartial<IStateSchema> = {
+    const state: DeepPartial<StateSchema> = {
       user: { authData },
     };
-    expect(getUserAuthData(state as IStateSchema)).toEqual(authData);
+    expect(getUserAuthData(state as StateSchema)).toEqual(authData);
   });
 
   test('Should work with empty state', () => {
-    const state: DeepPartial<IStateSchema> = {};
-    expect(getUserAuthData(state as IStateSchema)).toEqual(undefined);
+    const state: DeepPartial<StateSchema> = {};
+    expect(getUserAuthData(state as StateSchema)).toEqual(undefined);
   });
 });

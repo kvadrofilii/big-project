@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  gap: var(--gap-m);
+}
+
+.grid {
+  flex-wrap: wrap;
+}
+
+.list {
+  flex-direction: column;
+}

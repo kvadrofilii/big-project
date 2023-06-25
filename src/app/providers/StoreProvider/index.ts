@@ -3,7 +3,7 @@ export type { AppDispatch, RootState } from './config/store';
 export { StoreProvider } from './ui/StoreProvider';
 
 export type {
-  IStateSchema,
+  StateSchema,
   StateSchemaKey,
   ReduxStoreWithManager,
   ThunkConfig,

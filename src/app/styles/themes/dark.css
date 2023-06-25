@@ -21,4 +21,7 @@ body.dark {
 
   /* Code */
   --code-bg-color: #555;
+
+  /* Card */
+  --card-bg-color: #555;
 }

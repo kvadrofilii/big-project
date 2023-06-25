@@ -3,10 +3,12 @@ import { memo } from 'react';
 import clsx from 'clsx';
 import { Heading } from 'shared/ui';
 
-import css from './ArticleImageBlock.m.css';
-import { ArticleImageBlockProps } from './ArticleImageBlock.types';
+import css from './ArticleImageBlockComponent.m.css';
+import { ArticleImageBlockComponentProps } from './ArticleImageBlockComponent.types';
 
-export const ArticleImageBlock = memo(function ArticleImageBlock(props: ArticleImageBlockProps) {
+export const ArticleImageBlockComponent = memo(function ArticleImageBlockComponent(
+  props: ArticleImageBlockComponentProps,
+) {
   const { className, block } = props;
 
   return (

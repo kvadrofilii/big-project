@@ -28,12 +28,12 @@
   --footer-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 56px;
-  --padding-s: 9px;
-  --padding-m: 15px;
-  --padding-l: 21px;
-  --gap-s: 9px;
-  --gap-m: 15px;
-  --gap-l: 21px;
+  --padding-s: 8px;
+  --padding-m: 16px;
+  --padding-l: 24px;
+  --gap-s: 8px;
+  --gap-m: 16px;
+  --gap-l: 24px;
   --btn-padding-s: 3px var(--padding-s);
   --btn-padding-m: 5px var(--padding-m);
   --btn-padding-l: 7px var(--padding-l);

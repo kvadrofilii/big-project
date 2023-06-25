@@ -23,10 +23,10 @@ import {
 } from '../../model/selectors/articleDetails';
 import { fetchArticlesById } from '../../model/services/fetchArticlesById/fetchArticlesById';
 import { articleDetailsReducer } from '../../model/slice/articleDetails.slice';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article.types';
-import { ArticleCodeBlock } from '../ArticleCodeBlock/ArticleCodeBlock';
-import { ArticleImageBlock } from '../ArticleImageBlock/ArticleImageBlock';
-import { ArticleTextBlock } from '../ArticleTextBlock/ArticleTextBlock';
+import { ArticleBlock } from '../../model/types/article.types';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 const reducers: ReducersList = {
   articleDetails: articleDetailsReducer,
@@ -34,14 +34,14 @@ const reducers: ReducersList = {
 
 const renderBlock = (block: ArticleBlock) => {
   switch (block.type) {
-    case ArticleBlockType.CODE: {
-      return <ArticleCodeBlock key={block.id} className={css.block} block={block} />;
+    case 'code': {
+      return <ArticleCodeBlockComponent key={block.id} className={css.block} block={block} />;
     }
-    case ArticleBlockType.IMAGE: {
-      return <ArticleImageBlock key={block.id} className={css.block} block={block} />;
+    case 'image': {
+      return <ArticleImageBlockComponent key={block.id} className={css.block} block={block} />;
     }
-    case ArticleBlockType.TEXT: {
-      return <ArticleTextBlock key={block.id} className={css.block} block={block} />;
+    case 'text': {
+      return <ArticleTextBlockComponent key={block.id} className={css.block} block={block} />;
     }
     default: {
       return null;

@@ -21,7 +21,7 @@ export interface IProfile {
   avatar?: string;
 }
 
-export interface IProfileSchema {
+export interface ProfileSchema {
   data?: IProfile;
   form?: IProfile;
   isLoading: boolean;

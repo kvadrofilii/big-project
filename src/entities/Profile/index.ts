@@ -1,4 +1,4 @@
-export type { IProfile, IProfileSchema } from './model/types/profile.types';
+export type { IProfile, ProfileSchema } from './model/types/profile.types';
 export { profileActions, profileReducer } from './model/slice/profile.slice';
 export { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData';
 export { ProfileCard } from './ui/ProfileCard/ProfileCard';

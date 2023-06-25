@@ -1,19 +1,19 @@
-import { IStateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from 'app/providers/StoreProvider';
 
 import { getLoginIsLoading } from './getLoginIsLoading';
 
 describe('getLoginIsLoading', () => {
   test('Should return isLoading', () => {
-    const state: DeepPartial<IStateSchema> = {
+    const state: DeepPartial<StateSchema> = {
       loginForm: {
         isLoading: true,
       },
     };
-    expect(getLoginIsLoading(state as IStateSchema)).toEqual(true);
+    expect(getLoginIsLoading(state as StateSchema)).toEqual(true);
   });
 
   test('Should work with empty state', () => {
-    const state: DeepPartial<IStateSchema> = {};
-    expect(getLoginIsLoading(state as IStateSchema)).toEqual(false);
+    const state: DeepPartial<StateSchema> = {};
+    expect(getLoginIsLoading(state as StateSchema)).toEqual(false);
   });
 });

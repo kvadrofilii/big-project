@@ -1,10 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { fetchArticlesById } from '../services/fetchArticlesById/fetchArticlesById';
-import { IArticle } from '../types/article.types';
-import { IArticleDetailsSchema } from '../types/articleDetailsSchema.types';
+import { Article, ArticleDetailsSchema } from '../types/article.types';
 
-const initialState: IArticleDetailsSchema = {
+const initialState: ArticleDetailsSchema = {
   isLoading: false,
   error: undefined,
   data: undefined,
@@ -20,7 +19,7 @@ export const articleDetailsSlice = createSlice({
         state.error = undefined;
         state.isLoading = true;
       })
-      .addCase(fetchArticlesById.fulfilled, (state, action: PayloadAction<IArticle>) => {
+      .addCase(fetchArticlesById.fulfilled, (state, action: PayloadAction<Article>) => {
         state.isLoading = false;
         state.data = action.payload;
       })

@@ -1,10 +1,10 @@
 /* eslint-disable no-param-reassign */
 import { AnyAction, combineReducers, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 
-import { IStateSchema, StateSchemaKey, ReducerManager } from './StateSchema';
+import { StateSchema, StateSchemaKey, ReducerManager } from './StateSchema';
 
 export function createReducerManager(
-  initialReducers: ReducersMapObject<IStateSchema>,
+  initialReducers: ReducersMapObject<StateSchema>,
 ): ReducerManager {
   const reducers = { ...initialReducers };
 
@@ -13,7 +13,7 @@ export function createReducerManager(
 
   return {
     getReducerMap: () => reducers,
-    reduce: (state: IStateSchema, action: AnyAction) => {
+    reduce: (state: StateSchema, action: AnyAction) => {
       if (keysToRemove.length > 0) {
         state = { ...state };
         keysToRemove.forEach((key) => {

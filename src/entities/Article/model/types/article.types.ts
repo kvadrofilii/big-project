@@ -1,46 +1,49 @@
-export enum ArticleBlockType {
-  CODE = 'CODE',
-  IMAGE = 'IMAGE',
-  TEXT = 'TEXT',
-}
+import { User } from 'entities/User';
 
-export interface IArticleBlockBase {
+type ArticleBlockType = 'code' | 'image' | 'text';
+
+type ArticleType = 'IT' | 'SCIENCE' | 'ECONOMICS';
+
+export interface ArticleBlockBase {
   id: string;
   type: ArticleBlockType;
 }
 
-export interface IArticleCodeBlock extends IArticleBlockBase {
-  type: ArticleBlockType.CODE;
+export interface ArticleCodeBlock extends ArticleBlockBase {
+  type: 'code';
   code: string;
 }
 
-export interface IArticleImageBlock extends IArticleBlockBase {
-  type: ArticleBlockType.IMAGE;
+export interface ArticleImageBlock extends ArticleBlockBase {
+  type: 'image';
   src: string;
   title: string;
 }
 
-export interface IArticleTextBlock extends IArticleBlockBase {
-  type: ArticleBlockType.TEXT;
+export interface ArticleTextBlock extends ArticleBlockBase {
+  type: 'text';
   title?: string;
   paragraphs: string[];
 }
 
-export type ArticleBlock = IArticleCodeBlock | IArticleImageBlock | IArticleTextBlock;
+export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
 
-export enum ArticleType {
-  IT = 'IT',
-  SCIENCE = 'SCIENCE',
-  ECONOMICS = 'ECONOMICS',
-}
-
-export interface IArticle {
+export interface Article {
   id: string;
   title: string;
   subtitle: string;
+  user: User;
   img: string;
   views: number;
   createdAt: string;
   type: ArticleType[];
   blocks: ArticleBlock[];
 }
+
+export interface ArticleDetailsSchema {
+  isLoading: boolean;
+  error?: string;
+  data?: Article;
+}
+
+export type ArticleView = 'list' | 'grid';
