@@ -11,7 +11,7 @@ import { LoginFormProps, FormInput } from './LoginForm.types';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
-import { loginReducer } from '../../model/slice/login.slice';
+import { loginReducer } from '../../model/slices/login.slice';
 
 const initialReducers: ReducersList = {
   loginForm: loginReducer,

@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
-import { IComment } from 'entities/Comment';
+import { Comment } from 'entities/Comment';
 
 export const fetchCommentsByArticleId = createAsyncThunk<
-  IComment[],
+  Comment[],
   string | undefined,
   ThunkConfig<string>
 >('articleDetails/fetchCommentsByArticleId', async (articleId, thunkApi) => {
@@ -14,7 +14,7 @@ export const fetchCommentsByArticleId = createAsyncThunk<
   }
 
   try {
-    const response = await extra.api.get<IComment[]>(`/comments`, {
+    const response = await extra.api.get<Comment[]>(`/comments`, {
       params: {
         articleId,
         _expand: 'user',

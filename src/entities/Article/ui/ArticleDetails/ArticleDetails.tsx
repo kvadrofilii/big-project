@@ -22,7 +22,7 @@ import {
   getArticleDetailsData,
 } from '../../model/selectors/articleDetails';
 import { fetchArticlesById } from '../../model/services/fetchArticlesById/fetchArticlesById';
-import { articleDetailsReducer } from '../../model/slice/articleDetails.slice';
+import { articleDetailsReducer } from '../../model/slices/articleDetails.slice';
 import { ArticleBlock } from '../../model/types/article.types';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';

@@ -1,8 +1,8 @@
 import { User } from 'entities/User';
 
-type ArticleBlockType = 'code' | 'image' | 'text';
+export type ArticleBlockType = 'code' | 'image' | 'text';
 
-type ArticleType = 'IT' | 'SCIENCE' | 'ECONOMICS';
+export type ArticleType = 'IT' | 'SCIENCE' | 'ECONOMICS';
 
 export interface ArticleBlockBase {
   id: string;

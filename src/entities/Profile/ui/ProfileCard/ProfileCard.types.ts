@@ -1,11 +1,11 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 
-import { IProfile } from '../../model/types/profile.types';
+import { Profile } from '../../model/types/profile.types';
 
 export interface ProfileCardProps {
   className?: string;
-  data?: IProfile;
+  data?: Profile;
   isLoading?: boolean;
   error?: string;
   readOnly?: boolean;

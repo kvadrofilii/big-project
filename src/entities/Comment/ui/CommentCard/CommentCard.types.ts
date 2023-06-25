@@ -1,7 +1,7 @@
-import { IComment } from '../../model/types/comment.types';
+import { Comment } from '../../model/types/comment.types';
 
 export interface CommentCardProps {
   className?: string;
-  comment?: IComment;
+  comment?: Comment;
   isLoading?: boolean;
 }
