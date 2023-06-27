@@ -38,7 +38,7 @@ export const Header = memo(function Header({ className }: HeaderProps) {
 
   return (
     <header data-testid="header" className={clsx(css.root, className)}>
-      <div className={css.wrapper}>{linksList}</div>
+      <nav className={css.wrapper}>{linksList}</nav>
       <div className={css.wrapper}>
         <LangSelect />
         <ThemeSwitcher />
