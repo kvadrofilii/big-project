@@ -23,7 +23,7 @@ import {
   useAppSelector,
   useInitialEffect,
 } from 'shared/lib';
-import { Text } from 'shared/ui';
+import { Page, Text } from 'shared/ui';
 
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
@@ -115,7 +115,7 @@ const ProfilePage: FC = () => {
 
   return (
     <DynamicReducerLoader reducers={reducers}>
-      <div>
+      <Page>
         <ProfilePageHeader />
         {validateErrors?.length &&
           validateErrors.map((err) => (
@@ -137,7 +137,7 @@ const ProfilePage: FC = () => {
           onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
         />
-      </div>
+      </Page>
     </DynamicReducerLoader>
   );
 };

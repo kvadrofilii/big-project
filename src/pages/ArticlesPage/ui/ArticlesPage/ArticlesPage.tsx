@@ -9,6 +9,7 @@ import {
   useAppSelector,
   useInitialEffect,
 } from 'shared/lib';
+import { Page } from 'shared/ui';
 
 import css from './ArticlesPage.m.css';
 import { ArticlesPageProps } from './ArticlesPage.types';
@@ -18,6 +19,7 @@ import {
   getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import {
   articlesPageActions,
   articlesPageReducer,
@@ -43,17 +45,25 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
     [dispatch],
   );
 
+  const onLoadNextPart = useCallback(() => {
+    dispatch(fetchNextArticlesPage());
+  }, [dispatch]);
+
   useInitialEffect(() => {
-    dispatch(fetchArticlesList());
     dispatch(articlesPageActions.initState());
+    dispatch(
+      fetchArticlesList({
+        page: 1,
+      }),
+    );
   });
 
   return (
     <DynamicReducerLoader reducers={reducers}>
-      <div className={clsx(css.root, className)}>
+      <Page className={clsx(css.root, className)} onScrollEnd={onLoadNextPart}>
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
         <ArticleList isLoading={isLoading} view={view} articles={articles} />
-      </div>
+      </Page>
     </DynamicReducerLoader>
   );
 };

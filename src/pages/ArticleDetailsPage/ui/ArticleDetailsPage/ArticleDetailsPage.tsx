@@ -14,7 +14,7 @@ import {
   useAppSelector,
   useInitialEffect,
 } from 'shared/lib';
-import { Button, Heading } from 'shared/ui';
+import { Button, Heading, Page } from 'shared/ui';
 
 import css from './ArticleDetailsPage.m.css';
 import { ArticleDetailsPageProps } from './ArticleDetailsPage.types';
@@ -60,7 +60,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
 
   return (
     <DynamicReducerLoader reducers={reducers}>
-      <div className={clsx(css.root, className)}>
+      <Page className={clsx(css.root, className)}>
         <Button variant="outlined" onClick={onBack}>
           {t('Return')}
         </Button>
@@ -68,7 +68,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
         <Heading className={css['comment-title']}>{t('Comments')}</Heading>
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={commentsIsLoading} comments={comments} />
-      </div>
+      </Page>
     </DynamicReducerLoader>
   );
 };

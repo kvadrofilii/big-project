@@ -1,9 +1,8 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { useTranslation } from 'react-i18next';
-import GridIcon from 'shared/assets/icons/grid-3x3-gap.svg';
-import ListIcon from 'shared/assets/icons/list.svg';
+import GridIcon from 'shared/assets/icons/grid-3x3-gap-fill.svg';
+import ListIcon from 'shared/assets/icons/menu.svg';
 import { IconButton } from 'shared/ui';
 
 import css from './ArticleViewSelector.m.css';
@@ -25,7 +24,6 @@ export const ArticleViewSelector = memo(function ArticleViewSelector(
   props: ArticleViewSelectorProps,
 ) {
   const { className, view, onViewClick } = props;
-  const { t } = useTranslation();
 
   const onClick = (newView: ArticleView) => () => {
     onViewClick?.(newView);

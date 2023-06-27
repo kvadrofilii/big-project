@@ -5,10 +5,6 @@
   border-radius: var(--border-radius);
 }
 
-.button {
-  color: var(--secondary-color);
-}
-
 .button.not-selected {
   color: var(--inverted-bg-color);
 }

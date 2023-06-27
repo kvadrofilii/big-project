@@ -5,15 +5,10 @@ import { routeConfig } from 'shared/config';
 import { AppRoutesProps } from 'shared/config/route/routeConfig';
 import { PageLoader } from 'widgets/PageLoader';
 
-import css from './AppRouter.m.css';
 import { RequireAuth } from './RequireAuth';
 
 const renderWithWrapper = (route: AppRoutesProps) => {
-  const element = (
-    <Suspense fallback={<PageLoader />}>
-      <div className={css.root}>{route.element}</div>
-    </Suspense>
-  );
+  const element = <Suspense fallback={<PageLoader />}>{route.element}</Suspense>;
 
   return (
     <Route

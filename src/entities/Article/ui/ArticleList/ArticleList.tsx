@@ -16,10 +16,6 @@ const getSkeletons = (view: ArticleView) =>
 export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
   const { className, articles, isLoading, view = 'list' } = props;
 
-  if (isLoading) {
-    return <div className={clsx(css.root, css[view], className)}>{getSkeletons(view)}</div>;
-  }
-
   const renderArticle = (article: Article) => (
     <ArticleListItem key={article.id} view={view} article={article} />
   );
@@ -27,6 +23,7 @@ export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
   return (
     <div className={clsx(css.root, css[view], className)}>
       {articles.length > 0 ? articles.map(renderArticle) : null}
+      {isLoading && getSkeletons(view)}
     </div>
   );
 });

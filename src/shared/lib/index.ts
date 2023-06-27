@@ -7,3 +7,4 @@ export type { ReducersList } from './components/DynamicModuleLoader/DynamicReduc
 export { DynamicReducerLoader } from './components/DynamicModuleLoader/DynamicReducerLoader';
 export { useInitialEffect } from './hooks/useInitialEffect/useInitialEffect';
 export { useHover } from './hooks/useHover/useHover';
+export { useInfiniteScroll } from './hooks/useInfiniteScroll/useInfiniteScroll';
