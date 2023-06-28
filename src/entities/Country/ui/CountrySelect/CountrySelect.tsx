@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui';
 
 import { CountrySelectProps } from './CountrySelect.types';
-import { Country } from '../../model/types/country';
+import { Country } from '../../model/types/country.types';
 
 export const CountrySelect = memo(function CountrySelect(props: CountrySelectProps) {
   const { className, value, onChange, disabled } = props;

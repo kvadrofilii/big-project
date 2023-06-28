@@ -1,4 +1,4 @@
-import { Currency } from '../../model/types/currency';
+import { Currency } from '../../model/types/currency.types';
 
 export interface CurrencySelectProps {
   className?: string;

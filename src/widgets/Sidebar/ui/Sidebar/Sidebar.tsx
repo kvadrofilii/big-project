@@ -1,8 +1,8 @@
 import { memo, useState } from 'react';
 
 import clsx from 'clsx';
+import CaretLeft from 'shared/assets/icons/caret-left-fill.svg';
 import { IconButton } from 'shared/ui';
-import CaretLeft from 'widgets/assets/icons/caret-left-fill.svg';
 
 import css from './Sidebar.m.css';
 import { SidebarProps } from './Sidebar.types';

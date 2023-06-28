@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui';
 
 import { CurrencySelectProps } from './CurrencySelect.types';
-import { Currency } from '../../model/types/currency';
+import { Currency } from '../../model/types/currency.types';
 
 export const CurrencySelect = memo(function CurrencySelect(props: CurrencySelectProps) {
   const { className, value, onChange, disabled } = props;

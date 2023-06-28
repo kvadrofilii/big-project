@@ -1,5 +1,5 @@
-import { INavbarLinks } from '../../model/types/links.types';
+import { NavbarLinks } from '../../model/types/links.types';
 
 export interface NavbarLinkProps {
-  item: INavbarLinks;
+  item: NavbarLinks;
 }

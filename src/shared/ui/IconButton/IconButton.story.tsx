@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import IconChildren from 'shared/assets/icons/bandaid.svg';
+import IconArrow from 'shared/assets/icons/caret-left-fill.svg';
 
 import { IconButton } from './IconButton';
-import IconArrow from '../../../widgets/assets/icons/caret-left-fill.svg';
-import IconChildren from '../../assets/icons/bandaid.svg';
 
 export default {
   title: 'shared/IconButton',
