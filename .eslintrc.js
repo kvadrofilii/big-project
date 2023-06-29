@@ -72,6 +72,8 @@ module.exports = {
     'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
     // Разрешаем использовать глобальное объявление типов
     'no-undef': 'off',
+    // Разрешает использовать висячие символы в переменных (_)
+    'no-underscore-dangle': 'off',
     'import/prefer-default-export': 'off',
     'import/no-named-as-default': 'off',
     'import/no-extraneous-dependencies': 'off',
