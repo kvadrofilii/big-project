@@ -55,21 +55,21 @@ export const ProfileCard = (props: ProfileCardProps) => {
           </div>
         )}
         <Input
-          value={data?.firstName || ''}
+          value={data?.firstName ?? ''}
           placeholder={t('Your-first-name')}
           className={css.input}
           readOnly={readOnly}
           onChange={onChangeFirstName}
         />
         <Input
-          value={data?.lastName || ''}
+          value={data?.lastName ?? ''}
           placeholder={t('Your-last-name')}
           className={css.input}
           readOnly={readOnly}
           onChange={onChangeLastName}
         />
         <Input
-          value={data?.age || ''}
+          value={data?.age ?? ''}
           placeholder={t('Your-age')}
           className={css.input}
           readOnly={readOnly}
@@ -77,21 +77,21 @@ export const ProfileCard = (props: ProfileCardProps) => {
           type="number"
         />
         <Input
-          value={data?.city || ''}
+          value={data?.city ?? ''}
           placeholder={t('Your-city')}
           className={css.input}
           readOnly={readOnly}
           onChange={onChangeCity}
         />
         <Input
-          value={data?.username || ''}
+          value={data?.username ?? ''}
           placeholder={t('Enter the user name')}
           className={css.input}
           readOnly={readOnly}
           onChange={onChangeUsername}
         />
         <Input
-          value={data?.avatar || ''}
+          value={data?.avatar ?? ''}
           placeholder={t('Enter the link to the avatar')}
           className={css.input}
           readOnly={readOnly}
