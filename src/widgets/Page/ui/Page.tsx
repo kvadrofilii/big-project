@@ -42,7 +42,7 @@ export const Page = (props: PageProps) => {
   return (
     <section ref={wrapperRef} className={clsx(css.root, className)} onScroll={onScroll}>
       {children}
-      <div ref={triggerRef} />
+      {onScrollEnd ? <div className={css.trigger} ref={triggerRef} /> : null}
     </section>
   );
 };
