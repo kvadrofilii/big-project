@@ -14,7 +14,8 @@ import {
   useAppSelector,
   useInitialEffect,
 } from 'shared/lib';
-import { Button, Heading, Page } from 'shared/ui';
+import { Button, Heading } from 'shared/ui';
+import { Page } from 'widgets/Page';
 
 import css from './ArticleDetailsPage.m.css';
 import { ArticleDetailsPageProps } from './ArticleDetailsPage.types';

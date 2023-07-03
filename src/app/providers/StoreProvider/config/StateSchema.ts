@@ -13,9 +13,11 @@ import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { ScrollSchema } from 'widgets/Page';
 
 export interface StateSchema {
   user: UserSchema;
+  scroll: ScrollSchema;
 
   // Lazy reducers
   loginForm?: LoginSchema;

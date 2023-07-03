@@ -23,7 +23,8 @@ import {
   useAppSelector,
   useInitialEffect,
 } from 'shared/lib';
-import { Page, Text } from 'shared/ui';
+import { Text } from 'shared/ui';
+import { Page } from 'widgets/Page';
 
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 

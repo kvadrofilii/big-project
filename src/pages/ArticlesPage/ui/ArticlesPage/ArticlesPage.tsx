@@ -9,7 +9,7 @@ import {
   useAppSelector,
   useInitialEffect,
 } from 'shared/lib';
-import { Page } from 'shared/ui';
+import { Page } from 'widgets/Page';
 
 import css from './ArticlesPage.m.css';
 import { ArticlesPageProps } from './ArticlesPage.types';
