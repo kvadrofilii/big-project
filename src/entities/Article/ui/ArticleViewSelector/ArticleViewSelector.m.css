@@ -1,6 +1,6 @@
 .root {
   width: 58px;
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space);
   border: 1px solid var(--inverted-bg-color);
   border-radius: var(--border-radius);
 }
