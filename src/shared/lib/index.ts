@@ -9,3 +9,4 @@ export { useInitialEffect } from './hooks/useInitialEffect/useInitialEffect';
 export { useHover } from './hooks/useHover/useHover';
 export { useInfiniteScroll } from './hooks/useInfiniteScroll/useInfiniteScroll';
 export { useThrottle } from './hooks/useThrottle/useThrottle';
+export { useDebounce } from './hooks/useDebounce/useDebounce';
