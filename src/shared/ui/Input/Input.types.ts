@@ -6,4 +6,5 @@ export interface InputProps extends HTMLInputProps {
   className?: string;
   value?: string | number;
   onChange?: (value: string) => void;
+  fullWidth?: boolean;
 }

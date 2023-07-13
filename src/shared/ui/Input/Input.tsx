@@ -6,7 +6,7 @@ import css from './Input.m.css';
 import { InputProps } from './Input.types';
 
 export const Input = memo(function Input(props: InputProps) {
-  const { className, value, onChange, ...rest } = props;
+  const { className, value, onChange, fullWidth = false, ...rest } = props;
 
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value);
@@ -15,7 +15,13 @@ export const Input = memo(function Input(props: InputProps) {
   return (
     <input
       data-testid="input"
-      className={clsx(css.root, className)}
+      className={clsx(
+        css.root,
+        {
+          [css['full-width']]: fullWidth,
+        },
+        className,
+      )}
       value={value}
       onChange={onChangeHandler}
       {...rest}

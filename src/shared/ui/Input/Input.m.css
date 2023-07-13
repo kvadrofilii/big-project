@@ -27,3 +27,10 @@
   color: var(--disabled-text-color);
   border-color: var(--disabled-text-color);
 }
+
+/* Full width */
+
+.full-width {
+  flex: 2 1 auto;
+  width: 100%;
+}
