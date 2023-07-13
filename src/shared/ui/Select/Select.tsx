@@ -5,12 +5,12 @@ import clsx from 'clsx';
 import css from './Select.m.css';
 import { SelectProps } from './Select.types';
 
-export const Select = memo(function Select(props: SelectProps) {
+export const SelectComponent = <T extends string>(props: SelectProps<T>) => {
   const { className, label, options, onChange, value, disabled } = props;
 
   const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     if (onChange) {
-      onChange(e.target.value);
+      onChange(e.target.value as T);
     }
   };
 
@@ -32,4 +32,6 @@ export const Select = memo(function Select(props: SelectProps) {
       </select>
     </div>
   );
-});
+};
+
+export const Select = memo(SelectComponent) as typeof SelectComponent;
