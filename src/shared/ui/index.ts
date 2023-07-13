@@ -14,5 +14,9 @@ export { Overlay } from './Overlay/Overlay';
 export { Portal } from './Portal/Portal';
 export { Select } from './Select/Select';
 export { Skeleton } from './Skeleton/Skeleton';
+export { Tabs } from './Tabs/Tabs';
 export { Text } from './Text/Text';
 export { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher';
+
+export type { TabItem } from './Tabs/Tabs.types';
+export type { SelectOption } from './Select/Select.types';
