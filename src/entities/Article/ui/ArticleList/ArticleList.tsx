@@ -1,6 +1,8 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
+import { useTranslation } from 'react-i18next';
+import { Text } from 'shared/ui';
 
 import css from './ArticleList.m.css';
 import { ArticleListProps } from './ArticleList.types';
@@ -15,10 +17,19 @@ const getSkeletons = (view: ArticleView) =>
 
 export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
   const { className, articles, isLoading, view = 'list' } = props;
+  const { t } = useTranslation('article');
 
   const renderArticle = (article: Article) => (
     <ArticleListItem key={article.id} view={view} article={article} />
   );
+
+  if (!isLoading && !articles.length) {
+    return (
+      <div className={clsx(css.root, css[view], className)}>
+        <Text fontSize="2xl">{t('Articles not found')}</Text>
+      </div>
+    );
+  }
 
   return (
     <div className={clsx(css.root, css[view], className)}>

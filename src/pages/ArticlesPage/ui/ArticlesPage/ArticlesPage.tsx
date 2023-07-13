@@ -1,7 +1,8 @@
 import { FC, memo, useCallback } from 'react';
 
 import clsx from 'clsx';
-import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Article';
+import { ArticleList } from 'entities/Article';
+import { useSearchParams } from 'react-router-dom';
 import {
   DynamicReducerLoader,
   ReducersList,
@@ -14,17 +15,13 @@ import { Page } from 'widgets/Page';
 import css from './ArticlesPage.m.css';
 import { ArticlesPageProps } from './ArticlesPage.types';
 import {
-  getArticlesPageError,
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
-import {
-  articlesPageActions,
-  articlesPageReducer,
-  getArticles,
-} from '../../model/slices/articlesPage.slice';
+import { articlesPageReducer, getArticles } from '../../model/slices/articlesPage.slice';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer,
@@ -36,14 +33,7 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const articles = useAppSelector(getArticles.selectAll);
   const isLoading = useAppSelector(getArticlesPageIsLoading);
   const view = useAppSelector(getArticlesPageView);
-  const error = useAppSelector(getArticlesPageError);
-
-  const onChangeView = useCallback(
-    (newView: ArticleView) => {
-      dispatch(articlesPageActions.setView(newView));
-    },
-    [dispatch],
-  );
+  const [searchParams] = useSearchParams();
 
   const onLoadNextPart = useCallback(() => {
     if (__PROJECT__ !== 'storybook') {
@@ -52,13 +42,13 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   }, [dispatch]);
 
   useInitialEffect(() => {
-    dispatch(initArticlesPage());
+    dispatch(initArticlesPage(searchParams));
   });
 
   return (
     <DynamicReducerLoader reducers={reducers}>
       <Page className={clsx(css.root, className)} onScrollEnd={onLoadNextPart}>
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
+        <ArticlesPageFilters />
         <ArticleList isLoading={isLoading} view={view} articles={articles} />
       </Page>
     </DynamicReducerLoader>

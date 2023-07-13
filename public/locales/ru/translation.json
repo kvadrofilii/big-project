@@ -38,5 +38,17 @@
   "Article": "Статья",
   "There are no comments": "Комментарии отсутствуют",
   "Enter the comment text": "Введите текст комментария",
-  "Send": "Отправить"
+  "Send": "Отправить",
+  "Sort by": "Сортировать по",
+  "Search": "Поиск",
+  "ascending order": "возрастанию",
+  "descending order": "убыванию",
+  "date of creation": "дате создания",
+  "by name": "по названию",
+  "by views": "по просмотрам",
+  "by": "по",
+  "All": "Все",
+  "IT": "АйТи",
+  "Science": "Наука",
+  "Economics": "Экономика"
 }

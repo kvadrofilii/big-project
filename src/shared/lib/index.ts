@@ -10,3 +10,4 @@ export { useHover } from './hooks/useHover/useHover';
 export { useInfiniteScroll } from './hooks/useInfiniteScroll/useInfiniteScroll';
 export { useThrottle } from './hooks/useThrottle/useThrottle';
 export { useDebounce } from './hooks/useDebounce/useDebounce';
+export { addQueryParams } from './url/addQueryParams/addQueryParams';

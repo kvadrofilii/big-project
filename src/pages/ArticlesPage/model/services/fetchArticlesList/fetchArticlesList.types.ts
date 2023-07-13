@@ -1,3 +1,3 @@
 export interface FetchArticlesListProps {
-  page?: number;
+  replace?: boolean;
 }

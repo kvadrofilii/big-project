@@ -38,5 +38,17 @@
   "Article": "Article",
   "There are no comments": "There are no comments",
   "Enter the comment text": "Enter the comment text",
-  "Send": "Send"
+  "Send": "Send",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "ascending order": "ascending order",
+  "descending order": "descending order",
+  "date of creation": "date of creation",
+  "by name": "by name",
+  "by views": "by views",
+  "by": "by",
+  "All": "All",
+  "IT": "IT",
+  "Science": "Science",
+  "Economics": "Economics"
 }

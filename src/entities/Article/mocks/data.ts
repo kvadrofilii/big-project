@@ -11,7 +11,7 @@ export const article: Article = {
     id: '1',
     username: 'admin',
   },
-  type: ['IT'],
+  type: ['it'],
   blocks: [
     {
       id: '1',

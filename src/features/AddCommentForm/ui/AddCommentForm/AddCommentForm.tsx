@@ -7,10 +7,7 @@ import { Button, Input } from 'shared/ui';
 
 import css from './AddCommentForm.m.css';
 import { AddCommentFormProps } from './AddCommentForm.types';
-import {
-  getAddCommentFormText,
-  getAddCommentFormError,
-} from '../../model/selectors/AddCommentFormSelectors';
+import { getAddCommentFormText } from '../../model/selectors/AddCommentFormSelectors';
 import {
   addCommentFormActions,
   addCommentFormReducer,
@@ -25,7 +22,6 @@ const AddCommentForm = memo(function AddCommentForm(props: AddCommentFormProps) 
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const text = useAppSelector(getAddCommentFormText);
-  const error = useAppSelector(getAddCommentFormError);
 
   const onCommentTextChange = useCallback(
     (value: string) => {

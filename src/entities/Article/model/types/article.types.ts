@@ -1,8 +1,10 @@
 import { User } from 'entities/User';
 
+export type ArticleSortField = 'views' | 'title' | 'createdAt';
+
 export type ArticleBlockType = 'code' | 'image' | 'text';
 
-export type ArticleType = 'IT' | 'SCIENCE' | 'ECONOMICS';
+export type ArticleType = 'all' | 'it' | 'science' | 'economics';
 
 export interface ArticleBlockBase {
   id: string;
