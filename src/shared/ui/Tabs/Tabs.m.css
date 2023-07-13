@@ -1,0 +1,9 @@
+.root {
+  cursor: pointer;
+  display: flex;
+  gap: var(--space);
+}
+
+.tab {
+  padding: var(--btn-padding-m);
+}
