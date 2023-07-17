@@ -26,7 +26,7 @@ export const NavbarLink = memo(function NavbarLink({ item }: NavbarLinkProps) {
   };
 
   return (
-    <AppLink to={item.path} variant="inverted">
+    <AppLink to={item.path} variant="contained">
       {routeTranslate[item.text]}
     </AppLink>
   );
