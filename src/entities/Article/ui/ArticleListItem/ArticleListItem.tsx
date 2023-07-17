@@ -1,11 +1,10 @@
-import { memo, useCallback } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import Eye from 'shared/assets/icons/eye.svg';
 import { RoutePath } from 'shared/config';
-import { Avatar, Button, Card, CardAction, Heading, Text } from 'shared/ui';
+import { AppLink, Avatar, Card, CardAction, Heading, Text } from 'shared/ui';
 
 import css from './ArticleListItem.m.css';
 import { ArticleListItemProps } from './ArticleListItem.types';
@@ -13,13 +12,8 @@ import { ArticleTextBlock } from '../../model/types/article.types';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 export const ArticleListItem = memo(function ArticleListItem(props: ArticleListItemProps) {
-  const { className, article, view } = props;
+  const { className, article, view, target } = props;
   const { t } = useTranslation('article');
-  const navigate = useNavigate();
-
-  const onOpenArticle = useCallback(() => {
-    navigate(RoutePath.article_details + article.id);
-  }, [article.id, navigate]);
 
   const types = <Text ellipsis>{article.type.join(', ')}</Text>;
   const views = (
@@ -47,9 +41,14 @@ export const ArticleListItem = memo(function ArticleListItem(props: ArticleListI
           <img src={article.img} className={css.img} alt={article.title} />
           {textBlock && <ArticleTextBlockComponent className={css.text} block={textBlock} />}
           <div className={css.footer}>
-            <Button variant="outlined" color="primary" onClick={onOpenArticle}>
+            <AppLink
+              target={target}
+              variant="outlined"
+              color="primary"
+              to={RoutePath.article_details + article.id}
+            >
               {t('Read more')}
-            </Button>
+            </AppLink>
             {views}
           </div>
         </Card>
@@ -60,7 +59,7 @@ export const ArticleListItem = memo(function ArticleListItem(props: ArticleListI
   return (
     <div className={clsx(className, css[view])}>
       <Card>
-        <CardAction to={RoutePath.article_details + article.id}>
+        <CardAction target={target} to={RoutePath.article_details + article.id}>
           <div className={css['img-wrapper']}>
             <img src={article.img} className={css.img} alt={article.title} />
             <Text className={css.create}>{article.createdAt}</Text>

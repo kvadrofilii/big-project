@@ -4,8 +4,38 @@
 @import url('themes/dark');
 
 html {
+  scrollbar-width: thin;
   font-size: 62.5%;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* Track */
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(110 110 110);
+
+    /* Handle */
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    /* not handle on */
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    /* Handle on hover */
+    background: rgb(110 110 110);
+  }
 }
+
 
 body {
   min-height: 100vh;

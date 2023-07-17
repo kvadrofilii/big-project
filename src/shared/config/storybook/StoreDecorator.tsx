@@ -5,7 +5,7 @@ import { articleDetailsReducer } from 'entities/Article/model/slices/articleDeta
 import { profileReducer } from 'entities/Profile';
 import { addCommentFormReducer } from 'features/AddCommentForm/model/slices/addCommentForm.slice';
 import { loginReducer } from 'features/AuthByUsername/model/slices/login.slice';
-import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsComments.slice';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
 import { ReducersList } from 'shared/lib';
 
 const defaultAsyncReducers: ReducersList = {
@@ -13,7 +13,7 @@ const defaultAsyncReducers: ReducersList = {
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
   addCommentForm: addCommentFormReducer,
-  articleDetailsComments: articleDetailsCommentsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
 };
 
 export const StoreDecorator =

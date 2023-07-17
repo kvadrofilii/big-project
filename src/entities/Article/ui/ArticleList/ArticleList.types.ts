@@ -1,3 +1,5 @@
+import { HTMLAttributeAnchorTarget } from 'react';
+
 import type { Article, ArticleView } from '../../model/types/article.types';
 
 export interface ArticleListProps {
@@ -5,4 +7,5 @@ export interface ArticleListProps {
   articles: Article[];
   isLoading?: boolean;
   view?: ArticleView;
+  target?: HTMLAttributeAnchorTarget;
 }

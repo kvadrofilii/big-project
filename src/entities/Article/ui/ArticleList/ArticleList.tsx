@@ -16,11 +16,11 @@ const getSkeletons = (view: ArticleView) =>
     .map((_, index) => <ArticleListItemSkeleton key={index} view={view} />);
 
 export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
-  const { className, articles, isLoading, view = 'list' } = props;
+  const { className, articles, isLoading, view = 'grid', target } = props;
   const { t } = useTranslation('article');
 
   const renderArticle = (article: Article) => (
-    <ArticleListItem key={article.id} view={view} article={article} />
+    <ArticleListItem key={article.id} view={view} article={article} target={target} />
   );
 
   if (!isLoading && !articles.length) {

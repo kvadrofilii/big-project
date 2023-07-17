@@ -5,3 +5,9 @@
 .comment-title {
   padding: 2rem 0 1rem;
 }
+
+.recommendations {
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
