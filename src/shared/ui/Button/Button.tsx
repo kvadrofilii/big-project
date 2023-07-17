@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 
 import clsx from 'clsx';
 
@@ -20,13 +20,13 @@ export const Button = memo(function Button(props: ButtonProps) {
     ...rest
   } = props;
 
-  const style = () => {
+  const style = useCallback(() => {
     if (disabled) {
       return css[`${variant}-disabled`];
     }
 
     return css[`${variant}-${color}`];
-  };
+  }, [color, disabled, variant]);
 
   return (
     <button
