@@ -22,6 +22,8 @@ export const NavbarLink = memo(function NavbarLink({ item }: NavbarLinkProps) {
     [AppRoutes.PROFILE]: t('Profile'),
     [AppRoutes.ARTICLES]: t('Articles'),
     [AppRoutes.ARTICLE_DETAILS]: t('Article'),
+    [AppRoutes.ARTICLE_CREATE]: t('Create'),
+    [AppRoutes.ARTICLE_EDIT]: t('Edit'),
     [AppRoutes.NOT_FOUND]: t('404'),
   };
 

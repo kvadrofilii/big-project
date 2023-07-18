@@ -5,8 +5,7 @@ import { ArticleDetails, ArticleList } from 'entities/Article';
 import { CommentList } from 'entities/Comment';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams } from 'react-router-dom';
-import { RoutePath } from 'shared/config';
+import { useParams } from 'react-router-dom';
 import {
   DynamicReducerLoader,
   ReducersList,
@@ -14,7 +13,7 @@ import {
   useAppSelector,
   useInitialEffect,
 } from 'shared/lib';
-import { Button, Heading } from 'shared/ui';
+import { Heading } from 'shared/ui';
 import { Page } from 'widgets/Page';
 
 import css from './ArticleDetailsPage.m.css';
@@ -28,6 +27,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 import { articleDetailsPageReducer } from '../../model/slices';
 import { getArticleRecommendations } from '../../model/slices/ArticleDetailsRecommendations.slice';
 import { getArticleComments } from '../../model/slices/articleDetailsComments.slice';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 const reducers: ReducersList = {
   articleDetailsPage: articleDetailsPageReducer,
@@ -42,11 +42,6 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const recommendations = useAppSelector(getArticleRecommendations.selectAll);
   const commentsIsLoading = useAppSelector(getArticleCommentsIsLoading);
   const recommendationsIsLoading = useAppSelector(getArticleRecommendationsIsLoading);
-  const navigate = useNavigate();
-
-  const onBack = useCallback(() => {
-    navigate(RoutePath.articles);
-  }, [navigate]);
 
   const onSendComment = useCallback(
     (text: string) => {
@@ -67,9 +62,8 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   return (
     <DynamicReducerLoader reducers={reducers}>
       <Page className={clsx(css.root, className)}>
-        <Button variant="outlined" onClick={onBack}>
-          {t('Return')}
-        </Button>
+        <ArticleDetailsPageHeader />
+
         <ArticleDetails id={id} />
         <Heading className={css['comment-title']}>{t('Recommendations')}</Heading>
         <ArticleList

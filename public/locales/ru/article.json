@@ -3,7 +3,8 @@
   "An error occurred while downloading": "Произошла ошибка при загрузке",
   "Comments": "Комментарии",
   "Read more": "Читать далее",
-  "Return": "Назад",
   "Articles not found": "Статьи не найдены",
-  "Recommendations": "Рекомендации"
+  "Recommendations": "Рекомендации",
+  "Editing an article with an id": "Редактирование статьи с id: ",
+  "Creating a new article": "Создание новой статьи"
 }

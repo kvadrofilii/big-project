@@ -3,7 +3,8 @@
   "An error occurred while downloading": "An error occurred while downloading",
   "Comments": "Comments",
   "Read more": "Read more",
-  "Return": "Return",
   "Articles not found": "Articles not found",
-  "Recommendations": "Recommendations"
+  "Recommendations": "Recommendations",
+  "Editing an article with an id": "Editing an article with an id: ",
+  "Creating a new article": "Creating a new article"
 }

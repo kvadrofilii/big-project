@@ -28,6 +28,11 @@ export const getHeaderLinks = createSelector(getUserAuthData, (userData) => {
         text: AppRoutes.ARTICLES,
         authOnly: true,
       },
+      {
+        path: RoutePath.article_create,
+        text: AppRoutes.ARTICLE_CREATE,
+        authOnly: true,
+      },
     );
   }
 

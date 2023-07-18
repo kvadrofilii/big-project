@@ -18,20 +18,6 @@
   "Logout": "Выйти",
   "Specify the currency": "Укажите валюту",
   "Specify the country": "Выберете страну",
-  "navbar-links": [
-    {
-      "id": 0,
-      "text": "Главная"
-    },
-    {
-      "id": 1,
-      "text": "О сайте"
-    },
-    {
-      "id": 2,
-      "text": "Профиль"
-    }
-  ],
   "Main": "Главная",
   "About": "О сайте",
   "Articles": "Статьи",
@@ -50,5 +36,8 @@
   "All": "Все",
   "IT": "АйТи",
   "Science": "Наука",
-  "Economics": "Экономика"
+  "Economics": "Экономика",
+  "Return": "Назад",
+  "Edit": "Редактировать",
+  "Create": "Создание"
 }

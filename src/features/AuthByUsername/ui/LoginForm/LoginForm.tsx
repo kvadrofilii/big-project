@@ -36,7 +36,6 @@ const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormPro
     if (result.meta.requestStatus === 'fulfilled') {
       onSuccess();
     }
-    console.log('form data:', data);
   };
 
   return (

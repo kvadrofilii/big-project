@@ -18,20 +18,6 @@
   "Logout": "Logout",
   "Specify the currency": "Specify the currency",
   "Specify the country": "Specify the country",
-  "navbar-links": [
-    {
-      "id": 0,
-      "text": "Main"
-    },
-    {
-      "id": 1,
-      "text": "About"
-    },
-    {
-      "id": 2,
-      "text": "Profile"
-    }
-  ],
   "Main": "Main",
   "About": "About",
   "Articles": "Articles",
@@ -50,5 +36,8 @@
   "All": "All",
   "IT": "IT",
   "Science": "Science",
-  "Economics": "Economics"
+  "Economics": "Economics",
+  "Return": "Return",
+  "Edit": "Edit",
+  "Create": "Create"
 }
