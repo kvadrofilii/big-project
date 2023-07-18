@@ -12,7 +12,7 @@ i18n
   .init({
     lng: 'ru',
     fallbackLng: 'ru',
-    debug: __IS_DEV__,
+    debug: false,
     returnNull: false,
     ns,
     backend: {
