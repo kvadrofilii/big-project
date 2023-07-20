@@ -36,8 +36,6 @@ export const Header = memo(function Header({ className }: HeaderProps) {
     [navbarLinks],
   );
 
-  console.log(linksList);
-
   return (
     <header data-testid="header" className={clsx(css.root, className)}>
       <nav className={css.wrapper}>{linksList}</nav>
