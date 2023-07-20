@@ -7,7 +7,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 import ProfilePage from './ProfilePage';
 
 export default {
-  title: 'page/ProfilePage',
+  title: 'pages/ProfilePage',
   component: ProfilePage,
 } as ComponentMeta<typeof ProfilePage>;
 
