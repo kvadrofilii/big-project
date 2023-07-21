@@ -106,13 +106,7 @@ module.exports = {
           order: 'asc',
           caseInsensitive: false,
         },
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          ['parent', 'sibling', 'index', 'object'],
-          'type',
-        ],
+        groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index', 'object'], 'type'],
         'newlines-between': 'always',
         pathGroups: [
           {
@@ -172,7 +166,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/*.story.@(ts|tsx|js|jsx|mjs|cjs)'],
+      files: ['**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)'],
       rules: {
         'storybook/hierarchy-separator': 'error',
         'storybook/default-exports': 'error',
