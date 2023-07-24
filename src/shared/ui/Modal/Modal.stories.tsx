@@ -1,16 +1,19 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Modal } from './Modal';
 
-export default {
+const meta = {
   title: 'shared/Modal',
   component: Modal,
-} as ComponentMeta<typeof Modal>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof Modal>;
 
-const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  isOpened: true,
-  children: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.`,
+export const Default: Story = {
+  args: {
+    isOpened: true,
+    children: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.`,
+  },
 };

@@ -1,13 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { ThemeSwitcher } from './ThemeSwitcher';
 
-export default {
+import type { Meta, StoryObj } from '@storybook/react';
+
+const meta = {
   title: 'shared/ThemeSwitcher',
   component: ThemeSwitcher,
-} as ComponentMeta<typeof ThemeSwitcher>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof ThemeSwitcher>;
 
-const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: Story = {
+  args: {},
+};

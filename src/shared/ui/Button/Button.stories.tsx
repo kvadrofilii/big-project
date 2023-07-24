@@ -1,101 +1,116 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from './Button';
 
-export default {
+const meta = {
   title: 'shared/Button',
   component: Button,
-} as ComponentMeta<typeof Button>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const ContainedSmall = Template.bind({});
-ContainedSmall.args = {
-  children: 'Button',
-  variant: 'contained',
-  size: 'small',
+export const ContainedSmall: Story = {
+  args: {
+    children: 'Button',
+    variant: 'contained',
+    size: 'small',
+  },
 };
 
-export const ContainedMedium = Template.bind({});
-ContainedMedium.args = {
-  children: 'Button',
-  variant: 'contained',
+export const ContainedMedium: Story = {
+  args: {
+    children: 'Button',
+    variant: 'contained',
+  },
 };
 
-export const ContainedLarge = Template.bind({});
-ContainedLarge.args = {
-  children: 'Button',
-  variant: 'contained',
-  size: 'large',
+export const ContainedLarge: Story = {
+  args: {
+    children: 'Button',
+    variant: 'contained',
+    size: 'large',
+  },
 };
 
-export const ContainedPrimary = Template.bind({});
-ContainedPrimary.args = {
-  children: 'Button',
-  variant: 'contained',
-  color: 'primary',
+export const ContainedPrimary: Story = {
+  args: {
+    children: 'Button',
+    variant: 'contained',
+    color: 'primary',
+  },
 };
 
-export const ContainedSecondary = Template.bind({});
-ContainedSecondary.args = {
-  children: 'Button',
-  variant: 'contained',
-  color: 'secondary',
+export const ContainedSecondary: Story = {
+  args: {
+    children: 'Button',
+    variant: 'contained',
+    color: 'secondary',
+  },
 };
 
-export const TextPrimary = Template.bind({});
-TextPrimary.args = {
-  children: 'Button',
-  color: 'primary',
+export const TextPrimary: Story = {
+  args: {
+    children: 'Button',
+    color: 'primary',
+  },
 };
 
-export const TextSecondary = Template.bind({});
-TextSecondary.args = {
-  children: 'Button',
-  color: 'secondary',
+export const TextSecondary: Story = {
+  args: {
+    children: 'Button',
+    color: 'secondary',
+  },
 };
 
-export const OutlinedPrimary = Template.bind({});
-OutlinedPrimary.args = {
-  children: 'Button',
-  variant: 'outlined',
-  color: 'primary',
+export const OutlinedPrimary: Story = {
+  args: {
+    children: 'Button',
+    variant: 'outlined',
+    color: 'primary',
+  },
 };
 
-export const OutlinedSecondary = Template.bind({});
-OutlinedSecondary.args = {
-  children: 'Button',
-  variant: 'outlined',
-  color: 'secondary',
+export const OutlinedSecondary: Story = {
+  args: {
+    children: 'Button',
+    variant: 'outlined',
+    color: 'secondary',
+  },
 };
 
-export const ContainedFullWidth = Template.bind({});
-ContainedFullWidth.args = {
-  children: 'Button',
-  variant: 'contained',
-  fullWidth: true,
+export const ContainedFullWidth: Story = {
+  args: {
+    children: 'Button',
+    variant: 'contained',
+    fullWidth: true,
+  },
 };
 
-export const ContainedDisabled = Template.bind({});
-ContainedDisabled.args = {
-  children: 'Button',
-  variant: 'contained',
-  color: 'primary',
-  disabled: true,
+export const ContainedDisabled: Story = {
+  args: {
+    children: 'Button',
+    variant: 'contained',
+    color: 'primary',
+    disabled: true,
+  },
 };
 
-export const TextDisabled = Template.bind({});
-TextDisabled.args = {
-  children: 'Button',
-  variant: 'text',
-  color: 'primary',
-  disabled: true,
+export const TextDisabled: Story = {
+  args: {
+    children: 'Button',
+    variant: 'text',
+    color: 'primary',
+    disabled: true,
+  },
 };
 
-export const OutlinedDisabled = Template.bind({});
-OutlinedDisabled.args = {
-  children: 'Button',
-  variant: 'outlined',
-  color: 'primary',
-  disabled: true,
+export const OutlinedDisabled: Story = {
+  args: {
+    children: 'Button',
+    variant: 'outlined',
+    color: 'primary',
+    disabled: true,
+  },
 };

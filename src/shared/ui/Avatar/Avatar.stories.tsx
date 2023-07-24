@@ -1,26 +1,27 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 import AvatarImg from '../../assets/test/storybook.png';
 
-export default {
+const meta = {
   title: 'shared/Avatar',
   component: Avatar,
-  argTypes: {
-    backgroundColor: { control: 'color' },
+  tags: ['autodocs'],
+} satisfies Meta<typeof Avatar>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    size: 150,
+    src: AvatarImg,
   },
-} as ComponentMeta<typeof Avatar>;
-
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  size: 150,
-  src: AvatarImg,
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 50,
-  src: AvatarImg,
+export const Small: Story = {
+  args: {
+    size: 50,
+    src: AvatarImg,
+  },
 };

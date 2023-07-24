@@ -6,13 +6,7 @@ import { CommentList } from 'entities/Comment';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import {
-  DynamicReducerLoader,
-  ReducersList,
-  useAppDispatch,
-  useAppSelector,
-  useInitialEffect,
-} from 'shared/lib';
+import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from 'shared/lib';
 import { Heading } from 'shared/ui';
 import { Page } from 'widgets/Page';
 
@@ -25,8 +19,8 @@ import { addCommentForArticle } from '../../model/services/addCommentForArticle/
 import { fetchArticlesRecommendations } from '../../model/services/fetchArticlesRecommendations/fetchArticlesRecommendations';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { articleDetailsPageReducer } from '../../model/slices';
-import { getArticleRecommendations } from '../../model/slices/ArticleDetailsRecommendations.slice';
 import { getArticleComments } from '../../model/slices/articleDetailsComments.slice';
+import { getArticleRecommendations } from '../../model/slices/articleDetailsRecommendation.slice';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 const reducers: ReducersList = {

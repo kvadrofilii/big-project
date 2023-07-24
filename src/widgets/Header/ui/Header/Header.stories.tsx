@@ -1,15 +1,17 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 import { Header } from './Header';
 
-export default {
+const meta = {
   title: 'widgets/Header',
   component: Header,
-} as ComponentMeta<typeof Header>;
+} satisfies Meta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
-Default.decorators = [StoreDecorator({})];
+export const Default: Story = {
+  args: {},
+  decorators: [StoreDecorator({})],
+};

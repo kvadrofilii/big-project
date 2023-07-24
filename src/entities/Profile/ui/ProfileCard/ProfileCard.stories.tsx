@@ -1,37 +1,41 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import AvatarImg from 'shared/assets/test/storybook.png';
 
 import { ProfileCard } from './ProfileCard';
 
-export default {
+const meta = {
   title: 'entities/ProfileCard',
   component: ProfileCard,
-} as ComponentMeta<typeof ProfileCard>;
+} satisfies Meta<typeof ProfileCard>;
 
-const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  data: {
-    username: 'admin',
-    age: 22,
-    country: Country.America,
-    lastName: 'Lain',
-    firstName: 'Chaisy',
-    city: 'Moscow',
-    currency: Currency.RUB,
-    avatar: AvatarImg,
+export const Default: Story = {
+  args: {
+    data: {
+      username: 'admin',
+      age: 22,
+      country: Country.America,
+      lastName: 'Lain',
+      firstName: 'Chaisy',
+      city: 'Moscow',
+      currency: Currency.RUB,
+      avatar: AvatarImg,
+    },
   },
 };
 
-export const WithError = Template.bind({});
-WithError.args = {
-  error: 'true',
+export const WithError: Story = {
+  args: {
+    error: 'true',
+  },
 };
 
-export const Loading = Template.bind({});
-Loading.args = {
-  isLoading: true,
+export const Loading: Story = {
+  args: {
+    isLoading: true,
+  },
 };

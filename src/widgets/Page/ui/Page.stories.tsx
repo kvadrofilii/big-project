@@ -1,16 +1,18 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Page } from './Page';
 
-export default {
+const meta = {
   title: 'widgets/Page',
   component: Page,
-  argTypes: {
-    backgroundColor: { control: 'color' },
+  tags: ['autodocs'],
+} satisfies Meta<typeof Page>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    children: `Story Page`,
   },
-} as ComponentMeta<typeof Page>;
-
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+};

@@ -1,16 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import ArticleEditPage from './ArticleEditPage';
 
-export default {
+const meta = {
   title: 'pages/ArticleEditPage',
   component: ArticleEditPage,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof ArticleEditPage>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof ArticleEditPage>;
 
-const Template: ComponentStory<typeof ArticleEditPage> = (args) => <ArticleEditPage {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: Story = {
+  args: {},
+};

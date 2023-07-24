@@ -1,36 +1,37 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { CommentCard } from './CommentCard';
 
-export default {
+const meta = {
   title: 'entities/CommentCard',
   component: CommentCard,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof CommentCard>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof CommentCard>;
 
-const Template: ComponentStory<typeof CommentCard> = (args) => <CommentCard {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  comment: {
-    id: '1',
-    text: 'some comment',
-    user: {
+export const Default: Story = {
+  args: {
+    comment: {
       id: '1',
-      username: 'admin',
-      avatar: 'https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg',
+      text: 'some comment',
+      user: {
+        id: '1',
+        username: 'admin',
+        avatar: 'https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg',
+      },
     },
   },
 };
 
-export const Loading = Template.bind({});
-Loading.args = {
-  comment: {
-    id: '1',
-    text: 'hello world',
-    user: { id: '1', username: 'Vasya' },
+export const Loading: Story = {
+  args: {
+    comment: {
+      id: '1',
+      text: 'hello world',
+      user: { id: '1', username: 'Vasya' },
+    },
+    isLoading: true,
   },
-  isLoading: true,
 };

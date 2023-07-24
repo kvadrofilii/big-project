@@ -1,45 +1,53 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 import { ArticleDetails } from './ArticleDetails';
 import { article } from '../../mocks/data';
 
-export default {
+const meta = {
   title: 'entities/Article/ArticleDetails',
   component: ArticleDetails,
-  argTypes: {
-    backgroundColor: { control: 'color' },
+  tags: ['autodocs'],
+} satisfies Meta<typeof ArticleDetails>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    id: '1',
   },
-} as ComponentMeta<typeof ArticleDetails>;
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        data: article,
+      },
+    }),
+  ],
+};
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />;
+export const Loading: Story = {
+  args: {
+    id: '1',
+  },
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        isLoading: true,
+      },
+    }),
+  ],
+};
 
-export const Default = Template.bind({});
-Default.args = {};
-Default.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      data: article,
-    },
-  }),
-];
-
-export const Loading = Template.bind({});
-Loading.args = {};
-Loading.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      isLoading: true,
-    },
-  }),
-];
-
-export const Error = Template.bind({});
-Error.args = {};
-Error.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      error: 'error',
-    },
-  }),
-];
+export const Error: Story = {
+  args: {
+    id: '1',
+  },
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        error: 'error',
+      },
+    }),
+  ],
+};

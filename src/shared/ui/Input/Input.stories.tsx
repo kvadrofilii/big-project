@@ -1,13 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Input } from './Input';
 
-export default {
+const meta = {
   title: 'shared/Input',
   component: Input,
-} as ComponentMeta<typeof Input>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof Input>;
 
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: Story = {
+  args: {},
+};

@@ -1,18 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader';
 
-export default {
+const meta = {
   title: 'pages/ArticleDetailsPageHeader',
   component: ArticleDetailsPageHeader,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof ArticleDetailsPageHeader>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof ArticleDetailsPageHeader>;
 
-const Template: ComponentStory<typeof ArticleDetailsPageHeader> = (args) => (
-  <ArticleDetailsPageHeader {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: Story = {
+  args: {},
+};

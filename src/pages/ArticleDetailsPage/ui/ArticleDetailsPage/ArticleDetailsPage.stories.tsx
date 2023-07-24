@@ -1,10 +1,10 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { article } from 'entities/Article/mocks/data';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 import ArticleDetailsPage from './ArticleDetailsPage';
 
-export default {
+const meta = {
   title: 'pages/ArticleDetailsPage',
   component: ArticleDetailsPage,
   parameters: {
@@ -13,21 +13,19 @@ export default {
       routeParams: { id: '1' },
     },
   },
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof ArticleDetailsPage>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof ArticleDetailsPage>;
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
-  <ArticleDetailsPage {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
-Default.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      data: article,
-    },
-  }),
-];
+export const Default: Story = {
+  args: {},
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        data: article,
+      },
+    }),
+  ],
+};

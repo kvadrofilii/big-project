@@ -1,13 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Loader } from './Loader';
 
-export default {
+const meta = {
   title: 'shared/Loader',
   component: Loader,
-} as ComponentMeta<typeof Loader>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof Loader>;
 
-const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: Story = {
+  args: {},
+};

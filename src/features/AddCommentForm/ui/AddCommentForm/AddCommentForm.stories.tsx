@@ -1,21 +1,21 @@
 import { action } from '@storybook/addon-actions';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 import AddCommentForm from './AddCommentForm';
 
-export default {
+const meta = {
   title: 'features/AddCommentForm',
   component: AddCommentForm,
-  argTypes: {
-    backgroundColor: { control: 'color' },
+  tags: ['autodocs'],
+} satisfies Meta<typeof AddCommentForm>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    onSendComment: action('onSendComment'),
   },
-} as ComponentMeta<typeof AddCommentForm>;
-
-const Template: ComponentStory<typeof AddCommentForm> = (args) => <AddCommentForm {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  onSendComment: action('onSendComment'),
+  decorators: [StoreDecorator({})],
 };
-Default.decorators = [StoreDecorator({})];

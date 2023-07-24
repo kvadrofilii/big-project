@@ -1,13 +1,15 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Sidebar } from './Sidebar';
 
-export default {
+const meta = {
   title: 'widgets/Sidebar',
   component: Sidebar,
-} as ComponentMeta<typeof Sidebar>;
+} satisfies Meta<typeof Sidebar>;
 
-const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: Story = {
+  args: {},
+};

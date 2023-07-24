@@ -1,10 +1,11 @@
-/* eslint-disable react/destructuring-assignment */import { Suspense, useEffect } from 'react';
+/* eslint-disable react/destructuring-assignment */
+import { Suspense, useEffect } from 'react';
 
-import { Story } from '@storybook/react';
+import { StoryFn, StoryContext } from '@storybook/react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'shared/config/i18n/i18n-for-test';
 
-export const TranslationDecorator = (StoryComponent: Story, context: any) => {
+export const TranslationDecorator = (StoryComponent: StoryFn, context: StoryContext) => {
   const { locale } = context.globals;
 
   useEffect(() => {

@@ -1,13 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { LangSelect } from './LangSelect';
 
-export default {
+const meta = {
   title: 'shared/LangSelect',
   component: LangSelect,
-} as ComponentMeta<typeof LangSelect>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof LangSelect>;
 
-const Template: ComponentStory<typeof LangSelect> = (args) => <LangSelect {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: Story = {
+  args: {},
+};
