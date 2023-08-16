@@ -1,6 +1,6 @@
 import { withRouter } from 'storybook-addon-react-router-v6';
 
-import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator';
+// import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator';
 import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator';

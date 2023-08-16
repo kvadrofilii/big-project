@@ -37,6 +37,7 @@ module.exports = {
     //'postcss-modules',
     'i18next',
     'testing-library',
+    'yaki-test-plugin',
   ],
   settings: {
     react: {
@@ -48,6 +49,7 @@ module.exports = {
     },
   },
   rules: {
+    'yaki-test-plugin/path-checker': 'error',
     'no-console': 'off',
     'no-plusplus': 'off',
     'prefer-object-spread': 'off',
