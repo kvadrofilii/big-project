@@ -3,9 +3,10 @@ import { useCallback, useState, memo, useMemo } from 'react';
 import clsx from 'clsx';
 import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
+import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from 'shared/lib';
-import { Button, LangSelect, ThemeSwitcher } from 'shared/ui';
+import { Button, LangSelect } from 'shared/ui';
 
 import css from './Header.m.css';
 import { HeaderProps } from './Header.types';
@@ -31,10 +32,7 @@ export const Header = memo(function Header({ className }: HeaderProps) {
     dispatch(userActions.logout());
   }, [dispatch]);
 
-  const linksList = useMemo(
-    () => navbarLinks.map((item) => <NavbarLink key={item.path} item={item} />),
-    [navbarLinks],
-  );
+  const linksList = useMemo(() => navbarLinks.map((item) => <NavbarLink key={item.path} item={item} />), [navbarLinks]);
 
   return (
     <header data-testid="header" className={clsx(css.root, className)}>
