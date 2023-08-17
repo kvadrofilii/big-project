@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
@@ -18,19 +18,9 @@ export const AppLink = memo(function AppLink(props: AppLinkProps) {
     ...rest
   } = props;
 
-  const style = useCallback(() => css[`${variant}-${color}`], [color, variant]);
-
   return (
     <Link
-      className={clsx(
-        css.root,
-        css[size],
-        {
-          [css['full-width']]: fullWidth,
-        },
-        style(),
-        className,
-      )}
+      className={clsx(css.root, css[size], fullWidth && css['full-width'], css[`${variant}-${color}`], className)}
       to={to}
       {...rest}
     >

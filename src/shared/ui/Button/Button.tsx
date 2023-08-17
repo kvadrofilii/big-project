@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo } from 'react';
 
 import clsx from 'clsx';
 
@@ -20,14 +20,6 @@ export const Button = memo(function Button(props: ButtonProps) {
     ...rest
   } = props;
 
-  const style = useCallback(() => {
-    if (disabled) {
-      return css[`${variant}-disabled`];
-    }
-
-    return css[`${variant}-${color}`];
-  }, [color, disabled, variant]);
-
   return (
     <button
       // eslint-disable-next-line react/button-has-type
@@ -35,10 +27,8 @@ export const Button = memo(function Button(props: ButtonProps) {
       className={clsx(
         css.root,
         css[size],
-        {
-          [css['full-width']]: fullWidth,
-        },
-        style(),
+        fullWidth && css['full-width'],
+        disabled ? css[`${variant}-disabled`] : css[`${variant}-${color}`],
         className,
       )}
       disabled={disabled}

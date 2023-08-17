@@ -22,15 +22,7 @@ export const IconButton = memo(function IconButton(props: IconButtonProps) {
       className={clsx(
         css.root,
         css[size],
-        {
-          [css[`${variant}-disabled`]]: disabled,
-          [css['contained-primary']]: variant === 'contained' && color === 'primary',
-          [css['contained-secondary']]: variant === 'contained' && color === 'secondary',
-          [css['clear-primary']]: variant === 'clear' && color === 'primary',
-          [css['clear-secondary']]: variant === 'clear' && color === 'secondary',
-          [css['outlined-primary']]: variant === 'outlined' && color === 'primary',
-          [css['outlined-secondary']]: variant === 'outlined' && color === 'secondary',
-        },
+        disabled ? css[`${variant}-disabled`] : css[`${variant}-${color}`],
         className,
       )}
       {...rest}
