@@ -1,18 +1,18 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export type Color = 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success';
+export type ButtonColor = 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success';
 
-export type Size = 'small' | 'medium' | 'large';
+export type ButtonSize = 'small' | 'medium' | 'large';
 
-export type Variant = 'contained' | 'text' | 'outlined';
+export type ButtonVariant = 'contained' | 'text' | 'outlined';
 
 interface CommonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  color?: Color;
+  color?: ButtonColor;
   disabled?: boolean;
   fullWidth?: boolean;
-  size?: Size;
-  variant?: Variant;
+  size?: ButtonSize;
+  variant?: ButtonVariant;
   type?: 'submit' | 'reset' | 'button';
 }
 

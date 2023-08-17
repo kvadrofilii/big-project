@@ -1,15 +1,15 @@
 import { LinkProps } from 'react-router-dom';
 
-type Color = 'primary' | 'secondary';
+type AppLinkColor = 'primary' | 'secondary';
 
-export type Variant = 'contained' | 'text' | 'outlined';
+export type AppLinkVariant = 'contained' | 'text' | 'outlined';
 
-export type Size = 'small' | 'medium' | 'large';
+export type AppLinkSize = 'small' | 'medium' | 'large';
 
 export interface AppLinkProps extends LinkProps {
   className?: string;
-  color?: Color;
-  variant?: Variant;
-  size?: Size;
+  color?: AppLinkColor;
+  variant?: AppLinkVariant;
+  size?: AppLinkSize;
   fullWidth?: boolean;
 }

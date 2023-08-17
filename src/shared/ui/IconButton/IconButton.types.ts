@@ -1,19 +1,19 @@
 import { ButtonHTMLAttributes } from 'react';
 
-export type Color = 'primary' | 'secondary';
+export type IconButtonColor = 'primary' | 'secondary';
 // | 'success'
 // | 'error'
 // | 'info'
 // | 'warning'
 
-export type Size = 'small' | 'medium' | 'large' | 'xl';
+export type IconButtonSize = 'small' | 'medium' | 'large' | 'xl';
 
-export type Variant = 'contained' | 'clear' | 'outlined';
+export type IconButtonVariant = 'contained' | 'clear' | 'outlined';
 
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  color?: Color;
+  color?: IconButtonColor;
   disabled?: boolean;
-  size?: Size;
-  variant?: Variant;
+  size?: IconButtonSize;
+  variant?: IconButtonVariant;
 }
