@@ -12,7 +12,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector, useDebounce } from 'shared/lib';
 import { SortOrder } from 'shared/types';
-import { Input } from 'shared/ui';
+import { Flex, Input } from 'shared/ui';
 
 import css from './ArticlesPageFilters.m.css';
 import { ArticlesPageFiltersProps } from './ArticlesPageFilters.types';
@@ -26,9 +26,7 @@ import {
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/articlesPage.slice';
 
-export const ArticlesPageFilters = memo(function ArticlesPageFilters(
-  props: ArticlesPageFiltersProps,
-) {
+export const ArticlesPageFilters = memo(function ArticlesPageFilters(props: ArticlesPageFiltersProps) {
   const { className } = props;
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
@@ -88,18 +86,13 @@ export const ArticlesPageFilters = memo(function ArticlesPageFilters(
   );
 
   return (
-    <div className={clsx(css.root, className)}>
-      <div className={css['sort-wrapper']}>
-        <ArticleSortSelector
-          order={order}
-          sort={sort}
-          onChangeOrder={onChangeOrder}
-          onChangeSort={onChangeSort}
-        />
+    <Flex className={clsx(css.root, className)} direction="column" gap={1} justify="between">
+      <Flex className={css.wrapper} justify="between" wrap="wrap" gap={1}>
+        <ArticleSortSelector order={order} sort={sort} onChangeOrder={onChangeOrder} onChangeSort={onChangeSort} />
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
-      </div>
+      </Flex>
       <Input placeholder={t('Search')} fullWidth value={search} onChange={onChangeSearch} />
       <ArticleTypeTabs value={type} onChangeType={onChangeType} />
-    </div>
+    </Flex>
   );
 });

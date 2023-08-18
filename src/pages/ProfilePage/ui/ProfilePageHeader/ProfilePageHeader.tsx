@@ -1,16 +1,11 @@
 import { useCallback } from 'react';
 
 import clsx from 'clsx';
-import {
-  getProfileData,
-  getProfileReadOnly,
-  profileActions,
-  updateProfileData,
-} from 'entities/Profile';
+import { getProfileData, getProfileReadOnly, profileActions, updateProfileData } from 'entities/Profile';
 import { getUserAuthData } from 'entities/User';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from 'shared/lib';
-import { Button, Heading } from 'shared/ui';
+import { Button, Flex, Heading } from 'shared/ui';
 
 import css from './ProfilePageHeader.m.css';
 import { ProfilePageHeaderProps } from './ProfilePageHeader.types';
@@ -36,10 +31,10 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <div className={clsx(css.root, className)}>
+    <Flex className={clsx(css.root, className)} justify="between">
       <Heading>{t('Profile')}</Heading>
       {canEdit && (
-        <div className={css.edit}>
+        <Flex gap={2}>
           {readOnly ? (
             <Button variant="outlined" onClick={onEdit}>
               {t('Edit')}
@@ -54,8 +49,8 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
               </Button>
             </>
           )}
-        </div>
+        </Flex>
       )}
-    </div>
+    </Flex>
   );
 };

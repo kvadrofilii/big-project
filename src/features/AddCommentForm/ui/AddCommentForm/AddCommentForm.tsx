@@ -3,15 +3,12 @@ import { memo, useCallback } from 'react';
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } from 'shared/lib';
-import { Button, Input } from 'shared/ui';
+import { Button, Flex, Input } from 'shared/ui';
 
 import css from './AddCommentForm.m.css';
 import { AddCommentFormProps } from './AddCommentForm.types';
 import { getAddCommentFormText } from '../../model/selectors/AddCommentFormSelectors';
-import {
-  addCommentFormActions,
-  addCommentFormReducer,
-} from '../../model/slices/addCommentForm.slice';
+import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentForm.slice';
 
 const reducers: ReducersList = {
   addCommentForm: addCommentFormReducer,
@@ -37,7 +34,7 @@ const AddCommentForm = memo(function AddCommentForm(props: AddCommentFormProps) 
 
   return (
     <DynamicReducerLoader reducers={reducers}>
-      <div className={clsx(css.root, className)}>
+      <Flex className={clsx(css.root, className)} gap={2} justify="between">
         <Input
           placeholder={t('Enter the comment text')}
           value={text}
@@ -47,7 +44,7 @@ const AddCommentForm = memo(function AddCommentForm(props: AddCommentFormProps) 
         <Button variant="outlined" onClick={onSendHandler}>
           {t('Send')}
         </Button>
-      </div>
+      </Flex>
     </DynamicReducerLoader>
   );
 });

@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react';
 
 import clsx from 'clsx';
-import { Card } from 'shared/ui';
+import { Card, Flex } from 'shared/ui';
 
 import css from './Tabs.m.css';
 import { TabItem, TabsProps } from './Tabs.types';
@@ -17,7 +17,7 @@ export const Tabs = memo(function Tabs(props: TabsProps) {
   );
 
   return (
-    <div className={clsx(css.root, className)}>
+    <Flex className={clsx(css.root, className)} gap={1}>
       {tabs.map((tab) => (
         <Card
           className={css.tab}
@@ -28,6 +28,6 @@ export const Tabs = memo(function Tabs(props: TabsProps) {
           {tab.content}
         </Card>
       ))}
-    </div>
+    </Flex>
   );
 });

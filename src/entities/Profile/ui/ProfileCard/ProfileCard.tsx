@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { CountrySelect } from 'entities/Country';
 import { CurrencySelect } from 'entities/Currency';
 import { useTranslation } from 'react-i18next';
-import { Avatar, Heading, Input, Loader, Text } from 'shared/ui';
+import { Avatar, Flex, Heading, Input, Loader, Text } from 'shared/ui';
 
 import css from './ProfileCard.m.css';
 import { ProfileCardProps } from './ProfileCard.types';
@@ -48,11 +48,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   return (
     <div className={clsx(css.root, className)}>
-      <div className={css.data}>
+      <Flex direction="column" gap={2} align="center">
         {data?.avatar && (
-          <div className={css['avatar-wrapper']}>
+          <Flex className={css['avatar-wrapper']} justify="center">
             <Avatar src={data?.avatar} />
-          </div>
+          </Flex>
         )}
         <Input
           value={data?.firstName ?? ''}
@@ -97,19 +97,9 @@ export const ProfileCard = (props: ProfileCardProps) => {
           readOnly={readOnly}
           onChange={onChangeAvatar}
         />
-        <CurrencySelect
-          value={data?.currency}
-          className={css.input}
-          disabled={readOnly}
-          onChange={onChangeCurrency}
-        />
-        <CountrySelect
-          value={data?.country}
-          className={css.input}
-          disabled={readOnly}
-          onChange={onChangeCountry}
-        />
-      </div>
+        <CurrencySelect value={data?.currency} className={css.input} disabled={readOnly} onChange={onChangeCurrency} />
+        <CountrySelect value={data?.country} className={css.input} disabled={readOnly} onChange={onChangeCountry} />
+      </Flex>
     </div>
   );
 };

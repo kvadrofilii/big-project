@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
 import clsx from 'clsx';
-import { Loader } from 'shared/ui';
+import { Flex, Loader } from 'shared/ui';
 
 import css from './PageLoader.m.css';
 import { PageLoaderProps } from './PageLoader.types';
 
 export const PageLoader: FC<PageLoaderProps> = ({ className }) => (
-  <div className={clsx(css.root, className)}>
+  <Flex className={clsx(css.root, className)} justify="center" grow={1}>
     <Loader />
-  </div>
+  </Flex>
 );

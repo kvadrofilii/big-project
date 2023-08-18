@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import css from './PageError.m.css';
 import { PageErrorProps } from './PageError.types';
+import { Flex } from 'shared/ui';
 
 export const PageError: FC<PageErrorProps> = ({ className }) => {
   const { t } = useTranslation();
@@ -14,11 +15,11 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
   };
 
   return (
-    <div className={clsx(css.root, className)}>
+    <Flex className={clsx(css.root, className)} direction="column" gap={2} justify="center">
       <p>{t('PageError')}</p>
       <button type="button" onClick={reloadPage}>
         {t('PageErrorBtn')}
       </button>
-    </div>
+    </Flex>
   );
 };

@@ -8,7 +8,7 @@ export const Flex = (props: FlexProps) => {
     className,
     children,
     justify = 'start',
-    align = 'center',
+    align = 'start',
     direction = 'row',
     gap,
     shrink,

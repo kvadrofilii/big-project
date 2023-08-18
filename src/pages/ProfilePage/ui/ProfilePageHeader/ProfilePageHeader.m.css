@@ -1,10 +1,3 @@
 .root {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: calc(var(--space) * 2);
-}
-
-.edit {
-  display: flex;
-  gap: calc(var(--space) * 2);
 }

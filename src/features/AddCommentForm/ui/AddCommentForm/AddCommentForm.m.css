@@ -1,12 +1,6 @@
 .root {
-  display: flex;
-  gap: calc(var(--space) * 2);
-  align-items: center;
-  justify-content: space-between;
-
   margin-bottom: calc(var(--space) * 2);
   padding: calc(var(--space) * 2);
-
   border: 1px solid var(--primary-color);
   border-radius: var(--border-radius)
 }

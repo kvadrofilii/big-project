@@ -1,17 +1,13 @@
 import { memo, useMemo } from 'react';
 
-import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 import { SortOrder } from 'shared/types';
-import { Select, SelectOption } from 'shared/ui';
+import { Flex, Select, SelectOption } from 'shared/ui';
 
-import css from './ArticleSortSelector.m.css';
 import { ArticleSortSelectorProps } from './ArticleSortSelector.types';
 import { ArticleSortField } from '../../model/types/article.types';
 
-export const ArticleSortSelector = memo(function ArticleSortSelector(
-  props: ArticleSortSelectorProps,
-) {
+export const ArticleSortSelector = memo(function ArticleSortSelector(props: ArticleSortSelectorProps) {
   const { className, sort, order, onChangeOrder, onChangeSort } = props;
   const { t } = useTranslation();
 
@@ -48,19 +44,9 @@ export const ArticleSortSelector = memo(function ArticleSortSelector(
   );
 
   return (
-    <div className={clsx(css.root, className)}>
-      <Select<ArticleSortField>
-        label={t('Sort by')}
-        options={sortFieldOptions}
-        value={sort}
-        onChange={onChangeSort}
-      />
-      <Select<SortOrder>
-        label={t('by')}
-        options={orderOptions}
-        value={order}
-        onChange={onChangeOrder}
-      />
-    </div>
+    <Flex className={className} gap={1}>
+      <Select<ArticleSortField> label={t('Sort by')} options={sortFieldOptions} value={sort} onChange={onChangeSort} />
+      <Select<SortOrder> label={t('by')} options={orderOptions} value={order} onChange={onChangeOrder} />
+    </Flex>
   );
 });

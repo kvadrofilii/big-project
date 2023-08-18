@@ -1,7 +1,5 @@
 .root {
   cursor: pointer;
-  display: flex;
-  gap: var(--space);
 }
 
 .tab {

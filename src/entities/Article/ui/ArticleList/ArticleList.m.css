@@ -1,8 +1,3 @@
-.root {
-  display: flex;
-  gap: calc(var(--space) * 2);
-}
-
 .grid {
   flex-wrap: wrap;
 }

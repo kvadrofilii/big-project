@@ -5,14 +5,8 @@
   border-radius: var(--border-radius);
 }
 
-.data {
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--space) * 2);
-}
-
 .input {
-  margin-top: 10px;
+  margin-top: var(--space);
 }
 
 .loading {
@@ -27,7 +21,5 @@
 }
 
 .avatar-wrapper {
-  display: flex;
-  justify-content: center;
   width: 100%;
 }

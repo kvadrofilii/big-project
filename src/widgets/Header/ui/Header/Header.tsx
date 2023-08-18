@@ -6,7 +6,7 @@ import { LoginModal } from 'features/AuthByUsername';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from 'shared/lib';
-import { Button, LangSelect } from 'shared/ui';
+import { Button, Flex, LangSelect } from 'shared/ui';
 
 import css from './Header.m.css';
 import { HeaderProps } from './Header.types';
@@ -37,7 +37,7 @@ export const Header = memo(function Header({ className }: HeaderProps) {
   return (
     <header data-testid="header" className={clsx(css.root, className)}>
       <nav className={css.wrapper}>{linksList}</nav>
-      <div className={css.wrapper}>
+      <Flex gap={2}>
         <LangSelect />
         <ThemeSwitcher />
         {authData ? (
@@ -52,7 +52,7 @@ export const Header = memo(function Header({ className }: HeaderProps) {
             {isAuthModal && <LoginModal isOpened={isAuthModal} onClose={onCloseModal} />}
           </>
         )}
-      </div>
+      </Flex>
     </header>
   );
 });
