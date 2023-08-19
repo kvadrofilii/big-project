@@ -14,11 +14,14 @@ export const Text = memo(function Text(props: TextProps) {
     fontSize = 'md',
     align = 'start',
     ellipsis = false,
+    variant = 'p',
     ...rest
   } = props;
 
+  const Tag = variant;
+
   return (
-    <p
+    <Tag
       className={clsx(
         css.root,
         css[fontSize],
@@ -33,6 +36,6 @@ export const Text = memo(function Text(props: TextProps) {
       {...rest}
     >
       {children}
-    </p>
+    </Tag>
   );
 });

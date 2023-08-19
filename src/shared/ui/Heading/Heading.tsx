@@ -17,55 +17,23 @@ export const Heading = memo(function Heading(props: HeadingProps) {
     ...rest
   } = props;
 
-  const styles = () =>
-    clsx(
-      css.root,
-      css[color],
-      css[align],
-      {
-        [css.disabled]: disabled,
-        [css.ellipsis]: ellipsis,
-      },
-      className,
-    );
+  const Tag = variant;
 
-  switch (variant) {
-    case 'h1':
-      return (
-        <h1 className={styles()} {...rest}>
-          {children}
-        </h1>
-      );
-    case 'h3':
-      return (
-        <h3 className={styles()} {...rest}>
-          {children}
-        </h3>
-      );
-    case 'h4':
-      return (
-        <h4 className={styles()} {...rest}>
-          {children}
-        </h4>
-      );
-    case 'h5':
-      return (
-        <h5 className={styles()} {...rest}>
-          {children}
-        </h5>
-      );
-    case 'h6':
-      return (
-        <h6 className={styles()} {...rest}>
-          {children}
-        </h6>
-      );
-    case 'h2':
-    default:
-      return (
-        <h2 className={styles()} {...rest}>
-          {children}
-        </h2>
-      );
-  }
+  return (
+    <Tag
+      className={clsx(
+        css.root,
+        css[color],
+        css[align],
+        {
+          [css.disabled]: disabled,
+          [css.ellipsis]: ellipsis,
+        },
+        className,
+      )}
+      {...rest}
+    >
+      {children}
+    </Tag>
+  );
 });
