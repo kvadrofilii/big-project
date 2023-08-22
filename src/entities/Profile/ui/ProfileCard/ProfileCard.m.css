@@ -5,10 +5,6 @@
   border-radius: var(--border-radius);
 }
 
-.input {
-  margin-top: var(--space);
-}
-
 .loading {
   display: flex;
   align-items: center;
