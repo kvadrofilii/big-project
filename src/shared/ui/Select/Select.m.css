@@ -16,7 +16,7 @@
   background: none;
   border: 1px solid var(--gray-color);
   border-radius: var(--border-radius);
-  outline: none;
+  outline: transparent;
 }
 
 .select[disabled] {
