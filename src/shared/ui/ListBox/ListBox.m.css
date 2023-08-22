@@ -1,0 +1,70 @@
+.root {
+  position: relative;
+  display: inline-block;
+}
+
+.root[disabled] {
+  color: var(--disabled-text-color);
+  border-color: var(--disabled-text-color);
+}
+
+.btn {
+  cursor: pointer;
+
+  min-width: 200px;
+  padding: var(--btn-padding-m);
+
+  font: var(--font-md);
+
+  border: 1px solid var(--gray-color);
+  border-radius: var(--border-radius);
+  outline: transparent;
+
+  &.disabled {
+    border: 1px solid var(--disabled-text-color);
+  }
+}
+
+.options {
+  position: absolute;
+  z-index: 10000;
+
+  overflow: hidden;
+
+  list-style: none;
+
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: 2px 2px 4px var(--text-color);
+}
+
+.item {
+  cursor: pointer;
+  position: relative;
+  min-width: 200px;
+  padding: var(--btn-padding-m);
+}
+
+.active {
+  background-color: blueviolet;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  user-select: none;
+  color: var(--disabled-text-color);
+}
+
+.top {
+  bottom: 100%;
+}
+
+.ok {
+  position: absolute;
+  margin-left: -11px;
+}
+
+.label {
+  color: inherit;
+}
