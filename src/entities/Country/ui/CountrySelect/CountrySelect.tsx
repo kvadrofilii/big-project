@@ -1,7 +1,7 @@
 import { memo, useCallback, useMemo } from 'react';
 
 import { useTranslation } from 'react-i18next';
-import { ListBox, Select } from 'shared/ui';
+import { ListBox } from 'shared/ui';
 
 import { CountrySelectProps } from './CountrySelect.types';
 import { Country } from '../../model/types/country.types';
@@ -28,7 +28,7 @@ export const CountrySelect = memo(function CountrySelect(props: CountrySelectPro
       value={value}
       disabled={disabled}
       onChange={onChangeHandler}
-      direction="top"
+      direction="top right"
     />
   );
 });

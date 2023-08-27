@@ -1,7 +1,7 @@
 import { memo, useCallback, useMemo } from 'react';
 
 import { useTranslation } from 'react-i18next';
-import { ListBox, Select } from 'shared/ui';
+import { ListBox } from 'shared/ui';
 
 import { CurrencySelectProps } from './CurrencySelect.types';
 import { Currency } from '../../model/types/currency.types';
@@ -28,7 +28,7 @@ export const CurrencySelect = memo(function CurrencySelect(props: CurrencySelect
       defaultValue={t('Specify the currency')}
       label={t('Specify the currency')}
       disabled={disabled}
-      direction="top"
+      direction="top right"
     />
   );
 });
