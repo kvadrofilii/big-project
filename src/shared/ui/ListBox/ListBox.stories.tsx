@@ -13,5 +13,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {},
-  decorators: [],
+  decorators: [
+    (Story) => (
+      <div style={{ padding: 100 }}>
+        <Story />
+      </div>
+    ),
+  ],
 };

@@ -11,10 +11,11 @@
 .btn {
   cursor: pointer;
 
-  min-width: 200px;
+  min-width: 60px;
   padding: var(--btn-padding-m);
 
   font: var(--font-md);
+  text-align: left;
 
   border: 1px solid var(--gray-color);
   border-radius: var(--border-radius);
@@ -40,9 +41,13 @@
 
 .item {
   cursor: pointer;
+
   position: relative;
-  min-width: 200px;
+
+  min-width: 60px;
   padding: var(--btn-padding-m);
+
+  color: inherit;
 }
 
 .active {
@@ -56,8 +61,24 @@
   color: var(--disabled-text-color);
 }
 
-.top {
+.top-right {
   bottom: 100%;
+  left: 0;
+}
+
+.top-left {
+  right: 0;
+  bottom: 100%;
+}
+
+.bottom-right {
+  top: 100%;
+  left: 0;
+}
+
+.bottom-left {
+  top: 100%;
+  right: 0;
 }
 
 .ok {

@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 
+import type { DropdownDirection } from 'shared/types';
+
 export interface ListBoxItem {
   value: string;
   content: ReactNode;
   disabled?: boolean;
 }
-
-type DropdownDirection = 'top' | 'bottom';
 
 export interface ListBoxProps {
   className?: string;

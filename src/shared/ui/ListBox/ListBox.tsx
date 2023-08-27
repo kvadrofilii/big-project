@@ -1,23 +1,27 @@
+/* eslint-disable i18next/no-literal-string */
 import { Fragment, memo } from 'react';
-import { Listbox as HListbox } from '@headlessui/react';
 
+import { Listbox as HListbox } from '@headlessui/react';
 import clsx from 'clsx';
+import { Flex } from 'shared/ui';
 
 import css from './ListBox.m.css';
 import { ListBoxProps } from './ListBox.types';
-import { Flex } from 'shared/ui';
 
 export const ListBox = memo(function ListBox(props: ListBoxProps) {
-  const { className, options, value, defaultValue, onChange, disabled, direction, label } = props;
+  const { className, options, value, defaultValue, onChange, disabled, direction = 'bottom-right', label } = props;
 
   return (
     <Flex gap={1} align="center">
       {label && <span className={css.label}>{label}</span>}
-      <HListbox as={'div'} className={clsx(css.root, className)} value={value} onChange={onChange} disabled={disabled}>
+      <HListbox as="div" className={clsx(css.root, className)} value={value} onChange={onChange} disabled={disabled}>
         <HListbox.Button className={clsx(css.btn, disabled && css.disabled)}>{value ?? defaultValue}</HListbox.Button>
         <HListbox.Options
           className={clsx(css.options, {
-            [css.top]: direction === 'top',
+            [css['top-right']]: direction === 'top right',
+            [css['top-left']]: direction === 'top left',
+            [css['bottom-right']]: direction === 'bottom right',
+            [css['bottom-left']]: direction === 'bottom left',
           })}
         >
           {options?.map((item) => (
