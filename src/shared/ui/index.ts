@@ -11,6 +11,7 @@ export { Heading } from './Heading/Heading';
 export { LangSelect } from './LangSelect/LangSelect';
 export { ListBox } from './ListBox/ListBox';
 export { Loader } from './Loader/Loader';
+export { Menu } from './Menu/Menu';
 export { Modal } from './Modal/Modal';
 export { Overlay } from './Overlay/Overlay';
 export { Portal } from './Portal/Portal';

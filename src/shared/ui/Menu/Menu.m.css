@@ -1,0 +1,78 @@
+.root {
+  position:relative;
+  z-index: 1;
+}
+
+.root[disabled] {
+  color: var(--disabled-text-color);
+  border-color: var(--disabled-text-color);
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  border: none;
+  outline: transparent;
+}
+
+.items {
+  position: absolute;
+  z-index: 10000;
+
+  overflow: hidden;
+
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: 2px 2px 4px var(--text-color);
+}
+
+.item {
+  cursor: pointer;
+
+  position: relative;
+
+  width: 100%;
+  min-width: 60px;
+  padding: var(--btn-padding-m);
+
+  font-size: var(--font-size-md);
+  color: inherit;
+  text-align: left;
+
+  background: none;
+  border: none;
+  outline: transparent;
+}
+
+.active {
+  background-color: blueviolet;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  user-select: none;
+  color: var(--disabled-text-color);
+}
+
+.top-right {
+  bottom: 100%;
+  left: 0;
+}
+
+.top-left {
+  right: 0;
+  bottom: 100%;
+}
+
+.bottom-right {
+  top: 100%;
+  left: 0;
+}
+
+.bottom-left {
+  top: 100%;
+  right: 0;
+}
