@@ -2,10 +2,10 @@ import { FC } from 'react';
 
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
+import { Flex } from 'shared/ui';
 
 import css from './PageError.m.css';
 import { PageErrorProps } from './PageError.types';
-import { Flex } from 'shared/ui';
 
 export const PageError: FC<PageErrorProps> = ({ className }) => {
   const { t } = useTranslation();
