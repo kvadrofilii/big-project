@@ -2,6 +2,7 @@ import { Fragment, memo } from 'react';
 
 import { Menu as HMenu } from '@headlessui/react';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 import css from './Menu.m.css';
 import { MenuProps } from './Menu.types';
@@ -20,15 +21,32 @@ export const Menu = memo(function Menu(props: MenuProps) {
           [css['bottom-left']]: direction === 'bottom left',
         })}
       >
-        {items.map((item) => (
-          <HMenu.Item as={Fragment} key={item.id} disabled={item.disabled}>
-            {({ active }) => (
-              <button className={clsx(css.item, active && css.active)} type="button" onClick={item.onClick}>
-                {item.content}
-              </button>
-            )}
-          </HMenu.Item>
-        ))}
+        {items.map((item) => {
+          const content = ({ active }: { active: boolean }) => (
+            <button
+              className={clsx(css.item, active && css.active)}
+              type="button"
+              onClick={item.onClick}
+              disabled={item.disabled}
+            >
+              {item.content}
+            </button>
+          );
+
+          if (item.href) {
+            return (
+              <HMenu.Item as={Link} to={item.href} key={item.id} disabled={item.disabled}>
+                {content}
+              </HMenu.Item>
+            );
+          }
+
+          return (
+            <HMenu.Item as={Fragment} key={item.id} disabled={item.disabled}>
+              {content}
+            </HMenu.Item>
+          );
+        })}
       </HMenu.Items>
     </HMenu>
   );
