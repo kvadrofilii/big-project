@@ -19,11 +19,6 @@ export const getHeaderLinks = createSelector(getUserAuthData, (userData) => {
   if (userData) {
     navbarLinks.push(
       {
-        path: RoutePath.profile + userData.id,
-        text: AppRoutes.PROFILE,
-        authOnly: true,
-      },
-      {
         path: RoutePath.articles,
         text: AppRoutes.ARTICLES,
         authOnly: true,

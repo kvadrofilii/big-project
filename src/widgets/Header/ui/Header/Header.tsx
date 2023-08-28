@@ -5,8 +5,9 @@ import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
+import { RoutePath } from 'shared/config';
 import { useAppDispatch, useAppSelector } from 'shared/lib';
-import { Button, Flex, LangSelect } from 'shared/ui';
+import { Avatar, Button, Flex, LangSelect, Menu } from 'shared/ui';
 
 import css from './Header.m.css';
 import { HeaderProps } from './Header.types';
@@ -41,9 +42,23 @@ export const Header = memo(function Header({ className }: HeaderProps) {
         <LangSelect />
         <ThemeSwitcher />
         {authData ? (
-          <Button variant="contained" onClick={onLogout}>
-            {t('Logout')}
-          </Button>
+          <Menu
+            direction="bottom left"
+            items={[
+              {
+                id: 1,
+                content: t('Profile'),
+                href: RoutePath.profile + authData.id,
+              },
+              {
+                id: 2,
+                content: t('Logout'),
+                onClick: onLogout,
+              },
+            ]}
+          >
+            <Avatar size={28} src={authData?.avatar} className={css.avatar} />
+          </Menu>
         ) : (
           <>
             <Button variant="contained" onClick={onShowModal}>

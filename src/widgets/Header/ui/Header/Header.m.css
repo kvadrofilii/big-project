@@ -16,3 +16,7 @@
   gap: 16px;
   align-items: center;
 }
+
+.avatar {
+  margin: 0;
+}
