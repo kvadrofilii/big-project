@@ -3,7 +3,8 @@ import { CSSProperties, useMemo } from 'react';
 import clsx from 'clsx';
 
 import cls from './Avatar.m.css';
-import { AvatarProps } from './Avatar.types';
+
+import type { AvatarProps } from './Avatar.types';
 
 export const Avatar = (props: AvatarProps) => {
   const { className, src, size, alt } = props;

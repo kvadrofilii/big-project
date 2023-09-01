@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { Flex } from 'shared/ui';
 
 import css from './PageError.m.css';
-import { PageErrorProps } from './PageError.types';
+
+import type { PageErrorProps } from './PageError.types';
 
 export const PageError: FC<PageErrorProps> = ({ className }) => {
   const { t } = useTranslation();

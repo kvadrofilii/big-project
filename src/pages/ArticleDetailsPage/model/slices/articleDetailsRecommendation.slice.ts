@@ -3,7 +3,8 @@ import { StateSchema } from 'app/providers/StoreProvider';
 import { Article } from 'entities/Article';
 
 import { fetchArticlesRecommendations } from '../services/fetchArticlesRecommendations/fetchArticlesRecommendations';
-import { ArticleDetailsRecommendationsSchema } from '../types/articleDetailsRecommendations.types';
+
+import type { ArticleDetailsRecommendationsSchema } from '../types/articleDetailsRecommendations.types';
 
 const recommendationsAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
@@ -28,13 +29,10 @@ const articleDetailsRecommendationsSlice = createSlice({
         state.error = undefined;
         state.isLoading = true;
       })
-      .addCase(
-        fetchArticlesRecommendations.fulfilled,
-        (state, action: PayloadAction<Article[]>) => {
-          state.isLoading = false;
-          recommendationsAdapter.setAll(state, action.payload);
-        },
-      )
+      .addCase(fetchArticlesRecommendations.fulfilled, (state, action: PayloadAction<Article[]>) => {
+        state.isLoading = false;
+        recommendationsAdapter.setAll(state, action.payload);
+      })
       .addCase(fetchArticlesRecommendations.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;

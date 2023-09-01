@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { createPortal } from 'react-dom';
 
-import { PortalProps } from './Portal.types';
+import type { PortalProps } from './Portal.types';
 
 export const Portal = ({ children }: PortalProps) => {
   const [container] = useState(() => document.createElement('div'));

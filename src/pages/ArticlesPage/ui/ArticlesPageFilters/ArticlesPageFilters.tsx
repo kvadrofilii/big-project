@@ -15,7 +15,6 @@ import { SortOrder } from 'shared/types';
 import { Flex, Input } from 'shared/ui';
 
 import css from './ArticlesPageFilters.m.css';
-import { ArticlesPageFiltersProps } from './ArticlesPageFilters.types';
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
@@ -25,6 +24,8 @@ import {
 } from '../../model/selectors/articlesPageSelectors';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/articlesPage.slice';
+
+import type { ArticlesPageFiltersProps } from './ArticlesPageFilters.types';
 
 export const ArticlesPageFilters = memo(function ArticlesPageFilters(props: ArticlesPageFiltersProps) {
   const { className } = props;

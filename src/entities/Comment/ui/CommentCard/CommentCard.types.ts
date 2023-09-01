@@ -1,4 +1,4 @@
-import { Comment } from '../../model/types/comment.types';
+import type { Comment } from '../../model/types/comment.types';
 
 export interface CommentCardProps {
   className?: string;

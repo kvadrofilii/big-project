@@ -2,7 +2,7 @@ import { createSelector } from '@reduxjs/toolkit';
 import { getUserAuthData } from 'entities/User';
 import { RoutePath, AppRoutes } from 'shared/config';
 
-import { NavbarLinks } from '../types/links.types';
+import type { NavbarLinks } from '../types/links.types';
 
 export const getHeaderLinks = createSelector(getUserAuthData, (userData) => {
   const navbarLinks: NavbarLinks[] = [

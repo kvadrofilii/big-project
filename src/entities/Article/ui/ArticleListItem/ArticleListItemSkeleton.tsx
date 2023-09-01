@@ -4,11 +4,10 @@ import clsx from 'clsx';
 import { Card, Skeleton } from 'shared/ui';
 
 import css from './ArticleListItem.m.css';
-import { ArticleListItemSkeletonProps } from './ArticleListItem.types';
 
-export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(
-  props: ArticleListItemSkeletonProps,
-) {
+import type { ArticleListItemSkeletonProps } from './ArticleListItem.types';
+
+export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(props: ArticleListItemSkeletonProps) {
   const { className, view } = props;
 
   if (view === 'list') {

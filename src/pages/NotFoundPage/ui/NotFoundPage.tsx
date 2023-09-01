@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { Page } from 'widgets/Page';
 
 import css from './NotFoundPage.m.css';
-import { NotFoundPageProps } from './NotFoundPage.types';
+
+import type { NotFoundPageProps } from './NotFoundPage.types';
 
 export const NotFoundPage: FC<NotFoundPageProps> = ({ className }) => {
   const { t } = useTranslation();

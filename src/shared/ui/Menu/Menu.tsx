@@ -5,7 +5,8 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
 import css from './Menu.m.css';
-import { MenuProps } from './Menu.types';
+
+import type { MenuProps } from './Menu.types';
 
 export const Menu = memo(function Menu(props: MenuProps) {
   const { className, items, children, disabled, direction = 'bottom right' } = props;

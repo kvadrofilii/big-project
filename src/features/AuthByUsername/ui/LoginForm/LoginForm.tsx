@@ -7,11 +7,12 @@ import { useAppDispatch, useAppSelector, DynamicReducerLoader, ReducersList } fr
 import { Button, Heading, Input, Text } from 'shared/ui';
 
 import css from './LoginForm.m.css';
-import { LoginFormProps, FormInput } from './LoginForm.types';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { loginReducer } from '../../model/slices/login.slice';
+
+import type { LoginFormProps, FormInput } from './LoginForm.types';
 
 const initialReducers: ReducersList = {
   loginForm: loginReducer,
@@ -49,13 +50,7 @@ const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormPro
           // rules={{ required: true, minLength: 2, maxLength: 20 }}
           defaultValue=""
           render={({ field: { onChange, onBlur, value } }) => (
-            <Input
-              onBlur={onBlur}
-              type="text"
-              onChange={onChange}
-              value={value}
-              placeholder={t('username')}
-            />
+            <Input onBlur={onBlur} type="text" onChange={onChange} value={value} placeholder={t('username')} />
           )}
         />
         <Controller
@@ -64,13 +59,7 @@ const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormPro
           // rules={{ required: true, minLength: 3, maxLength: 20, pattern: /^[A-Za-z]+$/i }}
           defaultValue=""
           render={({ field: { onChange, onBlur, value } }) => (
-            <Input
-              onBlur={onBlur}
-              onChange={onChange}
-              value={value}
-              type="text"
-              placeholder={t('password')}
-            />
+            <Input onBlur={onBlur} onChange={onChange} value={value} type="text" placeholder={t('password')} />
           )}
         />
         <Button variant="contained" type="submit" disabled={isLoading}>

@@ -10,9 +10,10 @@ import { useAppDispatch, useAppSelector } from 'shared/lib';
 import { Avatar, Button, Flex, LangSelect, Menu } from 'shared/ui';
 
 import css from './Header.m.css';
-import { HeaderProps } from './Header.types';
 import { getHeaderLinks } from '../../model/selectors/getHeaderLinks';
 import { NavbarLink } from '../NavbarLink/NavbarLink';
+
+import type { HeaderProps } from './Header.types';
 
 export const Header = memo(function Header({ className }: HeaderProps) {
   const { t } = useTranslation();

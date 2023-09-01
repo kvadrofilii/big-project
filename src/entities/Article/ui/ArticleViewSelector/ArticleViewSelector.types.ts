@@ -1,6 +1,5 @@
-import { ReactElement } from 'react';
-
-import { ArticleView } from '../../model/types/article.types';
+import type { ArticleView } from '../../model/types/article.types';
+import type { ReactElement } from 'react';
 
 export interface ArticleViewSelectorProps {
   className?: string;

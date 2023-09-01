@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 
 import css from './Flex.m.css';
-import { FlexProps } from './Flex.types';
+
+import type { FlexProps } from './Flex.types';
 
 export const Flex = (props: FlexProps) => {
   const {

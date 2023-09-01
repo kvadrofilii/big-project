@@ -1,7 +1,7 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 
-import { Profile } from '../../model/types/profile.types';
+import type { Profile } from '../../model/types/profile.types';
 
 export interface ProfileCardProps {
   className?: string;

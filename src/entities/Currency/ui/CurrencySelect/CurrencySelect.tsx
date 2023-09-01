@@ -3,8 +3,9 @@ import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ListBox } from 'shared/ui';
 
-import { CurrencySelectProps } from './CurrencySelect.types';
 import { Currency } from '../../model/types/currency.types';
+
+import type { CurrencySelectProps } from './CurrencySelect.types';
 
 export const CurrencySelect = memo(function CurrencySelect(props: CurrencySelectProps) {
   const { className, value, onChange, disabled } = props;

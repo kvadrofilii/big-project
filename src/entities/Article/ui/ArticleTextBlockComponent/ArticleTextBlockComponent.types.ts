@@ -1,4 +1,4 @@
-import { ArticleTextBlock } from '../../model/types/article.types';
+import type { ArticleTextBlock } from '../../model/types/article.types';
 
 export interface ArticleTextBlockComponentProps {
   className?: string;

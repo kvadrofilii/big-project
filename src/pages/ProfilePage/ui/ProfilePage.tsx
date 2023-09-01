@@ -16,13 +16,7 @@ import {
 import { ValidateProfileError } from 'entities/Profile/model/types/profile.types';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import {
-  DynamicReducerLoader,
-  ReducersList,
-  useAppDispatch,
-  useAppSelector,
-  useInitialEffect,
-} from 'shared/lib';
+import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from 'shared/lib';
 import { Text } from 'shared/ui';
 import { Page } from 'widgets/Page';
 

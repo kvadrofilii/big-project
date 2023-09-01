@@ -10,11 +10,12 @@ import { DynamicReducerLoader, ReducersList, useAppDispatch, useInitialEffect } 
 import { Page } from 'widgets/Page';
 
 import css from './ArticleDetailsPage.m.css';
-import { ArticleDetailsPageProps } from './ArticleDetailsPage.types';
 // eslint-disable-next-line max-len
 import { fetchArticlesRecommendations } from '../../model/services/fetchArticlesRecommendations/fetchArticlesRecommendations';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+
+import type { ArticleDetailsPageProps } from './ArticleDetailsPage.types';
 
 const reducers: ReducersList = {
   articleDetailsPage: articleDetailsPageReducer,

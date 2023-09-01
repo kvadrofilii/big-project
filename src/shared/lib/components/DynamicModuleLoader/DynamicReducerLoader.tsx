@@ -4,7 +4,7 @@ import { ReduxStoreWithManager, StateSchemaKey } from 'app/providers/StoreProvid
 import { useStore } from 'react-redux';
 import { useAppDispatch } from 'shared/lib';
 
-import { DynamicReducerLoaderProps } from './DynamicReducerLoader.types';
+import type { DynamicReducerLoaderProps } from './DynamicReducerLoader.types';
 
 export const DynamicReducerLoader = (props: DynamicReducerLoaderProps) => {
   const { children, reducers, removeAfterUnmount = false } = props;

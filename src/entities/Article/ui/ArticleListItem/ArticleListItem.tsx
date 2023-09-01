@@ -7,9 +7,10 @@ import { RoutePath } from 'shared/config';
 import { AppLink, Avatar, Card, CardAction, Heading, Text } from 'shared/ui';
 
 import css from './ArticleListItem.m.css';
-import { ArticleListItemProps } from './ArticleListItem.types';
-import { ArticleTextBlock } from '../../model/types/article.types';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+
+import type { ArticleListItemProps } from './ArticleListItem.types';
+import type { ArticleTextBlock } from '../../model/types/article.types';
 
 export const ArticleListItem = memo(function ArticleListItem(props: ArticleListItemProps) {
   const { className, article, view, target } = props;
@@ -41,12 +42,7 @@ export const ArticleListItem = memo(function ArticleListItem(props: ArticleListI
           <img src={article.img} className={css.img} alt={article.title} />
           {textBlock && <ArticleTextBlockComponent className={css.text} block={textBlock} />}
           <div className={css.footer}>
-            <AppLink
-              target={target}
-              variant="outlined"
-              color="primary"
-              to={RoutePath.article_details + article.id}
-            >
+            <AppLink target={target} variant="outlined" color="primary" to={RoutePath.article_details + article.id}>
               {t('Read more')}
             </AppLink>
             {views}

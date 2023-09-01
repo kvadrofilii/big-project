@@ -1,4 +1,4 @@
-import { Article } from '../model/types/article.types';
+import type { Article } from '../model/types/article.types';
 
 export const article: Article = {
   id: '1',

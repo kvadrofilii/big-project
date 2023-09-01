@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Page } from 'widgets/Page';
 
-import { ArticleEditPageProps } from './ArticleEditPage.types';
+import type { ArticleEditPageProps } from './ArticleEditPage.types';
 
 const ArticleEditPage = memo(function ArticleEditPage(props: ArticleEditPageProps) {
   const { className } = props;

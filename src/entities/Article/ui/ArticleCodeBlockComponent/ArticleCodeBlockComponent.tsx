@@ -4,7 +4,8 @@ import clsx from 'clsx';
 import { Code } from 'shared/ui';
 
 import css from './ArticleCodeBlockComponent.m.css';
-import { ArticleCodeBlockComponentProps } from './ArticleCodeBlockComponent.types';
+
+import type { ArticleCodeBlockComponentProps } from './ArticleCodeBlockComponent.types';
 
 export const ArticleCodeBlockComponent = memo(function ArticleCodeBlockComponent(
   props: ArticleCodeBlockComponentProps,

@@ -6,8 +6,9 @@ import ListIcon from 'shared/assets/icons/menu.svg';
 import { IconButton } from 'shared/ui';
 
 import css from './ArticleViewSelector.m.css';
-import { ArticleViewSelectorProps, ViewTypes } from './ArticleViewSelector.types';
-import { ArticleView } from '../../model/types/article.types';
+
+import type { ArticleViewSelectorProps, ViewTypes } from './ArticleViewSelector.types';
+import type { ArticleView } from '../../model/types/article.types';
 
 const viewTypes: ViewTypes[] = [
   {
@@ -20,9 +21,7 @@ const viewTypes: ViewTypes[] = [
   },
 ];
 
-export const ArticleViewSelector = memo(function ArticleViewSelector(
-  props: ArticleViewSelectorProps,
-) {
+export const ArticleViewSelector = memo(function ArticleViewSelector(props: ArticleViewSelectorProps) {
   const { className, view, onViewClick } = props;
 
   const onClick = (newView: ArticleView) => () => {

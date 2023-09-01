@@ -3,7 +3,8 @@ import { memo } from 'react';
 import clsx from 'clsx';
 
 import css from './Button.m.css';
-import { ButtonProps } from './Button.types';
+
+import type { ButtonProps } from './Button.types';
 
 export const Button = memo(function Button(props: ButtonProps) {
   const {

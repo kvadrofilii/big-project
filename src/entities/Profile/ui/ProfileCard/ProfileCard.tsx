@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { Avatar, Flex, Heading, Input, Loader, Text } from 'shared/ui';
 
 import css from './ProfileCard.m.css';
-import { ProfileCardProps } from './ProfileCard.types';
+
+import type { ProfileCardProps } from './ProfileCard.types';
 
 export const ProfileCard = (props: ProfileCardProps) => {
   const {

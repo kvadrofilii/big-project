@@ -6,7 +6,8 @@ import clsx from 'clsx';
 import { Flex } from 'shared/ui';
 
 import css from './ListBox.m.css';
-import { ListBoxProps } from './ListBox.types';
+
+import type { ListBoxProps } from './ListBox.types';
 
 export const ListBox = memo(function ListBox(props: ListBoxProps) {
   const { className, options, value, defaultValue, onChange, disabled, direction = 'bottom-right', label } = props;

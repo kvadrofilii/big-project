@@ -4,7 +4,8 @@ import clsx from 'clsx';
 import { Card, Flex } from 'shared/ui';
 
 import css from './Tabs.m.css';
-import { TabItem, TabsProps } from './Tabs.types';
+
+import type { TabItem, TabsProps } from './Tabs.types';
 
 export const Tabs = memo(function Tabs(props: TabsProps) {
   const { className, value, tabs, onTabClick } = props;

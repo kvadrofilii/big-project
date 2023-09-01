@@ -3,7 +3,8 @@ import { memo, ChangeEvent } from 'react';
 import clsx from 'clsx';
 
 import css from './Input.m.css';
-import { InputProps } from './Input.types';
+
+import type { InputProps } from './Input.types';
 
 export const Input = memo(function Input(props: InputProps) {
   const { className, value, onChange, fullWidth = false, ...rest } = props;

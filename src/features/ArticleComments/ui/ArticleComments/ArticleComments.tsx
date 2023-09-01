@@ -9,10 +9,11 @@ import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } fr
 import { Heading } from 'shared/ui';
 
 import css from './ArticleComments.m.css';
-import { ArticleCommentsProps } from './ArticleComments.types';
 import { useAddCommentForArticleMutation, useGetCommentsByArticleIdQuery } from '../../api/articlesCommentsApi';
 import { getAddCommentFormText } from '../../model/selectors/ArticleCommentSelectors';
 import { articleCommentsActions, articleCommentsReducer } from '../../model/slices/articleComment.slice';
+
+import type { ArticleCommentsProps } from './ArticleComments.types';
 
 const reducers: ReducersList = {
   articleComments: articleCommentsReducer,

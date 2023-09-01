@@ -6,8 +6,9 @@ import { useTranslation } from 'react-i18next';
 import { Flex, Heading } from 'shared/ui';
 
 import css from './ArticlesRecommendationsList.m.css';
-import { ArticlesRecommendationsListProps } from './ArticlesRecommendationsList.types';
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
+
+import type { ArticlesRecommendationsListProps } from './ArticlesRecommendationsList.types';
 
 export const ArticlesRecommendationsList = memo(function ArticlesRecommendationsList(
   props: ArticlesRecommendationsListProps,

@@ -3,7 +3,8 @@ import { memo } from 'react';
 import clsx from 'clsx';
 
 import css from './Text.m.css';
-import { TextProps } from './Text.types';
+
+import type { TextProps } from './Text.types';
 
 export const Text = memo(function Text(props: TextProps) {
   const {

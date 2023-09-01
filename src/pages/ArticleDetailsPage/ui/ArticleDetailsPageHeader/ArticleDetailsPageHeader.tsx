@@ -6,9 +6,10 @@ import { RoutePath } from 'shared/config';
 import { useAppSelector } from 'shared/lib';
 import { Button, Flex } from 'shared/ui';
 
-import { ArticleDetailsPageHeaderProps } from './ArticleDetailsPageHeader.types';
 import { getArticleDetailsData } from '../../../../entities/Article';
 import { getCanEditArticle } from '../../model/selectors/article';
+
+import type { ArticleDetailsPageHeaderProps } from './ArticleDetailsPageHeader.types';
 
 export const ArticleDetailsPageHeader = memo(function ArticleDetailsPageHeader(props: ArticleDetailsPageHeaderProps) {
   const { className } = props;

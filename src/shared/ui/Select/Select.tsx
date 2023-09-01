@@ -3,7 +3,8 @@ import { ChangeEvent, memo, useMemo } from 'react';
 import clsx from 'clsx';
 
 import css from './Select.m.css';
-import { SelectProps } from './Select.types';
+
+import type { SelectProps } from './Select.types';
 
 export const SelectComponent = <T extends string>(props: SelectProps<T>) => {
   const { className, label, options, onChange, value, disabled } = props;

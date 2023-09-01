@@ -1,6 +1,5 @@
-import { SortOrder } from 'shared/types';
-
-import { ArticleSortField } from '../../model/types/article.types';
+import type { ArticleSortField } from '../../model/types/article.types';
+import type { SortOrder } from 'shared/types';
 
 export interface ArticleSortSelectorProps {
   className?: string;

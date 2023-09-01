@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { Button, Flex, Input } from 'shared/ui';
 
 import css from './CommentForm.m.css';
-import { CommentFormProps } from './CommentForm.types';
+
+import type { CommentFormProps } from './CommentForm.types';
 
 export const CommentForm = memo(function CommentForm(props: CommentFormProps) {
   const { className, value, onChange, onSend } = props;

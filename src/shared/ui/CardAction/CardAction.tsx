@@ -2,7 +2,8 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
 import css from './CardAction.m.css';
-import { CardActionProps } from './CardAction.types';
+
+import type { CardActionProps } from './CardAction.types';
 
 export const CardAction = (props: CardActionProps) => {
   const { to, className, children, ...rest } = props;

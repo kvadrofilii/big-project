@@ -4,7 +4,8 @@ import clsx from 'clsx';
 import { Heading } from 'shared/ui';
 
 import css from './ArticleImageBlockComponent.m.css';
-import { ArticleImageBlockComponentProps } from './ArticleImageBlockComponent.types';
+
+import type { ArticleImageBlockComponentProps } from './ArticleImageBlockComponent.types';
 
 export const ArticleImageBlockComponent = memo(function ArticleImageBlockComponent(
   props: ArticleImageBlockComponentProps,

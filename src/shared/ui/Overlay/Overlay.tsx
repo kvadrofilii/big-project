@@ -1,7 +1,8 @@
 import { FC, useCallback, useEffect } from 'react';
 
 import css from './Overlay.m.css';
-import { OverlayProps } from './Overlay.types';
+
+import type { OverlayProps } from './Overlay.types';
 
 export const Overlay: FC<OverlayProps> = (props) => {
   const { isOpened, onClose } = props;
@@ -31,13 +32,5 @@ export const Overlay: FC<OverlayProps> = (props) => {
     };
   }, [isOpened, onKeyDown]);
 
-  return (
-    <button
-      type="button"
-      aria-label="Overlay"
-      className={css.root}
-      tabIndex={0}
-      onClick={closeHandler}
-    />
-  );
+  return <button type="button" aria-label="Overlay" className={css.root} tabIndex={0} onClick={closeHandler} />;
 };

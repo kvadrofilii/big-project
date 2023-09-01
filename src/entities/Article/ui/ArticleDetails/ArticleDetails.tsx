@@ -9,7 +9,6 @@ import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, use
 import { Avatar, Flex, Heading, Skeleton, Text } from 'shared/ui';
 
 import css from './ArticleDetails.m.css';
-import { ArticleDetailsProps } from './ArticleDetails.types';
 import {
   getArticleDetailsIsLoading,
   getArticleDetailsError,
@@ -17,10 +16,12 @@ import {
 } from '../../model/selectors/articleDetails';
 import { fetchArticlesById } from '../../model/services/fetchArticlesById/fetchArticlesById';
 import { articleDetailsReducer } from '../../model/slices/articleDetails.slice';
-import { ArticleBlock } from '../../model/types/article.types';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+
+import type { ArticleDetailsProps } from './ArticleDetails.types';
+import type { ArticleBlock } from '../../model/types/article.types';
 
 const reducers: ReducersList = {
   articleDetails: articleDetailsReducer,
