@@ -4,7 +4,6 @@ import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { articleDetailsReducer } from 'entities/Article/model/slices/articleDetails.slice';
 import { profileReducer } from 'entities/Profile';
 import { loginReducer } from 'features/AuthByUsername/model/slices/login.slice';
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slices/articlesPage.slice';
 import { ReducersList } from 'shared/lib';
 
@@ -14,7 +13,6 @@ const defaultAsyncReducers: ReducersList = {
   articleDetails: articleDetailsReducer,
   articleComments: articleDetailsReducer,
   articlesPage: articlesPageReducer,
-  articleDetailsPage: articleDetailsPageReducer,
 };
 
 export const StoreDecorator =

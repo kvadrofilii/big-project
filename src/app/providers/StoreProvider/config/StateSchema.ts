@@ -5,7 +5,6 @@ import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { ArticleCommentsSchema } from 'features/ArticleComments';
 import { LoginSchema } from 'features/AuthByUsername';
-import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { rtkApi } from 'shared/api/rtkApi';
 import { ScrollSchema } from 'widgets/Page';
@@ -20,7 +19,6 @@ export interface StateSchema {
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
   articlesPage?: ArticlesPageSchema;
-  articleDetailsPage?: ArticleDetailsPageSchema;
   articleComments?: ArticleCommentsSchema;
 }
 
