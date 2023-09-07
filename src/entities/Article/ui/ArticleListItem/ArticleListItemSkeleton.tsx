@@ -18,8 +18,8 @@ export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(pro
             <Skeleton width={30} height={30} borderRadius="50%" />
             <Skeleton width={100} height={20} />
           </div>
-          <Skeleton width={200} height={20} />
-          <Skeleton width={200} height={20} />
+          <Skeleton width="100%" height={20} />
+          <Skeleton width="100%" height={20} />
           <Skeleton className={css.img} />
           <Skeleton className={css.text} />
           <div className={css.footer}>
