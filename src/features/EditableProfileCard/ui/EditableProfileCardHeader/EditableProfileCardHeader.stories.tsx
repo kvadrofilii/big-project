@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
 const meta = {
-  title: '/EditableProfileCardHeader',
+  title: 'features/EditableProfileCard/EditableProfileCardHeader',
   component: EditableProfileCardHeader,
   tags: ['autodocs'],
 } satisfies Meta<typeof EditableProfileCardHeader>;
