@@ -43,15 +43,20 @@ export const EditableProfileCardHeader = memo(function EditableProfileCardHeader
       {canEdit && (
         <Flex gap={2}>
           {readOnly ? (
-            <Button variant="outlined" onClick={onEdit}>
+            <Button variant="outlined" onClick={onEdit} data-testid="EditableProfileCardHeader.EditButton">
               {t('Edit')}
             </Button>
           ) : (
             <>
-              <Button variant="outlined" color="error" onClick={onCancelEdit}>
+              <Button
+                variant="outlined"
+                color="error"
+                onClick={onCancelEdit}
+                data-testid="EditableProfileCardHeader.CancelButton"
+              >
                 {t('Cancel')}
               </Button>
-              <Button variant="outlined" onClick={onSave}>
+              <Button variant="outlined" onClick={onSave} data-testid="EditableProfileCardHeader.SaveButton">
                 {t('Save')}
               </Button>
             </>
