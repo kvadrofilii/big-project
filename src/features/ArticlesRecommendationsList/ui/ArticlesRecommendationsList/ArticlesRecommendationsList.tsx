@@ -17,7 +17,7 @@ export const ArticlesRecommendationsList = memo(function ArticlesRecommendations
   const { t } = useTranslation();
   const { data: articles, isLoading, error } = useArticleRecommendationsList(4);
 
-  if (isLoading || error) {
+  if (isLoading || error || !articles) {
     return null;
   }
 
