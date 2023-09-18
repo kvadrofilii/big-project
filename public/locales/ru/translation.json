@@ -39,5 +39,8 @@
   "Economics": "Экономика",
   "Return": "Назад",
   "Edit": "Редактировать",
-  "Create": "Создание"
+  "Create": "Создание",
+  "Admin panel": "Админка",
+  "You dont have access to this page": "У вас нет доступа к этой странице",
+  "Forbidden": "Запрещённый"
 }

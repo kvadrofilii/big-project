@@ -1,7 +1,7 @@
 import { useCallback, useState, memo, useMemo } from 'react';
 
 import clsx from 'clsx';
-import { getUserAuthData, userActions } from 'entities/User';
+import { getUserAuthData, isUserAdmin, isUserManager, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
@@ -21,6 +21,8 @@ export const Header = memo(function Header({ className }: HeaderProps) {
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useAppSelector(getUserAuthData);
   const navbarLinks = useAppSelector(getHeaderLinks);
+  const isAdmin = useAppSelector(isUserAdmin);
+  const isMAnager = useAppSelector(isUserManager);
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
@@ -36,6 +38,8 @@ export const Header = memo(function Header({ className }: HeaderProps) {
 
   const linksList = useMemo(() => navbarLinks.map((item) => <NavbarLink key={item.path} item={item} />), [navbarLinks]);
 
+  const isAdminPanelAvailable = isAdmin || isMAnager;
+
   return (
     <header data-testid="header" className={clsx(css.root, className)}>
       <nav className={css.wrapper}>{linksList}</nav>
@@ -46,6 +50,15 @@ export const Header = memo(function Header({ className }: HeaderProps) {
           <Menu
             direction="bottom left"
             items={[
+              ...(isAdminPanelAvailable
+                ? [
+                    {
+                      id: 0,
+                      content: t('Admin panel'),
+                      href: RoutePath.admin_panel,
+                    },
+                  ]
+                : []),
               {
                 id: 1,
                 content: t('Profile'),

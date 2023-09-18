@@ -39,5 +39,8 @@
   "Economics": "Economics",
   "Return": "Return",
   "Edit": "Edit",
-  "Create": "Create"
+  "Create": "Create",
+  "Admin panel": "Admin panel",
+  "You dont have access to this page": "You don't have access to this page",
+  "Forbidden": "Forbidden"
 }
