@@ -10,16 +10,9 @@ import type { AdminPanelPageProps } from './AdminPanelPage.types';
 
 const AdminPanelPage: FC<AdminPanelPageProps> = (props) => {
   const { className } = props;
-  const { t } = useTranslation('article');
+  const { t } = useTranslation();
 
-  return (
-    <Page className={clsx(css.root, className)}>
-      {/*<ArticleDetailsPageHeader />
-      <ArticleDetails id={id} />
-      <ArticlesRecommendationsList />
-      <ArticleComments id={id} />*/}
-    </Page>
-  );
+  return <Page className={clsx(css.root, className)}>{t('Admin panel')}</Page>;
 };
 
 export default memo(AdminPanelPage);
