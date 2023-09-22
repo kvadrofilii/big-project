@@ -6,6 +6,7 @@ import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator
 import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator';
 
 import type { Preview } from '@storybook/react';
+import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
 
 const preview: Preview = {
   parameters: {
@@ -45,7 +46,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [TranslationDecorator, withRouter, StyleDecorator, ThemeDecorator],
+  decorators: [TranslationDecorator, withRouter, StyleDecorator, ThemeDecorator, SuspenseDecorator],
 };
 
 export default preview;
