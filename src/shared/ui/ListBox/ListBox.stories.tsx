@@ -12,7 +12,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    defaultValue: '123',
+    label: 'Specify the country',
+    options: [
+      { value: '123', content: 'Первый пункт' },
+      { value: '1234', content: 'Второй пункт' },
+    ],
+  },
   decorators: [
     (Story) => (
       <div style={{ padding: 100 }}>

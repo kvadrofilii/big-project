@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { CommentCard } from './CommentCard';
 
 const meta = {
-  title: 'entities/CommentCard',
+  title: 'entities/Comment/CommentCard',
   component: CommentCard,
   tags: ['autodocs'],
 } satisfies Meta<typeof CommentCard>;

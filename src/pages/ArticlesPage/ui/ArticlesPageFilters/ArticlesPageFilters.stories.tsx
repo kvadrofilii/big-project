@@ -1,9 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ArticlesPageFilters } from './ArticlesPageFilters';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 const meta = {
-  title: 'pages/ArticlesPageFilters',
+  title: 'pages/ArticlesPage/ArticlesPageFilters',
   component: ArticlesPageFilters,
   tags: ['autodocs'],
 } satisfies Meta<typeof ArticlesPageFilters>;
@@ -13,4 +14,5 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {},
+  decorators: [StoreDecorator({})],
 };

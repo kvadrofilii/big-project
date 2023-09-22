@@ -5,6 +5,7 @@ import { Sidebar } from './Sidebar';
 const meta = {
   title: 'widgets/Sidebar',
   component: Sidebar,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Sidebar>;
 
 export default meta;

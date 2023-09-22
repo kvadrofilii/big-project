@@ -4,7 +4,7 @@ import { Menu } from './Menu';
 import { Button } from '../Button/Button';
 
 const meta = {
-  title: '/Menu',
+  title: 'shared/Menu',
   component: Menu,
   tags: ['autodocs'],
 } satisfies Meta<typeof Menu>;

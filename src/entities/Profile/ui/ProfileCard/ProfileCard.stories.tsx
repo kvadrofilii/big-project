@@ -8,6 +8,7 @@ import { ProfileCard } from './ProfileCard';
 const meta = {
   title: 'entities/ProfileCard',
   component: ProfileCard,
+  tags: ['autodocs'],
 } satisfies Meta<typeof ProfileCard>;
 
 export default meta;
