@@ -4,6 +4,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import CircularDependencyPlugin from 'circular-dependency-plugin';
 
 import { BuildOptions } from './types/config';
 
@@ -14,16 +15,27 @@ export function buildPlugins({
   apiUrl,
   project,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
+  let isDevPlugins = [];
+  if (isDev) {
+    isDevPlugins = [
+      new ReactRefreshWebpackPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new CircularDependencyPlugin({ exclude: /node_modules/, include: /src/, failOnError: true }),
+    ];
+  } else {
+    isDevPlugins = [
+      new MiniCssExtractPlugin({
+        filename: 'css/[name].[contenthash:8].css',
+        chunkFilename: 'css/[name].[contenthash:8].css',
+      }),
+    ];
+  }
+
   const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html,
     }),
     new webpack.ProgressPlugin(),
-    !isDev &&
-      new MiniCssExtractPlugin({
-        filename: 'css/[name].[contenthash:8].css',
-        chunkFilename: 'css/[name].[contenthash:8].css',
-      }),
     new CopyPlugin({
       patterns: [{ from: paths.locales, to: paths.buildLocales }],
     }),
@@ -33,8 +45,7 @@ export function buildPlugins({
       __PROJECT__: JSON.stringify(project),
     }),
     analyze && new BundleAnalyzerPlugin(),
-    isDev && new ReactRefreshWebpackPlugin(),
-    isDev && new webpack.HotModuleReplacementPlugin(),
+    ...isDevPlugins,
   ].filter(Boolean);
 
   return plugins as webpack.WebpackPluginInstance[];
