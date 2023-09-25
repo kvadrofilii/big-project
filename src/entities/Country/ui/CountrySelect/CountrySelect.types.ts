@@ -1,4 +1,4 @@
-import type { Country } from '../../model/types/country.types';
+import type { Country } from '../../model/consts/country';
 
 export interface CountrySelectProps {
   className?: string;

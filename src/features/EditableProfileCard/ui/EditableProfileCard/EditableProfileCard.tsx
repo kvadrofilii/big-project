@@ -14,10 +14,10 @@ import { getProfileReadOnly } from '../../model/selectors/getProfileReadOnly/get
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { profileActions, profileReducer } from '../../model/slices/profile.slice';
-import { ValidateProfileError } from '../../model/types/editableProfileCard.types';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
 import type { EditableProfileCardProps } from './EditableProfileCard.types';
+import { ValidateProfileError } from '../../model/consts/validateProfileError';
 
 const reducers: ReducersList = {
   profile: profileReducer,

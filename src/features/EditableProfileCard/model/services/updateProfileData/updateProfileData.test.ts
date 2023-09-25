@@ -3,7 +3,7 @@ import { Currency } from 'entities/Currency';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 
 import { updateProfileData } from './updateProfileData';
-import { ValidateProfileError } from '../../types/editableProfileCard.types';
+import { ValidateProfileError } from '../../consts/validateProfileError';
 
 const data = {
   username: 'admin',

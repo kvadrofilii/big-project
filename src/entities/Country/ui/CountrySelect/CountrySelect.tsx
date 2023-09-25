@@ -3,7 +3,7 @@ import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ListBox } from 'shared/ui';
 
-import { Country } from '../../model/types/country.types';
+import { Country } from '../../model/consts/country';
 
 import type { CountrySelectProps } from './CountrySelect.types';
 
