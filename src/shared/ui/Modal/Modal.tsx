@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
-import { Portal, Overlay } from 'shared/ui';
-
 import css from './Modal.m.css';
 
 import type { ModalProps } from './Modal.types';
+import { Portal } from '../Portal/Portal';
+import { Overlay } from '../Overlay/Overlay';
 
 export const Modal: FC<ModalProps> = (props) => {
   const { children, isOpened, onClose } = props;

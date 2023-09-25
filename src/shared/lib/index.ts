@@ -1,4 +1,3 @@
-export { ComponentRender } from './tests/ComponentRender/ComponentRender';
 export { useAppDispatch } from './hooks/useAppDispatch/useAppDispatch';
 export { useAppSelector } from './hooks/useAppSelector/useAppSelector';
 // export { useDynamicModuleLoad } from './hooks/useDynamicModuleLoad/useDynamicModuleLoad';

@@ -3,11 +3,11 @@ import { Fragment, memo } from 'react';
 
 import { Listbox as HListbox } from '@headlessui/react';
 import clsx from 'clsx';
-import { Flex } from 'shared/ui';
 
 import css from './ListBox.m.css';
 
 import type { ListBoxProps } from './ListBox.types';
+import { Flex } from '../Flex/Flex';
 
 export const ListBox = memo(function ListBox(props: ListBoxProps) {
   const { className, options, value, defaultValue, onChange, disabled, direction = 'bottom-right', label } = props;
