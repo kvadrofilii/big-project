@@ -5,6 +5,7 @@ import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 
 import { cssLoader } from '../webpack/loaders/cssLoader';
 import { svgLoader } from '../webpack/loaders/svgLoader';
+import { babelLoader } from './babelLoader';
 
 export default ({ config }: { config: webpack.Configuration }) => {
   const src = path.resolve(__dirname, '..', '..', 'src');
@@ -36,6 +37,9 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
   // Подключаю свой обработчик для стилей
   config.module?.rules?.push(cssLoader(true));
+
+  // Подключаю свой конфиг babel для storybook
+  config.module?.rules.push(babelLoader());
 
   // Подключаю глобальные переменные
   config.plugins?.push(
