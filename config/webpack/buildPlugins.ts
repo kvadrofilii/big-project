@@ -7,6 +7,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
 
 import { BuildOptions } from './types/config';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 export function buildPlugins({
   paths,
@@ -38,6 +39,15 @@ export function buildPlugins({
     new webpack.ProgressPlugin(),
     new CopyPlugin({
       patterns: [{ from: paths.locales, to: paths.buildLocales }],
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true,
+        },
+        mode: 'write-references',
+      },
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
