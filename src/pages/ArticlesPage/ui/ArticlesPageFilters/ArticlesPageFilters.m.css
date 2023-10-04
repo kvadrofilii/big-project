@@ -1,6 +1,6 @@
 .root {
   width: 100%;
-  margin-bottom: calc(var(--space)* 2);
+  margin-bottom: calc(var(--space) * 2);
 }
 
 .wrapper {

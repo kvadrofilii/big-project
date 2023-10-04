@@ -3,10 +3,10 @@ import { memo, useCallback } from 'react';
 import clsx from 'clsx';
 
 import css from './Tabs.m.css';
+import { Card } from '../Card/Card';
+import { Flex } from '../Flex/Flex';
 
 import type { TabItem, TabsProps } from './Tabs.types';
-import { Flex } from '../Flex/Flex';
-import { Card } from '../Card/Card';
 
 export const Tabs = memo(function Tabs(props: TabsProps) {
   const { className, value, tabs, onTabClick } = props;

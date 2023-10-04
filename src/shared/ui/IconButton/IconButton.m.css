@@ -112,7 +112,7 @@
   border: 1px solid var(--disabled-bg-color);
 }
 
-.contained-primary:hover ,
+.contained-primary:hover,
 .contained-secondary:hover {
   box-shadow: var(--shadow-btn-hover-color);
 }

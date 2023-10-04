@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from 'shared/lib';
 import { Text } from 'shared/ui';
 
+import { ValidateProfileError } from '../../model/consts/validateProfileError';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
@@ -17,7 +18,6 @@ import { profileActions, profileReducer } from '../../model/slices/profile.slice
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
 import type { EditableProfileCardProps } from './EditableProfileCard.types';
-import { ValidateProfileError } from '../../model/consts/validateProfileError';
 
 const reducers: ReducersList = {
   profile: profileReducer,

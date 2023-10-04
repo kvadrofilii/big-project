@@ -2,18 +2,18 @@ body.dark {
   --bg-color: #333;
   --inverted-bg-color: #e8e8ea;
   --text-color: #e8e8ea;
-  --inverted-text-color:#333;
+  --inverted-text-color: #333;
   --primary-color: #e8e8ea;
   --secondary-color: #04ff04;
   --gray-color: rgb(0 0 0 / 87%);
   --error-color: rgb(244 67 54);
   --error-bg-color: rgb(22 11 11);
-  --warning-color:rgb(255 167 38);
+  --warning-color: rgb(255 167 38);
   --warning-bg-color: rgb(25 18 7);
-  --info-color:rgb(41 182 246);
+  --info-color: rgb(41 182 246);
   --info-bg-color: rgb(7 19 24);
-  --success-color:rgb(102 187 106);
-  --success-bg-color:rgb(12 19 13);
+  --success-color: rgb(102 187 106);
+  --success-bg-color: rgb(12 19 13);
 
   /* Skeleton */
   --skeleton-color: #c0c0c0;

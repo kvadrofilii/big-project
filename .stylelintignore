@@ -1,3 +1,10 @@
 /node_modules
 /build
+/config
 /public
+/reports
+/src/**/*.ts
+/src/**/*.tsx
+/src/**/*.js
+/src/**/*.jsx
+/src/**/*.svg

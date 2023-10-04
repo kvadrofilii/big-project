@@ -1,13 +1,13 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
-import { EditableProfileCard } from './EditableProfileCard';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { Profile } from 'entities/Profile';
-import { profileReducer } from '../../model/slices/profile.slice';
 import { $api } from 'shared/api';
 import { ComponentRender } from 'shared/lib/tests/ComponentRender/ComponentRender';
+
+import { EditableProfileCard } from './EditableProfileCard';
+import { profileReducer } from '../../model/slices/profile.slice';
 
 const mockData: Profile = {
   id: '1',

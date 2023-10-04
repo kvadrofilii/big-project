@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import AvatarImg from 'shared/assets/test/storybook.png';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
+// import { Country } from 'entities/Country';
+// import { Currency } from 'entities/Currency';
+// import AvatarImg from 'shared/assets/test/storybook.png';
+// import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
+import { reactRouterParameters } from 'storybook-addon-react-router-v6';
 
 import ProfilePage from './ProfilePage';
-import { reactRouterParameters } from 'storybook-addon-react-router-v6';
 
 const meta = {
   title: 'pages/ProfilePage',
@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   decorators: [
-    //StoreDecorator({
+    // StoreDecorator({
     //  profile: {
     //    form: {
     //      username: 'admin',
@@ -39,6 +39,6 @@ export const Default: Story = {
     //      avatar: AvatarImg,
     //    },
     //  },
-    //}),
+    // }),
   ],
 };

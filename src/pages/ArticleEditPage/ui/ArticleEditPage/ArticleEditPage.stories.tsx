@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 import ArticleEditPage from './ArticleEditPage';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 const meta = {
   title: 'pages/ArticleEditPage',

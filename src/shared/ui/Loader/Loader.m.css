@@ -11,7 +11,7 @@
 }
 
 .root div::after {
-  content: " ";
+  content: ' ';
 
   position: absolute;
 

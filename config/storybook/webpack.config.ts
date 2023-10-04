@@ -3,9 +3,9 @@ import path from 'path';
 
 import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 
+import { babelLoader } from './babelLoader';
 import { cssLoader } from '../webpack/loaders/cssLoader';
 import { svgLoader } from '../webpack/loaders/svgLoader';
-import { babelLoader } from './babelLoader';
 
 export default ({ config }: { config: webpack.Configuration }) => {
   const src = path.resolve(__dirname, '..', '..', 'src');

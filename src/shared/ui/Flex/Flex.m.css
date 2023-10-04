@@ -23,15 +23,15 @@
 /* Align-items */
 
 .align-start {
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
 .align-center {
-  align-items:center;
+  align-items: center;
 }
 
 .align-end {
-  align-items:flex-end;
+  align-items: flex-end;
 }
 
 /* Flex-direction */
@@ -111,4 +111,3 @@
 .gap-6 {
   gap: calc(var(--space) * 6);
 }
-

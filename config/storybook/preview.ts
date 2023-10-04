@@ -2,11 +2,11 @@ import { withRouter } from 'storybook-addon-react-router-v6';
 
 // import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
+import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator';
 import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator';
 
 import type { Preview } from '@storybook/react';
-import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
 
 const preview: Preview = {
   parameters: {

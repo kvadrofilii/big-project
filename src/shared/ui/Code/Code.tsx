@@ -4,9 +4,9 @@ import clsx from 'clsx';
 import CopyIcon from 'shared/assets/icons/copy.svg';
 
 import css from './Code.m.css';
+import { IconButton } from '../IconButton/IconButton';
 
 import type { CodeProps } from './Code.types';
-import { IconButton } from '../IconButton/IconButton';
 
 export const Code = memo(function Code(props: CodeProps) {
   const { className, text } = props;
