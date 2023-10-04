@@ -1,17 +1,3 @@
-.root {
-  position:relative;
-  z-index: 1;
-}
-
-.root[disabled] {
-  color: var(--disabled-text-color);
-  border-color: var(--disabled-text-color);
-}
-
-.root a {
-  color: inherit;
-}
-
 .btn {
   cursor: pointer;
 
@@ -50,35 +36,4 @@
   background: none;
   border: none;
   outline: transparent;
-}
-
-.active {
-  background-color: blueviolet;
-}
-
-.disabled {
-  pointer-events: none;
-  cursor: not-allowed;
-  user-select: none;
-  color: var(--disabled-text-color);
-}
-
-.top-right {
-  bottom: 100%;
-  left: 0;
-}
-
-.top-left {
-  right: 0;
-  bottom: 100%;
-}
-
-.bottom-right {
-  top: 100%;
-  left: 0;
-}
-
-.bottom-left {
-  top: 100%;
-  right: 0;
 }

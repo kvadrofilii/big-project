@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Menu } from './Menu';
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 
 const meta = {
   title: 'shared/Menu',

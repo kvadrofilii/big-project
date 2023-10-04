@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
 import css from './Menu.m.css';
+import popover from '../../styles/popover.m.css';
 
 import type { MenuProps } from './Menu.types';
 
@@ -12,20 +13,20 @@ export const Menu = memo(function Menu(props: MenuProps) {
   const { className, items, children, disabled, direction = 'bottom right' } = props;
 
   return (
-    <HMenu as="div" className={clsx(css.root, className, disabled && css.disabled)}>
-      <HMenu.Button className={clsx(css.btn, disabled && css.disabled)}>{children}</HMenu.Button>
+    <HMenu as="div" className={clsx(popover.root, className, disabled && popover.disabled)}>
+      <HMenu.Button className={clsx(css.btn, disabled && popover.disabled)}>{children}</HMenu.Button>
       <HMenu.Items
         className={clsx(css.items, {
-          [css['top-right']]: direction === 'top right',
-          [css['top-left']]: direction === 'top left',
-          [css['bottom-right']]: direction === 'bottom right',
-          [css['bottom-left']]: direction === 'bottom left',
+          [popover['top-right']]: direction === 'top right',
+          [popover['top-left']]: direction === 'top left',
+          [popover['bottom-right']]: direction === 'bottom right',
+          [popover['bottom-left']]: direction === 'bottom left',
         })}
       >
         {items.map((item) => {
           const content = ({ active }: { active: boolean }) => (
             <button
-              className={clsx(css.item, active && css.active)}
+              className={clsx(css.item, active && popover.active)}
               type="button"
               onClick={item.onClick}
               disabled={item.disabled}
