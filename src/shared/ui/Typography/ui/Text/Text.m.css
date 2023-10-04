@@ -1,0 +1,47 @@
+/* stylelint-disable selector-class-pattern */
+.root {
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Size */
+
+.6xl {
+  font-size: var(--font-size-6xl);
+}
+
+.5xl {
+  font-size: var(--font-size-5xl);
+}
+
+.4xl {
+  font-size: var(--font-size-4xl);
+}
+
+.3xl {
+  font-size: var(--font-size-3xl);
+}
+
+.2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.xl {
+  font-size: var(--font-size-xl);
+}
+
+.lg {
+  font-size: var(--font-size-lg);
+}
+
+.md {
+  font-size: var(--font-size-md);
+}
+
+.sm {
+  font-size: var(--font-size-sm);
+}
+
+.xs {
+  font-size: var(--font-size-xs);
+}
