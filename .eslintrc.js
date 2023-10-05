@@ -37,7 +37,7 @@ module.exports = {
     //'postcss-modules',
     'i18next',
     'testing-library',
-    //'yaki-test-plugin',
+    '@kvadrofilii/fsd',
   ],
   settings: {
     react: {
@@ -49,7 +49,7 @@ module.exports = {
     },
   },
   rules: {
-    //'yaki-test-plugin/path-checker': 'error',
+    '@kvadrofilii/fsd/path-checker': 'error',
     'no-console': 'off',
     'no-plusplus': 'off',
     'prefer-object-spread': 'off',
