@@ -1,0 +1,23 @@
+.btn {
+  cursor: pointer;
+
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  border: none;
+  outline: transparent;
+}
+
+.items {
+  position: absolute;
+  z-index: 10000;
+
+  overflow: hidden;
+
+  padding: var(--space);
+
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: 2px 2px 4px var(--text-color);
+}
