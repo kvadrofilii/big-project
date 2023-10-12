@@ -3,6 +3,7 @@ import { useCallback, useState, memo, useMemo } from 'react';
 import clsx from 'clsx';
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
+import { NotificationButton } from 'features/NotificationButton';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
 import { RoutePath } from 'shared/config';
@@ -46,33 +47,37 @@ export const Header = memo(function Header({ className }: HeaderProps) {
       <Flex gap={2}>
         <LangSelect />
         <ThemeSwitcher />
+
         {authData ? (
-          <Menu
-            direction="bottom left"
-            items={[
-              ...(isAdminPanelAvailable
-                ? [
-                    {
-                      id: 0,
-                      content: t('Admin panel'),
-                      href: RoutePath.admin_panel,
-                    },
-                  ]
-                : []),
-              {
-                id: 1,
-                content: t('Profile'),
-                href: RoutePath.profile + authData.id,
-              },
-              {
-                id: 2,
-                content: t('Logout'),
-                onClick: onLogout,
-              },
-            ]}
-          >
-            <Avatar size={28} src={authData?.avatar} className={css.avatar} />
-          </Menu>
+          <>
+            <NotificationButton />
+            <Menu
+              direction="bottom left"
+              items={[
+                ...(isAdminPanelAvailable
+                  ? [
+                      {
+                        id: 0,
+                        content: t('Admin panel'),
+                        href: RoutePath.admin_panel,
+                      },
+                    ]
+                  : []),
+                {
+                  id: 1,
+                  content: t('Profile'),
+                  href: RoutePath.profile + authData.id,
+                },
+                {
+                  id: 2,
+                  content: t('Logout'),
+                  onClick: onLogout,
+                },
+              ]}
+            >
+              <Avatar size={28} src={authData?.avatar} className={css.avatar} />
+            </Menu>
+          </>
         ) : (
           <>
             <Button variant="contained" onClick={onShowModal}>

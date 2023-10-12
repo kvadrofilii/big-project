@@ -1,0 +1,13 @@
+.btn {
+  color: var(--bg-color);
+}
+
+.notifications {
+  overflow-y: auto;
+
+  width: 300px;
+  min-height: 150px;
+  max-height: 300px;
+
+  border-radius: var(--border-radius);
+}
