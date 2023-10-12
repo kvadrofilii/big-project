@@ -1,0 +1,60 @@
+import { memo, useCallback } from 'react';
+
+import { isUserAdmin, isUserManager, userActions, getUserAuthData } from 'entities/User';
+import { useTranslation } from 'react-i18next';
+import { RoutePath } from 'shared/config';
+import { useAppSelector, useAppDispatch } from 'shared/lib';
+import { Avatar, Menu } from 'shared/ui';
+
+import css from './AvatarMenu.m.css';
+
+import type { AvatarMenuProps } from './AvatarMenu.types';
+
+export const AvatarMenu = memo(function AvatarMenu(props: AvatarMenuProps) {
+  const { className } = props;
+  const { t } = useTranslation();
+  const dispatch = useAppDispatch();
+  const isAdmin = useAppSelector(isUserAdmin);
+  const isMAnager = useAppSelector(isUserManager);
+  const authData = useAppSelector(getUserAuthData);
+
+  const isAdminPanelAvailable = isAdmin || isMAnager;
+
+  const onLogout = useCallback(() => {
+    dispatch(userActions.logout());
+  }, [dispatch]);
+
+  if (!authData) {
+    return null;
+  }
+
+  return (
+    <Menu
+      className={className}
+      direction="bottom left"
+      items={[
+        ...(isAdminPanelAvailable
+          ? [
+              {
+                id: 0,
+                content: t('Admin panel'),
+                href: RoutePath.admin_panel,
+              },
+            ]
+          : []),
+        {
+          id: 1,
+          content: t('Profile'),
+          href: RoutePath.profile + authData.id,
+        },
+        {
+          id: 2,
+          content: t('Logout'),
+          onClick: onLogout,
+        },
+      ]}
+    >
+      <Avatar size={28} src={authData?.avatar} className={css.avatar} />
+    </Menu>
+  );
+});
