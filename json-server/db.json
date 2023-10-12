@@ -6,6 +6,32 @@
       "author": "typicode"
     }
   ],
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Notification 1",
+      "description": "Add to event",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "2",
+      "title": "Notification 2",
+      "description": "Add to event",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Notification 3",
+      "description": "Add to event",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Notification 4",
+      "description": "Add to event",
+      "href": "http://localhost:3000/admin"
+    }
+  ],
   "articles": [
     {
       "id": "1",
