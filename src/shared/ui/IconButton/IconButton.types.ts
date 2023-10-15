@@ -1,6 +1,6 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export type IconButtonColor = 'primary' | 'secondary';
+export type IconButtonColor = 'primary' | 'secondary' | 'inherit';
 // | 'success'
 // | 'error'
 // | 'info'
@@ -16,4 +16,5 @@ export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>
   disabled?: boolean;
   size?: IconButtonSize;
   variant?: IconButtonVariant;
+  children: ReactNode;
 }
