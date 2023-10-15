@@ -12,6 +12,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    item: {
+      id: '1',
+      title: 'Notification 1',
+      description: 'Add to event',
+      href: 'http://localhost:3000/admin',
+    },
+  },
   decorators: [],
 };
