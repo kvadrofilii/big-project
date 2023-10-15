@@ -32,6 +32,10 @@
   color: var(--success-color);
 }
 
+.inherit {
+  color: inherit;
+}
+
 /* Align */
 
 .start {
