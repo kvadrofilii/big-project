@@ -14,7 +14,7 @@
 }
 
 .active {
-  background-color: blueviolet;
+  background: var(--primary-color);
 }
 
 .disabled {

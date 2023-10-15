@@ -30,10 +30,9 @@
   padding: var(--btn-padding-m);
 
   font-size: var(--font-size-md);
-  color: inherit;
+  color: var(--text-color);
   text-align: left;
 
-  background: none;
   border: none;
   outline: transparent;
 }
