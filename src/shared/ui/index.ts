@@ -6,6 +6,7 @@ export { CardAction } from './CardAction/CardAction';
 export { Code } from './Code/Code';
 export { IconButton } from './IconButton/IconButton';
 export { Input } from './Input/Input';
+export { Drawer } from './Drawer/Drawer';
 export { Flex } from './Flex/Flex';
 export { LangSelect } from './LangSelect/LangSelect';
 export { Loader } from './Loader/Loader';
