@@ -1,18 +1,12 @@
 .root {
   pointer-events: none;
-
   position: fixed;
   z-index: -1;
   inset: 0;
-
-  display: flex;
-  align-items: flex-end;
-
-  opacity: 0;
 }
 
 .content {
-  position: relative;
+  position: absolute;
   z-index: 10000;
   bottom: 0;
   transform: translateY(100%);
@@ -30,22 +24,6 @@
   border-top-right-radius: var(--border-radius);
 
   transition: 0.3s transform;
-}
-
-.content::before {
-  content: '';
-
-  position: relative;
-  bottom: 40px;
-
-  display: block;
-
-  width: 100px;
-  height: 10px;
-  margin: auto;
-
-  background: var(--bg-color);
-  border-radius: var(--border-radius);
 }
 
 .opened {
