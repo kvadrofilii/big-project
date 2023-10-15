@@ -1,14 +1,18 @@
 import { memo } from 'react';
 
+import clsx from 'clsx';
 import { getUserAuthData } from 'entities/User';
 import { useTranslation } from 'react-i18next';
 import { AppRoutes } from 'shared/config';
 import { useAppSelector } from 'shared/lib';
-import { AppLink } from 'shared/ui';
+import { AppLink, IconButton } from 'shared/ui';
+
+import css from './NavbarLink.m.css';
 
 import type { NavbarLinkProps } from './NavbarLink.types';
 
-export const NavbarLink = memo(function NavbarLink({ item }: NavbarLinkProps) {
+export const NavbarLink = memo(function NavbarLink(props: NavbarLinkProps) {
+  const { item, collapsed } = props;
   const { t } = useTranslation();
   const isAuth = useAppSelector(getUserAuthData);
 
@@ -30,8 +34,12 @@ export const NavbarLink = memo(function NavbarLink({ item }: NavbarLinkProps) {
   };
 
   return (
-    <AppLink to={item.path} variant="contained">
-      {routeTranslate[item.text]}
+    <AppLink className={css.root} to={item.path} variant="text" fullWidth>
+      <IconButton size="large" data-testid="sidebar-toggle" type="button" color="inherit">
+        <item.icon />
+      </IconButton>
+      {!collapsed && routeTranslate[item.text]}
+      {/* <span className={clsx(css.link, { [css.collapsed]: collapsed })}>{routeTranslate[item.text]}</span> */}
     </AppLink>
   );
 });
