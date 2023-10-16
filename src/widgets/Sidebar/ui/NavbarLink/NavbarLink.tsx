@@ -1,6 +1,5 @@
 import { memo } from 'react';
 
-import clsx from 'clsx';
 import { getUserAuthData } from 'entities/User';
 import { useTranslation } from 'react-i18next';
 import { AppRoutes } from 'shared/config';
@@ -35,11 +34,10 @@ export const NavbarLink = memo(function NavbarLink(props: NavbarLinkProps) {
 
   return (
     <AppLink className={css.root} to={item.path} variant="text" fullWidth>
-      <IconButton size="large" data-testid="sidebar-toggle" type="button" color="inherit">
+      <IconButton size="large" type="button" color="inherit">
         <item.icon />
       </IconButton>
       {!collapsed && routeTranslate[item.text]}
-      {/* <span className={clsx(css.link, { [css.collapsed]: collapsed })}>{routeTranslate[item.text]}</span> */}
     </AppLink>
   );
 });
