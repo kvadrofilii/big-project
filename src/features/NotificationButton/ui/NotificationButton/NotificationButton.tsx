@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { NotificationList } from 'entities/Notification';
 import Bell from 'shared/assets/icons/bell-fill.svg';
 import { useDeviceDetect } from 'shared/lib';
+import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
 import { IconButton, Popover, Drawer } from 'shared/ui';
 
 import css from './NotificationButton.m.css';
@@ -25,19 +26,21 @@ export const NotificationButton = memo(function NotificationButton(props: Notifi
 
   return isMobile ? (
     <>
-      <IconButton variant="clear" className={css.btn} onClick={onOpenDrawer}>
+      <IconButton tag="span" variant="clear" className={css.btn} onClick={onOpenDrawer}>
         <Bell />
       </IconButton>
-      <Drawer isOpened={isOpened} onClose={onCloseDrawer}>
-        <NotificationList />
-      </Drawer>
+      <AnimationProvider>
+        <Drawer isOpened={isOpened} onClose={onCloseDrawer}>
+          <NotificationList />
+        </Drawer>
+      </AnimationProvider>
     </>
   ) : (
     <Popover
       className={clsx(className)}
       direction="bottom left"
       trigger={
-        <IconButton variant="clear" className={css.btn}>
+        <IconButton tag="span" variant="clear" className={css.btn}>
           <Bell />
         </IconButton>
       }

@@ -18,9 +18,9 @@ export const NotificationList = memo(function NotificationList(props: Notificati
   if (isLoading) {
     return (
       <Flex className={clsx(css.root, className)} direction="column" gap={1}>
-        <Skeleton width="100%" height={20} />
-        <Skeleton width="100%" height={20} />
-        <Skeleton width="100%" height={20} />
+        <Skeleton width="100%" height={40} />
+        <Skeleton width="100%" height={40} />
+        <Skeleton width="100%" height={40} />
       </Flex>
     );
   }
