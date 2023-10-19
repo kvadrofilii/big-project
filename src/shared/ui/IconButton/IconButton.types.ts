@@ -10,6 +10,8 @@ export type IconButtonSize = 'small' | 'medium' | 'large' | 'xl';
 
 export type IconButtonVariant = 'contained' | 'clear' | 'outlined';
 
+export type IconButtonTag = 'button' | 'span';
+
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   color?: IconButtonColor;
@@ -17,4 +19,5 @@ export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>
   size?: IconButtonSize;
   variant?: IconButtonVariant;
   children: ReactNode;
+  tag?: IconButtonTag;
 }

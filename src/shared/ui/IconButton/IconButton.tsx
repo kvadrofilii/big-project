@@ -14,12 +14,14 @@ export const IconButton = memo(function IconButton(props: IconButtonProps) {
     disabled = false,
     size = 'medium',
     variant = 'clear',
+    tag = 'button',
     ...rest
   } = props;
 
+  const Tag = tag;
+
   return (
-    <button
-      type="button"
+    <Tag
       className={clsx(
         css.root,
         css[size],
@@ -29,6 +31,6 @@ export const IconButton = memo(function IconButton(props: IconButtonProps) {
       {...rest}
     >
       {children}
-    </button>
+    </Tag>
   );
 });
