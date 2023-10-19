@@ -32,6 +32,7 @@ export const ArticleViewSelector = memo(function ArticleViewSelector(props: Arti
     <div className={clsx(css.root, className)}>
       {viewTypes.map((viewType: ViewTypes) => (
         <IconButton
+          type="button"
           key={viewType.view}
           className={clsx(css.button, {
             [css['not-selected']]: viewType.view !== view,
