@@ -1,7 +1,8 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { Card, Heading, Text, CardAction } from 'shared/ui';
+
+import { Card, Heading, Text, CardAction } from '@/shared/ui';
 
 import css from './NotificationItem.m.css';
 

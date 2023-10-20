@@ -1,6 +1,8 @@
 import { memo, useCallback } from 'react';
 
 import clsx from 'clsx';
+import { useTranslation } from 'react-i18next';
+
 import {
   ArticleSortField,
   ArticleSortSelector,
@@ -8,11 +10,10 @@ import {
   ArticleTypeTabs,
   ArticleView,
   ArticleViewSelector,
-} from 'entities/Article';
-import { useTranslation } from 'react-i18next';
-import { useAppDispatch, useAppSelector, useDebounce } from 'shared/lib';
-import { SortOrder } from 'shared/types';
-import { Flex, Input } from 'shared/ui';
+} from '@/entities/Article';
+import { useAppDispatch, useAppSelector, useDebounce } from '@/shared/lib';
+import { SortOrder } from '@/shared/types';
+import { Flex, Input } from '@/shared/ui';
 
 import css from './ArticlesPageFilters.m.css';
 import {

@@ -3,10 +3,11 @@ import { memo } from 'react';
 
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-import CalendarPlusIcon from 'shared/assets/icons/calendar-plus.svg';
-import EyeIcon from 'shared/assets/icons/eye.svg';
-import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from 'shared/lib';
-import { Avatar, Flex, Heading, Skeleton, Text } from 'shared/ui';
+
+import CalendarPlusIcon from '@/shared/assets/icons/calendar-plus.svg';
+import EyeIcon from '@/shared/assets/icons/eye.svg';
+import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from '@/shared/lib';
+import { Avatar, Flex, Heading, Skeleton, Text } from '@/shared/ui';
 
 import css from './ArticleDetails.m.css';
 import {

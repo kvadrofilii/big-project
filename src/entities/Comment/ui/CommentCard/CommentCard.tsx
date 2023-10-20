@@ -1,8 +1,9 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { RoutePath } from 'shared/config';
-import { AppLink, Avatar, Flex, Skeleton, Text } from 'shared/ui';
+
+import { RoutePath } from '@/shared/config';
+import { AppLink, Avatar, Flex, Skeleton, Text } from '@/shared/ui';
 
 import css from './CommentCard.m.css';
 

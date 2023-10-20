@@ -1,10 +1,11 @@
 import { memo } from 'react';
 
-import { getUserAuthData } from 'entities/User';
 import { useTranslation } from 'react-i18next';
-import { AppRoutes } from 'shared/config';
-import { useAppSelector } from 'shared/lib';
-import { AppLink, IconButton } from 'shared/ui';
+
+import { getUserAuthData } from '@/entities/User';
+import { AppRoutes } from '@/shared/config';
+import { useAppSelector } from '@/shared/lib';
+import { AppLink, IconButton } from '@/shared/ui';
 
 import css from './NavbarLink.m.css';
 

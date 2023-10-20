@@ -1,10 +1,11 @@
 import { memo, useCallback } from 'react';
 
-import { isUserAdmin, isUserManager, userActions, getUserAuthData } from 'entities/User';
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config';
-import { useAppSelector, useAppDispatch } from 'shared/lib';
-import { Avatar, Menu } from 'shared/ui';
+
+import { isUserAdmin, isUserManager, userActions, getUserAuthData } from '@/entities/User';
+import { RoutePath } from '@/shared/config';
+import { useAppSelector, useAppDispatch } from '@/shared/lib';
+import { Avatar, Menu } from '@/shared/ui';
 
 import css from './AvatarMenu.m.css';
 

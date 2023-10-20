@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 
-import { ReduxStoreWithManager, StateSchemaKey } from 'app/providers/StoreProvider';
 import { useStore } from 'react-redux';
+
+import { ReduxStoreWithManager, StateSchemaKey } from '@/app/providers/StoreProvider';
 
 import { useAppDispatch } from '../../hooks/useAppDispatch/useAppDispatch';
 

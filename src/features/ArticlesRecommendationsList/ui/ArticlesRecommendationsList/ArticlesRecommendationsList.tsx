@@ -1,9 +1,10 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { ArticleList } from 'entities/Article';
 import { useTranslation } from 'react-i18next';
-import { Flex, Heading } from 'shared/ui';
+
+import { ArticleList } from '@/entities/Article';
+import { Flex, Heading } from '@/shared/ui';
 
 import css from './ArticlesRecommendationsList.m.css';
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';

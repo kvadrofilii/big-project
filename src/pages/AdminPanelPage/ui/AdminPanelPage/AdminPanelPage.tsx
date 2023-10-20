@@ -2,7 +2,8 @@ import { FC, memo } from 'react';
 
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-import { Page } from 'widgets/Page';
+
+import { Page } from '@/widgets/Page';
 
 import css from './AdminPanelPage.m.css';
 

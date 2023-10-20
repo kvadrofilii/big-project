@@ -1,4 +1,4 @@
-import { AppRoutes } from 'shared/config';
+import { AppRoutes } from '@/shared/config';
 
 export interface NavbarLinks {
   path: string;

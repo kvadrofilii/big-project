@@ -1,5 +1,5 @@
-import { Comment } from 'entities/Comment';
-import { rtkApi } from 'shared/api';
+import { Comment } from '@/entities/Comment';
+import { rtkApi } from '@/shared/api';
 
 interface AddComment {
   text: string;

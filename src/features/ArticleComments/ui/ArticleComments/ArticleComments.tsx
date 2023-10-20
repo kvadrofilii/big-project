@@ -1,12 +1,13 @@
 import { memo, useCallback } from 'react';
 
-import { CommentList } from 'entities/Comment';
-import { CommentForm } from 'entities/CommentForm';
-import { getUserAuthData } from 'entities/User';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } from 'shared/lib';
-import { Heading } from 'shared/ui';
+
+import { CommentList } from '@/entities/Comment';
+import { CommentForm } from '@/entities/CommentForm';
+import { getUserAuthData } from '@/entities/User';
+import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } from '@/shared/lib';
+import { Heading } from '@/shared/ui';
 
 import css from './ArticleComments.m.css';
 import { useAddCommentForArticleMutation, useGetCommentsByArticleIdQuery } from '../../api/articlesCommentsApi';

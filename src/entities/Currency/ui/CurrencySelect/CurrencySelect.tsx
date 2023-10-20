@@ -1,7 +1,8 @@
 import { memo, useCallback, useMemo } from 'react';
 
 import { useTranslation } from 'react-i18next';
-import { ListBox } from 'shared/ui';
+
+import { ListBox } from '@/shared/ui';
 
 import { Currency } from '../../model/consts/currency';
 

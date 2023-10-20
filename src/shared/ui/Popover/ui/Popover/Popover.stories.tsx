@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Popover } from './Popover';
 
 const meta = {
-  title: '/Popover',
+  title: 'shared/Popover',
   component: Popover,
   tags: ['autodocs'],
 } satisfies Meta<typeof Popover>;

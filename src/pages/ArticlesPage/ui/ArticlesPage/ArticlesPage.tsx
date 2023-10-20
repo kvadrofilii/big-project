@@ -1,10 +1,11 @@
 import { FC, memo, useCallback } from 'react';
 
 import clsx from 'clsx';
-import { ArticleList } from 'entities/Article';
 import { useSearchParams } from 'react-router-dom';
-import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from 'shared/lib';
-import { Page } from 'widgets/Page';
+
+import { ArticleList } from '@/entities/Article';
+import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from '@/shared/lib';
+import { Page } from '@/widgets/Page';
 
 import css from './ArticlesPage.m.css';
 import { getArticlesPageIsLoading, getArticlesPageView } from '../../model/selectors/articlesPageSelectors';

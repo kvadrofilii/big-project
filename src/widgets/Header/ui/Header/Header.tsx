@@ -1,14 +1,15 @@
 import { useCallback, useState, memo } from 'react';
 
 import clsx from 'clsx';
-import { getUserAuthData } from 'entities/User';
-import { LoginModal } from 'features/AuthByUsername';
-import { AvatarMenu } from 'features/AvatarMenu';
-import { NotificationButton } from 'features/NotificationButton';
-import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
-import { useAppSelector } from 'shared/lib';
-import { Button, Flex, LangSelect, AppLink } from 'shared/ui';
+
+import { getUserAuthData } from '@/entities/User';
+import { LoginModal } from '@/features/AuthByUsername';
+import { AvatarMenu } from '@/features/AvatarMenu';
+import { NotificationButton } from '@/features/NotificationButton';
+import { ThemeSwitcher } from '@/features/ThemeSwitcher';
+import { useAppSelector } from '@/shared/lib';
+import { Button, Flex, LangSelect, AppLink } from '@/shared/ui';
 
 import css from './Header.m.css';
 

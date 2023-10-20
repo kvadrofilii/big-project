@@ -2,8 +2,9 @@ import { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { Text } from 'shared/ui';
-import { Page } from 'widgets/Page';
+
+import { Text } from '@/shared/ui';
+import { Page } from '@/widgets/Page';
 
 import { EditableProfileCard } from '../../../features/EditableProfileCard';
 

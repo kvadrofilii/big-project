@@ -1,7 +1,8 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { Code } from 'shared/ui';
+
+import { Code } from '@/shared/ui';
 
 import css from './ArticleCodeBlockComponent.m.css';
 

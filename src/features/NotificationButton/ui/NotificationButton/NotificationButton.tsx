@@ -1,11 +1,12 @@
 import { memo, useCallback, useState } from 'react';
 
 import clsx from 'clsx';
-import { NotificationList } from 'entities/Notification';
-import Bell from 'shared/assets/icons/bell-fill.svg';
-import { useDeviceDetect } from 'shared/lib';
-import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
-import { IconButton, Popover, Drawer } from 'shared/ui';
+
+import { NotificationList } from '@/entities/Notification';
+import Bell from '@/shared/assets/icons/bell-fill.svg';
+import { useDeviceDetect } from '@/shared/lib';
+import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
+import { IconButton, Popover, Drawer } from '@/shared/ui';
 
 import css from './NotificationButton.m.css';
 

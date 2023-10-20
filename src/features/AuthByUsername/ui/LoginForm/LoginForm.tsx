@@ -3,8 +3,9 @@ import { memo } from 'react';
 import clsx from 'clsx';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch, useAppSelector, DynamicReducerLoader, ReducersList } from 'shared/lib';
-import { Button, Heading, Input, Text } from 'shared/ui';
+
+import { useAppDispatch, useAppSelector, DynamicReducerLoader, ReducersList } from '@/shared/lib';
+import { Button, Heading, Input, Text } from '@/shared/ui';
 
 import css from './LoginForm.m.css';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';

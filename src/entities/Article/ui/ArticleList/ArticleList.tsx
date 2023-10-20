@@ -2,7 +2,8 @@ import { memo } from 'react';
 
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-import { Flex, Text } from 'shared/ui';
+
+import { Flex, Text } from '@/shared/ui';
 
 import css from './ArticleList.m.css';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';

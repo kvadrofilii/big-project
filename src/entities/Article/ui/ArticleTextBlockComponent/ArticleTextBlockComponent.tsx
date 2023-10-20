@@ -1,7 +1,8 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { Heading, Text } from 'shared/ui';
+
+import { Heading, Text } from '@/shared/ui';
 
 import css from './ArticleTextBlockComponent.m.css';
 

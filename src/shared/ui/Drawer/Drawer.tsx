@@ -1,7 +1,8 @@
 import { memo, useCallback, useEffect } from 'react';
 
 import clsx from 'clsx';
-import { useAnimationLibs } from 'shared/lib/components/AnimationProvider';
+
+import { useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
 
 import css from './Drawer.m.css';
 import { Overlay } from '../Overlay/Overlay';

@@ -1,8 +1,9 @@
 import clsx from 'clsx';
-import { CountrySelect } from 'entities/Country';
-import { CurrencySelect } from 'entities/Currency';
 import { useTranslation } from 'react-i18next';
-import { Avatar, Flex, Heading, Input, Loader, Text } from 'shared/ui';
+
+import { CountrySelect } from '@/entities/Country';
+import { CurrencySelect } from '@/entities/Currency';
+import { Avatar, Flex, Heading, Input, Loader, Text } from '@/shared/ui';
 
 import css from './ProfileCard.m.css';
 

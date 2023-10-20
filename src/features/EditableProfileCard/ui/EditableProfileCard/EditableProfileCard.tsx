@@ -1,11 +1,12 @@
 import { memo, useCallback } from 'react';
 
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import { ProfileCard } from 'entities/Profile';
 import { useTranslation } from 'react-i18next';
-import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from 'shared/lib';
-import { Text } from 'shared/ui';
+
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { ProfileCard } from '@/entities/Profile';
+import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from '@/shared/lib';
+import { Text } from '@/shared/ui';
 
 import { ValidateProfileError } from '../../model/consts/validateProfileError';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';

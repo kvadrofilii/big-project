@@ -1,10 +1,11 @@
 import { memo, useCallback } from 'react';
 
 import clsx from 'clsx';
-import { getUserAuthData } from 'entities/User';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch, useAppSelector } from 'shared/lib';
-import { Button, Flex, Heading } from 'shared/ui';
+
+import { getUserAuthData } from '@/entities/User';
+import { useAppDispatch, useAppSelector } from '@/shared/lib';
+import { Button, Flex, Heading } from '@/shared/ui';
 
 import css from './EditableProfileCardHeader.m.css';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';

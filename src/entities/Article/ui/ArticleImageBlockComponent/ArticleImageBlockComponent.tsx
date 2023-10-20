@@ -1,7 +1,8 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { Heading } from 'shared/ui';
+
+import { Heading } from '@/shared/ui';
 
 import css from './ArticleImageBlockComponent.m.css';
 

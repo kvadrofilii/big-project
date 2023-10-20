@@ -1,10 +1,11 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import DarkIcon from 'shared/assets/icons/moon.svg';
-import LightIcon from 'shared/assets/icons/sun.svg';
-import { useTheme } from 'shared/contexts';
-import { IconButton } from 'shared/ui';
+
+import DarkIcon from '@/shared/assets/icons/moon.svg';
+import LightIcon from '@/shared/assets/icons/sun.svg';
+import { useTheme } from '@/shared/contexts';
+import { IconButton } from '@/shared/ui';
 
 import css from './ThemeSwitcher.m.css';
 

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { NotificationItem } from './NotificationItem';
 
 const meta = {
-  title: '/NotificationItem',
+  title: 'entities/Notification/NotificationItem',
   component: NotificationItem,
   tags: ['autodocs'],
 } satisfies Meta<typeof NotificationItem>;

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import type { DropdownDirection } from 'shared/types';
+import type { DropdownDirection } from '@/shared/types';
 
 export interface DropdownItem {
   id: string | number;

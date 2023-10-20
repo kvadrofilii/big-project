@@ -1,7 +1,8 @@
 import { memo } from 'react';
 
 import clsx from 'clsx';
-import { Card, Skeleton } from 'shared/ui';
+
+import { Card, Skeleton } from '@/shared/ui';
 
 import css from './ArticleListItem.m.css';
 

@@ -1,12 +1,13 @@
 import { FC, memo } from 'react';
 
 import clsx from 'clsx';
-import { ArticleDetails } from 'entities/Article';
-import { ArticleComments } from 'features/ArticleComments';
-import { ArticlesRecommendationsList } from 'features/ArticlesRecommendationsList';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { Page } from 'widgets/Page';
+
+import { ArticleDetails } from '@/entities/Article';
+import { ArticleComments } from '@/features/ArticleComments';
+import { ArticlesRecommendationsList } from '@/features/ArticlesRecommendationsList';
+import { Page } from '@/widgets/Page';
 
 import css from './ArticleDetailsPage.m.css';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';

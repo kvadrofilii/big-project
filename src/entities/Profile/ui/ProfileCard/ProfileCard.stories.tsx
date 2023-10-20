@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import AvatarImg from 'shared/assets/test/storybook.png';
+
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import AvatarImg from '@/shared/assets/test/storybook.png';
 
 import { ProfileCard } from './ProfileCard';
 

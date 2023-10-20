@@ -2,9 +2,10 @@ import { memo, useCallback } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { RoutePath } from 'shared/config';
-import { useAppSelector } from 'shared/lib';
-import { Button, Flex } from 'shared/ui';
+
+import { RoutePath } from '@/shared/config';
+import { useAppSelector } from '@/shared/lib';
+import { Button, Flex } from '@/shared/ui';
 
 import { getArticleDetailsData } from '../../../../entities/Article';
 import { getCanEditArticle } from '../../model/selectors/article';
