@@ -47,6 +47,15 @@ module.exports = {
       include: '**/*.m.css',
       exclude: '**/node_modules/**/*',
     },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+      typescript: {
+        directory: './tsconfig.json',
+      },
+    },
   },
   rules: {
     '@kvadrofilii/fsd/path-checker': 'error',
@@ -76,10 +85,11 @@ module.exports = {
     'no-undef': 'off',
     // Разрешает использовать висячие символы в переменных (_)
     'no-underscore-dangle': 'off',
-    'import/prefer-default-export': 'off',
-    'import/no-named-as-default': 'off',
-    'import/no-extraneous-dependencies': 'off',
     'import/export': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-cycle': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-named-as-default': 'off',
     'react/forbid-prop-types': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-props-no-spreading': 'off',

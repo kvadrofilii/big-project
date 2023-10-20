@@ -5,7 +5,7 @@ import { BuildOptions } from './types/config';
 export function buildResolvers(options: BuildOptions): ResolveOptions {
   return {
     // Расширения, которые не нужно указывать при импорте
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
     // Абсолютные пути импортов в приоритете
     preferAbsolute: true,
     // Папки откуда будут абсолютные импорты
@@ -14,6 +14,8 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
     mainFiles: ['index'],
     // Алиасы для абсолютных путей
     // Пустой объект означает абсолютные пути импорта без "@" в начале пути
-    alias: {},
+    alias: {
+      '@': options.paths.src,
+    },
   };
 }
