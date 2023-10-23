@@ -15,6 +15,7 @@ export { Overlay } from './Overlay/Overlay';
 export { Portal } from './Portal/Portal';
 export { Select } from './Select/Select';
 export { Skeleton } from './Skeleton/Skeleton';
+export { StarRating } from './StarRating/StarRating';
 export { Tabs } from './Tabs/Tabs';
 
 export { Menu, ListBox, Popover } from './Popover';

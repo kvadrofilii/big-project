@@ -1,0 +1,13 @@
+.icon {
+  cursor: pointer;
+  color: var(--primary-color);
+  fill: none;
+}
+
+.hovered {
+  fill: var(--primary-color);
+}
+
+.selected {
+  cursor: auto;
+}
