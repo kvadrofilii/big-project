@@ -15,6 +15,7 @@ export const Flex = (props: FlexProps) => {
     shrink,
     grow,
     wrap = 'nowrap',
+    fullWidth,
     ...rest
   } = props;
 
@@ -29,6 +30,7 @@ export const Flex = (props: FlexProps) => {
         shrink && css[`shrink-${shrink}`],
         grow && css[`grow-${grow}`],
         wrap && css[`wrap-${wrap}`],
+        fullWidth && css['full-width'],
         className,
       )}
       {...rest}

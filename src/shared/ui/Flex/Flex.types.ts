@@ -24,4 +24,5 @@ export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   grow?: FlexGrow;
   wrap?: FlexWrap;
   gap?: FlexGap;
+  fullWidth?: boolean;
 }
