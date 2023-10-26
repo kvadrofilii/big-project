@@ -24,7 +24,7 @@ export const ArticlesRecommendationsList = memo(function ArticlesRecommendations
 
   return (
     <Flex className={clsx(css.root, className)} direction="column" gap={1}>
-      <Heading>{t('Recommendations')}</Heading>
+      <Heading className={css.title}>{t('Recommendations')}</Heading>
       <ArticleList className={css.recommendations} articles={articles} isLoading={isLoading} target="_blank" />
     </Flex>
   );

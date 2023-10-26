@@ -1,17 +1,19 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Rating } from './Rating';
+import ArticleRating from './ArticleRating';
 
 const meta = {
-  title: '/Rating',
-  component: Rating,
+  title: 'features/ArticleRating',
+  component: ArticleRating,
   tags: ['autodocs'],
-} satisfies Meta<typeof Rating>;
+} satisfies Meta<typeof ArticleRating>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    id: '1',
+  },
   decorators: [],
 };

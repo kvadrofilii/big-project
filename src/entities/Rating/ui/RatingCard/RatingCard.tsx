@@ -1,19 +1,16 @@
 import { memo, useCallback, useState } from 'react';
 
-import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import { Button, Card, Flex, Heading, Input, Modal, StarRating } from '@/shared/ui';
 
-import css from './Rating.m.css';
+import type { RatingCardProps } from './RatingCard.types';
 
-import type { RatingProps } from './Rating.types';
-
-export const Rating = memo(function Rating(props: RatingProps) {
-  const { className, title, feedbackTitle, onCancel, onAccept } = props;
+export const RatingCard = memo(function RatingCard(props: RatingCardProps) {
+  const { className, title, feedbackTitle, onCancel, onAccept, rate = 0 } = props;
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [starsCount, setStarsCount] = useState(0);
+  const [starsCount, setStarsCount] = useState(rate);
   const [feedback, setFeedback] = useState('');
 
   const onSelectStars = useCallback(
@@ -39,10 +36,10 @@ export const Rating = memo(function Rating(props: RatingProps) {
   }, [onCancel, starsCount]);
 
   return (
-    <Card className={clsx(css.root, className)}>
-      <Flex direction="column">
-        <Heading variant="h3">{title}</Heading>
-        <StarRating onSelect={onSelectStars} />
+    <Card className={className}>
+      <Flex direction="column" align="center">
+        <Heading variant="h3">{starsCount ? t('Thanks for the rating') : title}</Heading>
+        <StarRating onSelect={onSelectStars} selectStars={starsCount} />
       </Flex>
       <Modal isOpened={isModalOpen}>
         <Flex direction="column" gap={2}>
