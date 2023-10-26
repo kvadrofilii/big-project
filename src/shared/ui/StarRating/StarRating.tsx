@@ -11,7 +11,7 @@ const stars = [1, 2, 3, 4, 5];
 
 export const StarRating = memo(function StarRating(props: StarRatingProps) {
   const { className, onSelect, size = 30, selectStars = 0 } = props;
-  const [currentStarsCount, setCurrentStarsCount] = useState(0);
+  const [currentStarsCount, setCurrentStarsCount] = useState(selectStars);
   const [isSelected, setIsSelected] = useState(Boolean(selectStars));
 
   const onHover = (starsCount: number) => () => {
@@ -35,7 +35,7 @@ export const StarRating = memo(function StarRating(props: StarRatingProps) {
   };
 
   return (
-    <div className={clsx(className)}>
+    <div className={className}>
       {stars.map((starNumber) => (
         <StarIcon
           className={clsx(css.icon, {
