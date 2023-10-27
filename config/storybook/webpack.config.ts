@@ -9,15 +9,11 @@ import { svgLoader } from '../webpack/loaders/svgLoader';
 
 export default ({ config }: { config: webpack.Configuration }) => {
   const src = path.resolve(__dirname, '..', '..', 'src');
+
   config.resolve!.modules = [src, 'node_modules'];
   config.resolve!.alias = {
     ...config!.resolve!.alias,
-    '@/shared': path.resolve(__dirname, '..', '..', 'src', 'shared'),
-    '@/entities': path.resolve(__dirname, '..', '..', 'src', 'entities'),
-    '@/features': path.resolve(__dirname, '..', '..', 'src', 'features'),
-    '@/widgets': path.resolve(__dirname, '..', '..', 'src', 'widgets'),
-    '@/pages': path.resolve(__dirname, '..', '..', 'src', 'pages'),
-    '@/app': path.resolve(__dirname, '..', '..', 'src', 'app'),
+    '@': src,
   };
   config.resolve?.extensions?.push('.ts', '.tsx');
 
