@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
+
 import ArticleRating from './ArticleRating';
 
 const meta = {
@@ -15,5 +17,11 @@ export const Default: Story = {
   args: {
     id: '1',
   },
-  decorators: [],
+  decorators: [
+    StoreDecorator({
+      user: {
+        authData: { id: '1' },
+      },
+    }),
+  ],
 };
