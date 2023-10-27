@@ -27,16 +27,12 @@ const ArticleRating = memo(function ArticleRating(props: ArticleRatingProps) {
 
   const handleRateArticle = useCallback(
     (starsCount: number, feedback?: string) => {
-      try {
-        rateArticleMutation({
-          userId: userData?.id ?? '',
-          articleId: id,
-          rate: starsCount,
-          feedback,
-        });
-      } catch (e) {
-        console.log(e);
-      }
+      rateArticleMutation({
+        userId: userData?.id ?? '',
+        articleId: id,
+        rate: starsCount,
+        feedback,
+      });
     },
     [id, rateArticleMutation, userData?.id],
   );
