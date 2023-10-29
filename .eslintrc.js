@@ -58,7 +58,7 @@ module.exports = {
     },
   },
   rules: {
-    '@kvadrofilii/fsd/path-checker': 'error',
+    '@kvadrofilii/fsd/path-checker': ['error', { alias: '@' }],
     'no-console': 'off',
     'no-plusplus': 'off',
     'prefer-object-spread': 'off',
