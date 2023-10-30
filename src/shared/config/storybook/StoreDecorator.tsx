@@ -2,11 +2,12 @@
 import { StoryFn } from '@storybook/react';
 
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import { articleDetailsReducer } from '@/entities/Article/model/slices/articleDetails.slice';
-import { loginReducer } from '@/features/AuthByUsername/model/slices/login.slice';
+import { articleDetailsReducer } from '@/entities/Article/testing';
+import { loginReducer } from '@/features/AuthByUsername/testing';
 import { profileReducer } from '@/features/EditableProfileCard';
-import { articlesPageReducer } from '@/pages/ArticlesPage/model/slices/articlesPage.slice';
-import { ReducersList } from '@/shared/lib';
+import { articlesPageReducer } from '@/pages/ArticlesPage/testing';
+
+import { ReducersList } from '../../lib';
 
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
