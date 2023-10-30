@@ -1,6 +1,6 @@
 import { FC, useMemo, useState, useEffect } from 'react';
 
-import { LOCAL_STORAGE_THEME_KEY } from '@/shared/const/localstorage';
+import { LOCAL_STORAGE_THEME_KEY } from '@/shared/consts/localstorage';
 import { Theme, ThemeContext } from '@/shared/contexts/theme-context/ThemeContext';
 
 import type { ThemeProviderProps } from './ThemeProvider.types';
