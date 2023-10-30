@@ -59,6 +59,13 @@ module.exports = {
   },
   rules: {
     '@kvadrofilii/fsd/path-checker': ['error', { alias: '@' }],
+    '@kvadrofilii/fsd/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
+      },
+    ],
     'no-console': 'off',
     'no-plusplus': 'off',
     'prefer-object-spread': 'off',

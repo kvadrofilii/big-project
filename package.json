@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-react": "^7.22.15",
     "@babel/preset-typescript": "^7.23.0",
-    "@kvadrofilii/eslint-plugin-fsd": "^1.1.1",
+    "@kvadrofilii/eslint-plugin-fsd": "^2.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@storybook/addon-a11y": "^7.4.5",
     "@storybook/addon-actions": "^7.4.5",
