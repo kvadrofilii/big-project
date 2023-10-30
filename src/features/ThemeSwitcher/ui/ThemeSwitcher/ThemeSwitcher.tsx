@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import DarkIcon from '@/shared/assets/icons/moon.svg';
 import LightIcon from '@/shared/assets/icons/sun.svg';
-import { useTheme } from '@/shared/contexts';
+import { useTheme } from '@/shared/lib';
 import { IconButton } from '@/shared/ui';
 
 import css from './ThemeSwitcher.m.css';
