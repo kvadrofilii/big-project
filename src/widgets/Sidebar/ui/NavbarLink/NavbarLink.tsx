@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { getUserAuthData } from '@/entities/User';
-import { AppRoutes } from '@/shared/config';
+import { AppRoutes } from '@/shared/consts/route';
 import { useAppSelector } from '@/shared/lib';
 import { AppLink, IconButton } from '@/shared/ui';
 

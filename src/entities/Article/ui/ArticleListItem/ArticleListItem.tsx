@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import Eye from '@/shared/assets/icons/eye.svg';
-import { RoutePath } from '@/shared/config';
+import { RoutePath } from '@/shared/consts/route';
 import { AppLink, Avatar, Card, CardAction, Heading, Text } from '@/shared/ui';
 
 import css from './ArticleListItem.m.css';

@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { isUserAdmin, isUserManager, userActions, getUserAuthData } from '@/entities/User';
-import { RoutePath } from '@/shared/config';
+import { RoutePath } from '@/shared/consts/route';
 import { useAppSelector, useAppDispatch } from '@/shared/lib';
 import { Avatar, Menu } from '@/shared/ui';
 

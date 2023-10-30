@@ -4,7 +4,7 @@ import { getUserAuthData } from '@/entities/User';
 import AboutIcon from '@/shared/assets/icons/box2-heart-fill.svg';
 import ArticlesIcon from '@/shared/assets/icons/collection-fill.svg';
 import MainIcon from '@/shared/assets/icons/house-fill.svg';
-import { RoutePath, AppRoutes } from '@/shared/config';
+import { RoutePath, AppRoutes } from '@/shared/consts/route';
 
 import type { NavbarLinks } from '../types/links.types';
 
