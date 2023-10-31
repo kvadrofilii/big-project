@@ -66,6 +66,10 @@ module.exports = {
         testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
       },
     ],
+    '@kvadrofilii/fsd/layer-imports': [
+      'error',
+      { alias: '@', ignoreImportPatterns: ['**/StoreProvider', '**/testing'] },
+    ],
     'no-console': 'off',
     'no-plusplus': 'off',
     'prefer-object-spread': 'off',
