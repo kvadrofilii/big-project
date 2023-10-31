@@ -1,6 +1,5 @@
 import { useEffect, Suspense } from 'react';
 
-import { AppRouter } from '@/app/providers/AppRouter';
 import { getUserIsMount, userActions } from '@/entities/User';
 import { useAppDispatch, useAppSelector } from '@/shared/lib';
 // import { Footer } from 'widgets/Footer';
@@ -9,6 +8,7 @@ import { PageLoader } from '@/widgets/PageLoader';
 import { Sidebar } from '@/widgets/Sidebar';
 
 import css from './App.m.css';
+import { AppRouter } from './providers/AppRouter';
 
 const App = () => {
   const dispatch = useAppDispatch();
