@@ -137,29 +137,10 @@ module.exports = {
           {
             pattern: 'react',
             group: 'builtin',
+            position: 'before',
           },
           {
-            pattern: 'processes/',
-            group: 'internal',
-          },
-          {
-            pattern: 'pages/',
-            group: 'internal',
-          },
-          {
-            pattern: 'widgets/',
-            group: 'internal',
-          },
-          {
-            pattern: 'features/',
-            group: 'internal',
-          },
-          {
-            pattern: 'entities/',
-            group: 'internal',
-          },
-          {
-            pattern: 'shared/',
+            pattern: '@/**',
             group: 'internal',
           },
         ],
