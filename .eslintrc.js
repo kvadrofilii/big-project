@@ -38,6 +38,7 @@ module.exports = {
     'i18next',
     'testing-library',
     '@kvadrofilii/fsd',
+    'unused-imports',
   ],
   settings: {
     react: {
@@ -58,6 +59,7 @@ module.exports = {
     },
   },
   rules: {
+    'unused-imports/no-unused-imports': 'error',
     '@kvadrofilii/fsd/path-checker': ['error', { alias: '@' }],
     '@kvadrofilii/fsd/public-api-imports': [
       'error',
