@@ -1,5 +1,5 @@
-import { Country } from '@/entities/Country';
-import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country/testing';
+import { Currency } from '@/entities/Currency/testing';
 
 import { profileActions, profileReducer } from './profile.slice';
 import { ValidateProfileError } from '../consts/validateProfileError';

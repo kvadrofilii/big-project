@@ -18,6 +18,7 @@ export const Page = (props: PageProps) => {
   const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
   const { pathname } = useLocation();
+  // eslint-disable-next-line react-redux/useSelector-prefer-selectors
   const scrollPosition = useAppSelector((state: StateSchema) => getScrollByPath(state, pathname));
 
   useInfiniteScroll({ triggerRef, wrapperRef, callback: onScrollEnd });
