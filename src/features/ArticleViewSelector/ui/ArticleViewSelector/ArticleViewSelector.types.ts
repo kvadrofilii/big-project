@@ -1,4 +1,4 @@
-import type { ArticleView } from '../../model/types/article.types';
+import type { ArticleView } from '../../../../entities/Article/model/types/article.types';
 import type { ReactElement } from 'react';
 
 export interface ArticleViewSelectorProps {

@@ -3,14 +3,10 @@ import { memo, useCallback } from 'react';
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
-import {
-  ArticleSortField,
-  ArticleSortSelector,
-  ArticleType,
-  ArticleTypeTabs,
-  ArticleView,
-  ArticleViewSelector,
-} from '@/entities/Article';
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
+import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { useAppDispatch, useAppSelector, useDebounce } from '@/shared/lib';
 import { SortOrder } from '@/shared/types';
 import { Flex, Input } from '@/shared/ui';

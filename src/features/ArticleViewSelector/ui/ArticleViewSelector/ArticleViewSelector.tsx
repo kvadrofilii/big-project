@@ -9,7 +9,7 @@ import { IconButton } from '@/shared/ui';
 import css from './ArticleViewSelector.m.css';
 
 import type { ArticleViewSelectorProps, ViewTypes } from './ArticleViewSelector.types';
-import type { ArticleView } from '../../model/types/article.types';
+import type { ArticleView } from '@/entities/Article';
 
 const viewTypes: ViewTypes[] = [
   {

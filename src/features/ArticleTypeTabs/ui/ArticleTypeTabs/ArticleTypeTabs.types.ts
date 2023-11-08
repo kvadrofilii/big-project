@@ -1,4 +1,4 @@
-import type { ArticleType } from '../../model/types/article.types';
+import type { ArticleType } from '../../../../entities/Article/model/types/article.types';
 
 export interface ArticleTypeTabsProps {
   className?: string;
