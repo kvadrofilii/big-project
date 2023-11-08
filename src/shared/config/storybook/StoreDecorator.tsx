@@ -3,6 +3,7 @@ import { StoryFn } from '@storybook/react';
 
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { articleDetailsReducer } from '@/entities/Article/testing';
+import { articleCommentsReducer } from '@/features/ArticleComments/testing';
 import { loginReducer } from '@/features/AuthByUsername/testing';
 import { profileReducer } from '@/features/EditableProfileCard/testing';
 import { articlesPageReducer } from '@/pages/ArticlesPage/testing';
@@ -13,7 +14,7 @@ const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
-  articleComments: articleDetailsReducer,
+  articleComments: articleCommentsReducer,
   articlesPage: articlesPageReducer,
 };
 
