@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import { RoutePath } from '@/shared/consts/route';
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/consts/route';
 import { useAppSelector } from '@/shared/lib';
 import { Button, Flex } from '@/shared/ui';
 
@@ -20,12 +20,12 @@ export const ArticleDetailsPageHeader = memo(function ArticleDetailsPageHeader(p
   const article = useAppSelector(getArticleDetailsData);
 
   const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles);
+    navigate(getRouteArticles());
   }, [navigate]);
 
   const onEditArticle = useCallback(() => {
     if (article?.id) {
-      navigate(`${RoutePath.articles}/${article?.id}/edit`);
+      navigate(getRouteArticleEdit(article?.id));
     }
   }, [article?.id, navigate]);
 

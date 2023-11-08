@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import Eye from '@/shared/assets/icons/eye.svg';
-import { RoutePath } from '@/shared/consts/route';
+import { getRouteArticleDetails } from '@/shared/consts/route';
 import { AppLink, Avatar, Card, CardAction, Heading, Text } from '@/shared/ui';
 
 import css from './ArticleListItem.m.css';
@@ -43,7 +43,7 @@ export const ArticleListItem = memo(function ArticleListItem(props: ArticleListI
           <img src={article.img} className={css.img} alt={article.title} />
           {textBlock && <ArticleTextBlockComponent className={css.text} block={textBlock} />}
           <div className={css.footer}>
-            <AppLink target={target} variant="outlined" color="primary" to={RoutePath.article_details + article.id}>
+            <AppLink target={target} variant="outlined" color="primary" to={getRouteArticleDetails(article.id)}>
               {t('Read more')}
             </AppLink>
             {views}
@@ -56,7 +56,7 @@ export const ArticleListItem = memo(function ArticleListItem(props: ArticleListI
   return (
     <div className={clsx(className, css[view])}>
       <Card>
-        <CardAction target={target} to={RoutePath.article_details + article.id}>
+        <CardAction target={target} to={getRouteArticleDetails(article.id)}>
           <div className={css['img-wrapper']}>
             <img src={article.img} className={css.img} alt={article.title} />
             <Text className={css.create}>{article.createdAt}</Text>

@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { isUserAdmin, isUserManager, userActions, getUserAuthData } from '@/entities/User';
-import { RoutePath } from '@/shared/consts/route';
+import { getRouteAdmin, getRouteProfile } from '@/shared/consts/route';
 import { useAppSelector, useAppDispatch } from '@/shared/lib';
 import { Avatar, Menu } from '@/shared/ui';
 
@@ -39,14 +39,14 @@ export const AvatarMenu = memo(function AvatarMenu(props: AvatarMenuProps) {
               {
                 id: 0,
                 content: t('Admin panel'),
-                href: RoutePath.admin_panel,
+                href: getRouteAdmin(),
               },
             ]
           : []),
         {
           id: 1,
           content: t('Profile'),
-          href: RoutePath.profile + authData.id,
+          href: getRouteProfile(authData.id),
         },
         {
           id: 2,

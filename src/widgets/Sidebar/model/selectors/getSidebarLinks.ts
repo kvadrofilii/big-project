@@ -4,19 +4,19 @@ import { getUserAuthData } from '@/entities/User';
 import AboutIcon from '@/shared/assets/icons/box2-heart-fill.svg';
 import ArticlesIcon from '@/shared/assets/icons/collection-fill.svg';
 import MainIcon from '@/shared/assets/icons/house-fill.svg';
-import { RoutePath, AppRoutes } from '@/shared/consts/route';
+import { AppRoutes, getRouteAbout, getRouteArticles, getRouteMain } from '@/shared/consts/route';
 
 import type { NavbarLinks } from '../types/links.types';
 
 export const getSidebarLinks = createSelector(getUserAuthData, (userData) => {
   const navbarLinks: NavbarLinks[] = [
     {
-      path: RoutePath.main,
+      path: getRouteMain(),
       text: AppRoutes.MAIN,
       icon: MainIcon,
     },
     {
-      path: RoutePath.about,
+      path: getRouteAbout(),
       text: AppRoutes.ABOUT,
       icon: AboutIcon,
     },
@@ -25,13 +25,13 @@ export const getSidebarLinks = createSelector(getUserAuthData, (userData) => {
   if (userData) {
     navbarLinks.push(
       {
-        path: RoutePath.articles,
+        path: getRouteArticles(),
         text: AppRoutes.ARTICLES,
         icon: ArticlesIcon,
         authOnly: true,
       },
       // {
-      //  path: RoutePath.article_create,
+      //  path: getRouteArticleCreate(),
       //  text: AppRoutes.ARTICLE_CREATE,
       //  authOnly: true,
       // },

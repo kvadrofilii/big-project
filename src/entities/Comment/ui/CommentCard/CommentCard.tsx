@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import clsx from 'clsx';
 
-import { RoutePath } from '@/shared/consts/route';
+import { getRouteProfile } from '@/shared/consts/route';
 import { AppLink, Avatar, Flex, Skeleton, Text } from '@/shared/ui';
 
 import css from './CommentCard.m.css';
@@ -30,7 +30,7 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
 
   return (
     <Flex className={clsx(css.root, className)} direction="column" gap={2}>
-      <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={css.header}>
+      <AppLink to={getRouteProfile(comment.user.id)} className={css.header}>
         {comment.user.avatar ? <Avatar size={30} src={comment.user.avatar} /> : null}
         <Text>{comment.user.username}</Text>
       </AppLink>
