@@ -1,4 +1,8 @@
-// Обновляет импорты в проекте добавляя alias '@/'
+/**
+ * Обновляет импорты в проекте добавляя alias '@/'
+ * Запускается:
+ * npx ts-node scripts/refactoring/updateImports.ts
+ */
 
 import { Project } from 'ts-morph';
 
