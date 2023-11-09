@@ -16,29 +16,17 @@ export function buildPlugins({
   apiUrl,
   project,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-  let isDevPlugins = [];
-  if (isDev) {
-    isDevPlugins = [
-      new ReactRefreshWebpackPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
-      new CircularDependencyPlugin({ exclude: /node_modules/, include: /src/, failOnError: true }),
-    ];
-  } else {
-    isDevPlugins = [
-      new MiniCssExtractPlugin({
-        filename: 'css/[name].[contenthash:8].css',
-        chunkFilename: 'css/[name].[contenthash:8].css',
-      }),
-    ];
-  }
+  const isProd = !isDev;
 
   const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html,
     }),
     new webpack.ProgressPlugin(),
-    new CopyPlugin({
-      patterns: [{ from: paths.locales, to: paths.buildLocales }],
+    new webpack.DefinePlugin({
+      __IS_DEV__: JSON.stringify(isDev),
+      __API__: JSON.stringify(apiUrl),
+      __PROJECT__: JSON.stringify(project),
     }),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
@@ -49,14 +37,37 @@ export function buildPlugins({
         mode: 'write-references',
       },
     }),
-    new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev),
-      __API__: JSON.stringify(apiUrl),
-      __PROJECT__: JSON.stringify(project),
-    }),
-    analyze && new BundleAnalyzerPlugin(),
-    ...isDevPlugins,
   ].filter(Boolean);
+
+  if (analyze) {
+    plugins.push(new BundleAnalyzerPlugin());
+  }
+
+  if (isDev) {
+    plugins.push(new ReactRefreshWebpackPlugin());
+    plugins.push(new webpack.HotModuleReplacementPlugin());
+    plugins.push(
+      new CircularDependencyPlugin({
+        exclude: /node_modules/,
+        include: /src/,
+        failOnError: true,
+      }),
+    );
+  }
+
+  if (isProd) {
+    plugins.push(
+      new CopyPlugin({
+        patterns: [{ from: paths.locales, to: paths.buildLocales }],
+      }),
+    );
+    plugins.push(
+      new MiniCssExtractPlugin({
+        filename: 'css/[name].[contenthash:8].css',
+        chunkFilename: 'css/[name].[contenthash:8].css',
+      }),
+    );
+  }
 
   return plugins as webpack.WebpackPluginInstance[];
 }

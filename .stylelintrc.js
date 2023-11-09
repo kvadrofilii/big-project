@@ -5,5 +5,5 @@ module.exports = {
     'selector-pseudo-class-disallowed-list': ['global'],
   },
   include: ['**/*.css', '**/*.m.css'],
-  exclude: ['**/*.ts', '**/*.tsx', '**/*.d.ts', '**/*.js', '**/*.jsx', '**/*.md', '**/*.svg'],
+  exclude: ['/node_modules/', '**/*.ts', '**/*.tsx', '**/*.d.ts', '**/*.js', '**/*.jsx', '**/*.md', '**/*.svg'],
 };
