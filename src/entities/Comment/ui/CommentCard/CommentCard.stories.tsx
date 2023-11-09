@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { CommentCard } from './CommentCard';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'entities/Comment/CommentCard',

@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { CardAction } from './CardAction';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'shared/CardAction',

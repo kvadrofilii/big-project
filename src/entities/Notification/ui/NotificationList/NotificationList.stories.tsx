@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { NotificationList } from './NotificationList';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'entities/Notification/NotificationList',

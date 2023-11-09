@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { AvatarMenu } from './AvatarMenu';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'features/AvatarMenu',

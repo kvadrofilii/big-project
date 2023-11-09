@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { Code } from './Code';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'shared/Code',

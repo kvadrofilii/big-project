@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { ArticleSortSelector } from './ArticleSortSelector';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'entities/Article/ArticleSortSelector',
