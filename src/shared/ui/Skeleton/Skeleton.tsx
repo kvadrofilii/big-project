@@ -7,7 +7,7 @@ import css from './Skeleton.m.css';
 import type { SkeletonProps } from './Skeleton.types';
 
 export const Skeleton: FC<SkeletonProps> = (props) => {
-  const { className, height, width, borderRadius } = props;
+  const { className, height, width, borderRadius, shadow } = props;
 
   const styles: CSSProperties = {
     height,
@@ -15,5 +15,16 @@ export const Skeleton: FC<SkeletonProps> = (props) => {
     borderRadius,
   };
 
-  return <div className={clsx(css.root, className)} style={styles} />;
+  return (
+    <div
+      className={clsx(
+        css.root,
+        {
+          [css.shadow]: shadow === true,
+        },
+        className,
+      )}
+      style={styles}
+    />
+  );
 };

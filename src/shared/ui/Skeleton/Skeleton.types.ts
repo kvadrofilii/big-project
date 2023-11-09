@@ -3,4 +3,5 @@ export interface SkeletonProps {
   height?: string | number;
   width?: string | number;
   borderRadius?: string;
+  shadow?: boolean;
 }
