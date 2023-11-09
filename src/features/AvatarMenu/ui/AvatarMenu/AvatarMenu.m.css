@@ -1,3 +1,4 @@
 .avatar {
   margin: 0;
+  color: var(--inverted-text-color);
 }
