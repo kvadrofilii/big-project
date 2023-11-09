@@ -274,7 +274,7 @@
       "export const MainPageAsync = lazy(() => import('./MainPage'));"
     ],
     "Stories": [
-      "import { Meta, StoryObj } from '@storybook/react';",
+      "import type { Meta, StoryObj } from '@storybook/react';",
       "",
       "import { [FTName] } from './[FTName]';",
       "",
