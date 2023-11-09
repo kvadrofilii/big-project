@@ -26,6 +26,7 @@
 - `npm run storybook` - запуск Storybook
 - `npm run storybook:build` - сборка Storybook билда
 - `npm run prepare` - прекоммит хуки
+- `npm run postinstall` - удаление кешей в папке `node_modules` после установки npm-пакетов
 
 ---
 
