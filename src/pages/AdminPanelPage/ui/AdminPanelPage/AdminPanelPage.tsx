@@ -13,7 +13,11 @@ const AdminPanelPage: FC<AdminPanelPageProps> = (props) => {
   const { className } = props;
   const { t } = useTranslation();
 
-  return <Page className={clsx(css.root, className)}>{t('Admin panel')}</Page>;
+  return (
+    <Page className={clsx(css.root, className)} data-testid="AdminPanelPage">
+      {t('Admin panel')}
+    </Page>
+  );
 };
 
 export default memo(AdminPanelPage);

@@ -13,7 +13,7 @@ import { scrollActions } from '../model/slices/scroll.slice';
 import type { PageProps } from './Page.types';
 
 export const Page = (props: PageProps) => {
-  const { className, children, onScrollEnd } = props;
+  const { className, children, onScrollEnd, ...rest } = props;
   const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
   const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
@@ -37,7 +37,7 @@ export const Page = (props: PageProps) => {
   });
 
   return (
-    <section ref={wrapperRef} className={clsx(css.root, className)} onScroll={onScroll}>
+    <section ref={wrapperRef} className={clsx(css.root, className)} onScroll={onScroll} {...rest}>
       {children}
       {onScrollEnd ? <div className={css.trigger} ref={triggerRef} /> : null}
     </section>

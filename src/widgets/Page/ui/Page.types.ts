@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 
-export interface PageProps {
+import { TestProps } from '@/shared/types';
+
+export interface PageProps extends TestProps {
   className?: string;
   children: ReactNode;
   onScrollEnd?: () => void;
