@@ -6,18 +6,20 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:import/recommended',
-    'plugin:import/typescript',
-    'airbnb',
-    'airbnb-typescript',
-    'airbnb/hooks',
+    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    //'plugin:postcss-modules/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:testing-library/react',
     'plugin:react-redux/recommended',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
-    'prettier',
+    //'plugin:postcss-modules/recommended',
+    'plugin:prettier/recommended',
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -28,17 +30,17 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint',
     'import',
     'react-hooks',
     'jsx-a11y',
+    '@typescript-eslint',
     'react-redux',
-    'prettier',
-    //'postcss-modules',
     'i18next',
     'testing-library',
     '@kvadrofilii/fsd',
     'unused-imports',
+    //'postcss-modules',
+    'prettier',
   ],
   settings: {
     react: {
@@ -59,6 +61,13 @@ module.exports = {
     },
   },
   rules: {
+    // Подсвечиваю использование console.log в коде
+    'no-console': 'warn',
+    // Разрешаем использовать глобальное объявление типов
+    'no-undef': 'off',
+    // Разрешает использовать висячие символы в переменных (_)
+    'no-underscore-dangle': 'off',
+    'prettier/prettier': 'error',
     'unused-imports/no-unused-imports': 'error',
     '@kvadrofilii/fsd/path-checker': ['error', { alias: '@' }],
     '@kvadrofilii/fsd/public-api-imports': [
@@ -72,37 +81,6 @@ module.exports = {
       'error',
       { alias: '@', ignoreImportPatterns: ['**/StoreProvider', '**/testing'] },
     ],
-    'no-console': 'off',
-    'no-plusplus': 'off',
-    'prefer-object-spread': 'off',
-    // Устанавливает максимальное количество пустых строк (в файле, в конце файла, в начале файла)
-    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
-    semi: ['error', 'always'],
-    // Запятые в объектах и массивах
-    'comma-dangle': ['error', 'always-multiline'],
-    // Длина строки
-    'max-len': [
-      'error',
-      {
-        code: 120,
-        ignoreUrls: true,
-        ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true,
-        ignoreComments: true,
-      },
-    ],
-    // Все свойства объектов с новой строки
-    'object-property-newline': 'error',
-    'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
-    // Разрешаем использовать глобальное объявление типов
-    'no-undef': 'off',
-    // Разрешает использовать висячие символы в переменных (_)
-    'no-underscore-dangle': 'off',
-    'import/export': 'off',
-    'import/prefer-default-export': 'off',
-    'import/no-cycle': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'import/no-named-as-default': 'off',
     'react/forbid-prop-types': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -112,10 +90,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     // Отключает значения по умолчанию для необязательных пропсов
     'react/require-default-props': 'off',
-    // React Hooks Rules
-    'react-hooks/rules-of-hooks': 'error',
-    // Проверяем зависимости эффекта
-    'react-hooks/exhaustive-deps': 'error',
     // Добавляю исключение для неиспользуемых аргументов в виде "_"
     '@typescript-eslint/no-unused-vars': [
       'warn',
@@ -123,6 +97,11 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
+    'import/export': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-cycle': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-named-as-default': 'off',
     // Настройка очерёдности импортов
     'import/order': [
       'error',
