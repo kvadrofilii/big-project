@@ -1,4 +1,4 @@
-import { CombinedState, configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
+import { CombinedState, configureStore, Reducer, ReducersMapObject, Store } from '@reduxjs/toolkit';
 
 import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api/api';
@@ -7,6 +7,10 @@ import { scrollReducer } from '@/widgets/Page';
 
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
+
+type AsyncStore = {
+  reducerManager: ReturnType<typeof createReducerManager>;
+} & Store;
 
 export function createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) {
   const rootReducers: ReducersMapObject<StateSchema> = {
@@ -30,9 +34,8 @@ export function createReduxStore(initialState?: StateSchema, asyncReducers?: Red
           extraArgument: extraArg,
         },
       }).concat(rtkApi.middleware),
-  });
+  }) as AsyncStore;
 
-  // @ts-ignore
   store.reducerManager = reducerManager;
 
   return store;
@@ -40,5 +43,5 @@ export function createReduxStore(initialState?: StateSchema, asyncReducers?: Red
 
 const store = createReduxStore();
 
-export type RootState = ReturnType<typeof store.getState>;
+export type AppState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

@@ -12,6 +12,7 @@ jest.mock('axios');
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 export class TestAsyncThunk<Return, Arg, RejectedValue> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dispatch: jest.MockedFn<any>;
 
   getState: () => StateSchema;
@@ -20,10 +21,7 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
 
   api: jest.Mocked<AxiosStatic>;
 
-  constructor(
-    actionCreator: ActionCreatorType<Return, Arg, RejectedValue>,
-    state?: DeepPartial<StateSchema>,
-  ) {
+  constructor(actionCreator: ActionCreatorType<Return, Arg, RejectedValue>, state?: DeepPartial<StateSchema>) {
     this.actionCreator = actionCreator;
     this.dispatch = jest.fn();
     this.getState = jest.fn(() => state as StateSchema);
