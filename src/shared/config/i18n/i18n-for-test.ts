@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 import i18n from 'i18next';

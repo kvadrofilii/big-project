@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useEffect, useRef } from 'react';
 
 type AnyFunction = (...args: any[]) => any;
