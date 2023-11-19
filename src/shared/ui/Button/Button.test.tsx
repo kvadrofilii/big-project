@@ -11,6 +11,5 @@ describe('Button', () => {
   test('Test clear contained', () => {
     render(<Button variant="contained">Test</Button>);
     expect(screen.getByText('Test')).toHaveClass('contained-primary');
-    screen.debug();
   });
 });

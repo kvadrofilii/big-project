@@ -11,6 +11,5 @@ describe('Button', () => {
   test('Test clear variant', () => {
     render(<IconButton variant="clear">Test</IconButton>);
     expect(screen.getByText('Test')).toHaveClass('clear-primary');
-    screen.debug();
   });
 });
