@@ -1,0 +1,14 @@
+{
+  // Рекомендованные расширения
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "lokalise.i18n-ally",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "Huuums.vscode-fast-folder-structure",
+    "clinyong.vscode-css-modules"
+  ],
+
+  // Нежелательные расширения
+  "unwantedRecommendations": []
+}
