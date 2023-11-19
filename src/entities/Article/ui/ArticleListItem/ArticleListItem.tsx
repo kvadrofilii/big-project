@@ -32,18 +32,39 @@ export const ArticleListItem = memo(function ArticleListItem(props: ArticleListI
       <div className={clsx(className, css[view])}>
         <Card className={css.card}>
           <div className={css.header}>
-            <Avatar size={30} alt={article.user.username} src={article.user.avatar} />
+            <Avatar
+              size={30}
+              alt={article.user.username}
+              src={article.user.avatar}
+            />
             <Text className={css.create}>{article.user.username}</Text>
             <Text className={css.create}>{article.createdAt}</Text>
           </div>
-          <Heading variant="h3" ellipsis>
+          <Heading
+            variant="h3"
+            ellipsis
+          >
             {article.title}
           </Heading>
           {types}
-          <img src={article.img} className={css.img} alt={article.title} />
-          {textBlock && <ArticleTextBlockComponent className={css.text} block={textBlock} />}
+          <img
+            src={article.img}
+            className={css.img}
+            alt={article.title}
+          />
+          {textBlock && (
+            <ArticleTextBlockComponent
+              className={css.text}
+              block={textBlock}
+            />
+          )}
           <div className={css.footer}>
-            <AppLink target={target} variant="outlined" color="primary" to={getRouteArticleDetails(article.id)}>
+            <AppLink
+              target={target}
+              variant="outlined"
+              color="primary"
+              to={getRouteArticleDetails(article.id)}
+            >
               {t('Read more')}
             </AppLink>
             {views}
@@ -56,16 +77,26 @@ export const ArticleListItem = memo(function ArticleListItem(props: ArticleListI
   return (
     <div className={clsx(className, css[view])}>
       <Card>
-        <CardAction target={target} to={getRouteArticleDetails(article.id)}>
+        <CardAction
+          target={target}
+          to={getRouteArticleDetails(article.id)}
+        >
           <div className={css['img-wrapper']}>
-            <img src={article.img} className={css.img} alt={article.title} />
+            <img
+              src={article.img}
+              className={css.img}
+              alt={article.title}
+            />
             <Text className={css.create}>{article.createdAt}</Text>
           </div>
           <div className={css['info-wrapper']}>
             {types}
             {views}
           </div>
-          <Heading variant="h3" ellipsis>
+          <Heading
+            variant="h3"
+            ellipsis
+          >
             {article.title}
           </Heading>
         </CardAction>

@@ -14,7 +14,10 @@ const AdminPanelPage: FC<AdminPanelPageProps> = (props) => {
   const { t } = useTranslation();
 
   return (
-    <Page className={clsx(css.root, className)} data-testid="AdminPanelPage">
+    <Page
+      className={clsx(css.root, className)}
+      data-testid="AdminPanelPage"
+    >
       {t('Admin panel')}
     </Page>
   );

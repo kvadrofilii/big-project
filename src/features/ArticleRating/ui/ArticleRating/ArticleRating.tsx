@@ -52,7 +52,12 @@ const ArticleRating = memo(function ArticleRating(props: ArticleRatingProps) {
   );
 
   if (isLoading) {
-    return <Skeleton width="100%" height={60} />;
+    return (
+      <Skeleton
+        width="100%"
+        height={60}
+      />
+    );
   }
 
   const rating = data?.[0];

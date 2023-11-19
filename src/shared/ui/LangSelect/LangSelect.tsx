@@ -21,7 +21,13 @@ export const LangSelect = memo(function LangSelect(props: LangSelectProps) {
   };
 
   return (
-    <IconButton variant="clear" className={clsx(css.root, className)} type="button" onClick={toggleLanguage} {...rest}>
+    <IconButton
+      variant="clear"
+      className={clsx(css.root, className)}
+      type="button"
+      onClick={toggleLanguage}
+      {...rest}
+    >
       <TranslateIcon />
     </IconButton>
   );

@@ -37,19 +37,45 @@ export const RatingCard = memo(function RatingCard(props: RatingCardProps) {
 
   return (
     <Card className={className}>
-      <Flex direction="column" align="center">
+      <Flex
+        direction="column"
+        align="center"
+      >
         <Heading variant="h3">{starsCount ? t('Thanks for the rating') : title}</Heading>
-        <StarRating onSelect={onSelectStars} selectStars={starsCount} />
+        <StarRating
+          onSelect={onSelectStars}
+          selectStars={starsCount}
+        />
       </Flex>
       <Modal isOpened={isModalOpen}>
-        <Flex direction="column" gap={2}>
+        <Flex
+          direction="column"
+          gap={2}
+        >
           <Heading>{feedbackTitle}</Heading>
-          <Input value={feedback} onChange={setFeedback} placeholder={t('Your feedback')} fullWidth />
-          <Flex gap={2} justify="end" fullWidth>
-            <Button variant="outlined" color="error" onClick={cancelHandle}>
+          <Input
+            value={feedback}
+            onChange={setFeedback}
+            placeholder={t('Your feedback')}
+            fullWidth
+          />
+          <Flex
+            gap={2}
+            justify="end"
+            fullWidth
+          >
+            <Button
+              variant="outlined"
+              color="error"
+              onClick={cancelHandle}
+            >
               {t('Close')}
             </Button>
-            <Button variant="contained" color="primary" onClick={acceptHandle}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={acceptHandle}
+            >
               {t('Send')}
             </Button>
           </Flex>

@@ -45,9 +45,22 @@ export const ArticleSortSelector = memo(function ArticleSortSelector(props: Arti
   );
 
   return (
-    <Flex className={className} gap={1}>
-      <Select<ArticleSortField> label={t('Sort by')} options={sortFieldOptions} value={sort} onChange={onChangeSort} />
-      <Select<SortOrder> label={t('by')} options={orderOptions} value={order} onChange={onChangeOrder} />
+    <Flex
+      className={className}
+      gap={1}
+    >
+      <Select<ArticleSortField>
+        label={t('Sort by')}
+        options={sortFieldOptions}
+        value={sort}
+        onChange={onChangeSort}
+      />
+      <Select<SortOrder>
+        label={t('by')}
+        options={orderOptions}
+        value={order}
+        onChange={onChangeOrder}
+      />
     </Flex>
   );
 });

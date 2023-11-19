@@ -19,8 +19,19 @@ export const Avatar = (props: AvatarProps) => {
     [size],
   );
 
-  const fallback = <Skeleton width={size} height={size} borderRadius="50%" />;
-  const errorFallback = <PersonIcon style={styles} className={className} />;
+  const fallback = (
+    <Skeleton
+      width={size}
+      height={size}
+      borderRadius="50%"
+    />
+  );
+  const errorFallback = (
+    <PersonIcon
+      style={styles}
+      className={className}
+    />
+  );
 
   return (
     <AppImage

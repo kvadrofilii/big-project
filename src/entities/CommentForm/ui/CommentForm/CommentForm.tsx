@@ -14,9 +14,21 @@ export const CommentForm = memo(function CommentForm(props: CommentFormProps) {
   const { t } = useTranslation();
 
   return (
-    <Flex className={clsx(css.root, className)} gap={2} justify="between">
-      <Input placeholder={t('Enter the comment text')} value={value} onChange={onChange} className={css.input} />
-      <Button variant="outlined" onClick={onSend}>
+    <Flex
+      className={clsx(css.root, className)}
+      gap={2}
+      justify="between"
+    >
+      <Input
+        placeholder={t('Enter the comment text')}
+        value={value}
+        onChange={onChange}
+        className={css.input}
+      />
+      <Button
+        variant="outlined"
+        onClick={onSend}
+      >
         {t('Send')}
       </Button>
     </Flex>

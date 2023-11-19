@@ -13,7 +13,10 @@ export const NotificationItem = memo(function NotificationItem(props: Notificati
 
   const content = (
     <>
-      <Heading variant="h4" ellipsis>
+      <Heading
+        variant="h4"
+        ellipsis
+      >
         {item.title}
       </Heading>
       <Text>{item.description}</Text>
@@ -23,7 +26,10 @@ export const NotificationItem = memo(function NotificationItem(props: Notificati
   if (item.href) {
     return (
       <Card className={clsx(css.root, className)}>
-        <CardAction target="_blank" to={item.href}>
+        <CardAction
+          target="_blank"
+          to={item.href}
+        >
           {content}
         </CardAction>
       </Card>

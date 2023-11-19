@@ -84,13 +84,39 @@ export const ArticlesPageFilters = memo(function ArticlesPageFilters(props: Arti
   );
 
   return (
-    <Flex className={clsx(css.root, className)} direction="column" gap={1} justify="between">
-      <Flex className={css.wrapper} justify="between" wrap="wrap" gap={1}>
-        <ArticleSortSelector order={order} sort={sort} onChangeOrder={onChangeOrder} onChangeSort={onChangeSort} />
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
+    <Flex
+      className={clsx(css.root, className)}
+      direction="column"
+      gap={1}
+      justify="between"
+    >
+      <Flex
+        className={css.wrapper}
+        justify="between"
+        wrap="wrap"
+        gap={1}
+      >
+        <ArticleSortSelector
+          order={order}
+          sort={sort}
+          onChangeOrder={onChangeOrder}
+          onChangeSort={onChangeSort}
+        />
+        <ArticleViewSelector
+          view={view}
+          onViewClick={onChangeView}
+        />
       </Flex>
-      <Input placeholder={t('Search')} fullWidth value={search} onChange={onChangeSearch} />
-      <ArticleTypeTabs value={type} onChangeType={onChangeType} />
+      <Input
+        placeholder={t('Search')}
+        fullWidth
+        value={search}
+        onChange={onChangeSearch}
+      />
+      <ArticleTypeTabs
+        value={type}
+        onChangeType={onChangeType}
+      />
     </Flex>
   );
 });

@@ -15,9 +15,16 @@ export const ArticleImageBlockComponent = memo(function ArticleImageBlockCompone
 
   return (
     <div className={clsx(className)}>
-      <img src={block.src} alt={block.title} className={css.img} />
+      <img
+        src={block.src}
+        alt={block.title}
+        className={css.img}
+      />
       {block.title && (
-        <Heading variant="h4" align="center">
+        <Heading
+          variant="h4"
+          align="center"
+        >
           {block.title}
         </Heading>
       )}

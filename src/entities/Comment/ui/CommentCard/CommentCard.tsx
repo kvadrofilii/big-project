@@ -14,12 +14,26 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
 
   if (isLoading) {
     return (
-      <Flex className={clsx(css.root, className)} direction="column" gap={2}>
+      <Flex
+        className={clsx(css.root, className)}
+        direction="column"
+        gap={2}
+      >
         <div className={css.header}>
-          <Skeleton width={30} height={30} borderRadius="50%" />
-          <Skeleton width={100} height={20} />
+          <Skeleton
+            width={30}
+            height={30}
+            borderRadius="50%"
+          />
+          <Skeleton
+            width={100}
+            height={20}
+          />
         </div>
-        <Skeleton width="100%" height={50} />
+        <Skeleton
+          width="100%"
+          height={50}
+        />
       </Flex>
     );
   }
@@ -29,9 +43,21 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
   }
 
   return (
-    <Flex className={clsx(css.root, className)} direction="column" gap={2}>
-      <AppLink to={getRouteProfile(comment.user.id)} className={css.header}>
-        {comment.user.avatar ? <Avatar size={30} src={comment.user.avatar} /> : null}
+    <Flex
+      className={clsx(css.root, className)}
+      direction="column"
+      gap={2}
+    >
+      <AppLink
+        to={getRouteProfile(comment.user.id)}
+        className={css.header}
+      >
+        {comment.user.avatar ? (
+          <Avatar
+            size={30}
+            src={comment.user.avatar}
+          />
+        ) : null}
         <Text>{comment.user.username}</Text>
       </AppLink>
       <Text>{comment.text}</Text>

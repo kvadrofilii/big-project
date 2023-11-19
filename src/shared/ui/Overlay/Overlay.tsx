@@ -32,5 +32,13 @@ export const Overlay: FC<OverlayProps> = (props) => {
     };
   }, [isOpened, onKeyDown]);
 
-  return <button type="button" aria-label="Overlay" className={css.root} tabIndex={0} onClick={closeHandler} />;
+  return (
+    <button
+      type="button"
+      aria-label="Overlay"
+      className={css.root}
+      tabIndex={0}
+      onClick={closeHandler}
+    />
+  );
 };

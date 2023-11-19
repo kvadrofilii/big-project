@@ -16,12 +16,18 @@ export const ArticleTextBlockComponent = memo(function ArticleTextBlockComponent
   return (
     <div className={clsx(className)}>
       {block.title && (
-        <Heading className={css.title} variant="h4">
+        <Heading
+          className={css.title}
+          variant="h4"
+        >
           {block.title}
         </Heading>
       )}
       {block.paragraphs.map((paragraph) => (
-        <Text className={css.paragraph} key={paragraph}>
+        <Text
+          className={css.paragraph}
+          key={paragraph}
+        >
           {paragraph}
         </Text>
       ))}

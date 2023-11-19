@@ -30,12 +30,21 @@ export const ArticleDetailsPageHeader = memo(function ArticleDetailsPageHeader(p
   }, [article?.id, navigate]);
 
   return (
-    <Flex className={className} justify="between">
-      <Button variant="outlined" onClick={onBackToList}>
+    <Flex
+      className={className}
+      justify="between"
+    >
+      <Button
+        variant="outlined"
+        onClick={onBackToList}
+      >
         {t('Return')}
       </Button>
       {canEdit && (
-        <Button variant="outlined" onClick={onEditArticle}>
+        <Button
+          variant="outlined"
+          onClick={onEditArticle}
+        >
           {t('Edit')}
         </Button>
       )}

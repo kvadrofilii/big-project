@@ -42,7 +42,10 @@ const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormPro
 
   return (
     <DynamicReducerLoader reducers={initialReducers}>
-      <form className={clsx(css.root, className)} onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className={clsx(css.root, className)}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <Heading>{t('Form authorizations')}</Heading>
         {error && <Text color="error">{t('You entered')}</Text>}
         <Controller
@@ -51,7 +54,13 @@ const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormPro
           // rules={{ required: true, minLength: 2, maxLength: 20 }}
           defaultValue=""
           render={({ field: { onChange, onBlur, value } }) => (
-            <Input onBlur={onBlur} type="text" onChange={onChange} value={value} placeholder={t('username')} />
+            <Input
+              onBlur={onBlur}
+              type="text"
+              onChange={onChange}
+              value={value}
+              placeholder={t('username')}
+            />
           )}
         />
         <Controller
@@ -60,10 +69,20 @@ const LoginForm = memo(function LoginForm({ className, onSuccess }: LoginFormPro
           // rules={{ required: true, minLength: 3, maxLength: 20, pattern: /^[A-Za-z]+$/i }}
           defaultValue=""
           render={({ field: { onChange, onBlur, value } }) => (
-            <Input onBlur={onBlur} onChange={onChange} value={value} type="text" placeholder={t('password')} />
+            <Input
+              onBlur={onBlur}
+              onChange={onChange}
+              value={value}
+              type="text"
+              placeholder={t('password')}
+            />
           )}
         />
-        <Button variant="contained" type="submit" disabled={isLoading}>
+        <Button
+          variant="contained"
+          type="submit"
+          disabled={isLoading}
+        >
           {t('Enter')}
         </Button>
       </form>

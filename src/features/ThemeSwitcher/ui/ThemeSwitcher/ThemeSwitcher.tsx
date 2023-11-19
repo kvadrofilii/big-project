@@ -16,7 +16,13 @@ export const ThemeSwitcher = memo(function ThemeSwitcher(props: ThemeSwitcherPro
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <IconButton variant="clear" className={clsx(css.root, className)} type="button" onClick={toggleTheme} {...rest}>
+    <IconButton
+      variant="clear"
+      className={clsx(css.root, className)}
+      type="button"
+      onClick={toggleTheme}
+      {...rest}
+    >
       {theme === 'dark' ? <LightIcon /> : <DarkIcon />}
     </IconButton>
   );

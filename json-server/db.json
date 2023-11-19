@@ -41,9 +41,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -113,9 +111,7 @@
       "views": 500,
       "createdAt": "26.04.2022",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -137,9 +133,7 @@
       "views": 304,
       "createdAt": "12.02.2022",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -161,9 +155,7 @@
       "views": 2003,
       "createdAt": "26.02.2020",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -185,9 +177,7 @@
       "views": 4302,
       "createdAt": "12.05.2012",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -209,9 +199,7 @@
       "views": 1332,
       "createdAt": "16.08.2021",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -233,9 +221,7 @@
       "views": 100,
       "createdAt": "26.08.2022",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -257,9 +243,7 @@
       "views": 405,
       "createdAt": "13.08.2002",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -281,9 +265,7 @@
       "views": 200,
       "createdAt": "23.03.2022",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -305,9 +287,7 @@
       "views": 33,
       "createdAt": "26.05.2020",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -329,9 +309,7 @@
       "views": 90,
       "createdAt": "18.06.2021",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -353,9 +331,7 @@
       "views": 3003,
       "createdAt": "01.04.2020",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -377,9 +353,7 @@
       "views": 881,
       "createdAt": "20.07.2012",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -401,9 +375,7 @@
       "views": 778,
       "createdAt": "06.03.2022",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -425,9 +397,7 @@
       "views": 90,
       "createdAt": "05.05.2005",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -449,9 +419,7 @@
       "views": 79,
       "createdAt": "09.09.2020",
       "userId": "1",
-      "type": [
-        "it"
-      ],
+      "type": ["it"],
       "blocks": [
         {
           "id": "1",
@@ -473,9 +441,7 @@
       "views": 606,
       "createdAt": "30.11.2018",
       "userId": "1",
-      "type": [
-        "it, economics"
-      ],
+      "type": ["it, economics"],
       "blocks": [
         {
           "id": "1",
@@ -497,9 +463,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "economics"
-      ],
+      "type": ["economics"],
       "blocks": [
         {
           "id": "1",
@@ -521,9 +485,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "science"
-      ],
+      "type": ["science"],
       "blocks": [
         {
           "id": "1",
@@ -599,27 +561,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg"
     },
     {
       "id": "2",
       "username": "cherry",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg"
     },
     {
       "id": "3",
       "username": "bobby",
       "password": "123",
-      "roles": [
-        "MANAGER"
-      ],
+      "roles": ["MANAGER"],
       "avatar": "https://forum.kaboom2.ru/data/avatars/o/70/70758.jpg"
     }
   ],

@@ -49,8 +49,15 @@ const ArticleComments = memo(function ArticleComments(props: ArticleCommentsProp
   return (
     <DynamicReducerLoader reducers={reducers}>
       <Heading className={css.title}>{t('Comments')}</Heading>
-      <CommentForm value={text} onChange={onCommentTextChange} onSend={onSendHandler} />
-      <CommentList isLoading={commentsIsLoading} comments={comments} />
+      <CommentForm
+        value={text}
+        onChange={onCommentTextChange}
+        onSend={onSendHandler}
+      />
+      <CommentList
+        isLoading={commentsIsLoading}
+        comments={comments}
+      />
     </DynamicReducerLoader>
   );
 });

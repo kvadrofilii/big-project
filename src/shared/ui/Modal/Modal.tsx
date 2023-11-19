@@ -16,7 +16,10 @@ export const Modal: FC<ModalProps> = (props) => {
   return (
     <Portal>
       <div className={css.root}>
-        <Overlay onClose={onClose} isOpened={isOpened} />
+        <Overlay
+          onClose={onClose}
+          isOpened={isOpened}
+        />
         <div className={css.content}>{children}</div>
       </div>
     </Portal>

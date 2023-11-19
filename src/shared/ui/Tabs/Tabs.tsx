@@ -19,7 +19,10 @@ export const Tabs = memo(function Tabs(props: TabsProps) {
   );
 
   return (
-    <Flex className={clsx(css.root, className)} gap={1}>
+    <Flex
+      className={clsx(css.root, className)}
+      gap={1}
+    >
       {tabs.map((tab) => (
         <Card
           className={css.tab}

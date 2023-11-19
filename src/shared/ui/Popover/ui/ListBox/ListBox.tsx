@@ -14,7 +14,10 @@ export const ListBox = memo(function ListBox(props: ListBoxProps) {
   const { className, options, value, defaultValue, onChange, disabled, direction = 'bottom-right', label } = props;
 
   return (
-    <Flex gap={1} align="center">
+    <Flex
+      gap={1}
+      align="center"
+    >
       {label && <span className={css.label}>{label}</span>}
       <HListbox
         as="div"
@@ -33,7 +36,12 @@ export const ListBox = memo(function ListBox(props: ListBoxProps) {
           })}
         >
           {options?.map((item) => (
-            <HListbox.Option as={Fragment} key={item.value} value={item.value} disabled={item.disabled}>
+            <HListbox.Option
+              as={Fragment}
+              key={item.value}
+              value={item.value}
+              disabled={item.disabled}
+            >
               {({ active, selected }) => (
                 <li className={clsx(css.item, active && popover.active, item.disabled && popover.disabled)}>
                   {selected && <span className={css.ok}>⎷</span>}

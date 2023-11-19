@@ -71,7 +71,10 @@ export const DrawerContent = (props: DrawerProps) => {
           [css.opened]: isOpened,
         })}
       >
-        <Overlay onClose={onClose} isOpened={isOpened} />
+        <Overlay
+          onClose={onClose}
+          isOpened={isOpened}
+        />
         <Spring.a.div
           className={css.content}
           style={{ display, bottom: `calc(-100vh + ${height - 100}px)`, y }}

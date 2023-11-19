@@ -1,6 +1,5 @@
 import { memo } from 'react';
 
-import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 import { ArticleList } from '@/entities/Article';
@@ -23,9 +22,18 @@ export const ArticlesRecommendationsList = memo(function ArticlesRecommendations
   }
 
   return (
-    <Flex className={clsx(css.root, className)} direction="column" gap={1}>
+    <Flex
+      className={className}
+      direction="column"
+      gap={1}
+    >
       <Heading className={css.title}>{t('Recommendations')}</Heading>
-      <ArticleList className={css.recommendations} articles={articles} isLoading={isLoading} target="_blank" />
+      <ArticleList
+        className={css.recommendations}
+        articles={articles}
+        isLoading={isLoading}
+        target="_blank"
+      />
     </Flex>
   );
 });

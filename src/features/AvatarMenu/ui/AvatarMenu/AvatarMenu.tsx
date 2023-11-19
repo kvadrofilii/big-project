@@ -55,7 +55,11 @@ export const AvatarMenu = memo(function AvatarMenu(props: AvatarMenuProps) {
         },
       ]}
     >
-      <Avatar size={28} src={authData?.avatar} className={css.avatar} />
+      <Avatar
+        size={28}
+        src={authData?.avatar}
+        className={css.avatar}
+      />
     </Menu>
   );
 });

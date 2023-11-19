@@ -11,7 +11,10 @@ export const Footer: FC<FooterProps> = ({ className }) => {
   const { t } = useTranslation();
 
   return (
-    <footer data-testid="footer" className={clsx(css.root, className)}>
+    <footer
+      data-testid="footer"
+      className={clsx(css.root, className)}
+    >
       {t('Footer')}
     </footer>
   );

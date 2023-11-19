@@ -18,7 +18,12 @@ export const Code = memo(function Code(props: CodeProps) {
 
   return (
     <pre className={clsx(css.root, className)}>
-      <IconButton type="button" className={css.button} variant="outlined" onClick={onCopy}>
+      <IconButton
+        type="button"
+        className={css.button}
+        variant="outlined"
+        onClick={onCopy}
+      >
         <CopyIcon />
       </IconButton>
       <code>{text}</code>

@@ -29,12 +29,26 @@ export const Header = memo(function Header({ className }: HeaderProps) {
   }, []);
 
   return (
-    <header data-testid="header" className={clsx(css.root, className)}>
-      <Flex gap={2} align="center" justify="between" grow={1}>
-        <AppLink className={css.logo} to="/">
+    <header
+      data-testid="header"
+      className={clsx(css.root, className)}
+    >
+      <Flex
+        gap={2}
+        align="center"
+        justify="between"
+        grow={1}
+      >
+        <AppLink
+          className={css.logo}
+          to="/"
+        >
           {t('FSD project')}
         </AppLink>
-        <Flex gap={2} align="center">
+        <Flex
+          gap={2}
+          align="center"
+        >
           <LangSelect />
           <ThemeSwitcher />
 
@@ -45,10 +59,18 @@ export const Header = memo(function Header({ className }: HeaderProps) {
             </>
           ) : (
             <>
-              <Button variant="contained" onClick={onShowModal}>
+              <Button
+                variant="contained"
+                onClick={onShowModal}
+              >
                 {t('Enter')}
               </Button>
-              {isAuthModal && <LoginModal isOpened={isAuthModal} onClose={onCloseModal} />}
+              {isAuthModal && (
+                <LoginModal
+                  isOpened={isAuthModal}
+                  onClose={onCloseModal}
+                />
+              )}
             </>
           )}
         </Flex>

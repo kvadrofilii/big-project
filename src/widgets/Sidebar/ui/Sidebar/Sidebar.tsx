@@ -21,7 +21,14 @@ export const Sidebar = memo(function Sidebar({ className }: SidebarProps) {
   };
 
   const linksList = useMemo(
-    () => navbarLinks.map((item) => <NavbarLink key={item.path} item={item} collapsed={collapsed} />),
+    () =>
+      navbarLinks.map((item) => (
+        <NavbarLink
+          key={item.path}
+          item={item}
+          collapsed={collapsed}
+        />
+      )),
     [collapsed, navbarLinks],
   );
 

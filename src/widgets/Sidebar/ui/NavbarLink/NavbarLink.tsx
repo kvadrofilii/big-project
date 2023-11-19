@@ -34,8 +34,17 @@ export const NavbarLink = memo(function NavbarLink(props: NavbarLinkProps) {
   };
 
   return (
-    <AppLink className={css.root} to={item.path} variant="text" fullWidth>
-      <IconButton size="large" type="button" color="inherit">
+    <AppLink
+      className={css.root}
+      to={item.path}
+      variant="text"
+      fullWidth
+    >
+      <IconButton
+        size="large"
+        type="button"
+        color="inherit"
+      >
         <item.icon />
       </IconButton>
       {!collapsed && routeTranslate[item.text]}

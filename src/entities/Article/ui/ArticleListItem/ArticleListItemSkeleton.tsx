@@ -16,16 +16,35 @@ export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(pro
       <div className={clsx(className, css[view])}>
         <Card className={css.card}>
           <div className={css.header}>
-            <Skeleton width={30} height={30} borderRadius="50%" />
-            <Skeleton width={100} height={20} />
+            <Skeleton
+              width={30}
+              height={30}
+              borderRadius="50%"
+            />
+            <Skeleton
+              width={100}
+              height={20}
+            />
           </div>
-          <Skeleton width="100%" height={20} />
-          <Skeleton width="100%" height={20} />
+          <Skeleton
+            width="100%"
+            height={20}
+          />
+          <Skeleton
+            width="100%"
+            height={20}
+          />
           <Skeleton className={css.img} />
           <Skeleton className={css.text} />
           <div className={css.footer}>
-            <Skeleton width={100} height={20} />
-            <Skeleton width={100} height={20} />
+            <Skeleton
+              width={100}
+              height={20}
+            />
+            <Skeleton
+              width={100}
+              height={20}
+            />
           </div>
         </Card>
       </div>
@@ -39,10 +58,19 @@ export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(pro
           <Skeleton className={css.img} />
         </div>
         <div className={css['info-wrapper']}>
-          <Skeleton width={50} height={20} />
-          <Skeleton width={50} height={20} />
+          <Skeleton
+            width={50}
+            height={20}
+          />
+          <Skeleton
+            width={50}
+            height={20}
+          />
         </div>
-        <Skeleton width={100} height={20} />
+        <Skeleton
+          width={100}
+          height={20}
+        />
       </Card>
     </div>
   );

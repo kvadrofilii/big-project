@@ -39,12 +39,19 @@ export const EditableProfileCardHeader = memo(function EditableProfileCardHeader
   }, [dispatch]);
 
   return (
-    <Flex className={clsx(css.root, className)} justify="between">
+    <Flex
+      className={clsx(css.root, className)}
+      justify="between"
+    >
       <Heading>{t('Profile')}</Heading>
       {canEdit && (
         <Flex gap={2}>
           {readOnly ? (
-            <Button variant="outlined" onClick={onEdit} data-testid="EditableProfileCardHeader.EditButton">
+            <Button
+              variant="outlined"
+              onClick={onEdit}
+              data-testid="EditableProfileCardHeader.EditButton"
+            >
               {t('Edit')}
             </Button>
           ) : (
@@ -57,7 +64,11 @@ export const EditableProfileCardHeader = memo(function EditableProfileCardHeader
               >
                 {t('Cancel')}
               </Button>
-              <Button variant="outlined" onClick={onSave} data-testid="EditableProfileCardHeader.SaveButton">
+              <Button
+                variant="outlined"
+                onClick={onSave}
+                data-testid="EditableProfileCardHeader.SaveButton"
+              >
                 {t('Save')}
               </Button>
             </>

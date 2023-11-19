@@ -17,9 +17,17 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
   };
 
   return (
-    <Flex className={clsx(css.root, className)} direction="column" gap={2} justify="center">
+    <Flex
+      className={clsx(css.root, className)}
+      direction="column"
+      gap={2}
+      justify="center"
+    >
       <p>{t('PageError')}</p>
-      <button type="button" onClick={reloadPage}>
+      <button
+        type="button"
+        onClick={reloadPage}
+      >
         {t('PageErrorBtn')}
       </button>
     </Flex>

@@ -26,10 +26,18 @@ export const NotificationButton = memo(function NotificationButton(props: Notifi
 
   return isMobile ? (
     <>
-      <IconButton tag="span" variant="clear" className={css.btn} onClick={onOpenDrawer}>
+      <IconButton
+        tag="span"
+        variant="clear"
+        className={css.btn}
+        onClick={onOpenDrawer}
+      >
         <Bell />
       </IconButton>
-      <Drawer isOpened={isOpened} onClose={onCloseDrawer}>
+      <Drawer
+        isOpened={isOpened}
+        onClose={onCloseDrawer}
+      >
         <NotificationList />
       </Drawer>
     </>
@@ -38,7 +46,11 @@ export const NotificationButton = memo(function NotificationButton(props: Notifi
       className={clsx(className)}
       direction="bottom left"
       trigger={
-        <IconButton tag="span" variant="clear" className={css.btn}>
+        <IconButton
+          tag="span"
+          variant="clear"
+          className={css.btn}
+        >
           <Bell />
         </IconButton>
       }

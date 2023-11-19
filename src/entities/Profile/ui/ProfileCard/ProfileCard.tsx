@@ -38,10 +38,16 @@ export const ProfileCard = (props: ProfileCardProps) => {
   if (error) {
     return (
       <div className={clsx(css.root, css.error, className)}>
-        <Heading color="error" align="center">
+        <Heading
+          color="error"
+          align="center"
+        >
           {t('An error occurred while loading the profile')}
         </Heading>
-        <Text color="error" align="center">
+        <Text
+          color="error"
+          align="center"
+        >
           {t('Try refreshing the page')}
         </Text>
       </div>
@@ -50,9 +56,15 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   return (
     <div className={clsx(css.root, className)}>
-      <Flex direction="column" gap={2}>
+      <Flex
+        direction="column"
+        gap={2}
+      >
         {data?.avatar && (
-          <Flex className={css['avatar-wrapper']} justify="center">
+          <Flex
+            className={css['avatar-wrapper']}
+            justify="center"
+          >
             <Avatar src={data?.avatar} />
           </Flex>
         )}
@@ -77,7 +89,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
           onChange={onChangeAge}
           type="number"
         />
-        <Input value={data?.city ?? ''} placeholder={t('Your-city')} readOnly={readOnly} onChange={onChangeCity} />
+        <Input
+          value={data?.city ?? ''}
+          placeholder={t('Your-city')}
+          readOnly={readOnly}
+          onChange={onChangeCity}
+        />
         <Input
           value={data?.username ?? ''}
           placeholder={t('Enter the user name')}
@@ -90,8 +107,16 @@ export const ProfileCard = (props: ProfileCardProps) => {
           readOnly={readOnly}
           onChange={onChangeAvatar}
         />
-        <CurrencySelect value={data?.currency} disabled={readOnly} onChange={onChangeCurrency} />
-        <CountrySelect value={data?.country} disabled={readOnly} onChange={onChangeCountry} />
+        <CurrencySelect
+          value={data?.currency}
+          disabled={readOnly}
+          onChange={onChangeCurrency}
+        />
+        <CountrySelect
+          value={data?.country}
+          disabled={readOnly}
+          onChange={onChangeCountry}
+        />
       </Flex>
     </div>
   );

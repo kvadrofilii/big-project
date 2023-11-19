@@ -13,7 +13,10 @@ export const Menu = memo(function Menu(props: MenuProps) {
   const { className, items, children, disabled, direction = 'bottom right' } = props;
 
   return (
-    <HMenu as="div" className={clsx(popover.root, className, disabled && popover.disabled)}>
+    <HMenu
+      as="div"
+      className={clsx(popover.root, className, disabled && popover.disabled)}
+    >
       <HMenu.Button className={clsx(css.btn, disabled && popover.disabled)}>{children}</HMenu.Button>
       <HMenu.Items
         className={clsx(css.items, {
@@ -37,14 +40,23 @@ export const Menu = memo(function Menu(props: MenuProps) {
 
           if (item.href) {
             return (
-              <HMenu.Item as={Link} to={item.href} key={item.id} disabled={item.disabled}>
+              <HMenu.Item
+                as={Link}
+                to={item.href}
+                key={item.id}
+                disabled={item.disabled}
+              >
                 {content}
               </HMenu.Item>
             );
           }
 
           return (
-            <HMenu.Item as={Fragment} key={item.id} disabled={item.disabled}>
+            <HMenu.Item
+              as={Fragment}
+              key={item.id}
+              disabled={item.disabled}
+            >
               {content}
             </HMenu.Item>
           );

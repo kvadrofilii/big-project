@@ -40,9 +40,16 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
 
   return (
     <DynamicReducerLoader reducers={reducers}>
-      <Page className={clsx(css.root, className)} onScrollEnd={onLoadNextPart}>
+      <Page
+        className={clsx(css.root, className)}
+        onScrollEnd={onLoadNextPart}
+      >
         <ArticlesPageFilters />
-        <ArticleList isLoading={isLoading} view={view} articles={articles} />
+        <ArticleList
+          isLoading={isLoading}
+          view={view}
+          articles={articles}
+        />
       </Page>
     </DynamicReducerLoader>
   );

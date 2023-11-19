@@ -27,7 +27,13 @@ export const CommentList = memo(function CommentList(props: CommentListProps) {
   return (
     <div className={clsx(css.root, className)}>
       {comments?.length ? (
-        comments.map((comment) => <CommentCard key={comment.id} comment={comment} isLoading={isLoading} />)
+        comments.map((comment) => (
+          <CommentCard
+            key={comment.id}
+            comment={comment}
+            isLoading={isLoading}
+          />
+        ))
       ) : (
         <Text>{t('There are no comments')}</Text>
       )}

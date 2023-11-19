@@ -31,13 +31,28 @@ const reducers: ReducersList = {
 const renderBlock = (block: ArticleBlock) => {
   switch (block.type) {
     case 'code': {
-      return <ArticleCodeBlockComponent key={block.id} block={block} />;
+      return (
+        <ArticleCodeBlockComponent
+          key={block.id}
+          block={block}
+        />
+      );
     }
     case 'image': {
-      return <ArticleImageBlockComponent key={block.id} block={block} />;
+      return (
+        <ArticleImageBlockComponent
+          key={block.id}
+          block={block}
+        />
+      );
     }
     case 'text': {
-      return <ArticleTextBlockComponent key={block.id} block={block} />;
+      return (
+        <ArticleTextBlockComponent
+          key={block.id}
+          block={block}
+        />
+      );
     }
     default: {
       return null;
@@ -61,21 +76,58 @@ export const ArticleDetails = memo(function ArticleDetails(props: ArticleDetails
 
   if (isLoading) {
     content = (
-      <Flex gap={2} direction="column" align="start">
-        <Skeleton width={200} height={200} borderRadius="50%" className={css.avatar} />
-        <Skeleton width={300} height={32} borderRadius="10px" />
-        <Skeleton width={600} height={40} borderRadius="10px" />
-        <Skeleton width="100%" height={40} borderRadius="10px" />
-        <Skeleton width="100%" height={40} borderRadius="10px" />
+      <Flex
+        gap={2}
+        direction="column"
+        align="start"
+      >
+        <Skeleton
+          width={200}
+          height={200}
+          borderRadius="50%"
+          className={css.avatar}
+        />
+        <Skeleton
+          width={300}
+          height={32}
+          borderRadius="10px"
+        />
+        <Skeleton
+          width={600}
+          height={40}
+          borderRadius="10px"
+        />
+        <Skeleton
+          width="100%"
+          height={40}
+          borderRadius="10px"
+        />
+        <Skeleton
+          width="100%"
+          height={40}
+          borderRadius="10px"
+        />
       </Flex>
     );
   } else if (error) {
     content = <Text>{t('An error occurred while downloading')}</Text>;
   } else {
     content = (
-      <Flex className={clsx(css.root, className)} gap={2} direction="column" align="start">
-        <Flex className={css['avatar-wrapper']} justify="center">
-          <Avatar size={200} src={article?.img} className={css.avatar} />
+      <Flex
+        className={clsx(css.root, className)}
+        gap={2}
+        direction="column"
+        align="start"
+      >
+        <Flex
+          className={css['avatar-wrapper']}
+          justify="center"
+        >
+          <Avatar
+            size={200}
+            src={article?.img}
+            className={css.avatar}
+          />
         </Flex>
         <Heading variant="h1">{article?.title}</Heading>
         <Text fontSize="2xl">{article?.subtitle}</Text>
