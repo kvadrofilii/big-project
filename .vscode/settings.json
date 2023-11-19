@@ -1,17 +1,91 @@
 {
+  // Использовать локальную версию typescript
   "typescript.tsdk": "node_modules/typescript/lib",
+  // Форматирование кода с помощью prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Форматирование при сохранении файла
+  "editor.formatOnSave": true,
+  // Настройки для плагина i18n-ally
   "i18n-ally.localesPaths": ["public/locales"],
-  //"i18n-ally.namespace": true,
   "i18n-ally.pathMatcher": "{locale}/{namespace}.json",
-  //"i18n-ally.defaultNamespace": "translation",
   "i18n-ally.sourceLanguage": "english",
   "i18n-ally.keystyle": "nested",
   "i18n-ally.enabledFrameworks": ["react", "i18next", "general"],
+  //"i18n-ally.namespace": true,
+  //"i18n-ally.defaultNamespace": "translation",
+  // Путь до конфигурационного файла jest для плагина Jest Runner
   "jestrunner.configPath": "/config/jest/jest.config.ts",
+  // Группировка файлов в один
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, yarn.lock, .browserslistrc, .eslintignore, .eslintrc.js, .gitignore, .nvmrc, .prettierignore, .prettierrc, .stylelintignore, .stylelintrc.js",
+  },
   "files.associations": {
     "**/.fttemplates/**": "plaintext"
   },
   "folderTemplates.structures": [
+    {
+      "name": "Page",
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName|pascalcase>Page/index.ts",
+          "template": "page index"
+        },
+        {
+          "fileName": "<FTName|pascalcase>Page/ui/<FTName|pascalcase>Page.tsx",
+          "template": "page page"
+        },
+        {
+          "fileName": "<FTName|pascalcase>Page/ui/<FTName|pascalcase>Page.lazy.tsx",
+          "template": "page lazy"
+        },
+      ]
+    },
+    {
+      "name": "TS component",
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.m.css",
+          "template": "css"
+        },
+        {
+          "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.stories.tsx",
+          "template": "stories"
+        },
+        {
+          "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.tsx",
+          "template": "TS component"
+        },
+        {
+          "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.types.tsx",
+          "template": "types"
+        },
+      ]
+    },
+    {
+      "name": "TS memo component",
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.m.css",
+          "template": "css"
+        },
+        {
+          "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.stories.tsx",
+          "template": "stories"
+        },
+        {
+          "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.tsx",
+          "template": "TS memo component"
+        },
+        {
+          "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.types.tsx",
+          "template": "types"
+        },
+      ]
+    },
     {
       "name": "FSD structure folder",
       "omitParentDirectory": true,
@@ -73,170 +147,59 @@
     }
   ],
   "folderTemplates.fileTemplates": {
-    "selectors": [
-      "import { StateSchema } from 'app/providers/StoreProvider';",
-      "",
-      "export const get<FTName|pascalcase>IsLoading = (state: StateSchema) => state;"
-    ],
-    "selectors test": [
-      "import { StateSchema } from 'app/providers/StoreProvider';",
-      "import { get<FTName|pascalcase>IsLoading } from './get<FTName|pascalcase>';",
-      "",
-      "describe('get<FTName|pascalcase>', () => {",
-      " test('', () => {",
-      " const state: DeepPartial<StateSchema> = {};",
-      " expect(get<FTName|pascalcase>IsLoading(state as StateSchema)).toEqual({});",
-      " });",
-      "});"
-    ],
-    "services": [
-      "import { createAsyncThunk } from '@reduxjs/toolkit';",
-      "import { ThunkConfig } from 'app/providers/StoreProvider';",
-      "import i18next from 'i18next';",
-      "",
-      "interface <FTName|pascalcase>Props {",
-      " ",
+    "css": [
+      ".root {",
+      " display: block;",
       "}",
-      "",
-      "export const fetch<FTName|pascalcase> = createAsyncThunk<",
-      " any,",
-      " <FTName|pascalcase>Props,",
-      " ThunkConfig<string>",
-      ">('***/<FTName|camelcase>', async (_, thunkApi) => {",
-      " const { dispatch, extra, rejectWithValue, getState } = thunkApi;",
-      "",
-      " try {",
-      " const response = await extra.api.post<any>('/***', {});",
-      " if (!response.data) throw new Error();",
-      "",
-      " return response.data;",
-      " } catch (error) {",
-      " console.log(error);",
-      " return rejectWithValue(i18next.t('ERROR'));",
-      " }",
-      "});"
+      ""
     ],
-    "services test": [
-      "import { TestAsyncThunk } from 'shared/lib/tests/testAsyncThunk/testAsyncThunk';",
-      "import { fetch<FTName|pascalcase> } from './fetch<FTName|pascalcase>';",
-      "",
-      "const data = {}",
-      "",
-      "describe('fetch<FTName|pascalcase>', () => {",
-      " test('success', async () => {",
-      " const thunk = new TestAsyncThunk(fetch<FTName|pascalcase>);",
-      " thunk.api.get.mockReturnValue(Promise.resolve({ data }));",
-      " const result = await thunk.callThunk();",
-      "",
-      " expect(thunk.api.get).toHaveBeenCalled();",
-      " expect(result.meta.requestStatus).toBe('fulfilled');",
-      " expect(result.payload).toEqual(data);",
-      " });",
-      "",
-      " test('error', async () => {",
-      " const thunk = new TestAsyncThunk(fetch<FTName|pascalcase>);",
-      " thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));",
-      " const result = await thunk.callThunk();",
-      "",
-      " expect(result.meta.requestStatus).toBe('rejected');",
-      " });",
-      "});"
+    "types": [
+      "export interface <FTName|pascalcase>Props {",
+      "  className?: string;",
+      "}",
+      ""
     ],
-    "slice": [
-      "import { createSlice, PayloadAction } from '@reduxjs/toolkit';",
-      "import { fetch<FTName|pascalcase> } from '../services/fetch<FTName|pascalcase>/fetch<FTName|pascalcase>';",
-      "import { <FTName|pascalcase>Schema } from '../types/<FTName|camelcase>';",
+    "stories": [
+      "import { <FTName|pascalcase> } from './<FTName|pascalcase>';",
       "",
-      "const initialState: <FTName|pascalcase>Schema = {",
-      " isLoading: false,",
+      "import type { Meta, StoryObj } from '@storybook/react';",
+      "",
+      "const meta = {",
+      "  title: '/<FTName|pascalcase>',",
+      "  component: <FTName|pascalcase>,",
+      "  tags: ['autodocs'],",
+      "} satisfies Meta<typeof <FTName|pascalcase>>;",
+      "",
+      "export default meta;",
+      "type Story = StoryObj<typeof meta>;",
+      "",
+      "export const Default: Story = {",
+      "  args: {},",
+      "  decorators: [],",
       "};",
-      "",
-      "export const <FTName|camelcase>Slice = createSlice({",
-      " name: '<FTName|camelcase>',",
-      " initialState,",
-      " reducers: {",
-      " setIsLoading: (state, { payload }: PayloadAction<boolean>) => {",
-      " state.isLoading = payload;",
-      " },",
-      " },",
-      " extraReducers: (builder) => {",
-      " builder",
-      " .addCase(fetch<FTName|pascalcase>.pending, (state) => {",
-      " state.error = undefined;",
-      " state.isLoading = true;",
-      " })",
-      " .addCase(",
-      " fetch<FTName|pascalcase>.fulfilled,",
-      " (state, action: PayloadAction<any>) => {",
-      " state.isLoading = false;",
-      " state.data = action.payload;",
-      " }",
-      " )",
-      " .addCase(fetch<FTName|pascalcase>.rejected, (state, action) => {",
-      " state.isLoading = false;",
-      " state.error = action.payload;",
-      " });",
-      " }",
-      "});",
-      "",
-      "export const { actions: <FTName|camelcase>Actions } = <FTName|camelcase>Slice;",
-      "export const { reducer: <FTName|camelcase>Reducer } = <FTName|camelcase>Slice;"
+      ""
     ],
-    "slice test": [
-      "import { fetch<FTName|pascalcase> } from '../services/fetch<FTName|pascalcase>/fetch<FTName|pascalcase>';",
-      "import { <FTName|pascalcase>Schema } from '../types/<FTName|camelcase>';",
-      "import { <FTName|camelcase>Actions, <FTName|camelcase>Reducer } from './<FTName|camelcase>';",
+    "TS component": [
+      "import clsx from 'clsx';",
+      "import { useTranslation } from 'react-i18next';",
       "",
-      "const data = {};",
+      "import css from './<FTName|pascalcase>.m.css';",
       "",
-      "describe('<FTName|camelcase>Slice', () => {",
-      "test('', () => {",
-      "const state: DeepPartial<<FTName|pascalcase>Schema> = {};",
-      "expect(",
-      "<FTName|camelcase>Reducer(state as <FTName|pascalcase>Schema, <FTName|camelcase>Actions.set(true))",
-      ").toEqual({});",
-      "});",
+      "import type { <FTName|pascalcase>Props } from './<FTName|pascalcase>.types';",
       "",
-      "test('test <FTName|camelcase> service pending', () => {",
-      "const state: DeepPartial<<FTName|pascalcase>Schema> = {",
-      "isLoading: false,",
-      "error: 'error',",
+      "export const <FTName|pascalcase> = (props: <FTName|pascalcase>Props) => {",
+      "  const { className } = props;",
+      "  const { t } = useTranslation();",
+      "",
+      "  return (",
+      "    <div className={clsx(css.root, className)}>",
+      "      <div/>",
+      "      </div>",
+      "  );",
       "};",
-      "expect(",
-      "<FTName|camelcase>Reducer(state as <FTName|pascalcase>Schema, fetch<FTName|pascalcase>.pending)",
-      ").toEqual({",
-      "isLoading: true,",
-      "error: undefined,",
-      "});",
-      "});",
-      "",
-      "test('test <FTName|camelcase> service fullfilled', () => {",
-      "const state: DeepPartial<<FTName|pascalcase>Schema> = {",
-      "isLoading: true,",
-      "error: 'error',",
-      "};",
-      "expect(",
-      "<FTName|camelcase>Reducer(",
-      "state as <FTName|pascalcase>Schema,",
-      "fetch<FTName|pascalcase>.fulfilled(data, '')",
-      ")",
-      ").toEqual({",
-      "isLoading: false,",
-      "error: undefined,",
-      "data,",
-      "});",
-      "});",
-      "});"
+      ""
     ],
-    "types slice": [
-      "export interface <FTName|pascalcase>Schema {",
-      "  isLoading: boolean;",
-      "  data?: any;",
-      "  error?: string;",
-      "}"
-    ],
-    "types component": ["export interface <FTName|pascalcase>Props {", "className?: string;", "}"],
-    "TS FC": [
+    "TS memo component": [
       "import { memo } from 'react';",
       "",
       "import clsx from 'clsx';",
@@ -252,50 +215,34 @@
       "",
       "  return (",
       "    <div className={clsx(css.root, className)}>",
-      "      <div />",
-      "    </div>",
+      "      <div/>",
+      "      </div>",
       "  );",
       "});",
-      "",
-      "export default <FTName|pascalcase>;"
+      ""
     ],
-    "test ts fc": [
-      "import <FTName|pascalcase> from './<FTName|pascalcase>';",
-      "",
-      "describe('<FTName|pascalcase>', () => {",
-      " test('', () => {",
-      " expect({}).toEqual({});",
-      " });",
-      "});"
+    "page index": [
+      "export { <FTName|pascalcase>Lazy as <FTName|pascalcase> } from './ui/<FTName|pascalcase>.lazy';",
+      ""
     ],
-    "TS FC Async": [
-      "import { FC, lazy } from 'react';",
-      "import type { <FTName|pascalcase>Props } from './<FTName|pascalcase>';",
-      "export const MainPageAsync = lazy(() => import('./MainPage'));"
+    "page page": [
+      "import { useTranslation } from 'react-i18next';",
+      "",
+      "import { Page } from '@/widgets/Page';",
+      "const <FTName|pascalcase> = () => {",
+      "  const { t } = useTranslation('');",
+      "",
+      "  return <Page data-testid=\"<FTName|pascalcase>\">{t('<FTName|pascalcase>')}</Page>;",
+      "};",
+      "",
+      "export default <FTName|pascalcase>;",
+      ""
     ],
-    "Stories": [
-      "import type { Meta, StoryObj } from '@storybook/react';",
+    "page lazy": [
+      "import { lazy } from 'react';",
       "",
-      "import { [FTName] } from './[FTName]';",
-      "",
-      "const meta = {",
-      "  title: '/[FTName]',",
-      "  component: [FTName],",
-      "  tags: ['autodocs'],",
-      "} satisfies Meta<typeof [FTName]>;",
-      "",
-      "export default meta;",
-      "type Story = StoryObj<typeof meta>;",
-      "",
-      "export const Default: Story = {",
-      "  args: {},",
-      "  decorators: [],",
-      "};"
+      "export const <FTName|pascalcase>Lazy = lazy(() => import('./<FTName|pascalcase>'));",
+      ""
     ],
-    "CSS": [".root {", " display: block;", "}"],
-    "TS INDEX": [
-      "export {<FTName|pascalcase>Async as <FTName|pascalcase>} from './ui/<FTName|pascalcase>.async'",
-      "export type { <FTName|pascalcase>Schema } from './model/types/<FTName|camelcase>;'"
-    ]
   }
 }
