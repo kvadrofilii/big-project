@@ -48,15 +48,16 @@ describe('EditableProfileCard', () => {
         data: mockData,
       }),
     );
-    ComponentRender(<EditableProfileCard id="1" />, options);
   });
 
   test('Switching read only', async () => {
+    ComponentRender(<EditableProfileCard id="1" />, options);
     await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
     expect(screen.getByTestId('EditableProfileCardHeader.CancelButton')).toBeInTheDocument();
   });
 
   test('When canceled, the values should be reset to zero', async () => {
+    ComponentRender(<EditableProfileCard id="1" />, options);
     await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
     await userEvent.clear(screen.getByTestId('ProfileCard.firstName'));
@@ -75,6 +76,7 @@ describe('EditableProfileCard', () => {
   });
 
   test('An error should appear', async () => {
+    ComponentRender(<EditableProfileCard id="1" />, options);
     await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
     await userEvent.clear(screen.getByTestId('ProfileCard.firstName'));
@@ -85,6 +87,7 @@ describe('EditableProfileCard', () => {
   });
 
   test('If there are no errors then the PUT request goes away', async () => {
+    ComponentRender(<EditableProfileCard id="1" />, options);
     const mockPutReq = jest.spyOn($api, 'put');
 
     await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
