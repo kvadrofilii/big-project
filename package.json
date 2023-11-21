@@ -26,6 +26,7 @@
     "analyze:dev": "webpack serve --env mode=development analyze=true",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
+    "chromatic": "npx chromatic --project-token=chpt_c714d743d5b5c08 --build-script-name storybook:build --storybook-config-dir ./config/storybook",
     "prepare": "husky install",
     "postinstall": "rimraf ./node_modules/.cache"
   },
@@ -61,6 +62,7 @@
     "@typescript-eslint/parser": "^6.11.0",
     "babel-loader": "^9.1.3",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "chromatic": "^9.1.0",
     "circular-dependency-plugin": "^5.2.2",
     "concurrently": "^8.2.2",
     "copy-webpack-plugin": "^11.0.0",
@@ -89,7 +91,6 @@
     "jest-html-reporters": "^3.1.4",
     "json-server": "^0.17.4",
     "lint-staged": "^15.1.0",
-    "loki": "^0.33.1",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
