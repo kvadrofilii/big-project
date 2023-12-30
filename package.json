@@ -123,6 +123,7 @@
     "@use-gesture/react": "^10.3.0",
     "axios": "^1.6.2",
     "clsx": "^2.0.0",
+    "dayjs": "^1.11.10",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.4.1",
     "react": "^18.2.0",
