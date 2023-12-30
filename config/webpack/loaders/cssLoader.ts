@@ -3,7 +3,9 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 export function cssLoader(isDev: boolean) {
   return {
     test: /\.(s[ac]ss|css)$/i,
-    exclude: /node_modules/,
+    // Если раскоментировать строку ниже, то в проекте не будут подключаться стили из библиотек
+    // Например, импорт стилей шрифтов у MUI: import '@fontsource/roboto/400.css';
+    // exclude: /node_modules/,
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
