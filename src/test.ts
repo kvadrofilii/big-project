@@ -1,3 +1,3 @@
 export const test = (): number => {
-  return 'string';
+  return 'string2';
 };
