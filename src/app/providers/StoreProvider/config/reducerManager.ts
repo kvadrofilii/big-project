@@ -1,4 +1,5 @@
-import { AnyAction, combineReducers, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { UnknownAction, combineReducers, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 
 import { StateSchema, StateSchemaKey, ReducerManager } from './StateSchema';
 
@@ -10,7 +11,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
 
   return {
     getReducerMap: () => reducers,
-    reduce: (state: StateSchema, action: AnyAction) => {
+    reduce: (state: StateSchema, action: UnknownAction) => {
       if (keysToRemove.length > 0) {
         state = { ...state };
         keysToRemove.forEach((key) => {
@@ -19,6 +20,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
         keysToRemove = [];
       }
 
+      // @ts-ignore
       return combinedReducer(state, action);
     },
     add: (key: StateSchemaKey, reducer: Reducer) => {

@@ -8,10 +8,14 @@ import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, use
 import { Page } from '@/widgets/Page';
 
 import css from './ArticlesPage.m.css';
-import { getArticlesPageIsLoading, getArticlesPageView } from '../../model/selectors/articlesPageSelectors';
+import {
+  getArticlesPageData,
+  getArticlesPageIsLoading,
+  getArticlesPageView,
+} from '../../model/selectors/articlesPageSelectors';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
-import { articlesPageReducer, getArticles } from '../../model/slices/articlesPage.slice';
+import { articlesPageReducer } from '../../model/slices/articlesPage.slice';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 
 import type { ArticlesPageProps } from './ArticlesPage.types';
@@ -23,7 +27,7 @@ const reducers: ReducersList = {
 const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const { className } = props;
   const dispatch = useAppDispatch();
-  const articles = useAppSelector(getArticles.selectAll);
+  const articles = useAppSelector(getArticlesPageData);
   const isLoading = useAppSelector(getArticlesPageIsLoading);
   const view = useAppSelector(getArticlesPageView);
   const [searchParams] = useSearchParams();

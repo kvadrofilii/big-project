@@ -10,8 +10,7 @@ describe('fetchNextArticlesPage.test', () => {
     const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
       articlesPage: {
         page: 2,
-        ids: [],
-        entities: {},
+        data: [],
         limit: 5,
         isLoading: false,
         hasMore: true,
@@ -27,8 +26,7 @@ describe('fetchNextArticlesPage.test', () => {
     const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
       articlesPage: {
         page: 2,
-        ids: [],
-        entities: {},
+        data: [],
         limit: 5,
         isLoading: false,
         hasMore: false,
