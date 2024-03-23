@@ -13,9 +13,6 @@
 - `npm run build:prod` - сборка в prod режиме
 - `npm run build:dev` - сборка в dev режиме (не минимизирован)
 - `npm run test:unit` - запуск unit тестов с jest
-- `npm run test:ui` - запуск скриншотных тестов с loki
-- `npm run test:ui:ok` - подтверждение новых скриншотов
-- `npm run test:ui:ci` - запуск скриншотных тестов в CI
 - `npm run test:ui:report` - генерация полного отчета для скриншотных тестов
 - `npm run lint:ts` - проверка ts файлов ESlint
 - `npm run lint:ts:fix` - исправление ts файлов ESlint
@@ -50,12 +47,11 @@
 
 ## Тесты
 
-В проекте используются 4 вида тестов:
+В проекте используются 3 вида тестов:
 
 1. Обычные unit тесты на jest - `npm run test:unit`
 2. Тесты на компоненты с React testing library -`npm run test:unit`
-3. Скриншотное тестирование с loki `npm run test:ui`
-4. e2e тестирование с Cypress `npm run test:e2e`
+3. e2e тестирование с Cypress `npm run test:e2e`
 
 Подробнее о тестах - [документация тестирование](/docs/tests.md)
 
