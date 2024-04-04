@@ -1,13 +1,10 @@
 /* eslint-disable i18next/no-literal-string */
 import { Fragment, memo } from 'react';
-
 import { Listbox as HListbox } from '@headlessui/react';
 import clsx from 'clsx';
-
 import css from './ListBox.m.css';
 import { Flex } from '../../../Flex/Flex';
 import popover from '../../styles/popover.m.css';
-
 import type { ListBoxProps } from './ListBox.types';
 
 export const ListBox = memo(function ListBox(props: ListBoxProps) {

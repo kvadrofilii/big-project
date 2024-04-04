@@ -1,5 +1,4 @@
 import { useCallback, useMemo, useState } from 'react';
-
 import type { UseHoverResult } from './useHover.types';
 
 export const useHover = (): UseHoverResult => {

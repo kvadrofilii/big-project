@@ -1,11 +1,7 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
-
 import { Card, Skeleton } from '@/shared/ui';
-
 import css from './ArticleListItem.m.css';
-
 import type { ArticleListItemSkeletonProps } from './ArticleListItem.types';
 
 export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(props: ArticleListItemSkeletonProps) {

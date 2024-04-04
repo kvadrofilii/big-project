@@ -1,8 +1,6 @@
 import { StoreDecorator } from '@/shared/config/testing';
-
 import { ArticleDetails } from './ArticleDetails';
 import { article } from '../../mocks/data';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

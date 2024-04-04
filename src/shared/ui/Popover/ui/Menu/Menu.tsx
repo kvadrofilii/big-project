@@ -1,12 +1,9 @@
 import { Fragment, memo } from 'react';
-
 import { Menu as HMenu } from '@headlessui/react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-
 import css from './Menu.m.css';
 import popover from '../../styles/popover.m.css';
-
 import type { MenuProps } from './Menu.types';
 
 export const Menu = memo(function Menu(props: MenuProps) {

@@ -1,5 +1,4 @@
 import { Loader } from './Loader';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

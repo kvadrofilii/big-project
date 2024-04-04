@@ -1,10 +1,7 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-
 import css from './AppLink.m.css';
-
 import type { AppLinkProps } from './AppLink.types';
 
 export const AppLink = memo(function AppLink(props: AppLinkProps) {

@@ -1,12 +1,9 @@
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-
 import { CountrySelect } from '@/entities/Country';
 import { CurrencySelect } from '@/entities/Currency';
 import { Avatar, Flex, Heading, Input, Loader, Text } from '@/shared/ui';
-
 import css from './ProfileCard.m.css';
-
 import type { ProfileCardProps } from './ProfileCard.types';
 
 export const ProfileCard = (props: ProfileCardProps) => {

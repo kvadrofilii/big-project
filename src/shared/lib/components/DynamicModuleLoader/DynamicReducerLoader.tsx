@@ -1,11 +1,7 @@
 import { useEffect } from 'react';
-
 import { useStore } from 'react-redux';
-
 import { ReduxStoreWithManager, StateSchemaKey } from '@/app/providers/StoreProvider';
-
 import { useAppDispatch } from '../../hooks/useAppDispatch/useAppDispatch';
-
 import type { DynamicReducerLoaderProps } from './DynamicReducerLoader.types';
 
 export const DynamicReducerLoader = (props: DynamicReducerLoaderProps) => {

@@ -1,5 +1,4 @@
 import { NotificationButton } from './NotificationButton';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

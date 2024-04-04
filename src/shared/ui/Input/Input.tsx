@@ -1,9 +1,6 @@
 import { memo, ChangeEvent } from 'react';
-
 import clsx from 'clsx';
-
 import css from './Input.m.css';
-
 import type { InputProps } from './Input.types';
 
 export const Input = memo(function Input(props: InputProps) {

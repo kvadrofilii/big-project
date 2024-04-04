@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-
 import type { DropdownDirection } from '@/shared/types';
 
 export interface DropdownItem {

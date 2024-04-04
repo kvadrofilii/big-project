@@ -1,5 +1,4 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
-
 import { TypographyAlign, TypographyColor } from '../../types/typography.types';
 
 export type TextVariant = 'p' | 'span';

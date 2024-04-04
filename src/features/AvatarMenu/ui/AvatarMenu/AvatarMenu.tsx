@@ -1,14 +1,10 @@
 import { memo, useCallback } from 'react';
-
 import { useTranslation } from 'react-i18next';
-
 import { isUserAdmin, isUserManager, userActions, getUserAuthData } from '@/entities/User';
 import { getRouteAdmin, getRouteProfile } from '@/shared/consts/route';
 import { useAppSelector, useAppDispatch } from '@/shared/lib';
 import { Avatar, Menu } from '@/shared/ui';
-
 import css from './AvatarMenu.m.css';
-
 import type { AvatarMenuProps } from './AvatarMenu.types';
 
 export const AvatarMenu = memo(function AvatarMenu(props: AvatarMenuProps) {

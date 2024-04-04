@@ -1,14 +1,10 @@
 import { memo, useCallback, useState } from 'react';
-
 import clsx from 'clsx';
-
 import { NotificationList } from '@/entities/Notification';
 import Bell from '@/shared/assets/icons/bell-fill.svg';
 import { useDeviceDetect } from '@/shared/lib';
 import { IconButton, Popover, Drawer } from '@/shared/ui';
-
 import css from './NotificationButton.m.css';
-
 import type { NotificationButtonProps } from './NotificationButton.types';
 
 export const NotificationButton = memo(function NotificationButton(props: NotificationButtonProps) {

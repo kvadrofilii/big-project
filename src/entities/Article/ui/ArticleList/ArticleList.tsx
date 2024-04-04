@@ -1,14 +1,10 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-
 import { Flex, Text } from '@/shared/ui';
-
 import css from './ArticleList.m.css';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
-
 import type { ArticleListProps } from './ArticleList.types';
 import type { Article, ArticleView } from '../../model/types/article.types';
 

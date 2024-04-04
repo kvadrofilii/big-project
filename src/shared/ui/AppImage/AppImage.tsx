@@ -1,5 +1,4 @@
 import { memo, useLayoutEffect, useState } from 'react';
-
 import type { AppImageProps } from './AppImage.types';
 
 export const AppImage = memo(function AppImage(props: AppImageProps) {

@@ -1,7 +1,5 @@
 import { ReactNode } from 'react';
-
 import { Reducer } from '@reduxjs/toolkit';
-
 import { StateSchema, StateSchemaKey } from '@/app/providers/StoreProvider';
 
 export type ReducersList = {

@@ -1,9 +1,6 @@
 import { CSSProperties, FC } from 'react';
-
 import clsx from 'clsx';
-
 import css from './Skeleton.m.css';
-
 import type { SkeletonProps } from './Skeleton.types';
 
 export const Skeleton: FC<SkeletonProps> = (props) => {

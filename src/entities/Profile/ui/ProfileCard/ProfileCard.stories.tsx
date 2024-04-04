@@ -1,9 +1,7 @@
 import { Country } from '@/entities/Country/testing';
 import { Currency } from '@/entities/Currency/testing';
 import AvatarImg from '@/shared/assets/test/storybook.png';
-
 import { ProfileCard } from './ProfileCard';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

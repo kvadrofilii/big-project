@@ -1,13 +1,9 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
-
 import { Flex, Skeleton } from '@/shared/ui';
-
 import css from './NotificationList.m.css';
 import { useNotifications } from '../../api/notificationApi';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
-
 import type { NotificationListProps } from './NotificationList.types';
 
 export const NotificationList = memo(function NotificationList(props: NotificationListProps) {

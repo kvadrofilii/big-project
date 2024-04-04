@@ -1,16 +1,12 @@
 import { memo, useCallback } from 'react';
-
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
 import { useAppSelector } from '@/shared/lib';
 import { Skeleton } from '@/shared/ui';
-
 import css from './ArticleRating.m.css';
 import { useArticleRating, useRateArticle } from '../../api/articleRatingApi';
-
 import type { ArticleRatingProps } from './ArticleRating.types';
 
 const ArticleRating = memo(function ArticleRating(props: ArticleRatingProps) {

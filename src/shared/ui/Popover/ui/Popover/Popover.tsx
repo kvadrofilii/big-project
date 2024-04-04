@@ -1,9 +1,7 @@
 import { Popover as HPopover } from '@headlessui/react';
 import clsx from 'clsx';
-
 import css from './Popover.m.css';
 import popover from '../../styles/popover.m.css';
-
 import type { PopoverProps } from './Popover.types';
 
 export const Popover = (props: PopoverProps) => {

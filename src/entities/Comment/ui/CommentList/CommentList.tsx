@@ -1,13 +1,9 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-
 import { Text } from '@/shared/ui';
-
 import css from './CommentList.m.css';
 import { CommentCard } from '../CommentCard/CommentCard';
-
 import type { CommentListProps } from './CommentList.types';
 
 export const CommentList = memo(function CommentList(props: CommentListProps) {

@@ -1,13 +1,9 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
-
 import GridIcon from '@/shared/assets/icons/grid-3x3-gap-fill.svg';
 import ListIcon from '@/shared/assets/icons/menu.svg';
 import { IconButton } from '@/shared/ui';
-
 import css from './ArticleViewSelector.m.css';
-
 import type { ArticleViewSelectorProps, ViewTypes } from './ArticleViewSelector.types';
 import type { ArticleView } from '@/entities/Article';
 

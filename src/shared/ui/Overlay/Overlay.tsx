@@ -1,7 +1,5 @@
 import { FC, useCallback, useEffect } from 'react';
-
 import css from './Overlay.m.css';
-
 import type { OverlayProps } from './Overlay.types';
 
 export const Overlay: FC<OverlayProps> = (props) => {

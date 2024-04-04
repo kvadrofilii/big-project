@@ -1,12 +1,10 @@
 import { useEffect, Suspense } from 'react';
-
 import { getUserIsMount, userActions } from '@/entities/User';
 import { useAppDispatch, useAppSelector } from '@/shared/lib';
 // import { Footer } from 'widgets/Footer';
 import { Header } from '@/widgets/Header';
 import { PageLoader } from '@/widgets/PageLoader';
 import { Sidebar } from '@/widgets/Sidebar';
-
 import css from './App.m.css';
 import { AppRouter } from './providers/AppRouter';
 

@@ -1,15 +1,11 @@
 import { memo, useMemo, useState } from 'react';
-
 import clsx from 'clsx';
-
 import CaretLeft from '@/shared/assets/icons/caret-left-fill.svg';
 import { useAppSelector } from '@/shared/lib';
 import { Flex, IconButton } from '@/shared/ui';
-
 import css from './Sidebar.m.css';
 import { getSidebarLinks } from '../../model/selectors/getSidebarLinks';
 import { NavbarLink } from '../NavbarLink/NavbarLink';
-
 import type { SidebarProps } from './Sidebar.types';
 
 export const Sidebar = memo(function Sidebar({ className }: SidebarProps) {

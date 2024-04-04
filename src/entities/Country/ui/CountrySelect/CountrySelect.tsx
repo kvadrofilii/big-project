@@ -1,11 +1,7 @@
 import { memo, useCallback, useMemo } from 'react';
-
 import { useTranslation } from 'react-i18next';
-
 import { ListBox } from '@/shared/ui';
-
 import { Country } from '../../model/consts/country';
-
 import type { CountrySelectProps } from './CountrySelect.types';
 
 export const CountrySelect = memo(function CountrySelect(props: CountrySelectProps) {

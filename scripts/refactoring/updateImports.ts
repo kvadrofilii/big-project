@@ -5,7 +5,6 @@
  */
 
 import { Project } from 'ts-morph';
-
 import { isAbsolutePath } from '../utils/isAbsolutePath';
 
 const project = new Project({

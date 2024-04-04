@@ -1,5 +1,4 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
-
 import { getUserAuthData } from './getUserAuthData';
 
 describe('getUserAuthData', () => {

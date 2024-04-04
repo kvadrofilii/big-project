@@ -1,8 +1,6 @@
 import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
-
 import { rtkApi } from '@/shared/api/rtkApi';
-
 import type { ArticleDetailsSchema } from '@/entities/Article';
 import type { UserSchema } from '@/entities/User';
 import type { ArticleCommentsSchema } from '@/features/ArticleComments';

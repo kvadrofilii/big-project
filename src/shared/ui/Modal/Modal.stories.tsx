@@ -1,5 +1,4 @@
 import { Modal } from './Modal';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

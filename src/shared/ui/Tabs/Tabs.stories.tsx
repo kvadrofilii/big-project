@@ -1,7 +1,5 @@
 import { action } from '@storybook/addon-actions';
-
 import { Tabs } from './Tabs';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

@@ -1,5 +1,4 @@
 import { NotificationList } from './NotificationList';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

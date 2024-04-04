@@ -1,5 +1,4 @@
 import { LangSelect } from './LangSelect';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

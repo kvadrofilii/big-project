@@ -1,5 +1,4 @@
 import { Heading } from './Heading';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

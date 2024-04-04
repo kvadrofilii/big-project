@@ -1,5 +1,4 @@
 import { StarRating } from './StarRating';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

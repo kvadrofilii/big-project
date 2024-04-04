@@ -1,8 +1,6 @@
 import IconChildren from '@/shared/assets/icons/bandaid.svg';
 import IconArrow from '@/shared/assets/icons/caret-left-fill.svg';
-
 import { IconButton } from './IconButton';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

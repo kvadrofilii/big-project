@@ -1,5 +1,4 @@
 import { CommentCard } from './CommentCard';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

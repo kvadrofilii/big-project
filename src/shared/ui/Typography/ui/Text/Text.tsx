@@ -1,10 +1,7 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
-
 import css from './Text.m.css';
 import typographyCss from '../../styles/typography.m.css';
-
 import type { TextProps } from './Text.types';
 
 export const Text = memo(function Text(props: TextProps) {

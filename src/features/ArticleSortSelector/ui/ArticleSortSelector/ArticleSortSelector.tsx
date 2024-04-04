@@ -1,10 +1,7 @@
 import { memo, useMemo } from 'react';
-
 import { useTranslation } from 'react-i18next';
-
 import { SortOrder } from '@/shared/types';
 import { Flex, Select, SelectOption } from '@/shared/ui';
-
 import type { ArticleSortSelectorProps } from './ArticleSortSelector.types';
 import type { ArticleSortField } from '@/entities/Article';
 

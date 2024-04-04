@@ -1,5 +1,4 @@
 import { HTMLAttributeAnchorTarget } from 'react';
-
 import type { Article, ArticleView } from '../../model/types/article.types';
 
 export interface ArticleListProps {

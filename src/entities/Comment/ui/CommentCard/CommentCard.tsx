@@ -1,12 +1,8 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
-
 import { getRouteProfile } from '@/shared/consts/route';
 import { AppLink, Avatar, Flex, Skeleton, Text } from '@/shared/ui';
-
 import css from './CommentCard.m.css';
-
 import type { CommentCardProps } from './CommentCard.types';
 
 export const CommentCard = memo(function CommentCard(props: CommentCardProps) {

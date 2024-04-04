@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-
 import { TestProps } from '@/shared/types';
 
 export interface PageProps extends TestProps {

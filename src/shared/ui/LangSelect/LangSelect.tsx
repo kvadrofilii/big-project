@@ -1,12 +1,9 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-
 import css from './LangSelect.m.css';
 import TranslateIcon from './translate.svg';
 import { IconButton } from '../IconButton/IconButton';
-
 import type { LangSelectProps } from './LangSelect.types';
 
 export const LangSelect = memo(function LangSelect(props: LangSelectProps) {

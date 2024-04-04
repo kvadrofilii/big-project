@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 import type { UseInfiniteScrollOptions } from './useInfiniteScroll.types';
 
 export function useInfiniteScroll(props: UseInfiniteScrollOptions) {

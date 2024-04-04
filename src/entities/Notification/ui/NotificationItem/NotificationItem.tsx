@@ -1,11 +1,7 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
-
 import { Card, Heading, Text, CardAction } from '@/shared/ui';
-
 import css from './NotificationItem.m.css';
-
 import type { NotificationItemProps } from './NotificationItem.types';
 
 export const NotificationItem = memo(function NotificationItem(props: NotificationItemProps) {

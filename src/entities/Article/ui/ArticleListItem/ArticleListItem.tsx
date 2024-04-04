@@ -1,15 +1,11 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-
 import Eye from '@/shared/assets/icons/eye.svg';
 import { getRouteArticleDetails } from '@/shared/consts/route';
 import { AppLink, Avatar, Card, CardAction, Heading, Text } from '@/shared/ui';
-
 import css from './ArticleListItem.m.css';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-
 import type { ArticleListItemProps } from './ArticleListItem.types';
 import type { ArticleTextBlock } from '../../model/types/article.types';
 

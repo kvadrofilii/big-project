@@ -1,7 +1,5 @@
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
-
 import AvatarImg from '../../assets/test/storybook.png';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

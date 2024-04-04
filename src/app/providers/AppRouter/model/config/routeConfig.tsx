@@ -21,7 +21,6 @@ import {
   getRouteNotFound,
   getRouteProfile,
 } from '@/shared/consts/route';
-
 import type { AppRoutesProps } from '../types/AppRoutesProps.types';
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {

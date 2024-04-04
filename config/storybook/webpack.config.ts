@@ -1,8 +1,6 @@
 /* eslint-disable no-param-reassign */
 import path from 'path';
-
 import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
-
 import { babelLoader } from './babelLoader';
 import { cssLoader } from '../webpack/loaders/cssLoader';
 import { svgLoader } from '../webpack/loaders/svgLoader';

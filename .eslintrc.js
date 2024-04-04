@@ -111,7 +111,7 @@ module.exports = {
           caseInsensitive: false,
         },
         groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index', 'object'], 'type'],
-        'newlines-between': 'always',
+        'newlines-between': 'never',
         pathGroups: [
           {
             pattern: 'react',

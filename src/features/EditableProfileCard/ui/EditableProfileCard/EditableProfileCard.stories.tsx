@@ -1,7 +1,5 @@
 import { StoreDecorator } from '@/shared/config/testing';
-
 import { EditableProfileCard } from './EditableProfileCard';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

@@ -1,7 +1,5 @@
 import { StoreDecorator } from '@/shared/config/testing';
-
 import { ArticlesPageFilters } from './ArticlesPageFilters';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

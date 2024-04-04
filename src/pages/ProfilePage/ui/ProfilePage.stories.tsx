@@ -3,9 +3,7 @@
 // import AvatarImg from 'shared/assets/test/storybook.png';
 // import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 import { reactRouterParameters } from 'storybook-addon-react-router-v6';
-
 import ProfilePage from './ProfilePage';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

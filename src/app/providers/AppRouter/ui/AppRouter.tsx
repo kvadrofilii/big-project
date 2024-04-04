@@ -1,9 +1,6 @@
 import { Suspense, memo } from 'react';
-
 import { Route, Routes } from 'react-router-dom';
-
 import { PageLoader } from '@/widgets/PageLoader';
-
 import { RequireAuth } from './RequireAuth';
 import { routeConfig } from '../model/config/routeConfig';
 import { AppRoutesProps } from '../model/types/AppRoutesProps.types';

@@ -1,9 +1,6 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
-
 import css from './IconButton.m.css';
-
 import type { IconButtonProps } from './IconButton.types';
 
 export const IconButton = memo(function IconButton(props: IconButtonProps) {

@@ -1,5 +1,4 @@
 import { createContext, ReactNode, useContext, useEffect, useMemo, useRef, useState } from 'react';
-
 import { AnimationContextPayload, GestureType, SpringType } from './AnimationProvider.types';
 
 const AnimationContext = createContext<AnimationContextPayload>({});

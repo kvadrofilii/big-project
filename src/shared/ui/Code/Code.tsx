@@ -1,12 +1,8 @@
 import { memo, useCallback } from 'react';
-
 import clsx from 'clsx';
-
 import CopyIcon from '@/shared/assets/icons/copy.svg';
-
 import css from './Code.m.css';
 import { IconButton } from '../IconButton/IconButton';
-
 import type { CodeProps } from './Code.types';
 
 export const Code = memo(function Code(props: CodeProps) {

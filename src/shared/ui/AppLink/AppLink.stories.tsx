@@ -1,5 +1,4 @@
 import { AppLink } from './AppLink';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

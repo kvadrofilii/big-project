@@ -1,9 +1,6 @@
 import { memo, useCallback, useState } from 'react';
-
 import { useTranslation } from 'react-i18next';
-
 import { Button, Card, Flex, Heading, Input, Modal, StarRating } from '@/shared/ui';
-
 import type { RatingCardProps } from './RatingCard.types';
 
 export const RatingCard = memo(function RatingCard(props: RatingCardProps) {

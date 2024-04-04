@@ -1,10 +1,7 @@
 import { FC } from 'react';
-
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-
 import css from './Footer.m.css';
-
 import type { FooterProps } from './Footer.types';
 
 export const Footer: FC<FooterProps> = ({ className }) => {

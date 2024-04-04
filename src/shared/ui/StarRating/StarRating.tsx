@@ -1,10 +1,7 @@
 import { memo, useState } from 'react';
-
 import clsx from 'clsx';
-
 import css from './StarRating.m.css';
 import StarIcon from '../../assets/icons/star.svg';
-
 import type { StarRatingProps } from './StarRating.types';
 
 const stars = [1, 2, 3, 4, 5];

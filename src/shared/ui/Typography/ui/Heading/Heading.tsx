@@ -1,10 +1,7 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
-
 import css from './Heading.m.css';
 import typographyCss from '../../styles/typography.m.css';
-
 import type { HeadingProps } from './Heading.types';
 
 export const Heading = memo(function Heading(props: HeadingProps) {

@@ -1,6 +1,5 @@
 import { Rating } from '@/entities/Rating';
 import { rtkApi } from '@/shared/api';
-
 import { RateArticleArg } from '../model/types/articleRatingApi.types';
 
 const articleRatingApi = rtkApi.injectEndpoints({

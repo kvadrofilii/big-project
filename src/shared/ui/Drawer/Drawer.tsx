@@ -1,13 +1,9 @@
 import { useCallback, useEffect } from 'react';
-
 import clsx from 'clsx';
-
 import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
-
 import css from './Drawer.m.css';
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
-
 import type { DrawerProps } from './Drawer.types';
 
 const height = window.innerHeight - 100;

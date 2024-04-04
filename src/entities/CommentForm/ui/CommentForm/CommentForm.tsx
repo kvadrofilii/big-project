@@ -1,12 +1,8 @@
 import { memo } from 'react';
-
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-
 import { Button, Flex, Input } from '@/shared/ui';
-
 import css from './CommentForm.m.css';
-
 import type { CommentFormProps } from './CommentForm.types';
 
 export const CommentForm = memo(function CommentForm(props: CommentFormProps) {

@@ -1,5 +1,4 @@
 import { Skeleton } from './Skeleton';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

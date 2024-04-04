@@ -1,9 +1,7 @@
 import { FC } from 'react';
-
 import css from './Modal.m.css';
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
-
 import type { ModalProps } from './Modal.types';
 
 export const Modal: FC<ModalProps> = (props) => {

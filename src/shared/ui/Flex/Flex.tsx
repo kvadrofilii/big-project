@@ -1,7 +1,5 @@
 import clsx from 'clsx';
-
 import css from './Flex.m.css';
-
 import type { FlexProps } from './Flex.types';
 import type { CSSProperties } from 'react';
 
