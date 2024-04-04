@@ -3,7 +3,7 @@ import { ArticleTypeTabs } from './ArticleTypeTabs';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'entities/Article/ArticleTypeTabs',
+  title: 'features/ArticleTypeTabs',
   component: ArticleTypeTabs,
   tags: ['autodocs'],
 } satisfies Meta<typeof ArticleTypeTabs>;
@@ -14,5 +14,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     value: 'all',
+    onChangeType: () => {},
   },
 };

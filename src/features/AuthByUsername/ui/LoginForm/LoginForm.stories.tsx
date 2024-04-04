@@ -14,12 +14,16 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    onSuccess: () => {},
+  },
   decorators: [StoreDecorator({})],
 };
 
 export const WithError: Story = {
-  args: {},
+  args: {
+    onSuccess: () => {},
+  },
   decorators: [
     StoreDecorator({
       loginForm: { error: 'ERROR' },
@@ -28,7 +32,9 @@ export const WithError: Story = {
 };
 
 export const Loading: Story = {
-  args: {},
+  args: {
+    onSuccess: () => {},
+  },
   decorators: [
     StoreDecorator({
       loginForm: { isLoading: true },

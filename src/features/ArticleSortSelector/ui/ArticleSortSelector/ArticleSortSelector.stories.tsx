@@ -3,7 +3,7 @@ import { ArticleSortSelector } from './ArticleSortSelector';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'entities/Article/ArticleSortSelector',
+  title: 'features/ArticleSortSelector',
   component: ArticleSortSelector,
   tags: ['autodocs'],
 } satisfies Meta<typeof ArticleSortSelector>;
@@ -15,5 +15,7 @@ export const Default: Story = {
   args: {
     sort: 'title',
     order: 'asc',
+    onChangeOrder: () => {},
+    onChangeSort: () => {},
   },
 };

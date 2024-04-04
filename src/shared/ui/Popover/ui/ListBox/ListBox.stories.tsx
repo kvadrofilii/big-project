@@ -19,6 +19,7 @@ export const Default: Story = {
       { value: '123', content: 'Первый пункт' },
       { value: '1234', content: 'Второй пункт' },
     ],
+    onChange: () => {},
   },
   decorators: [
     (Story) => (
