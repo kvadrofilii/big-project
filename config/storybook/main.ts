@@ -21,6 +21,17 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  // Код ниже активирует генерацию встроенных пропсов в историях
+  //typescript: {
+  //  reactDocgen: 'react-docgen-typescript',
+  //  reactDocgenTypescriptOptions: {
+  //    compilerOptions: {
+  //      allowSyntheticDefaultImports: false,
+  //      esModuleInterop: false,
+  //    },
+  //    propFilter: () => true,
+  //  },
+  //},
 };
 
 export default config;
