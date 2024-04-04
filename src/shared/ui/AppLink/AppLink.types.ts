@@ -1,15 +1,12 @@
-import { LinkProps } from 'react-router-dom';
+import type { Size, Variant } from '@/shared/types';
+import type { LinkProps } from 'react-router-dom';
 
 type AppLinkColor = 'primary' | 'secondary';
-
-export type AppLinkVariant = 'contained' | 'text' | 'outlined';
-
-export type AppLinkSize = 'small' | 'medium' | 'large';
 
 export interface AppLinkProps extends LinkProps {
   className?: string;
   color?: AppLinkColor;
-  variant?: AppLinkVariant;
-  size?: AppLinkSize;
+  variant?: Variant;
+  size?: Size;
   fullWidth?: boolean;
 }

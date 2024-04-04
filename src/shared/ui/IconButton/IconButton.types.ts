@@ -1,4 +1,5 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { Color } from '@/shared/types';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export type IconButtonColor = 'primary' | 'secondary' | 'inherit';
 // | 'success'
@@ -6,7 +7,7 @@ export type IconButtonColor = 'primary' | 'secondary' | 'inherit';
 // | 'info'
 // | 'warning'
 
-export type IconButtonSize = 'small' | 'medium' | 'large' | 'xl';
+export type IconButtonSize = Color | 'xl';
 
 export type IconButtonVariant = 'contained' | 'clear' | 'outlined';
 
