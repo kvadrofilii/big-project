@@ -1,29 +1,21 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { Color, Size, Variant } from '@/shared/types';
+import type { ButtonHTMLAttributes, ReactElement } from 'react';
 
-export type ButtonColor = 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success';
-
-export type ButtonSize = 'small' | 'medium' | 'large';
-
-export type ButtonVariant = 'contained' | 'text' | 'outlined';
-
-interface CommonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-  color?: ButtonColor;
-  disabled?: boolean;
+type CommonButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  color?: Color;
   fullWidth?: boolean;
-  size?: ButtonSize;
-  variant?: ButtonVariant;
-  type?: 'submit' | 'reset' | 'button';
-}
+  size?: Size;
+  variant?: Variant;
+};
 
-interface StartIconProps extends CommonButtonProps {
-  startIcon?: ReactNode;
+type StartIconProps = CommonButtonProps & {
+  startIcon?: ReactElement;
   endIcon?: never;
-}
+};
 
-interface EndIconProps extends CommonButtonProps {
-  endIcon?: ReactNode;
+type EndIconProps = CommonButtonProps & {
+  endIcon?: ReactElement;
   startIcon?: never;
-}
+};
 
 export type ButtonProps = StartIconProps | EndIconProps;

@@ -11,12 +11,11 @@ export const Button = memo(function Button(props: ButtonProps) {
     children,
     className,
     color = 'primary',
-    disabled = false,
     endIcon,
-    fullWidth = false,
+    fullWidth,
     size = 'medium',
     startIcon,
-    variant = 'text',
+    variant = 'contained',
     type = 'button',
     ...rest
   } = props;
@@ -25,14 +24,7 @@ export const Button = memo(function Button(props: ButtonProps) {
     <button
       // eslint-disable-next-line react/button-has-type
       type={type}
-      className={clsx(
-        css.root,
-        css[size],
-        fullWidth && css['full-width'],
-        disabled ? css[`${variant}-disabled`] : css[`${variant}-${color}`],
-        className,
-      )}
-      disabled={disabled}
+      className={clsx(css.root, css[size], fullWidth && css['full-width'], css[variant], css[color], className)}
       {...rest}
     >
       {startIcon && <span className={css.icon}>{startIcon}</span>}
