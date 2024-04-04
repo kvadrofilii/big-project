@@ -1,28 +1,13 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import type { CSSProperties, HTMLAttributes } from 'react';
 
-export type FlexJustify = 'start' | 'center' | 'end' | 'between';
-
-export type FlexAlign = 'start' | 'center' | 'end';
-
-export type FlexDirection = 'row' | 'column';
-
-export type FlexWrap = 'nowrap' | 'wrap' | 'reverse';
-
-export type FlexShrink = 0 | 1 | 2;
-
-export type FlexGrow = 1 | 2 | 3;
-
-export type FlexGap = 1 | 2 | 3 | 4 | 5 | 6;
-
-export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  children: ReactNode;
-  justify?: FlexJustify;
-  align?: FlexAlign;
-  direction?: FlexDirection;
-  shrink?: FlexShrink;
-  grow?: FlexGrow;
-  wrap?: FlexWrap;
-  gap?: FlexGap;
+export type FlexProps = HTMLAttributes<HTMLDivElement> & {
+  align?: CSSProperties['alignItems'];
+  basis?: CSSProperties['flexBasis'];
+  direction?: CSSProperties['flexDirection'];
   fullWidth?: boolean;
-}
+  gap?: CSSProperties['gap'];
+  grow?: CSSProperties['flexGrow'];
+  justify?: CSSProperties['justifyContent'];
+  shrink?: CSSProperties['flexShrink'];
+  wrap?: CSSProperties['flexWrap'];
+};
