@@ -1,16 +1,13 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2023: true,
     jest: true,
     node: true,
   },
   extends: [
-    'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
     'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
@@ -19,10 +16,10 @@ module.exports = {
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
     //'plugin:postcss-modules/recommended',
-    'plugin:prettier/recommended',
+    'prettier',
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json',
@@ -40,7 +37,6 @@ module.exports = {
     '@kvadrofilii/fsd',
     'unused-imports',
     //'postcss-modules',
-    'prettier',
   ],
   settings: {
     react: {
@@ -61,48 +57,46 @@ module.exports = {
     },
   },
   rules: {
-    // Подсвечиваю использование console.log в коде
-    'no-console': 'warn',
-    // Разрешаем использовать глобальное объявление типов
-    'no-undef': 'off',
-    // Разрешает использовать висячие символы в переменных (_)
-    'no-underscore-dangle': 'off',
-    'prettier/prettier': 'error',
-    'unused-imports/no-unused-imports': 'error',
+    'no-console': 'warn', // Подсвечиваю использование console.log в коде
+    'no-undef': 'off', // Разрешаем использовать глобальное объявление типов
+    'no-underscore-dangle': 'off', // Разрешает использовать висячие символы в переменных (_)
+    'unused-imports/no-unused-imports': 'warn',
     '@kvadrofilii/fsd/path-checker': ['error', { alias: '@' }],
     '@kvadrofilii/fsd/public-api-imports': [
       'error',
       {
         alias: '@',
-        testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx', '**/*.testing.ts'],
+        testFilesPatterns: [
+          '**/*.test.*',
+          '**/*.stories.*',
+          '**/StoreDecorator.tsx',
+          '**/*.testing.ts',
+        ],
       },
     ],
     '@kvadrofilii/fsd/layer-imports': [
       'error',
       { alias: '@', ignoreImportPatterns: ['**/StoreProvider', '**/testing'] },
     ],
+    'i18next/no-literal-string': 'warn',
     'react/forbid-prop-types': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/no-array-index-key': 'off',
     'react/prop-types': 'off',
-    // Отключает обязательный импорт React
-    'react/react-in-jsx-scope': 'off',
-    // Отключает значения по умолчанию для необязательных пропсов
-    'react/require-default-props': 'off',
-    // Добавляю исключение для неиспользуемых аргументов в виде "_"
+    'react/react-in-jsx-scope': 'off', // Отключает обязательный импорт React
+    'react/require-default-props': 'off', // Отключает значения по умолчанию для необязательных пропсов
     '@typescript-eslint/no-unused-vars': [
       'warn',
       {
         argsIgnorePattern: '^_',
       },
-    ],
+    ], // Добавляю исключение для неиспользуемых аргументов в виде "_"
     'import/export': 'off',
     'import/prefer-default-export': 'off',
     'import/no-cycle': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/no-named-as-default': 'off',
-    // Настройка очерёдности импортов
     'import/order': [
       'error',
       {
@@ -110,26 +104,24 @@ module.exports = {
           order: 'asc',
           caseInsensitive: false,
         },
-        groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index', 'object'], 'type'],
+        groups: ['builtin', 'external', 'internal', 'parent', 'index', 'sibling'],
         'newlines-between': 'never',
         pathGroups: [
           {
-            pattern: 'react',
-            group: 'builtin',
-            position: 'before',
+            pattern: './**.m.css',
+            group: 'sibling',
+            position: 'after',
           },
           {
             pattern: '@/**',
-            group: 'internal',
+            group: 'parent',
+            position: 'before',
           },
         ],
-        pathGroupsExcludedImportTypes: ['react', 'react-native', 'type'],
       },
     ],
-    // Запрещает использовать класс, который не задан в css-модуле
-    //'postcss-modules/no-undef-class': 'error',
-    // Запрещает оставлять классы в css-модуле, которые не используются в компоненте
-    //'postcss-modules/no-unused-class': 'warn',
+    //'postcss-modules/no-undef-class': 'error', // Запрещает использовать класс, который не задан в css-модуле
+    //'postcss-modules/no-unused-class': 'warn', // Запрещает оставлять классы в css-модуле, которые не используются в компоненте
   },
   // Глобальные переменные
   globals: {
