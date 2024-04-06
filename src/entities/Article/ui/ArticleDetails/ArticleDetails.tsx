@@ -1,12 +1,11 @@
 /* eslint-disable i18next/no-literal-string */
-import { memo } from 'react';
 import clsx from 'clsx';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import CalendarPlusIcon from '@/shared/assets/icons/calendar-plus.svg';
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from '@/shared/lib';
 import { Avatar, Flex, Heading, Skeleton, Text } from '@/shared/ui';
-import css from './ArticleDetails.m.css';
 import {
   getArticleDetailsIsLoading,
   getArticleDetailsError,
@@ -14,11 +13,12 @@ import {
 } from '../../model/selectors/articleDetails';
 import { fetchArticlesById } from '../../model/services/fetchArticlesById/fetchArticlesById';
 import { articleDetailsReducer } from '../../model/slices/articleDetails.slice';
+import type { ArticleBlock } from '../../model/types/article.types';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import type { ArticleDetailsProps } from './ArticleDetails.types';
-import type { ArticleBlock } from '../../model/types/article.types';
+import css from './ArticleDetails.m.css';
 
 const reducers: ReducersList = {
   articleDetails: articleDetailsReducer,

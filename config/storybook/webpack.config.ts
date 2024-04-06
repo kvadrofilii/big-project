@@ -1,11 +1,11 @@
 /* eslint-disable no-param-reassign */
 import path from 'path';
-import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
-import { babelLoader } from './babelLoader';
+import { DefinePlugin, type RuleSetRule, type Configuration } from 'webpack';
 import { cssLoader } from '../webpack/loaders/cssLoader';
 import { svgLoader } from '../webpack/loaders/svgLoader';
+import { babelLoader } from './babelLoader';
 
-export default ({ config }: { config: webpack.Configuration }) => {
+export default ({ config }: { config: Configuration }) => {
   const src = path.resolve(__dirname, '..', '..', 'src');
 
   config.resolve!.modules = [src, 'node_modules'];

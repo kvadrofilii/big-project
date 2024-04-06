@@ -1,8 +1,8 @@
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { ArticleType } from '@/entities/Article';
 import { TabItem, Tabs } from '@/shared/ui';
 import type { ArticleTypeTabsProps } from './ArticleTypeTabs.types';
-import type { ArticleType } from '@/entities/Article';
 
 export const ArticleTypeTabs = memo(function ArticleTypeTabs(props: ArticleTypeTabsProps) {
   const { className, value, onChangeType } = props;

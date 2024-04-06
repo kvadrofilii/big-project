@@ -5,8 +5,8 @@ import { Currency } from '@/entities/Currency/testing';
 import { Profile } from '@/entities/Profile/testing';
 import { $api } from '@/shared/api';
 import { ComponentRender } from '@/shared/lib/tests/ComponentRender/ComponentRender';
-import { EditableProfileCard } from './EditableProfileCard';
 import { profileReducer } from '../../model/slices/profile.slice';
+import { EditableProfileCard } from './EditableProfileCard';
 
 const mockData: Profile = {
   id: '1',

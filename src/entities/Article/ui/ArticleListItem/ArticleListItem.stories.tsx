@@ -1,6 +1,6 @@
-import { ArticleListItem } from './ArticleListItem';
-import { article } from '../../mocks/data';
 import type { Meta, StoryObj } from '@storybook/react';
+import { article } from '../../mocks/data';
+import { ArticleListItem } from './ArticleListItem';
 
 const meta = {
   title: 'entities/Article/ArticleListItem',

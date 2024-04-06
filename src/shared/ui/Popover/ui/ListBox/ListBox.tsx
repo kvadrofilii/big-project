@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { Listbox as HListbox } from '@headlessui/react';
 import clsx from 'clsx';
 import { Fragment, memo, type ReactNode } from 'react';

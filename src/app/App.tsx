@@ -5,8 +5,8 @@ import { useAppDispatch, useAppSelector } from '@/shared/lib';
 import { Header } from '@/widgets/Header';
 import { PageLoader } from '@/widgets/PageLoader';
 import { Sidebar } from '@/widgets/Sidebar';
-import css from './App.m.css';
 import { AppRouter } from './providers/AppRouter';
+import css from './App.m.css';
 
 const App = () => {
   const dispatch = useAppDispatch();

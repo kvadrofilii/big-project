@@ -1,16 +1,16 @@
-import { FC, memo, useCallback } from 'react';
 import clsx from 'clsx';
+import { FC, memo, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ArticleList } from '@/entities/Article';
 import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from '@/shared/lib';
 import { Page } from '@/widgets/Page';
-import css from './ArticlesPage.m.css';
 import { getArticlesPageIsLoading, getArticlesPageView } from '../../model/selectors/articlesPageSelectors';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { articlesPageReducer, getArticles } from '../../model/slices/articlesPage.slice';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import type { ArticlesPageProps } from './ArticlesPage.types';
+import css from './ArticlesPage.m.css';
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer,

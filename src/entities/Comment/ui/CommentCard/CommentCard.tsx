@@ -1,9 +1,9 @@
-import { memo } from 'react';
 import clsx from 'clsx';
+import { memo } from 'react';
 import { getRouteProfile } from '@/shared/consts/route';
 import { AppLink, Avatar, Flex, Skeleton, Text } from '@/shared/ui';
-import css from './CommentCard.m.css';
 import type { CommentCardProps } from './CommentCard.types';
+import css from './CommentCard.m.css';
 
 export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
   const { className, comment, isLoading } = props;

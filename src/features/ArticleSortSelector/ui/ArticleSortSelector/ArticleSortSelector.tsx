@@ -1,9 +1,9 @@
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { ArticleSortField } from '@/entities/Article';
 import { SortOrder } from '@/shared/types';
 import { Flex, Select, SelectOption } from '@/shared/ui';
 import type { ArticleSortSelectorProps } from './ArticleSortSelector.types';
-import type { ArticleSortField } from '@/entities/Article';
 
 export const ArticleSortSelector = memo(function ArticleSortSelector(props: ArticleSortSelectorProps) {
   const { className, sort, order, onChangeOrder, onChangeSort } = props;

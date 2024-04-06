@@ -1,5 +1,5 @@
-import { LangSelect } from './LangSelect';
 import type { Meta, StoryObj } from '@storybook/react';
+import { LangSelect } from './LangSelect';
 
 const meta = {
   title: 'shared/LangSelect',

@@ -1,12 +1,12 @@
-import { memo } from 'react';
 import clsx from 'clsx';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flex, Text } from '@/shared/ui';
-import css from './ArticleList.m.css';
+import type { Article, ArticleView } from '../../model/types/article.types';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import type { ArticleListProps } from './ArticleList.types';
-import type { Article, ArticleView } from '../../model/types/article.types';
+import css from './ArticleList.m.css';
 
 const getSkeletons = (view: ArticleView) =>
   new Array(view === 'grid' ? 9 : 3).fill(0).map((_, index) => (

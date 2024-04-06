@@ -1,9 +1,9 @@
-import { FC } from 'react';
 import clsx from 'clsx';
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flex } from '@/shared/ui';
-import css from './PageError.m.css';
 import type { PageErrorProps } from './PageError.types';
+import css from './PageError.m.css';
 
 export const PageError: FC<PageErrorProps> = ({ className }) => {
   const { t } = useTranslation();

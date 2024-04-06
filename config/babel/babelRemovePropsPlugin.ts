@@ -1,5 +1,5 @@
 /* eslint-disable func-names */
-import { PluginItem } from '@babel/core';
+import { type PluginItem } from '@babel/core';
 
 export default function (): PluginItem {
   return {

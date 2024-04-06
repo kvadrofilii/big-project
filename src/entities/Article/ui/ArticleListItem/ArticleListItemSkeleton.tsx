@@ -1,8 +1,8 @@
-import { memo } from 'react';
 import clsx from 'clsx';
+import { memo } from 'react';
 import { Card, Skeleton } from '@/shared/ui';
-import css from './ArticleListItem.m.css';
 import type { ArticleListItemSkeletonProps } from './ArticleListItem.types';
+import css from './ArticleListItem.m.css';
 
 export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(props: ArticleListItemSkeletonProps) {
   const { className, view } = props;

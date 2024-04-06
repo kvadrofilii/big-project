@@ -1,5 +1,5 @@
-import { Flex } from './Flex';
 import type { Meta, StoryObj } from '@storybook/react';
+import { Flex } from './Flex';
 
 const meta = {
   title: 'shared/Flex',

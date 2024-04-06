@@ -4,8 +4,8 @@ import { getUserAuthData } from '@/entities/User';
 import { AppRoutes } from '@/shared/consts/route';
 import { useAppSelector } from '@/shared/lib';
 import { AppLink, IconButton } from '@/shared/ui';
-import css from './NavbarLink.m.css';
 import type { NavbarLinkProps } from './NavbarLink.types';
+import css from './NavbarLink.m.css';
 
 export const NavbarLink = memo(function NavbarLink(props: NavbarLinkProps) {
   const { item, collapsed } = props;

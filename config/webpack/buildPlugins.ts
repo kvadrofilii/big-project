@@ -5,9 +5,14 @@ import CopyPlugin from 'copy-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import webpack from 'webpack';
+import {
+  type WebpackPluginInstance,
+  HotModuleReplacementPlugin,
+  ProgressPlugin,
+  DefinePlugin,
+} from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { BuildOptions } from './types/config';
+import { type BuildOptions } from './types/config';
 
 export function buildPlugins({
   paths,
@@ -15,15 +20,15 @@ export function buildPlugins({
   analyze,
   apiUrl,
   project,
-}: BuildOptions): webpack.WebpackPluginInstance[] {
+}: BuildOptions): WebpackPluginInstance[] {
   const isProd = !isDev;
 
   const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html,
     }),
-    new webpack.ProgressPlugin(),
-    new webpack.DefinePlugin({
+    new ProgressPlugin(),
+    new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
       __API__: JSON.stringify(apiUrl),
       __PROJECT__: JSON.stringify(project),
@@ -45,7 +50,7 @@ export function buildPlugins({
 
   if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin());
-    plugins.push(new webpack.HotModuleReplacementPlugin());
+    plugins.push(new HotModuleReplacementPlugin());
     plugins.push(
       new CircularDependencyPlugin({
         exclude: /node_modules/,
@@ -69,5 +74,5 @@ export function buildPlugins({
     );
   }
 
-  return plugins as webpack.WebpackPluginInstance[];
+  return plugins as WebpackPluginInstance[];
 }

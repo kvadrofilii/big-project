@@ -1,8 +1,8 @@
-import { memo } from 'react';
 import clsx from 'clsx';
+import { memo } from 'react';
 import { Heading, Text } from '@/shared/ui';
-import css from './ArticleTextBlockComponent.m.css';
 import type { ArticleTextBlockComponentProps } from './ArticleTextBlockComponent.types';
+import css from './ArticleTextBlockComponent.m.css';
 
 export const ArticleTextBlockComponent = memo(function ArticleTextBlockComponent(
   props: ArticleTextBlockComponentProps,

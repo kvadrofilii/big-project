@@ -1,23 +1,23 @@
 export type BuildMode = 'production' | 'development';
 
-export interface BuildEnv {
+export type BuildEnv = {
   mode: BuildMode;
   port: number;
   open: boolean;
   analyze: boolean;
   apiUrl: string;
-}
+};
 
-export interface BuildPaths {
+export type BuildPaths = {
   entry: string;
   build: string;
   html: string;
   src: string;
   locales: string;
   buildLocales: string;
-}
+};
 
-export interface BuildOptions {
+export type BuildOptions = {
   mode: BuildMode;
   paths: BuildPaths;
   isDev: boolean;
@@ -26,4 +26,4 @@ export interface BuildOptions {
   analyze: boolean;
   apiUrl: string;
   project: 'storybook' | 'frontend' | 'jest';
-}
+};

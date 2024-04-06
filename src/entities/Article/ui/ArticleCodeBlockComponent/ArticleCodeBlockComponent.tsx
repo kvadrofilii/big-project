@@ -1,8 +1,8 @@
-import { memo } from 'react';
 import clsx from 'clsx';
+import { memo } from 'react';
 import { Code } from '@/shared/ui';
-import css from './ArticleCodeBlockComponent.m.css';
 import type { ArticleCodeBlockComponentProps } from './ArticleCodeBlockComponent.types';
+import css from './ArticleCodeBlockComponent.m.css';
 
 export const ArticleCodeBlockComponent = memo(function ArticleCodeBlockComponent(
   props: ArticleCodeBlockComponentProps,

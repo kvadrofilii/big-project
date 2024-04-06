@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import type { ArticleCommentsSchema } from '../types/articleComments.types';
 
 const initialState: ArticleCommentsSchema = {

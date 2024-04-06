@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import type { ScrollSchema } from '../types/scrollSchema.types';
 
 const initialState: ScrollSchema = {

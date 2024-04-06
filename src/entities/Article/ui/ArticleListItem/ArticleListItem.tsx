@@ -1,13 +1,13 @@
-import { memo } from 'react';
 import clsx from 'clsx';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Eye from '@/shared/assets/icons/eye.svg';
 import { getRouteArticleDetails } from '@/shared/consts/route';
 import { AppLink, Avatar, Card, CardAction, Heading, Text } from '@/shared/ui';
-import css from './ArticleListItem.m.css';
+import type { ArticleTextBlock } from '../../model/types/article.types';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import type { ArticleListItemProps } from './ArticleListItem.types';
-import type { ArticleTextBlock } from '../../model/types/article.types';
+import css from './ArticleListItem.m.css';
 
 export const ArticleListItem = memo(function ArticleListItem(props: ArticleListItemProps) {
   const { className, article, view, target } = props;

@@ -1,20 +1,20 @@
-import webpack from 'webpack';
+import { type RuleSetRule } from 'webpack';
 import { babelLoader as buildBabelLoader } from './loaders/babelLoader';
 import { cssLoader as buildCssLoader } from './loaders/cssLoader';
 import { fontsLoader as buildFontsLoader } from './loaders/fontsLoader';
 import { imagesLoader as buildImagesLoader } from './loaders/imagesLoader';
 import { svgLoader as buildSvgLoader } from './loaders/svgLoader';
-import { BuildOptions } from './types/config';
+import { type BuildOptions } from './types/config';
 
-export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): RuleSetRule[] {
   const { isDev } = options;
 
-  const babelLoader: webpack.RuleSetRule = buildBabelLoader({ ...options, isTsx: false });
-  const tsxBabelLoader: webpack.RuleSetRule = buildBabelLoader({ ...options, isTsx: true });
-  const cssLoader: webpack.RuleSetRule = buildCssLoader(isDev);
-  const svgLoader: webpack.RuleSetRule = buildSvgLoader();
-  const imagesLoader: webpack.RuleSetRule = buildImagesLoader();
-  const fontsLoader: webpack.RuleSetRule = buildFontsLoader();
+  const babelLoader: RuleSetRule = buildBabelLoader({ ...options, isTsx: false });
+  const tsxBabelLoader: RuleSetRule = buildBabelLoader({ ...options, isTsx: true });
+  const cssLoader: RuleSetRule = buildCssLoader(isDev);
+  const svgLoader: RuleSetRule = buildSvgLoader();
+  const imagesLoader: RuleSetRule = buildImagesLoader();
+  const fontsLoader: RuleSetRule = buildFontsLoader();
 
   return [babelLoader, tsxBabelLoader, cssLoader, imagesLoader, svgLoader, fontsLoader];
 }

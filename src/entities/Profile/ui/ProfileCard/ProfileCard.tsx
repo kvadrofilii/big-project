@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { CountrySelect } from '@/entities/Country';
 import { CurrencySelect } from '@/entities/Currency';
 import { Avatar, Flex, Heading, Input, Loader, Text } from '@/shared/ui';
-import css from './ProfileCard.m.css';
 import type { ProfileCardProps } from './ProfileCard.types';
+import css from './ProfileCard.m.css';
 
 export const ProfileCard = (props: ProfileCardProps) => {
   const {

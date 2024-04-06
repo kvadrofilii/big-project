@@ -1,5 +1,5 @@
-import { memo, useCallback } from 'react';
 import clsx from 'clsx';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 import { ArticleSortSelector } from '@/features/ArticleSortSelector';
@@ -8,7 +8,6 @@ import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { useAppDispatch, useAppSelector, useDebounce } from '@/shared/lib';
 import { SortOrder } from '@/shared/types';
 import { Flex, Input } from '@/shared/ui';
-import css from './ArticlesPageFilters.m.css';
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
@@ -19,6 +18,7 @@ import {
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/articlesPage.slice';
 import type { ArticlesPageFiltersProps } from './ArticlesPageFilters.types';
+import css from './ArticlesPageFilters.m.css';
 
 export const ArticlesPageFilters = memo(function ArticlesPageFilters(props: ArticlesPageFiltersProps) {
   const { className } = props;

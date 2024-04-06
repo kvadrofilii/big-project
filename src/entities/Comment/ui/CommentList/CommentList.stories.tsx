@@ -1,5 +1,5 @@
-import { CommentList } from './CommentList';
 import type { Meta, StoryObj } from '@storybook/react';
+import { CommentList } from './CommentList';
 
 const meta = {
   title: 'entities/Comment/CommentList',
