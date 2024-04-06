@@ -1,7 +1,6 @@
 import { useEffect, Suspense } from 'react';
 import { getUserIsMount, userActions } from '~/entities/User';
 import { useAppDispatch, useAppSelector } from '~/shared/lib';
-// import { Footer } from 'widgets/Footer';
 import { Header } from '~/widgets/Header';
 import { PageLoader } from '~/widgets/PageLoader';
 import { Sidebar } from '~/widgets/Sidebar';
@@ -24,7 +23,6 @@ const App = () => {
         <div className={css.main}>
           <Suspense fallback={<PageLoader />}>{isMount && <AppRouter />}</Suspense>
         </div>
-        {/* <Footer className={css.footer} /> */}
       </div>
     </div>
   );

@@ -5,9 +5,7 @@
 .body {
   display: grid;
   grid-template: 1fr auto / auto 1fr;
-  grid-template-areas:
-    'sidebar main'
-    'sidebar footer';
+  grid-template-areas: 'sidebar main';
 }
 
 .sidebar {
@@ -17,10 +15,5 @@
 .main {
   overflow: hidden;
   grid-area: main;
-  height: calc(100vh - var(--header-height) - var(--footer-height));
-}
-
-.footer {
-  grid-area: footer;
-  height: var(--footer-height);
+  height: calc(100vh - var(--header-height));
 }
