@@ -1,15 +1,21 @@
 import clsx from 'clsx';
-import { memo } from 'react';
+import { memo, type HTMLAttributeAnchorTarget } from 'react';
 import { useTranslation } from 'react-i18next';
 import Eye from '@/shared/assets/icons/eye.svg';
 import { getRouteArticleDetails } from '@/shared/consts/route';
 import { AppLink, Avatar, Card, CardAction, Heading, Text } from '@/shared/ui';
-import type { ArticleTextBlock } from '../../model/types/article.types';
+import type { ArticleTextBlock, Article, ArticleView } from '../../model/types/article.types';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import type { ArticleListItemProps } from './ArticleListItem.types';
 import css from './ArticleListItem.m.css';
 
-export const ArticleListItem = memo(function ArticleListItem(props: ArticleListItemProps) {
+type Props = {
+  className?: string;
+  article: Article;
+  view: ArticleView;
+  target?: HTMLAttributeAnchorTarget;
+};
+
+export const ArticleListItem = memo(function ArticleListItem(props: Props) {
   const { className, article, view, target } = props;
   const { t } = useTranslation('article');
 

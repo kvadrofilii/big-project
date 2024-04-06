@@ -1,10 +1,15 @@
 import clsx from 'clsx';
 import { memo } from 'react';
 import { Card, Skeleton } from '@/shared/ui';
-import type { ArticleListItemSkeletonProps } from './ArticleListItem.types';
+import type { ArticleView } from '../../model/types/article.types';
 import css from './ArticleListItem.m.css';
 
-export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(props: ArticleListItemSkeletonProps) {
+type Props = {
+  className?: string;
+  view: ArticleView;
+};
+
+export const ArticleListItemSkeleton = memo(function ArticleListItemSkeleton(props: Props) {
   const { className, view } = props;
 
   if (view === 'list') {

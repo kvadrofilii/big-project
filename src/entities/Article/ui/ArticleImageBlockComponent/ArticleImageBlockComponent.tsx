@@ -1,12 +1,15 @@
 import clsx from 'clsx';
 import { memo } from 'react';
 import { Heading } from '@/shared/ui';
-import type { ArticleImageBlockComponentProps } from './ArticleImageBlockComponent.types';
+import type { ArticleImageBlock } from '../../model/types/article.types';
 import css from './ArticleImageBlockComponent.m.css';
 
-export const ArticleImageBlockComponent = memo(function ArticleImageBlockComponent(
-  props: ArticleImageBlockComponentProps,
-) {
+type Props = {
+  className?: string;
+  block: ArticleImageBlock;
+};
+
+export const ArticleImageBlockComponent = memo(function ArticleImageBlockComponent(props: Props) {
   const { className, block } = props;
 
   return (
