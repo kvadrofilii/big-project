@@ -2,7 +2,7 @@ import { Country } from '~/entities/Country';
 import { Currency } from '~/entities/Currency';
 import type { Profile } from '../../model/types/profile.types';
 
-export interface ProfileCardProps {
+export type ProfileCardProps = {
   className?: string;
   data?: Profile;
   isLoading?: boolean;
@@ -16,4 +16,4 @@ export interface ProfileCardProps {
   onChangeAvatar?: (value?: string) => void;
   onChangeCurrency?: (currency: Currency) => void;
   onChangeCountry?: (country: Country) => void;
-}
+};

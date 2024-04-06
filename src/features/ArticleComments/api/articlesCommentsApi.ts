@@ -1,11 +1,11 @@
 import { Comment } from '~/entities/Comment';
 import { rtkApi } from '~/shared/api';
 
-interface AddComment {
+type AddComment = {
   text: string;
   articleId: string;
   userId?: string;
-}
+};
 
 const articlesCommentsApi = rtkApi.injectEndpoints({
   endpoints: (build) => ({

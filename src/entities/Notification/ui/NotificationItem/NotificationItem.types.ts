@@ -1,6 +1,6 @@
 import { Notification } from '../../model/types/notification.types';
 
-export interface NotificationItemProps {
+export type NotificationItemProps = {
   className?: string;
   item: Notification;
-}
+};

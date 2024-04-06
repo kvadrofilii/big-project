@@ -1,3 +1,3 @@
-export interface AdminPanelPageProps {
+export type AdminPanelPageProps = {
   className?: string;
-}
+};

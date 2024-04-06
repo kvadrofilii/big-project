@@ -1,3 +1,3 @@
-export interface AvatarMenuProps {
+export type AvatarMenuProps = {
   className?: string;
-}
+};

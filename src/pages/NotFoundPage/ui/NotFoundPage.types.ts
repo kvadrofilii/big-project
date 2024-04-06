@@ -1,3 +1,3 @@
-export interface NotFoundPageProps {
+export type NotFoundPageProps = {
   className?: string;
-}
+};

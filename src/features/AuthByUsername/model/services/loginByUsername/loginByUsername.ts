@@ -3,10 +3,10 @@ import { ThunkConfig } from '~/app/providers/StoreProvider';
 import { User, userActions } from '~/entities/User';
 import { USER_LOCALSTORAGE_KEY } from '~/shared/consts/localstorage';
 
-interface LoginByUsernameProps {
+type LoginByUsernameProps = {
   username: string;
   password: string;
-}
+};
 
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, ThunkConfig<string>>(
   'login/loginByUsername',

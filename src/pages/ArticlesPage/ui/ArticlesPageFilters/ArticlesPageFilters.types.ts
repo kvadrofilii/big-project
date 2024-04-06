@@ -1,3 +1,3 @@
-export interface ArticlesPageFiltersProps {
+export type ArticlesPageFiltersProps = {
   className?: string;
-}
+};

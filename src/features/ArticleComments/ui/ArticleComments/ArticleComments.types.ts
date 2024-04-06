@@ -1,3 +1,3 @@
-export interface ArticleCommentsProps {
+export type ArticleCommentsProps = {
   id: string;
-}
+};

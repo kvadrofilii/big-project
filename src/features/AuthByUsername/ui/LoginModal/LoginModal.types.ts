@@ -1,4 +1,4 @@
-export interface LoginModalProps {
+export type LoginModalProps = {
   isOpened: boolean;
   onClose: () => void;
-}
+};

@@ -1,3 +1,3 @@
-export interface EditableProfileCardHeaderProps {
+export type EditableProfileCardHeaderProps = {
   className?: string;
-}
+};

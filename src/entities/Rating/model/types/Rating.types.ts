@@ -1,4 +1,4 @@
-export interface Rating {
+export type Rating = {
   rate: number;
   feedback?: string;
-}
+};

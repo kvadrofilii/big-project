@@ -1,3 +1,3 @@
-export interface FetchArticlesListProps {
+export type FetchArticlesListProps = {
   replace?: boolean;
-}
+};

@@ -1,3 +1,3 @@
-export interface ArticleCommentsSchema {
+export type ArticleCommentsSchema = {
   text?: string;
-}
+};

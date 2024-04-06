@@ -6,31 +6,31 @@ export type ArticleBlockType = 'code' | 'image' | 'text';
 
 export type ArticleType = 'all' | 'it' | 'science' | 'economics';
 
-export interface ArticleBlockBase {
+export type ArticleBlockBase = {
   id: string;
   type: ArticleBlockType;
-}
+};
 
-export interface ArticleCodeBlock extends ArticleBlockBase {
+export type ArticleCodeBlock = ArticleBlockBase & {
   type: 'code';
   code: string;
-}
+};
 
-export interface ArticleImageBlock extends ArticleBlockBase {
+export type ArticleImageBlock = ArticleBlockBase & {
   type: 'image';
   src: string;
   title: string;
-}
+};
 
-export interface ArticleTextBlock extends ArticleBlockBase {
+export type ArticleTextBlock = ArticleBlockBase & {
   type: 'text';
   title?: string;
   paragraphs: string[];
-}
+};
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
 
-export interface Article {
+export type Article = {
   id: string;
   title: string;
   subtitle: string;
@@ -40,12 +40,12 @@ export interface Article {
   createdAt: string;
   type: ArticleType[];
   blocks: ArticleBlock[];
-}
+};
 
-export interface ArticleDetailsSchema {
+export type ArticleDetailsSchema = {
   isLoading: boolean;
   error?: string;
   data?: Article;
-}
+};
 
 export type ArticleView = 'list' | 'grid';

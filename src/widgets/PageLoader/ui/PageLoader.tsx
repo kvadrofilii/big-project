@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { Flex, Loader } from '~/shared/ui';
 import css from './PageLoader.m.css';
 
-export interface Props {
+type Props = {
   className?: string;
-}
+};
 
 export const PageLoader: FC<Props> = ({ className }) => (
   <Flex

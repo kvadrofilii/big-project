@@ -1,3 +1,3 @@
-export interface NotificationButtonProps {
+export type NotificationButtonProps = {
   className?: string;
-}
+};

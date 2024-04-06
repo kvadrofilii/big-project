@@ -4,10 +4,10 @@ import { UserRole, getUserAuthData, getUserRole } from '~/entities/User';
 import { getRouteForbidden, getRouteMain } from '~/shared/consts/route';
 import { useAppSelector } from '~/shared/lib';
 
-interface RequireAuthProps {
+type RequireAuthProps = {
   children: JSX.Element;
   roles?: UserRole[];
-}
+};
 
 export function RequireAuth({ children, roles }: RequireAuthProps) {
   const isAuth = useAppSelector(getUserAuthData);

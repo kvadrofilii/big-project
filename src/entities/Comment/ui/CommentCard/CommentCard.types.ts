@@ -1,7 +1,7 @@
 import type { Comment } from '../../model/types/comment.types';
 
-export interface CommentCardProps {
+export type CommentCardProps = {
   className?: string;
   comment?: Comment;
   isLoading?: boolean;
-}
+};

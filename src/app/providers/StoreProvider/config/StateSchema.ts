@@ -15,7 +15,7 @@ import type { ArticlesPageSchema } from '~/pages/ArticlesPage';
 import { rtkApi } from '~/shared/api/rtkApi';
 import type { ScrollSchema } from '~/widgets/Page';
 
-export interface StateSchema {
+export type StateSchema = {
   user: UserSchema;
   scroll: ScrollSchema;
   [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
@@ -26,27 +26,27 @@ export interface StateSchema {
   articleDetails?: ArticleDetailsSchema;
   articlesPage?: ArticlesPageSchema;
   articleComments?: ArticleCommentsSchema;
-}
+};
 
 export type StateSchemaKey = keyof StateSchema;
 
-export interface ReducerManager {
+export type ReducerManager = {
   getReducerMap: () => ReducersMapObject<StateSchema>;
   reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
   add: (key: StateSchemaKey, reducer: Reducer) => void;
   remove: (key: StateSchemaKey) => void;
-}
+};
 
-export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
+export type ReduxStoreWithManager = EnhancedStore<StateSchema> & {
   reducerManager: ReducerManager;
-}
+};
 
-export interface ThunkExtraArg {
+export type ThunkExtraArg = {
   api: AxiosInstance;
-}
+};
 
-export interface ThunkConfig<T> {
+export type ThunkConfig<T> = {
   rejectValue: T;
   extra: ThunkExtraArg;
   state: StateSchema;
-}
+};

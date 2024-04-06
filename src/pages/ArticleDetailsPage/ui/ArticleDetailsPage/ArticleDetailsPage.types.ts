@@ -1,3 +1,3 @@
-export interface ArticleDetailsPageProps {
+export type ArticleDetailsPageProps = {
   className?: string;
-}
+};

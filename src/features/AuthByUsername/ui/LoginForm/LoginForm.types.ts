@@ -1,9 +1,9 @@
-export interface LoginFormProps {
+export type LoginFormProps = {
   className?: string;
   onSuccess: () => void;
-}
+};
 
-export interface FormInput {
+export type FormInput = {
   username: string;
   password: string;
-}
+};

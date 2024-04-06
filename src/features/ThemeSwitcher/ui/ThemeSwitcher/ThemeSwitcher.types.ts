@@ -1,3 +1,3 @@
-export interface ThemeSwitcherProps {
+export type ThemeSwitcherProps = {
   className?: string;
-}
+};

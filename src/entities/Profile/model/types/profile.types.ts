@@ -1,7 +1,7 @@
 import { Country } from '~/entities/Country';
 import { Currency } from '~/entities/Currency';
 
-export interface Profile {
+export type Profile = {
   id?: string;
   firstName?: string;
   lastName?: string;
@@ -11,4 +11,4 @@ export interface Profile {
   city?: string;
   username?: string;
   avatar?: string;
-}
+};

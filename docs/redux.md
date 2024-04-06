@@ -49,12 +49,12 @@ const rootReducers: ReducersMapObject<StateSchema> = {
 `/src/app/providers/StoreProvider/config/StateSchema.ts`
 
 ```typescript
-export interface StateSchema {
+export type StateSchema = {
   // Не асинхронные редюсеры
   user: UserSchema;
   [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
   // Асинхронные редюсеры
   loginForm?: LoginSchema;
-}
+};
 ```

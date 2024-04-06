@@ -1,11 +1,11 @@
-export interface GetArticleRatingArg {
+export type GetArticleRatingArg = {
   userId: string;
   articleId: string;
-}
+};
 
-export interface RateArticleArg {
+export type RateArticleArg = {
   userId: string;
   articleId: string;
   rate: number;
   feedback?: string;
-}
+};

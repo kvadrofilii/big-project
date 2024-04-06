@@ -1,13 +1,13 @@
 import type { ReactElement } from 'react';
 import type { ArticleView } from '../../../../entities/Article/model/types/article.types';
 
-export interface ArticleViewSelectorProps {
+export type ArticleViewSelectorProps = {
   className?: string;
   view: ArticleView;
   onViewClick?: (view: ArticleView) => void;
-}
+};
 
-export interface ViewTypes {
+export type ViewTypes = {
   view: ArticleView;
   icon: ReactElement;
-}
+};

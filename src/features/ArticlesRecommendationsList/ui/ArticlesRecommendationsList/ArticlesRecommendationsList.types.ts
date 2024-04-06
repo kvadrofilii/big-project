@@ -1,3 +1,3 @@
-export interface ArticlesRecommendationsListProps {
+export type ArticlesRecommendationsListProps = {
   className?: string;
-}
+};

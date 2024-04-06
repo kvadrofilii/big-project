@@ -1,4 +1,4 @@
-export interface ArticleRatingProps {
+export type ArticleRatingProps = {
   className?: string;
   id: string;
-}
+};

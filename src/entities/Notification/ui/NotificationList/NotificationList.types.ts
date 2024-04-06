@@ -1,3 +1,3 @@
-export interface NotificationListProps {
+export type NotificationListProps = {
   className?: string;
-}
+};

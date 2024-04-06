@@ -1,3 +1,3 @@
-export interface ArticleEditPageProps {
+export type ArticleEditPageProps = {
   className?: string;
-}
+};
