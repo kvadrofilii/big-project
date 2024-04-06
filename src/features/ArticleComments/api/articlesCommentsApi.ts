@@ -1,5 +1,5 @@
-import { Comment } from '@/entities/Comment';
-import { rtkApi } from '@/shared/api';
+import { Comment } from '~/entities/Comment';
+import { rtkApi } from '~/shared/api';
 
 interface AddComment {
   text: string;
@@ -30,4 +30,5 @@ const articlesCommentsApi = rtkApi.injectEndpoints({
   }),
 });
 
-export const { useAddCommentForArticleMutation, useGetCommentsByArticleIdQuery } = articlesCommentsApi;
+export const { useAddCommentForArticleMutation, useGetCommentsByArticleIdQuery } =
+  articlesCommentsApi;

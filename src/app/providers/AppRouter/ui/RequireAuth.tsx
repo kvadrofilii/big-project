@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { UserRole, getUserAuthData, getUserRole } from '@/entities/User';
-import { getRouteForbidden, getRouteMain } from '@/shared/consts/route';
-import { useAppSelector } from '@/shared/lib';
+import { UserRole, getUserAuthData, getUserRole } from '~/entities/User';
+import { getRouteForbidden, getRouteMain } from '~/shared/consts/route';
+import { useAppSelector } from '~/shared/lib';
 
 interface RequireAuthProps {
   children: JSX.Element;

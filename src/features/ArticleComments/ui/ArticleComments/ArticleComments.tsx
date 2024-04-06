@@ -1,14 +1,20 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { CommentList } from '@/entities/Comment';
-import { CommentForm } from '@/entities/CommentForm';
-import { getUserAuthData } from '@/entities/User';
-import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } from '@/shared/lib';
-import { Heading } from '@/shared/ui';
-import { useAddCommentForArticleMutation, useGetCommentsByArticleIdQuery } from '../../api/articlesCommentsApi';
+import { CommentList } from '~/entities/Comment';
+import { CommentForm } from '~/entities/CommentForm';
+import { getUserAuthData } from '~/entities/User';
+import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector } from '~/shared/lib';
+import { Heading } from '~/shared/ui';
+import {
+  useAddCommentForArticleMutation,
+  useGetCommentsByArticleIdQuery,
+} from '../../api/articlesCommentsApi';
 import { getAddCommentFormText } from '../../model/selectors/ArticleCommentSelectors';
-import { articleCommentsActions, articleCommentsReducer } from '../../model/slices/articleComment.slice';
+import {
+  articleCommentsActions,
+  articleCommentsReducer,
+} from '../../model/slices/articleComment.slice';
 import type { ArticleCommentsProps } from './ArticleComments.types';
 import css from './ArticleComments.m.css';
 

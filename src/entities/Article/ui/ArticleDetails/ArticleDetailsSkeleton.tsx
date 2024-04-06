@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Flex, Skeleton } from '@/shared/ui';
+import { Flex, Skeleton } from '~/shared/ui';
 import css from './ArticleDetails.m.css';
 
 export const ArticleDetailsSkeleton = memo(function ArticleDetailsLoading() {

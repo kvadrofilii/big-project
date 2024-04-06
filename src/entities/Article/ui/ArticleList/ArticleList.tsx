@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { memo, useCallback, type HTMLAttributeAnchorTarget } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Flex, Text } from '@/shared/ui';
+import { Flex, Text } from '~/shared/ui';
 import type { Article, ArticleView } from '../../model/types/article.types';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';

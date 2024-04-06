@@ -12,9 +12,9 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
     // Имя главного файла в папке
     mainFiles: ['index'],
     // Алиасы для абсолютных путей
-    // Пустой объект означает абсолютные пути импорта без "@" в начале пути
+    // Пустой объект означает абсолютные пути импорта без "~" в начале пути
     alias: {
-      '@': options.paths.src,
+      '~': options.paths.src,
     },
   };
 }

@@ -1,14 +1,16 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { getRouteArticleEdit, getRouteArticles } from '@/shared/consts/route';
-import { useAppSelector } from '@/shared/lib';
-import { Button, Flex } from '@/shared/ui';
+import { getRouteArticleEdit, getRouteArticles } from '~/shared/consts/route';
+import { useAppSelector } from '~/shared/lib';
+import { Button, Flex } from '~/shared/ui';
 import { getArticleDetailsData } from '../../../../entities/Article';
 import { getCanEditArticle } from '../../model/selectors/article';
 import type { ArticleDetailsPageHeaderProps } from './ArticleDetailsPageHeader.types';
 
-export const ArticleDetailsPageHeader = memo(function ArticleDetailsPageHeader(props: ArticleDetailsPageHeaderProps) {
+export const ArticleDetailsPageHeader = memo(function ArticleDetailsPageHeader(
+  props: ArticleDetailsPageHeaderProps,
+) {
   const { className } = props;
   const { t } = useTranslation();
   const navigate = useNavigate();

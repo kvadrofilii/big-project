@@ -5,10 +5,10 @@ import {
   type ReducersMapObject,
   type Store,
 } from '@reduxjs/toolkit';
-import { userReducer } from '@/entities/User';
-import { $api } from '@/shared/api/api';
-import { rtkApi } from '@/shared/api/rtkApi';
-import { scrollReducer } from '@/widgets/Page';
+import { userReducer } from '~/entities/User';
+import { $api } from '~/shared/api/api';
+import { rtkApi } from '~/shared/api/rtkApi';
+import { scrollReducer } from '~/widgets/Page';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 

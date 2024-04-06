@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { memo } from 'react';
-import { Card, Skeleton } from '@/shared/ui';
+import { Card, Skeleton } from '~/shared/ui';
 import type { ArticleView } from '../../model/types/article.types';
 import css from './ArticleListItem.m.css';
 

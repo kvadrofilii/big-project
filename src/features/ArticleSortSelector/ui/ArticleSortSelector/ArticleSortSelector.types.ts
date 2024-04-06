@@ -1,4 +1,4 @@
-import type { SortOrder } from '@/shared/types';
+import type { SortOrder } from '~/shared/types';
 import type { ArticleSortField } from '../../../../entities/Article/model/types/article.types';
 
 export interface ArticleSortSelectorProps {

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Page } from '@/widgets/Page';
+import { Page } from '~/widgets/Page';
 import type { AdminPanelPageProps } from './AdminPanelPage.types';
 import css from './AdminPanelPage.m.css';
 

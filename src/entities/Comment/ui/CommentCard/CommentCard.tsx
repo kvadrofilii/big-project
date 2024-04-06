@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { memo } from 'react';
-import { getRouteProfile } from '@/shared/consts/route';
-import { AppLink, Avatar, Flex, Skeleton, Text } from '@/shared/ui';
+import { getRouteProfile } from '~/shared/consts/route';
+import { AppLink, Avatar, Flex, Skeleton, Text } from '~/shared/ui';
 import type { CommentCardProps } from './CommentCard.types';
 import css from './CommentCard.m.css';
 

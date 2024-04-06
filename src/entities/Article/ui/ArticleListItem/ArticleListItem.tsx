@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import { memo, type HTMLAttributeAnchorTarget } from 'react';
 import { useTranslation } from 'react-i18next';
-import Eye from '@/shared/assets/icons/eye.svg';
-import { getRouteArticleDetails } from '@/shared/consts/route';
-import { AppLink, Avatar, Card, CardAction, Heading, Text } from '@/shared/ui';
+import Eye from '~/shared/assets/icons/eye.svg';
+import { getRouteArticleDetails } from '~/shared/consts/route';
+import { AppLink, Avatar, Card, CardAction, Heading, Text } from '~/shared/ui';
 import type { ArticleTextBlock, Article, ArticleView } from '../../model/types/article.types';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import css from './ArticleListItem.m.css';

@@ -6,8 +6,8 @@ import {
   useAppDispatch,
   useAppSelector,
   useInitialEffect,
-} from '@/shared/lib';
-import { Text } from '@/shared/ui';
+} from '~/shared/lib';
+import { Text } from '~/shared/ui';
 import {
   getArticleDetailsIsLoading,
   getArticleDetailsError,

@@ -6,14 +6,14 @@ import type {
   ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { type AxiosInstance } from 'axios';
-import type { ArticleDetailsSchema } from '@/entities/Article';
-import type { UserSchema } from '@/entities/User';
-import type { ArticleCommentsSchema } from '@/features/ArticleComments';
-import type { LoginSchema } from '@/features/AuthByUsername';
-import type { ProfileSchema } from '@/features/EditableProfileCard';
-import type { ArticlesPageSchema } from '@/pages/ArticlesPage';
-import { rtkApi } from '@/shared/api/rtkApi';
-import type { ScrollSchema } from '@/widgets/Page';
+import type { ArticleDetailsSchema } from '~/entities/Article';
+import type { UserSchema } from '~/entities/User';
+import type { ArticleCommentsSchema } from '~/features/ArticleComments';
+import type { LoginSchema } from '~/features/AuthByUsername';
+import type { ProfileSchema } from '~/features/EditableProfileCard';
+import type { ArticlesPageSchema } from '~/pages/ArticlesPage';
+import { rtkApi } from '~/shared/api/rtkApi';
+import type { ScrollSchema } from '~/widgets/Page';
 
 export interface StateSchema {
   user: UserSchema;

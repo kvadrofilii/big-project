@@ -1,7 +1,7 @@
 import { Popover as HPopover } from '@headlessui/react';
 import clsx from 'clsx';
 import { type ReactNode } from 'react';
-import type { DropdownDirection } from '@/shared/types';
+import type { DropdownDirection } from '~/shared/types';
 import popover from '../../styles/popover.m.css';
 import css from './Popover.m.css';
 

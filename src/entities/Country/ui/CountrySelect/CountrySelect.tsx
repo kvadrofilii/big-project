@@ -1,6 +1,6 @@
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ListBox } from '@/shared/ui';
+import { ListBox } from '~/shared/ui';
 import { Country } from '../../model/consts/country';
 import type { CountrySelectProps } from './CountrySelect.types';
 
@@ -8,7 +8,10 @@ export const CountrySelect = memo(function CountrySelect(props: CountrySelectPro
   const { className, value, onChange, disabled } = props;
   const { t } = useTranslation();
 
-  const options = useMemo(() => Object.entries(Country).map((val) => ({ value: val[0], content: val[1] })), []);
+  const options = useMemo(
+    () => Object.entries(Country).map((val) => ({ value: val[0], content: val[1] })),
+    [],
+  );
 
   const onChangeHandler = useCallback(
     (country: string) => {

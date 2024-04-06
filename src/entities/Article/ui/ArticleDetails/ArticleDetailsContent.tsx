@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import CalendarPlusIcon from '@/shared/assets/icons/calendar-plus.svg';
-import EyeIcon from '@/shared/assets/icons/eye.svg';
-import { useAppSelector } from '@/shared/lib';
-import { Avatar, Flex, Heading, Text } from '@/shared/ui';
+import CalendarPlusIcon from '~/shared/assets/icons/calendar-plus.svg';
+import EyeIcon from '~/shared/assets/icons/eye.svg';
+import { useAppSelector } from '~/shared/lib';
+import { Avatar, Flex, Heading, Text } from '~/shared/ui';
 import { getArticleDetailsData } from '../../model/selectors/articleDetails';
 import { renderBlock } from './renderBlock';
 import css from './ArticleDetails.m.css';

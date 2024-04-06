@@ -1,5 +1,5 @@
 /**
- * Обновляет импорты в проекте добавляя alias '@/'
+ * Обновляет импорты в проекте добавляя alias '~/'
  * Запускается:
  * npx ts-node scripts/refactoring/updateImports.ts
  */
@@ -23,7 +23,7 @@ files.forEach((sourceFile) => {
     const value = importDeclaration.getModuleSpecifierValue();
 
     if (isAbsolutePath(value)) {
-      importDeclaration.setModuleSpecifier(`@/${value}`);
+      importDeclaration.setModuleSpecifier(`~/${value}`);
     }
   });
 });

@@ -61,11 +61,11 @@ module.exports = {
     'no-undef': 'off', // Разрешаем использовать глобальное объявление типов
     'no-underscore-dangle': 'off', // Разрешает использовать висячие символы в переменных (_)
     'unused-imports/no-unused-imports': 'warn',
-    '@kvadrofilii/fsd/path-checker': ['error', { alias: '@' }],
+    '@kvadrofilii/fsd/path-checker': ['error', { alias: '~' }],
     '@kvadrofilii/fsd/public-api-imports': [
       'error',
       {
-        alias: '@',
+        alias: '~',
         testFilesPatterns: [
           '**/*.test.*',
           '**/*.stories.*',
@@ -76,7 +76,7 @@ module.exports = {
     ],
     '@kvadrofilii/fsd/layer-imports': [
       'error',
-      { alias: '@', ignoreImportPatterns: ['**/StoreProvider', '**/testing'] },
+      { alias: '~', ignoreImportPatterns: ['**/StoreProvider', '**/testing'] },
     ],
     'i18next/no-literal-string': 'warn',
     'react/forbid-prop-types': 'off',
@@ -113,7 +113,7 @@ module.exports = {
             position: 'after',
           },
           {
-            pattern: '@/**',
+            pattern: '~/**',
             group: 'parent',
             position: 'before',
           },

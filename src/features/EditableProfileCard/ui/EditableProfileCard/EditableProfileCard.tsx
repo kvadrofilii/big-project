@@ -1,10 +1,16 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Country } from '@/entities/Country';
-import { Currency } from '@/entities/Currency';
-import { ProfileCard } from '@/entities/Profile';
-import { DynamicReducerLoader, ReducersList, useAppDispatch, useAppSelector, useInitialEffect } from '@/shared/lib';
-import { Text } from '@/shared/ui';
+import { Country } from '~/entities/Country';
+import { Currency } from '~/entities/Currency';
+import { ProfileCard } from '~/entities/Profile';
+import {
+  DynamicReducerLoader,
+  ReducersList,
+  useAppDispatch,
+  useAppSelector,
+  useInitialEffect,
+} from '~/shared/lib';
+import { Text } from '~/shared/ui';
 import { ValidateProfileError } from '../../model/consts/validateProfileError';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
@@ -20,7 +26,9 @@ const reducers: ReducersList = {
   profile: profileReducer,
 };
 
-export const EditableProfileCard = memo(function EditableProfileCard(props: EditableProfileCardProps) {
+export const EditableProfileCard = memo(function EditableProfileCard(
+  props: EditableProfileCardProps,
+) {
   const { className, id } = props;
   const { t } = useTranslation('profile');
   const dispatch = useAppDispatch();

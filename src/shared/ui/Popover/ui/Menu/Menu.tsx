@@ -2,7 +2,7 @@ import { Menu as HMenu } from '@headlessui/react';
 import clsx from 'clsx';
 import { Fragment, memo, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import type { DropdownDirection } from '@/shared/types';
+import type { DropdownDirection } from '~/shared/types';
 import popover from '../../styles/popover.m.css';
 import css from './Menu.m.css';
 

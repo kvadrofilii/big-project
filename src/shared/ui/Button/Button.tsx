@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { memo, type ButtonHTMLAttributes, type ReactElement } from 'react';
-import type { Color, Size, Variant } from '@/shared/types';
+import type { Color, Size, Variant } from '~/shared/types';
 import css from './Button.m.css';
 
 type CommonButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {

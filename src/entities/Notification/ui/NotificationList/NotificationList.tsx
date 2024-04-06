@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { memo } from 'react';
-import { Flex, Skeleton } from '@/shared/ui';
+import { Flex, Skeleton } from '~/shared/ui';
 import { useNotifications } from '../../api/notificationApi';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
 import type { NotificationListProps } from './NotificationList.types';

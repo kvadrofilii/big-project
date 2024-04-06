@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArticleList } from '@/entities/Article';
-import { Flex, Heading } from '@/shared/ui';
+import { ArticleList } from '~/entities/Article';
+import { Flex, Heading } from '~/shared/ui';
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
 import type { ArticlesRecommendationsListProps } from './ArticlesRecommendationsList.types';
 import css from './ArticlesRecommendationsList.m.css';

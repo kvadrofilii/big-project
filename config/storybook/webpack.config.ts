@@ -11,7 +11,7 @@ export default ({ config }: { config: Configuration }) => {
   config.resolve!.modules = [src, 'node_modules'];
   config.resolve!.alias = {
     ...config!.resolve!.alias,
-    '@': src,
+    '~': src,
   };
   config.resolve?.extensions?.push('.ts', '.tsx');
 

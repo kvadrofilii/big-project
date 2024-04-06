@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Flex } from '@/shared/ui';
+import { Flex } from '~/shared/ui';
 import type { PageErrorProps } from './PageError.types';
 import css from './PageError.m.css';
 

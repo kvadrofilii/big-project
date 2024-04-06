@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { memo, type ButtonHTMLAttributes } from 'react';
-import type { Size } from '@/shared/types';
+import type { Size } from '~/shared/types';
 import css from './IconButton.m.css';
 
 type IconButtonColor = 'primary' | 'secondary' | 'inherit';

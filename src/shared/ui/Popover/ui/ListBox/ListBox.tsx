@@ -2,7 +2,7 @@
 import { Listbox as HListbox } from '@headlessui/react';
 import clsx from 'clsx';
 import { Fragment, memo, type ReactNode } from 'react';
-import type { DropdownDirection } from '@/shared/types';
+import type { DropdownDirection } from '~/shared/types';
 import { Flex } from '../../../Flex/Flex';
 import popover from '../../styles/popover.m.css';
 import css from './ListBox.m.css';

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import { memo, useMemo, useState } from 'react';
-import CaretLeft from '@/shared/assets/icons/caret-left-fill.svg';
-import { useAppSelector } from '@/shared/lib';
-import { Flex, IconButton } from '@/shared/ui';
+import CaretLeft from '~/shared/assets/icons/caret-left-fill.svg';
+import { useAppSelector } from '~/shared/lib';
+import { Flex, IconButton } from '~/shared/ui';
 import { getSidebarLinks } from '../../model/selectors/getSidebarLinks';
 import { NavbarLink } from '../NavbarLink/NavbarLink';
 import type { SidebarProps } from './Sidebar.types';

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { type HTMLAttributes, memo, useCallback } from 'react';
-import CopyIcon from '@/shared/assets/icons/copy.svg';
+import CopyIcon from '~/shared/assets/icons/copy.svg';
 import { IconButton } from '../IconButton/IconButton';
 import css from './Code.m.css';
 

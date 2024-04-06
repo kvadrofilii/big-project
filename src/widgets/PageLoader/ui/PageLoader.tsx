@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { FC } from 'react';
-import { Flex, Loader } from '@/shared/ui';
+import { Flex, Loader } from '~/shared/ui';
 import type { PageLoaderProps } from './PageLoader.types';
 import css from './PageLoader.m.css';
 

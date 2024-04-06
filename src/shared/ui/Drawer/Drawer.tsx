@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { useCallback, useEffect, type HTMLAttributes, type ReactNode } from 'react';
-import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
+import { AnimationProvider, useAnimationLibs } from '~/shared/lib/components/AnimationProvider';
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
 import css from './Drawer.m.css';

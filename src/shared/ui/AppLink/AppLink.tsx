@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import type { LinkProps } from 'react-router-dom';
-import type { Size, Variant } from '@/shared/types';
+import type { Size, Variant } from '~/shared/types';
 import css from './AppLink.m.css';
 
 type AppLinkColor = 'primary' | 'secondary';

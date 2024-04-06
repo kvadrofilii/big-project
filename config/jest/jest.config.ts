@@ -22,7 +22,7 @@ export default {
     '\\.svg': path.resolve(__dirname, 'JestEmptyComponent.tsx'),
     'entities/(.*)': '<rootDir>/src/entities/$1',
     // Поддержка Aliases
-    '^@/(.*)$': '<rootDir>src/$1',
+    '^~/(.*)$': '<rootDir>src/$1',
   },
   globals: {
     __IS_DEV__: true,

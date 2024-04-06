@@ -8,7 +8,6 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-interactions',
     'storybook-addon-remix-react-router',
   ],
   framework: {

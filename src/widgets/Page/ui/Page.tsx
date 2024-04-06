@@ -1,8 +1,14 @@
 import clsx from 'clsx';
 import { MutableRefObject, useRef, UIEvent } from 'react';
 import { useLocation } from 'react-router-dom';
-import { StateSchema } from '@/app/providers/StoreProvider';
-import { useAppDispatch, useAppSelector, useInfiniteScroll, useInitialEffect, useThrottle } from '@/shared/lib';
+import { StateSchema } from '~/app/providers/StoreProvider';
+import {
+  useAppDispatch,
+  useAppSelector,
+  useInfiniteScroll,
+  useInitialEffect,
+  useThrottle,
+} from '~/shared/lib';
 import { getScrollByPath } from '../model/selectors/scrollSelectors';
 import { scrollActions } from '../model/slices/scroll.slice';
 import type { PageProps } from './Page.types';

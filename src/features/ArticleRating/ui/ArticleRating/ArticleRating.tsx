@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { RatingCard } from '@/entities/Rating';
-import { getUserAuthData } from '@/entities/User';
-import { useAppSelector } from '@/shared/lib';
-import { Skeleton } from '@/shared/ui';
+import { RatingCard } from '~/entities/Rating';
+import { getUserAuthData } from '~/entities/User';
+import { useAppSelector } from '~/shared/lib';
+import { Skeleton } from '~/shared/ui';
 import { useArticleRating, useRateArticle } from '../../api/articleRatingApi';
 import type { ArticleRatingProps } from './ArticleRating.types';
 import css from './ArticleRating.m.css';
