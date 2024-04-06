@@ -1,5 +1,5 @@
 import type { Reducer } from '@reduxjs/toolkit';
-import { useEffect, type ReactNode } from 'react';
+import { useLayoutEffect, type ReactNode } from 'react';
 import { useStore } from 'react-redux';
 import type {
   ReduxStoreWithManager,
@@ -24,7 +24,7 @@ export const DynamicReducerLoader = (props: Props) => {
   const store = useStore() as ReduxStoreWithManager;
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     Object.entries(reducers).forEach(([name, reducer]) => {
       if (!store.getState()[name as StateSchemaKey]) {
         store.reducerManager.add(name as StateSchemaKey, reducer);
