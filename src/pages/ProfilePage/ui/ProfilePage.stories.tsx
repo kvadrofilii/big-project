@@ -2,9 +2,9 @@
 // import { Currency } from 'entities/Currency';
 // import AvatarImg from 'shared/assets/test/storybook.png';
 // import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import { reactRouterParameters } from 'storybook-addon-react-router-v6';
-import ProfilePage from './ProfilePage';
 import type { Meta, StoryObj } from '@storybook/react';
+import { reactRouterParameters } from 'storybook-addon-remix-react-router';
+import ProfilePage from './ProfilePage';
 
 const meta = {
   title: 'pages/ProfilePage',

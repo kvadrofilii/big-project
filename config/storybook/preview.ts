@@ -1,10 +1,10 @@
-import { withRouter } from 'storybook-addon-react-router-v6';
+import type { Preview } from '@storybook/react';
+import { withRouter } from 'storybook-addon-remix-react-router';
 // import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
 import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator';
 import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator';
-import type { Preview } from '@storybook/react';
 
 const preview: Preview = {
   parameters: {

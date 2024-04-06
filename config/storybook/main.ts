@@ -9,7 +9,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-interactions',
-    'storybook-addon-react-router-v6',
+    'storybook-addon-remix-react-router',
   ],
   framework: {
     name: '@storybook/react-webpack5',
