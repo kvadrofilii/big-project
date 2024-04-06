@@ -4,8 +4,6 @@ export { useAppDispatch } from './hooks/useAppDispatch/useAppDispatch';
 export { useAppSelector } from './hooks/useAppSelector/useAppSelector';
 export { useDebounce } from './hooks/useDebounce/useDebounce';
 export { useDeviceDetect } from './hooks/useDeviceDetect/useDeviceDetect';
-// export { useDynamicModuleLoad } from './hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-// export type { ReducersList } from './hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 export { useHover } from './hooks/useHover/useHover';
 export { useInitialEffect } from './hooks/useInitialEffect/useInitialEffect';
 export { useInfiniteScroll } from './hooks/useInfiniteScroll/useInfiniteScroll';
@@ -16,4 +14,4 @@ export { DynamicReducerLoader } from './components/DynamicModuleLoader/DynamicRe
 
 export { addQueryParams } from './url/addQueryParams/addQueryParams';
 
-export type { ReducersList } from './components/DynamicModuleLoader/DynamicReducerLoader.types';
+export type { ReducersList } from './components/DynamicModuleLoader/DynamicReducerLoader';

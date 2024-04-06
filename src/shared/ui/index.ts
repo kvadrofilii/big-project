@@ -21,5 +21,5 @@ export { Tabs } from './Tabs/Tabs';
 export { Menu, ListBox, Popover } from './Popover';
 export { Heading, Text } from './Typography';
 
-export type { TabItem } from './Tabs/Tabs.types';
-export type { SelectOption } from './Select/Select.types';
+export type { TabItem } from './Tabs/Tabs';
+export type { SelectOption } from './Select/Select';

@@ -1,11 +1,25 @@
-import { useEffect } from 'react';
+import type { Reducer } from '@reduxjs/toolkit';
+import { useEffect, type ReactNode } from 'react';
 import { useStore } from 'react-redux';
-import { ReduxStoreWithManager, StateSchemaKey } from '@/app/providers/StoreProvider';
+import type {
+  ReduxStoreWithManager,
+  StateSchemaKey,
+  StateSchema,
+} from '@/app/providers/StoreProvider';
 import { useAppDispatch } from '../../hooks/useAppDispatch/useAppDispatch';
-import type { DynamicReducerLoaderProps } from './DynamicReducerLoader.types';
 
-export const DynamicReducerLoader = (props: DynamicReducerLoaderProps) => {
-  const { children, reducers, removeAfterUnmount = false } = props;
+export type ReducersList = {
+  [name in StateSchemaKey]?: Reducer<NonNullable<StateSchema[name]>>;
+};
+
+type Props = {
+  reducers: ReducersList;
+  removeAfterUnmount?: boolean;
+  children: ReactNode;
+};
+
+export const DynamicReducerLoader = (props: Props) => {
+  const { children, reducers, removeAfterUnmount } = props;
 
   const store = useStore() as ReduxStoreWithManager;
   const dispatch = useAppDispatch();
