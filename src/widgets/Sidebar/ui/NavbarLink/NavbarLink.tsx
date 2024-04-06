@@ -4,10 +4,15 @@ import { getUserAuthData } from '~/entities/User';
 import { AppRoutes } from '~/shared/consts/route';
 import { useAppSelector } from '~/shared/lib';
 import { AppLink, IconButton } from '~/shared/ui';
-import type { NavbarLinkProps } from './NavbarLink.types';
+import type { NavbarLinks } from '../../model/types/links.types';
 import css from './NavbarLink.m.css';
 
-export const NavbarLink = memo(function NavbarLink(props: NavbarLinkProps) {
+type Props = {
+  item: NavbarLinks;
+  collapsed: boolean;
+};
+
+export const NavbarLink = memo(function NavbarLink(props: Props) {
   const { item, collapsed } = props;
   const { t } = useTranslation();
   const isAuth = useAppSelector(getUserAuthData);

@@ -1,10 +1,13 @@
 import clsx from 'clsx';
 import { FC } from 'react';
 import { Flex, Loader } from '~/shared/ui';
-import type { PageLoaderProps } from './PageLoader.types';
 import css from './PageLoader.m.css';
 
-export const PageLoader: FC<PageLoaderProps> = ({ className }) => (
+export interface Props {
+  className?: string;
+}
+
+export const PageLoader: FC<Props> = ({ className }) => (
   <Flex
     className={clsx(css.root, className)}
     justify="center"

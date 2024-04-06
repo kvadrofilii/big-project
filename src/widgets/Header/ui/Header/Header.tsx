@@ -8,10 +8,13 @@ import { NotificationButton } from '~/features/NotificationButton';
 import { ThemeSwitcher } from '~/features/ThemeSwitcher';
 import { useAppSelector } from '~/shared/lib';
 import { Button, Flex, LangSelect, AppLink } from '~/shared/ui';
-import type { HeaderProps } from './Header.types';
 import css from './Header.m.css';
 
-export const Header = memo(function Header({ className }: HeaderProps) {
+type Props = {
+  className?: string;
+};
+
+export const Header = memo(function Header({ className }: Props) {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useAppSelector(getUserAuthData);

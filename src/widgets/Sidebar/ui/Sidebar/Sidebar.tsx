@@ -5,10 +5,13 @@ import { useAppSelector } from '~/shared/lib';
 import { Flex, IconButton } from '~/shared/ui';
 import { getSidebarLinks } from '../../model/selectors/getSidebarLinks';
 import { NavbarLink } from '../NavbarLink/NavbarLink';
-import type { SidebarProps } from './Sidebar.types';
 import css from './Sidebar.m.css';
 
-export const Sidebar = memo(function Sidebar({ className }: SidebarProps) {
+type Props = {
+  className?: string;
+};
+
+export const Sidebar = memo(function Sidebar({ className }: Props) {
   const [collapsed, setCollapsed] = useState(true);
   const navbarLinks = useAppSelector(getSidebarLinks);
 

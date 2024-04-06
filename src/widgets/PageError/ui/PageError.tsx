@@ -2,10 +2,13 @@ import clsx from 'clsx';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flex } from '~/shared/ui';
-import type { PageErrorProps } from './PageError.types';
 import css from './PageError.m.css';
 
-export const PageError: FC<PageErrorProps> = ({ className }) => {
+export interface Props {
+  className?: string;
+}
+
+export const PageError: FC<Props> = ({ className }) => {
   const { t } = useTranslation();
 
   const reloadPage = () => {
