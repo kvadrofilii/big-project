@@ -1,10 +1,15 @@
-import { FC } from 'react';
-import css from './Modal.m.css';
+import type { FC, ReactNode } from 'react';
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
-import type { ModalProps } from './Modal.types';
+import css from './Modal.m.css';
 
-export const Modal: FC<ModalProps> = (props) => {
+type Props = {
+  children: ReactNode;
+  isOpened?: boolean;
+  onClose?: () => void;
+};
+
+export const Modal: FC<Props> = (props) => {
   const { children, isOpened, onClose } = props;
 
   if (!isOpened) {

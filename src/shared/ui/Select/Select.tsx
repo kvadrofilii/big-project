@@ -1,9 +1,22 @@
-import { ChangeEvent, memo, useMemo } from 'react';
 import clsx from 'clsx';
+import { type ChangeEvent, memo, useMemo } from 'react';
 import css from './Select.m.css';
-import type { SelectProps } from './Select.types';
 
-export const SelectComponent = <T extends string>(props: SelectProps<T>) => {
+export type SelectOption<T extends string> = {
+  value: T;
+  content: string;
+};
+
+type Props<T extends string> = {
+  className?: string;
+  label?: string;
+  options?: SelectOption<T>[];
+  value?: T;
+  onChange?: (value: T) => void;
+  disabled?: boolean;
+};
+
+export const SelectComponent = <T extends string>(props: Props<T>) => {
   const { className, label, options, onChange, value, disabled } = props;
 
   const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {

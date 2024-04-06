@@ -1,14 +1,39 @@
-/* eslint-disable i18next/no-literal-string */
-import { Fragment, memo } from 'react';
 import { Listbox as HListbox } from '@headlessui/react';
 import clsx from 'clsx';
-import css from './ListBox.m.css';
+import { Fragment, memo, type ReactNode } from 'react';
+import type { DropdownDirection } from '@/shared/types';
 import { Flex } from '../../../Flex/Flex';
 import popover from '../../styles/popover.m.css';
-import type { ListBoxProps } from './ListBox.types';
+import css from './ListBox.m.css';
 
-export const ListBox = memo(function ListBox(props: ListBoxProps) {
-  const { className, options, value, defaultValue, onChange, disabled, direction = 'bottom-right', label } = props;
+type ListBoxItem = {
+  value: string;
+  content: ReactNode;
+  disabled?: boolean;
+};
+
+type Props = {
+  className?: string;
+  options?: ListBoxItem[];
+  value?: string;
+  defaultValue?: string;
+  onChange: (value: string) => void;
+  disabled?: boolean;
+  direction?: DropdownDirection;
+  label?: string;
+};
+
+export const ListBox = memo(function ListBox(props: Props) {
+  const {
+    className,
+    options,
+    value,
+    defaultValue,
+    onChange,
+    disabled,
+    direction = 'bottom-right',
+    label,
+  } = props;
 
   return (
     <Flex
@@ -23,7 +48,9 @@ export const ListBox = memo(function ListBox(props: ListBoxProps) {
         onChange={onChange}
         disabled={disabled}
       >
-        <HListbox.Button className={clsx(css.btn, disabled && css.disabled)}>{value ?? defaultValue}</HListbox.Button>
+        <HListbox.Button className={clsx(css.btn, disabled && css.disabled)}>
+          {value ?? defaultValue}
+        </HListbox.Button>
         <HListbox.Options
           className={clsx(css.options, {
             [popover['top-right']]: direction === 'top right',
@@ -40,7 +67,13 @@ export const ListBox = memo(function ListBox(props: ListBoxProps) {
               disabled={item.disabled}
             >
               {({ active, selected }) => (
-                <li className={clsx(css.item, active && popover.active, item.disabled && popover.disabled)}>
+                <li
+                  className={clsx(
+                    css.item,
+                    active && popover.active,
+                    item.disabled && popover.disabled,
+                  )}
+                >
                   {selected && <span className={css.ok}>⎷</span>}
                   {item.content}
                 </li>

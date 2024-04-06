@@ -1,4 +1,6 @@
-export type TypographyColor =
+import type { CSSProperties, DetailedHTMLProps, HTMLAttributes } from 'react';
+
+type TypographyColor =
   | 'dark'
   | 'light'
   | 'primary'
@@ -9,4 +11,9 @@ export type TypographyColor =
   | 'success'
   | 'inherit';
 
-export type TypographyAlign = 'start' | 'end' | 'center' | 'justify';
+export type TypographyCommon<T> = {
+  color?: TypographyColor;
+  disabled?: boolean;
+  align?: CSSProperties['textAlign'];
+  ellipsis?: boolean;
+} & DetailedHTMLProps<HTMLAttributes<T>, T>;

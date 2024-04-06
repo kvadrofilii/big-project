@@ -1,8 +1,12 @@
-import { FC, useCallback, useEffect } from 'react';
+import { type FC, useCallback, useEffect } from 'react';
 import css from './Overlay.m.css';
-import type { OverlayProps } from './Overlay.types';
 
-export const Overlay: FC<OverlayProps> = (props) => {
+type Props = {
+  isOpened?: boolean;
+  onClose?: () => void;
+};
+
+export const Overlay: FC<Props> = (props) => {
   const { isOpened, onClose } = props;
 
   const closeHandler = useCallback(() => {

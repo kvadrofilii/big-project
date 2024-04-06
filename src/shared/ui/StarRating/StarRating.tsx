@@ -1,12 +1,18 @@
-import { memo, useState } from 'react';
 import clsx from 'clsx';
-import css from './StarRating.m.css';
+import { memo, useState } from 'react';
 import StarIcon from '../../assets/icons/star.svg';
-import type { StarRatingProps } from './StarRating.types';
+import css from './StarRating.m.css';
+
+type Props = {
+  className?: string;
+  onSelect?: (starCount: number) => void;
+  size?: number;
+  selectStars?: number;
+};
 
 const stars = [1, 2, 3, 4, 5];
 
-export const StarRating = memo(function StarRating(props: StarRatingProps) {
+export const StarRating = memo(function StarRating(props: Props) {
   const { className, onSelect, size = 30, selectStars = 0 } = props;
   const [currentStarsCount, setCurrentStarsCount] = useState(selectStars);
   const [isSelected, setIsSelected] = useState(Boolean(selectStars));

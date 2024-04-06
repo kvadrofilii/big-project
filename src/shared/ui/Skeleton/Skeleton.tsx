@@ -1,10 +1,16 @@
-import { CSSProperties, FC } from 'react';
 import clsx from 'clsx';
+import type { CSSProperties, FC, HTMLAttributes } from 'react';
 import css from './Skeleton.m.css';
-import type { SkeletonProps } from './Skeleton.types';
 
-export const Skeleton: FC<SkeletonProps> = (props) => {
-  const { className, height, width, borderRadius, shadow } = props;
+type Props = HTMLAttributes<HTMLDivElement> & {
+  height?: string | number;
+  width?: string | number;
+  borderRadius?: string;
+  shadow?: boolean;
+};
+
+export const Skeleton: FC<Props> = (props) => {
+  const { className, height, width, borderRadius, shadow, style, ...rest } = props;
 
   const styles: CSSProperties = {
     height,
@@ -21,7 +27,8 @@ export const Skeleton: FC<SkeletonProps> = (props) => {
         },
         className,
       )}
-      style={styles}
+      style={{ ...styles, ...style }}
+      {...rest}
     />
   );
 };

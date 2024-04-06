@@ -1,14 +1,20 @@
-import { useCallback, useEffect } from 'react';
 import clsx from 'clsx';
+import { useCallback, useEffect, type HTMLAttributes, type ReactNode } from 'react';
 import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
-import css from './Drawer.m.css';
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
-import type { DrawerProps } from './Drawer.types';
+import css from './Drawer.m.css';
+
+type Props = HTMLAttributes<HTMLDivElement> & {
+  className?: string;
+  children: ReactNode;
+  isOpened?: boolean;
+  onClose?: () => void;
+};
 
 const height = window.innerHeight - 100;
 
-export const DrawerContent = (props: DrawerProps) => {
+const DrawerContent = (props: Props) => {
   const { className, children, isOpened, onClose } = props;
   const { Spring, Gesture } = useAnimationLibs();
   const [{ y }, api] = Spring.useSpring(() => ({ y: height }));
@@ -83,7 +89,7 @@ export const DrawerContent = (props: DrawerProps) => {
   );
 };
 
-const DrawerAsync = (props: DrawerProps) => {
+const DrawerAsync = (props: Props) => {
   const { isLoaded } = useAnimationLibs();
 
   if (!isLoaded) {
@@ -93,7 +99,7 @@ const DrawerAsync = (props: DrawerProps) => {
   return <DrawerContent {...props} />;
 };
 
-export const Drawer = (props: DrawerProps) => (
+export const Drawer = (props: Props) => (
   <AnimationProvider>
     <DrawerAsync {...props} />
   </AnimationProvider>

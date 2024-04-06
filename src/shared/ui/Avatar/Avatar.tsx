@@ -1,13 +1,16 @@
-import { CSSProperties, useMemo } from 'react';
 import clsx from 'clsx';
-import cls from './Avatar.m.css';
+import { type CSSProperties, type ImgHTMLAttributes, useMemo } from 'react';
 import PersonIcon from '../../assets/icons/person-circle.svg';
 import { AppImage } from '../AppImage/AppImage';
 import { Skeleton } from '../Skeleton/Skeleton';
-import type { AvatarProps } from './Avatar.types';
+import cls from './Avatar.m.css';
 
-export const Avatar = (props: AvatarProps) => {
-  const { className, src, size, alt = '' } = props;
+export type Props = ImgHTMLAttributes<HTMLImageElement> & {
+  size?: number;
+};
+
+export const Avatar = (props: Props) => {
+  const { className, size, style, ...rest } = props;
   const styles = useMemo<CSSProperties>(
     () => ({
       width: size || 100,
@@ -16,28 +19,16 @@ export const Avatar = (props: AvatarProps) => {
     [size],
   );
 
-  const fallback = (
-    <Skeleton
-      width={size}
-      height={size}
-      borderRadius="50%"
-    />
-  );
-  const errorFallback = (
-    <PersonIcon
-      style={styles}
-      className={className}
-    />
-  );
+  const fallback = <Skeleton width={size} height={size} borderRadius="50%" />;
+  const errorFallback = <PersonIcon style={{ ...styles, ...style }} className={className} />;
 
   return (
     <AppImage
       fallback={fallback}
       errorFallback={errorFallback}
-      src={src}
-      alt={alt}
-      style={styles}
+      style={{ ...styles, ...style }}
       className={clsx(cls.root, className)}
+      {...rest}
     />
   );
 };

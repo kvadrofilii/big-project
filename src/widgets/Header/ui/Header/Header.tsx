@@ -1,5 +1,5 @@
-import { useCallback, useState, memo } from 'react';
 import clsx from 'clsx';
+import { useCallback, useState, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
@@ -8,8 +8,8 @@ import { NotificationButton } from '@/features/NotificationButton';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { useAppSelector } from '@/shared/lib';
 import { Button, Flex, LangSelect, AppLink } from '@/shared/ui';
-import css from './Header.m.css';
 import type { HeaderProps } from './Header.types';
+import css from './Header.m.css';
 
 export const Header = memo(function Header({ className }: HeaderProps) {
   const { t } = useTranslation();

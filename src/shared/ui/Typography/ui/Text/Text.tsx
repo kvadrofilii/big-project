@@ -1,18 +1,28 @@
-import { memo } from 'react';
 import clsx from 'clsx';
-import css from './Text.m.css';
+import { memo, type CSSProperties } from 'react';
 import typographyCss from '../../styles/typography.m.css';
-import type { TextProps } from './Text.types';
+import type { TypographyCommon } from '../../types/Typography.types';
+import css from './Text.m.css';
 
-export const Text = memo(function Text(props: TextProps) {
+type TextVariant = 'p' | 'span';
+
+type TextFontSize = '6xl' | '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+
+type Props = TypographyCommon<HTMLParagraphElement> & {
+  fontSize?: TextFontSize;
+  variant?: TextVariant;
+};
+
+export const Text = memo(function Text(props: Props) {
   const {
     children,
     className,
-    disabled = false,
+    style,
+    disabled,
     color = 'dark',
     fontSize = 'md',
-    align = 'start',
-    ellipsis = false,
+    align,
+    ellipsis,
     variant = 'p',
     ...rest
   } = props;
@@ -25,13 +35,18 @@ export const Text = memo(function Text(props: TextProps) {
         css.root,
         css[fontSize],
         typographyCss[color],
-        typographyCss[align],
         {
           [typographyCss.disabled]: disabled,
           [typographyCss.ellipsis]: ellipsis,
         },
         className,
       )}
+      style={
+        {
+          '--text-text-align': align || 'start',
+          ...style,
+        } as CSSProperties
+      }
       {...rest}
     >
       {children}

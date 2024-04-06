@@ -1,8 +1,13 @@
 import { memo, useLayoutEffect, useState } from 'react';
-import type { AppImageProps } from './AppImage.types';
+import type { ImgHTMLAttributes, ReactNode } from 'react';
 
-export const AppImage = memo(function AppImage(props: AppImageProps) {
-  const { className, src, alt = 'image', errorFallback, fallback, ...rest } = props;
+type Props = ImgHTMLAttributes<HTMLImageElement> & {
+  fallback?: ReactNode;
+  errorFallback?: ReactNode;
+};
+
+export const AppImage = memo(function AppImage(props: Props) {
+  const { src, errorFallback, fallback, ...rest } = props;
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
@@ -27,10 +32,9 @@ export const AppImage = memo(function AppImage(props: AppImageProps) {
   }
 
   return (
+    // eslint-disable-next-line jsx-a11y/alt-text
     <img
-      className={className}
       src={src}
-      alt={alt}
       {...rest}
     />
   );

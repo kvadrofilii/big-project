@@ -1,11 +1,22 @@
-import { memo, useCallback } from 'react';
 import clsx from 'clsx';
-import css from './Tabs.m.css';
+import { memo, useCallback, type ReactNode } from 'react';
 import { Card } from '../Card/Card';
 import { Flex } from '../Flex/Flex';
-import type { TabItem, TabsProps } from './Tabs.types';
+import css from './Tabs.m.css';
 
-export const Tabs = memo(function Tabs(props: TabsProps) {
+export type TabItem = {
+  value: string;
+  content: ReactNode;
+};
+
+type Props = {
+  className?: string;
+  tabs: TabItem[];
+  value: string;
+  onTabClick: (tab: TabItem) => void;
+};
+
+export const Tabs = memo(function Tabs(props: Props) {
   const { className, value, tabs, onTabClick } = props;
 
   const onClick = useCallback(

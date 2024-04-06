@@ -1,10 +1,20 @@
-import { memo } from 'react';
 import clsx from 'clsx';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
+import type { LinkProps } from 'react-router-dom';
+import type { Size, Variant } from '@/shared/types';
 import css from './AppLink.m.css';
-import type { AppLinkProps } from './AppLink.types';
 
-export const AppLink = memo(function AppLink(props: AppLinkProps) {
+type AppLinkColor = 'primary' | 'secondary';
+
+type Props = LinkProps & {
+  color?: AppLinkColor;
+  variant?: Variant;
+  size?: Size;
+  fullWidth?: boolean;
+};
+
+export const AppLink = memo(function AppLink(props: Props) {
   const {
     to,
     className,
@@ -12,13 +22,19 @@ export const AppLink = memo(function AppLink(props: AppLinkProps) {
     color = 'primary',
     variant = 'text',
     size = 'medium',
-    fullWidth = false,
+    fullWidth,
     ...rest
   } = props;
 
   return (
     <Link
-      className={clsx(css.root, css[size], fullWidth && css['full-width'], css[`${variant}-${color}`], className)}
+      className={clsx(
+        css.root,
+        css[size],
+        fullWidth && css['full-width'],
+        css[`${variant}-${color}`],
+        className,
+      )}
       to={to}
       {...rest}
     >

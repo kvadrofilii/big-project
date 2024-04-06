@@ -1,10 +1,34 @@
 import clsx from 'clsx';
+import type { CSSProperties, HTMLAttributes } from 'react';
 import css from './Flex.m.css';
-import type { FlexProps } from './Flex.types';
-import type { CSSProperties } from 'react';
 
-export const Flex = (props: FlexProps) => {
-  const { align, basis, className, children, justify, direction, gap, shrink, grow, wrap, fullWidth, ...rest } = props;
+type Props = HTMLAttributes<HTMLDivElement> & {
+  align?: CSSProperties['alignItems'];
+  basis?: CSSProperties['flexBasis'];
+  direction?: CSSProperties['flexDirection'];
+  fullWidth?: boolean;
+  gap?: CSSProperties['gap'];
+  grow?: CSSProperties['flexGrow'];
+  justify?: CSSProperties['justifyContent'];
+  shrink?: CSSProperties['flexShrink'];
+  wrap?: CSSProperties['flexWrap'];
+};
+
+export const Flex = (props: Props) => {
+  const {
+    align,
+    basis,
+    className,
+    children,
+    justify,
+    direction,
+    gap,
+    shrink,
+    grow,
+    wrap,
+    fullWidth,
+    ...rest
+  } = props;
 
   return (
     <div

@@ -1,10 +1,18 @@
-import { memo, ChangeEvent } from 'react';
 import clsx from 'clsx';
+import { memo, type ChangeEvent, type InputHTMLAttributes } from 'react';
 import css from './Input.m.css';
-import type { InputProps } from './Input.types';
 
-export const Input = memo(function Input(props: InputProps) {
-  const { className, value, onChange, fullWidth = false, ...rest } = props;
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
+
+type Props = HTMLInputProps & {
+  className?: string;
+  value?: string | number;
+  onChange?: (value: string) => void;
+  fullWidth?: boolean;
+};
+
+export const Input = memo(function Input(props: Props) {
+  const { className, value, onChange, fullWidth, ...rest } = props;
 
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value);

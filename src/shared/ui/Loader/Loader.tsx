@@ -1,9 +1,8 @@
-import { FC } from 'react';
 import clsx from 'clsx';
+import type { FC, HTMLAttributes } from 'react';
 import css from './Loader.m.css';
-import type { LoaderProps } from './Loader.types';
 
-export const Loader: FC<LoaderProps> = ({ className }) => (
+export const Loader: FC<HTMLAttributes<HTMLPreElement>> = ({ className }) => (
   <div className={clsx(css.root, className)}>
     <div />
     <div />

@@ -1,15 +1,26 @@
 import { Popover as HPopover } from '@headlessui/react';
 import clsx from 'clsx';
-import css from './Popover.m.css';
+import { type ReactNode } from 'react';
+import type { DropdownDirection } from '@/shared/types';
 import popover from '../../styles/popover.m.css';
-import type { PopoverProps } from './Popover.types';
+import css from './Popover.m.css';
 
-export const Popover = (props: PopoverProps) => {
+type Props = {
+  className?: string;
+  trigger: ReactNode;
+  children: ReactNode;
+  disabled?: boolean;
+  direction?: DropdownDirection;
+};
+
+export const Popover = (props: Props) => {
   const { className, trigger, children, disabled, direction = 'bottom right' } = props;
 
   return (
     <HPopover className={clsx(popover.root, className, disabled && popover.disabled)}>
-      <HPopover.Button className={clsx(css.btn, disabled && popover.disabled)}>{trigger}</HPopover.Button>
+      <HPopover.Button className={clsx(css.btn, disabled && popover.disabled)}>
+        {trigger}
+      </HPopover.Button>
 
       <HPopover.Panel
         className={clsx(css.items, {
