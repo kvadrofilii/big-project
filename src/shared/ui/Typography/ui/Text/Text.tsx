@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { memo, type CSSProperties } from 'react';
 import typographyCss from '../../styles/typography.m.css';
-import type { TypographyCommon } from '../../types/Typography.types';
+import type { TypographyCommon } from '../../types/typography.types';
 import css from './Text.m.css';
 
 type TextVariant = 'p' | 'span';

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { type CSSProperties, memo } from 'react';
 import typographyCss from '../../styles/typography.m.css';
-import type { TypographyCommon } from '../../types/Typography.types';
+import type { TypographyCommon } from '../../types/typography.types';
 import css from './Heading.m.css';
 
 type HeadingVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
