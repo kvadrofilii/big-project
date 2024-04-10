@@ -35,14 +35,14 @@ export const Flex = (props: Props) => {
       className={clsx(css.root, fullWidth && css['full-width'], className)}
       style={
         {
-          '--flex-direction': direction || 'row',
-          '--flex-grow': grow || 0,
-          '--flex-shrink': shrink || 1,
-          '--flex-wrap': wrap || 'nowrap',
-          '--gap': gap ? `calc(var(--space) * ${gap})` : 0,
-          '--align-items': align || 'flex-start',
-          '--justify-content': justify || 'flex-start',
-          '--flex-basis': basis || 'auto',
+          flexDirection: direction || 'row',
+          flexGrow: grow || 0,
+          flexShrink: shrink || 1,
+          flexWrap: wrap || 'nowrap',
+          gap: gap ? `calc(var(--space) * ${gap})` : 0,
+          alignItems: align || 'flex-start',
+          justifyContent: justify || 'flex-start',
+          flexBasis: basis || 'auto',
         } as CSSProperties
       }
       {...rest}

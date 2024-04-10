@@ -1,10 +1,5 @@
 .root {
   display: flex;
-  flex: var(--flex-grow) var(--flex-shrink) var(--flex-basis);
-  flex-flow: var(--flex-direction) var(--flex-wrap);
-  gap: var(--gap);
-  align-items: var(--align-items);
-  justify-content: var(--justify-content);
 }
 
 /* Full width */
