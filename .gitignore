@@ -1,7 +1,9 @@
 # Dependencies
 node_modules/
-.pnp
 .pnp.js
+.pnp.cjs
+.pnp.loader.mjs
+.yarn
 
 # System files
 .DS_Store

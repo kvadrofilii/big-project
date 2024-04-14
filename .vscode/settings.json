@@ -15,11 +15,6 @@
   //"i18n-ally.defaultNamespace": "translation",
   // Путь до конфигурационного файла jest для плагина Jest Runner
   "jestrunner.configPath": "/config/jest/jest.config.ts",
-  // Группировка файлов в один
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    "package.json": "package-lock.json, yarn.lock, .browserslistrc, .eslintignore, .eslintrc.js, .gitignore, .nvmrc, .prettierignore, .prettierrc, .stylelintignore, .stylelintrc.js, .editorconfig",
-  },
   "files.associations": {
     "**/.fttemplates/**": "plaintext"
   },
