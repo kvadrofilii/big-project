@@ -1,0 +1,14 @@
+{
+  "name": "@kvadrofilii/server",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Michael Yakovlev",
+  "description": "Technology testing. Server",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./json-server/index.js"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

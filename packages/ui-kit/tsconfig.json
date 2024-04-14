@@ -1,0 +1,31 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    // Задаём откуда считать абсолютные пути импортов
+    "baseUrl": ".",
+    // Создание декларации типов
+    "declaration": false,
+    // Поддержка jsx
+    // Стандартное значение "react"
+    // Значение "react-jsx", позволяет не импортировать React в компонентах
+    "jsx": "react-jsx",
+    // Папка дистрибутива
+    "outDir": "./dist/",
+    // Aliases
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "plugins": [
+      {
+        // Плагин для типизации css-modules
+        // https://www.npmjs.com/package/typescript-plugin-css-modules
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.m\\.css$"
+        }
+      }
+    ]
+  },
+  "include": ["src"],
+  "exclude": ["./dist", "node_modules"]
+}

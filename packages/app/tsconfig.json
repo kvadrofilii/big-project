@@ -1,0 +1,36 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    // Папка дистрибутива
+    "outDir": "./dist/",
+    // Поддержка jsx
+    // Стандартное значение "react"
+    // Значение "react-jsx", позволяет не импортировать React в компонентах
+    "jsx": "react-jsx",
+    // Задаём откуда считать абсолютные пути импортов
+    "baseUrl": ".",
+    // Aliases
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "plugins": [
+      {
+        // Плагин для типизации css-modules
+        // https://www.npmjs.com/package/typescript-plugin-css-modules
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.m\\.css$"
+        }
+      }
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+    "./config/jest/jest-setup.ts",
+    "src/shared/config/storybook/StyleDecorator",
+    "./webpack.config.ts"
+  ],
+  "exclude": ["./node_modules", "./build", "./dist", "babel.config.js", ".eslintrc.js"]
+}
